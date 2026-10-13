@@ -44,6 +44,7 @@ h1 em{color:var(--accent);font-style:italic}
 h2{font-family:var(--display);font-weight:400;font-size:1.55rem;margin:0 0 12px;text-wrap:balance;line-height:1.15}
 .scene p{margin:0 0 .75em}
 .scene p.pip{color:var(--muted);font-style:italic;padding-left:12px;border-left:2px solid var(--line)}
+.scene b.lore{font-family:var(--display);font-weight:400;color:var(--gold);font-size:1.1em}
 .prompt{font-family:var(--mono);color:var(--muted);margin:14px 0 8px;font-size:.92rem}
 .choices{display:grid;gap:8px;margin:0;padding:0;list-style:none}
 .choices button{width:100%;text-align:left;background:var(--choice);color:var(--fg);border:1px solid var(--line);padding:11px 13px;font:inherit;font-size:1.02rem;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;line-height:1.4}
@@ -95,12 +96,12 @@ td.good{color:var(--moss)}
   </header>
   <div class="status" id="status"></div>
   <main id="main"></main>
-  <div class="foot"><span>Keys 1-4 pick, Enter continues.</span><button id="newgame">New game</button></div>
+  <div class="foot"><span>Keys 1-4 pick, Enter continues.</span><button id="world">The world in one page</button><button id="newgame">New game</button></div>
 </div>
 
 <script>
 // ---------- state ----------
-const fresh = () => ({ role:null, trust:3, eye:0, coin:20, f:{}, done:{}, node:'pick', chosen:null, log:[] });
+const fresh = () => ({ role:null, trust:3, eye:0, coin:20, f:{}, done:{}, node:'world', chosen:null, log:[] });
 let S = fresh();
 const W = () => S.role === 'witcher';
 const NAME = () => W() ? 'Garrick' : 'Ilvara';
@@ -113,10 +114,26 @@ function clamp(){ S.trust = Math.max(0, Math.min(10, S.trust)); S.eye = Math.max
 // node: { q, where, title, text: fn -> [strings], choices:[{t, who:'w'|'s', if:fn, do:fn, out:fn->[strings], next}], end:bool }
 const N = {};
 
+N.world = {
+  where:'Before the story', title:'The world in one page',
+  text: () => [
+    'You do not need to know the Witcher books or games to play this. Here is everything that matters.',
+    '<h>The war.</h> Two big powers are fighting over this part of the world. Nilfgaard is the empire from the south: black armor, disciplined, winning. Redania is the northern kingdom: paranoid, run by a king who burns anyone who can do magic. Greyhollow is a small river town stuck on the line between them. The river is the Pontar. The one stone bridge over it is the only reason anyone cares about the town.',
+    '<h>The Eternal Fire.</h> Redania’s state church. Its witch hunters ride around in white cloaks arresting and burning sorceresses, mages, and anyone who looks like one. They answer to the city of Oxenfurt. In this game they are the people a sorceress is hiding from.',
+    '<h>Witchers.</h> Men taken as boys and changed with mutations so they can hunt monsters for money. Cat eyes, two swords (steel for people, silver for monsters), and five simple spells called Signs: Aard (a shove), Igni (fire), Quen (a shield), Yrden (a trap), and Axii (a calming mind-trick). Most people fear them a little and hire them anyway. A medallion around their neck hums near magic.',
+    '<h>Sorceresses.</h> Trained at a school called Aretuza. Powerful, long-lived, beautiful by choice (they fix their own faces with magic), and political. The Lodge was their secret club of the most powerful ones. A glamour is a spell that changes how you look.',
+    '<h>Monsters you will meet.</h> A wraith is a ghost that formed from a bad death. A botchling or lubberkin is what a dead unnamed baby can become. A troll is big, slow, talks, and is not evil. A leshen is an ancient forest spirit shaped like a stag-headed tree; it protects its woods and demands a tithe. A godling is a tiny, friendly, chatty nature spirit. A hag is an old swamp witch who takes children. A pesta is a plague ghost.',
+    '<h>Elves.</h> The Aen Seidhe are the elves who lived here before humans. Humans pushed them into the hills and now hunt the ones who fight back, who are called Scoia’tael. In Redania an elf caught near a road is usually hanged.',
+    '<h>Words.</h> Ealdorman or alderman means village headman. A pellar is a village healer and spirit-talker. Crowns are money. Velen is the poor, swampy province the town sits in. Mahakam is the dwarf mountain country to the east where runaways go.',
+    'That is it. The rest you will pick up as you go. Pip will explain things when it matters.'
+  ],
+  choices: [ { t:()=> S._return && S._return!=='world' ? 'Back to where I was.' : 'Got it. Who am I playing?', out:()=>[], next:()=>{ const r = S._return; S._return = null; return (r && r!=='world' && N[r]) ? r : (S.role ? 'hub' : 'pick'); } } ]
+};
+
 N.pick = {
   where:'Before the story', title:'Who walks into Greyhollow?',
   text: () => [
-    'Greyhollow is a river town on the Pontar, where Velen stops pretending to be Temeria. Nilfgaard holds the south bank. Redania holds the north. Witch hunters from Oxenfurt ride through whenever the chapel sends a letter. The town sits on its one stone bridge and hopes nobody important notices it.',
+    'Greyhollow is a river town on the Pontar, right on the line between two armies. Nilfgaard, the empire, holds the south bank. Redania, the kingdom, holds the north. Witch hunters from Oxenfurt ride through whenever the chapel sends a letter. The town sits on its one stone bridge and hopes nobody important notices it.',
     'Somebody important is about to.'
   ],
   pick:true
@@ -129,7 +146,7 @@ N.hub = {
     const open = [
       d===0 ? R('You take the corner table. The innkeeper, Berna, brings ale and a list of everything wrong with her town, in order of what she would pay to have fixed.',
                 'You take the corner table and the room rearranges itself around you. Men stop mid-sentence. Berna the innkeeper brings wine without being asked and a list of everything wrong with her town, in order of what she would pay to have fixed.') : '',
-      d===0 ? 'Something small and sooty is watching you from inside the chimney. It introduces itself as Pip, a godling, and says it has lived in that chimney for ninety years and has opinions about all of these jobs.' : '',
+      d===0 ? 'Something small and sooty is watching you from inside the chimney. It introduces itself as Pip, a godling, which is a knee-high nature spirit that attaches itself to a house and talks too much. Pip says it has lived in that chimney for ninety years and has opinions about all of these jobs.' : '',
       d>0 && d<4 ? 'Berna wipes the table. Pip rustles in the chimney. The board has more on it than it did.' : '',
       d>=4 && !S.done.q5 ? 'Pip is not in the chimney. Pip is on the table, which has never happened, and Pip says: "Horns. On the south road. You should finish your drink."' : '',
       S.done.q5 ? 'The story is told. Pip says you can read the ledger again, or start over and see what the other one would have done.' : ''
@@ -143,7 +160,7 @@ N.hub = {
 N.q1a = {
   q:'q1', where:'Ashbrook, a hamlet upriver', title:'Salt in the well',
   text: () => [
-    'Ashbrook’s well tastes of iron. Two cows are dead, a child is sick, and the village has decided this is the work of the widow Marga, who sells herbs and talks to her chickens. The ealdorman Berthold offers sixty crowns to "deal with whatever is down there."',
+    'Ashbrook’s well tastes of iron. Two cows are dead, a child is sick, and the village has decided this is the work of the widow Marga, who sells herbs and talks to her chickens. Berthold, the ealdorman (the village headman, the closest thing Ashbrook has to a mayor), offers sixty crowns to "deal with whatever is down there."',
     R('A child is sick and a village wants to burn an old woman. A witcher has seen this exact shape before. The monster is rarely the one they point at.',
       'You have been that old woman, in other villages, under other names. You feel the mood of the square the way other people feel weather.'),
     'Where do you start?'
@@ -161,7 +178,7 @@ N.q1well = {
       'You do not go down. You prick your thumb, let one drop fall into the bucket, and the well tells you itself, in the back of your skull, like a man shouting underwater.'),
     'There is a body under the water. A soldier in Nilfgaardian black, throat cut, a millstone roped to his chest. He has been there about a month. A letter in his coat, half rotted: his name is Aurelio, he deserted at the Pontar crossing, and he was walking home.',
     'His killer left the knife in him. A hunting knife, good steel, with two letters burned into the handle. L. B.',
-    'And he is not a drowner. He is becoming a wraith. In a day or two he will be done becoming.'
+    'And he is not a drowner, the common river monster the village assumes. He is becoming a wraith: a ghost made from a bad death, angry, and tied to the place it died. In a day or two he will be done becoming.'
   ],
   choices: [
     { t:'Talk to Marga.', if:()=>!S.f.q1marga, do:()=>{S.f.q1marga=1;}, out:()=>['Her hut door is open and her chickens are loose. Someone got here first.'], next:'q1marga' },
@@ -284,7 +301,7 @@ N.q2bridge = {
 N.q2under = {
   q:'q2', where:'Under the bridge', title:'What the troll was guarding',
   text: () => [
-    'Under the arch, on a ledge above the waterline, there is a camp. Four elves. Aen Seidhe, a mother, a grandfather, two children, thin as the reeds. Scoia’tael by Redanian law, which means a rope. Deserters by Nilfgaardian law, which means the same rope, slower.',
+    'Under the arch, on a ledge above the waterline, there is a camp. Four elves. A mother, a grandfather, two children, thin as the reeds. To Redania any elf off the road is a Scoia’tael rebel, which means a rope. To Nilfgaard they are deserters from the elf units it conscripted, which means the same rope, slower.',
     '"They make cheese," Bogdan says, as if that settles it. "Good cheese. Bogdan keeps bridge. They keep cheese. Everybody keeps."',
     'The mother looks at you the way the hunted look at anyone with a weapon.'
   ],
@@ -331,7 +348,7 @@ N.q2end = { q:'q2', end:true, where:'Greyhollow', title:'The toll, closed',
 N.q3a = {
   q:'q3', where:'Greyhollow square', title:'The spark',
   text: () => [
-    'Captain Tybalt Rook of the Order of the Eternal Fire rides in with six men and a cage on wheels. He is handsome, soft-spoken, and has burned eleven women this year, which he mentions during the sermon the way a farmer mentions rain.',
+    'Captain Tybalt Rook of the Eternal Fire, Redania’s church and its witch-burning police, rides in with six men and a cage on wheels. He is handsome, soft-spoken, and has burned eleven women this year, which he mentions during the sermon the way a farmer mentions rain.',
     'He is here because a letter said a child in this town sets things on fire when she is frightened. Liesl, the baker’s girl. Twelve. The bread has been coming out black for a month.',
     S.eye>=5 ? R('Rook’s eyes find you in the crowd and stay there. He knows what a witcher is. He does not like it.', 'Rook’s eyes find you in the crowd and stay there. He is not looking at a woman. He is looking at a pyre with a woman in front of it.')
             : R('Rook glances at you, files "mutant" under later, and moves on.', 'Rook’s eyes slide over you, pause, and move on. Good. The glamour on your face is holding.'),
@@ -345,7 +362,7 @@ N.q3b = {
   q:'q3', where:'The Drowned Rat, back room', title:'Liesl',
   text: () => [
     'Liesl is small for twelve and will not look up. When Matthis says the word "hunters" the candle on the table goes from a flame to a torch and back. He flinches. She flinches harder.',
-    R('You have seen this before. A Source, or near enough. In the old days a child like this got sent to Aretuza or Ban Ard. In Redania now, she gets a cage.',
+    R('You have seen this before. A Source: someone born with magic that leaks out before anyone teaches them to hold it. In the old days a child like this got sent to a magic school, Aretuza for girls, Ban Ard for boys. In Redania now, she gets a cage.',
       'You know exactly what she is, because you were. Raw Chaos, no training, and a world that would rather burn it than teach it.'),
     'Matthis asks what you can do.'
   ],
@@ -408,7 +425,7 @@ N.q3end = { q:'q3', end:true, where:'Greyhollow', title:'The spark, closed',
 N.q4a = {
   q:'q4', where:'The forest road north', title:'Old wood',
   text: () => [
-    'Two petitions reach the inn the same morning. Aldo, foreman of the woodcutters’ guild, will pay a hundred and twenty crowns for the leshen in the north wood: three men dead, the rest refusing to go in. Elder Hesper of Thornwick, the old-faith village at the wood’s edge, will pay nothing and asks you, please, to leave the forest its master.',
+    'Two petitions reach the inn the same morning. Aldo, foreman of the woodcutters’ guild, will pay a hundred and twenty crowns for the leshen in the north wood: three men dead, the rest refusing to go in. A leshen is an ancient forest spirit, antlered and tree-tall, that commands the wolves and crows and treats the wood as its own. Elder Hesper of Thornwick, the village at the wood’s edge that still keeps the old gods, will pay nothing and asks you, please, to leave the forest its master.',
     'The leshen has marked someone. Thornwick will not say who. The woodcutters do not care who.',
     R('Leshens are not killed, they are unmade. Totems first, then the thing itself, and even then they come back if the wood wants them to.',
       'You can feel it from the road. Something old, and awake, and interested in you specifically.')
@@ -462,7 +479,7 @@ function defense(){
 N.q5a = {
   q:'q5', where:'Greyhollow, the small hours', title:'Long shadows',
   text: () => [
-    'Horns on the south road. A Nilfgaardian raiding column, two hundred men, come to burn a river town for the lesson it teaches other river towns. They need the bridge. Everyone in Greyhollow needs it more.',
+    'Horns on the south road. A Nilfgaardian raiding column, two hundred soldiers of the southern empire, come to burn a river town for the lesson it teaches other river towns. They need the bridge to cross the Pontar. Everyone in Greyhollow needs it more.',
     S.f.rook==='dead' ? 'Behind the column, under the Eternal Fire’s banner, is the rest of Rook’s order. Thirty men with torches, here for whoever killed a captain. They have an understanding with the Nilfgaardians: the town is theirs to burn, you are the Fire’s to keep.' :
     S.f.rook==='alive' && S.eye>=6 ? 'Rook is with them. Of course he is. He has a warrant with your name on it and a column to enforce it.' :
     S.f.rook==='shamed' ? 'Rook is with them, at the back, with a face that has been waiting for this.' : '',
@@ -536,7 +553,11 @@ const QUESTS = [
 
 // ---------- render ----------
 function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
-function para(p){ if (p.startsWith('<pip>')) return `<p class="pip">${esc(p.slice(5,-6))}</p>`; return `<p>${esc(p)}</p>`; }
+function para(p){
+  if (p.startsWith('<pip>')) return `<p class="pip">${esc(p.slice(5,-6))}</p>`;
+  if (p.startsWith('<h>')) { const i = p.indexOf('</h>'); return `<p><b class="lore">${esc(p.slice(3,i))}</b> ${esc(p.slice(i+4))}</p>`; }
+  return `<p>${esc(p)}</p>`;
+}
 
 function renderStatus(){
   const el = document.getElementById('status');
@@ -570,12 +591,13 @@ function render(){
     h += `<p class="prompt">&gt; What do you do?</p><ul class="choices">`;
     cs.forEach((c,i) => {
       const who = c.who ? `<span class="who">${c.who==='w'?'Witcher':'Sorceress'} only</span>` : '';
-      h += `<li><button data-i="${c._i}" class="${c.who==='w'?'w':''}" ${c.disabled?'disabled':''}><span class="key">[${i+1}]</span><span>${esc(c.t)}${who}</span></button></li>`;
+      const label = typeof c.t === 'function' ? c.t() : c.t;
+      h += `<li><button data-i="${c._i}" class="${c.who==='w'?'w':''}" ${c.disabled?'disabled':''}><span class="key">[${i+1}]</span><span>${esc(label)}${who}</span></button></li>`;
     });
     h += `</ul>`;
   } else {
     const c = n.choices[S.chosen];
-    h += `<p class="prompt">&gt; ${esc(c.t)}</p>`;
+    h += `<p class="prompt">&gt; ${esc(typeof c.t === 'function' ? c.t() : c.t)}</p>`;
     const out = (c.out ? c.out() : []).filter(Boolean);
     if (out.length){ h += `<div class="result"><h3>What happens</h3><ul>`; out.forEach(o => h += `<li>${esc(o)}</li>`); h += `</ul></div>`; }
     if (S._delta) h += `<p class="delta">${esc(S._delta)}</p>`;
@@ -614,15 +636,16 @@ function choose(i){
   if (S.eye!==before.eye) d.push(`Fire’s eye ${S.eye>before.eye?'+':''}${S.eye-before.eye}`);
   if (S.coin!==before.coin) d.push(`Crowns ${S.coin>before.coin?'+':''}${S.coin-before.coin}`);
   S._delta = d.join(' · ');
-  S.log.push({node:S.node, pick:c.t});
+  S.log.push({node:S.node, pick:typeof c.t === 'function' ? c.t() : c.t});
   const out = (c.out ? c.out() : []).filter(Boolean);
-  if (!out.length && !S._delta){ S.node = c.next; S.chosen=null; render(); return; }
+  if (!out.length && !S._delta){ S.node = nextOf(c); S.chosen=null; render(); return; }
   S.chosen = i; render();
 }
+function nextOf(c){ return typeof c.next === 'function' ? c.next() : c.next; }
 function advance(){
   const n = N[S.node];
   if (n.end){ S.done[n.q] = 1; S.node='hub'; S.chosen=null; S._delta=''; render(); return; }
-  const c = n.choices[S.chosen]; S.node = c.next; S.chosen = null; S._delta=''; render();
+  const c = n.choices[S.chosen]; S.node = nextOf(c); S.chosen = null; S._delta=''; render();
 }
 function ledgerHTML(){
   const {d, why} = defense();
@@ -656,8 +679,9 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Enter') { const g = document.getElementById('go'); if (g) g.click(); }
 });
 document.getElementById('newgame').addEventListener('click', () => { S = fresh(); render(); });
+document.getElementById('world').addEventListener('click', () => { S._return = S.node; S.node = 'world'; S.chosen = null; render(); });
 
-load(); if (!N[S.node]) S.node = S.role ? 'hub' : 'pick'; render();
+load(); if (!N[S.node]) S.node = S.role ? 'hub' : 'world'; render();
 </script>
 </body>
 </html>
