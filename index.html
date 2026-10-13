@@ -127,7 +127,7 @@ N.world = {
     '<h>Words.</h> Ealdorman or alderman means village headman. A pellar is a village healer and spirit-talker. Crowns are money. Velen is the poor, swampy province the town sits in. Mahakam is the dwarf mountain country to the east where runaways go.',
     'That is it. The rest you will pick up as you go. Pip will explain things when it matters.'
   ],
-  choices: [ { t:()=> S._return && S._return!=='world' ? 'Back to where I was.' : 'Got it. Who am I playing?', out:()=>[], next:()=>{ const r = S._return; S._return = null; return (r && r!=='world' && N[r]) ? r : (S.role ? 'hub' : 'pick'); } } ]
+  choices: [ { t:()=> S._return && S._return!=='world' ? 'Back to where I was.' : 'Got it. Who am I playing?', out:()=>[], next:()=>{ S.seenWorld = 1; const r = S._return; S._return = null; return (r && r!=='world' && N[r]) ? r : (S.role ? 'hub' : 'pick'); } } ]
 };
 
 N.pick = {
@@ -681,7 +681,10 @@ document.addEventListener('keydown', e => {
 document.getElementById('newgame').addEventListener('click', () => { S = fresh(); render(); });
 document.getElementById('world').addEventListener('click', () => { S._return = S.node; S.node = 'world'; S.chosen = null; render(); });
 
-load(); if (!N[S.node]) S.node = S.role ? 'hub' : 'world'; render();
+load();
+if (!N[S.node]) S.node = S.role ? 'hub' : 'world';
+if (!S.seenWorld && S.node !== 'world') { S._return = S.node; S.node = 'world'; S.chosen = null; }
+render();
 </script>
 </body>
 </html>
