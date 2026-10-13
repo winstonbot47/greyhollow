@@ -146,8 +146,8 @@ N.hub = {
     const open = [
       d===0 ? R('You take the corner table. The innkeeper, Berna, brings ale and a list of everything wrong with her town, in order of what she would pay to have fixed.',
                 'You take the corner table and the room rearranges itself around you. Men stop mid-sentence. Berna the innkeeper brings wine without being asked and a list of everything wrong with her town, in order of what she would pay to have fixed.') : '',
-      d===0 ? 'Something small and sooty is watching you from inside the chimney. It introduces itself as Pip, a godling, which is a knee-high nature spirit that attaches itself to a house and talks too much. Pip says it has lived in that chimney for ninety years and has opinions about all of these jobs.' : '',
-      d>0 && d<4 ? 'Berna wipes the table. Pip rustles in the chimney. The board has more on it than it did.' : '',
+      !S.pipMet ? 'Something small and sooty is watching you from inside the chimney. It introduces itself as Pip, a godling, which is a knee-high nature spirit that attaches itself to a house and talks too much. Pip has lived in that chimney for ninety years, knows everyone in town by smell, and has opinions about all of these jobs. Pip will be riding in your coat pocket from here on, whether you like it or not.' : '',
+      d>0 && d<4 && S.pipMet ? 'Berna wipes the table. Pip rustles in the chimney. The board has more on it than it did.' : '',
       d>=4 && !S.done.q5 ? 'Pip is not in the chimney. Pip is on the table, which has never happened, and Pip says: "Horns. On the south road. You should finish your drink."' : '',
       S.done.q5 ? 'The story is told. Pip says you can read the ledger again, or start over and see what the other one would have done.' : ''
     ].filter(Boolean);
@@ -349,13 +349,15 @@ N.q3a = {
   q:'q3', where:'Greyhollow square', title:'The spark',
   text: () => [
     'Captain Tybalt Rook of the Eternal Fire, Redania’s church and its witch-burning police, rides in with six men and a cage on wheels. He is handsome, soft-spoken, and has burned eleven women this year, which he mentions during the sermon the way a farmer mentions rain.',
-    'He is here because a letter said a child in this town sets things on fire when she is frightened. Liesl, the baker’s girl. Twelve. The bread has been coming out black for a month.',
+    'He is here because a letter said a child in this town sets things on fire when she is frightened. Liesl, the baker’s girl. Twelve. The bread has been coming out black for a month. He says he will be here three days, and that he always finds what he comes for.',
     S.eye>=5 ? R('Rook’s eyes find you in the crowd and stay there. He knows what a witcher is. He does not like it.', 'Rook’s eyes find you in the crowd and stay there. He is not looking at a woman. He is looking at a pyre with a woman in front of it.')
             : R('Rook glances at you, files "mutant" under later, and moves on.', 'Rook’s eyes slide over you, pause, and move on. Good. The glamour on your face is holding.'),
-    '<pip>Pip: "He’s a bad one. I can smell what he had for breakfast and it was a person’s fear."</pip>'
+    '<pip>Pip, the godling from the inn chimney, from inside your coat: "He’s a bad one. I can smell what he had for breakfast and it was a person’s fear."</pip>',
+    'The sermon ends with a question to the crowd: does anyone here know the girl?'
   ],
   choices: [
-    { t:'Find the baker before Rook does.', out:()=>['Matthis the baker is already in the inn’s back room with his daughter and the look of a man who has stopped sleeping.'], next:'q3b' }
+    { t:'Say nothing. Find the baker before Rook does.', out:()=>['Matthis the baker is already in the inn’s back room with his daughter and the look of a man who has stopped sleeping.'], next:'q3b' },
+    { t:'Speak up. "Every child in Velen has burned a loaf. Go home."', do:()=>{S.trust+=1;S.eye+=1;S.f.q3spoke=1;}, out:()=>['The square laughs. Rook does not. He writes something in a small book without looking down at it.','Greyhollow likes you for it. So does Rook, in the way a cat likes a mouse that moved.'], next:'q3b' }
   ]
 };
 N.q3b = {
@@ -364,10 +366,10 @@ N.q3b = {
     'Liesl is small for twelve and will not look up. When Matthis says the word "hunters" the candle on the table goes from a flame to a torch and back. He flinches. She flinches harder.',
     R('You have seen this before. A Source: someone born with magic that leaks out before anyone teaches them to hold it. In the old days a child like this got sent to a magic school, Aretuza for girls, Ban Ard for boys. In Redania now, she gets a cage.',
       'You know exactly what she is, because you were. Raw Chaos, no training, and a world that would rather burn it than teach it.'),
-    'Matthis asks what you can do.'
+    'Rook has three days and six men. They will search every house. Matthis asks what you can do.'
   ],
   choices: [
-    { t:'Hide her in the inn chimney. Pip will keep her company.', do:()=>{S.f.liesl='hidden';}, out:()=>['Pip is delighted. "I’ve never had a guest." Liesl climbs up with a blanket and a loaf of bread.','It is a good hiding place. It is only a hiding place.'], next:'q3c' },
+    { t:'Hide her in the inn chimney. Pip will keep her company.', do:()=>{S.f.liesl='hidden';}, out:()=>['Pip is delighted. "I’ve never had a guest." Liesl climbs up with a blanket and a loaf of bread.','It is a good hiding place. It is only a hiding place, and Rook has three days.'], next:'q3c' },
     { t:'Teach her. Tonight. Control, not fear.', who:'s', do:()=>{S.f.liesl='trained';S.eye+=2;}, out:()=>['You spend the night in the cellar with her and three candles. By midnight she can light one without lighting the others. By dawn she can put one out.','She looks at you like you hung the moon. You remember a woman who looked at you like that once, before she burned.','Two candles’ worth of light leaked under the cellar door. The Fire’s eye on you grows.'], next:'q3c' },
     { t:'Teach her to lie. Axii for the nerves, and a story she can hold.', who:'w', do:()=>{S.f.liesl='coached';}, out:()=>['You cannot teach her magic. You can teach her to be boring. A calm face, a dull story, and a little Axii so her hands do not shake.','It will hold for one interrogation. Maybe.'], next:'q3c' },
     { t:'Send her to Marga in Ashbrook. An old woman with chickens is the last place anyone looks.', if:()=>S.done.q1 && S.f.marga!=='gone', do:()=>{S.f.liesl='marga';}, out:()=>['Matthis drives her out before dawn in a cart of flour sacks.','Marga meets them at the gate, takes one look at the girl, and says "Oh, you’re one of mine." Nobody knows what she means by it.'], next:'q3c' },
@@ -378,46 +380,75 @@ N.q3c = {
   q:'q3', where:'The square, next morning', title:'Questions',
   text: () => [
     'Rook asks to speak with you. Alone, he says, and then brings two men. He is polite. He knows what you are. He asks where the baker’s girl is, and then, before you answer, he asks about Ashbrook, and the bridge, and a light some people saw.',
-    R('He is building a case. Not against the girl. Against you.', 'He is enjoying this. He is looking at your mouth while you talk, and you know that look, and it is not the one men usually give you.')
+    R('He is building a case. Not against the girl. Against you.', 'He is enjoying this. He is looking at your mouth while you talk, and you know that look, and it is not the one men usually give you.'),
+    'Behind him, his men are already going door to door. The bakery is three doors from the inn.'
   ],
   choices: [
-    { t:'Lie. Smoothly. The girl ran off to Oxenfurt a week ago.', do:()=>{S.f.q3lied=1;}, out:()=>['He nods as if he believes you. He writes it down. He does not believe you.'], next:'q3d' },
-    { t:'Bribe him. Fifty crowns for a letter that says Greyhollow is clean.', if:()=>S.coin>=50, do:()=>{S.coin-=50;S.f.q3bribed=1;S.eye=Math.max(0,S.eye-1);}, out:()=>['He takes it without looking at it. "The Fire is grateful for your donation."','It buys you a day, maybe two. The eye on you softens, slightly.'], next:'q3d' },
-    { t:'Hex him. Make him forget the girl’s name.', who:'s', do:()=>{S.f.q3hexed=1;S.eye+=3;}, out:()=>['You touch his wrist like you are flirting and take the name out of his head.','It works. He stands there blinking. His two men saw your hand glow. The Fire’s eye on you is wide open now.'], next:'q3d' },
-    { t:'Let him see your eyes. Remind him what a witcher does to men who threaten him.', who:'w', do:()=>{S.f.q3scared=1;S.eye+=1;}, out:()=>['His men step back. He does not, but his hand finds his medallion.','You have bought silence, not safety. He will write to Oxenfurt tonight.'], next:'q3d' }
+    { t:'Lie. Smoothly. The girl ran off to Oxenfurt a week ago.', do:()=>{S.f.q3lied=1;}, out:()=>['He nods as if he believes you. He writes it down. He does not believe you.'], next:'q3search' },
+    { t:'Bribe him. Fifty crowns for a letter that says Greyhollow is clean.', if:()=>S.coin>=50, do:()=>{S.coin-=50;S.f.q3bribed=1;S.eye=Math.max(0,S.eye-1);}, out:()=>['He takes it without looking at it. "The Fire is grateful for your donation."','He does not call off the search. He just stops looking at you while it happens. The eye on you softens, slightly.'], next:'q3search' },
+    { t:'Hex him. Make him forget the girl’s name.', who:'s', do:()=>{S.f.q3hexed=1;S.eye+=3;}, out:()=>['You touch his wrist like you are flirting and take the name out of his head.','It works. He stands there blinking. His two men saw your hand glow. The Fire’s eye on you is wide open now.','His men do not need the name. They have the bakery.'], next:'q3search' },
+    { t:'Let him see your eyes. Remind him what a witcher does to men who threaten him.', who:'w', do:()=>{S.f.q3scared=1;S.eye+=1;}, out:()=>['His men step back. He does not, but his hand finds his medallion.','You have bought silence, not safety. He will write to Oxenfurt tonight.'], next:'q3search' }
   ]
 };
-N.q3d = {
-  q:'q3', where:'The Drowned Rat, that night', title:'The knock',
+N.q3search = {
+  q:'q3', where:'The Drowned Rat, dusk', title:'The search',
   text: () => {
-    const raid = S.f.q3hexed || S.eye>=6 || (S.f.elves==='reported' ? false : S.f.q3scared);
+    const l = S.f.liesl;
+    const t = ['Four of Rook’s men come through the inn at dusk with torches and a dog. They are not subtle. They turn over the beds, they open the flour barrels, they put a boot through Berna’s cellar door.'];
+    if (l==='hidden') t.push('One of them stops at the hearth and looks up. The dog is looking up too. Pip is up there with Liesl, and Pip is a nature spirit, not a soldier.');
+    if (l==='trained') t.push('Liesl is in the back room, sitting at the table with her hands folded, three candles in front of her, none of them lit. A man asks her name. She tells him. A man asks if she is afraid. "No," she says, and nothing on the table moves.');
+    if (l==='coached') t.push('Liesl is in the back room, sitting at the table with her hands folded. A man asks her name. She tells him the boring story you gave her, in the boring voice. Then Rook comes in, pulls a chair up close, and asks her what her mother’s name was.');
+    if (l==='marga'||l==='hag') t.push('She is not here and they know it. So they take Matthis instead. Two men walk the baker out of his own shop in irons. "Bait," Rook says, pleasantly, to the street. "Children come home for their fathers."');
+    return t;
+  },
+  choices: [
+    { t:'Let Pip handle it. Godlings are good at being somewhere else.', if:()=>S.f.liesl==='hidden', do:()=>{S.f.q3pip=1;}, out:()=>['Every pot in the kitchen falls off its hook at once. The dog bolts. The torches gutter. A voice from the rafters says "BOO" in a tone of enormous satisfaction.','The soldier at the hearth decides the chimney is a problem for the morning. There will not be a morning for this. Pip has never been prouder.'], next:'q3night' },
+    { t:R('Axii the man at the hearth. He has seen nothing.','Glamour the hearth. Stone, soot, no ladder, no girl.'), if:()=>S.f.liesl==='hidden', do:()=>{S.eye+= W()?1:2;}, out:()=>W()?['He blinks, nods, and walks out. The dog does not nod. The dog keeps looking up, and one of the other men notices the dog.','It holds. Barely. Someone will mention the dog to Rook.']:['The hearth is a hearth. The dog whines at nothing and is kicked for it.','It holds. The man who was kicked for his dog will mention the woman by the fire whose shadow fell the wrong way.'], next:'q3night' },
+    { t:'Do nothing. Trust the hiding place.', if:()=>S.f.liesl==='hidden', do:()=>{S.f.liesl='taken';S.trust-=1;}, out:()=>['He puts the torch up the flue. Liesl screams. They have her out and in the cage inside a minute, and Pip is a smear of soot on the hearthstone, crying.','The town watched you stand there. Trust drops.'], next:'q3night' },
+    { t:'Stand behind her and say nothing.', if:()=>S.f.liesl==='trained', do:()=>{S.trust+=1;}, out:()=>['They search the room around her and leave. Rook looks at the three unlit candles for a long moment and then at you.','She did that. You taught her to. The town saw a baker’s girl stare down the Fire and Greyhollow is quietly thrilled.'], next:'q3night' },
+    { t:'Get her out the back before they reach the room. Do not make her test it.', if:()=>S.f.liesl==='trained', do:()=>{S.eye+=1;}, out:()=>['She goes over the yard wall. The dog goes after her. Halfway down the lane the dog’s tail catches fire, just the tail, just for a second, and the dog goes home.','They lose her. They also now know exactly what they are looking for, and that it has been taught. The Fire’s eye on you grows.'], next:'q3night' },
+    { t:'Answer for her. "Her mother was Hanna. Died of the flux. Anything else?"', if:()=>S.f.liesl==='coached', do:()=>{S.f.q3answered=1;}, out:()=>['Rook does not look at you. He keeps looking at Liesl, who has gone white. "I asked her," he says. Then, lightly: "Hanna. I will remember that."','They leave. It held. Rook now has a name he can check, and a girl whose face told him everything.'], next:'q3night' },
+    { t:'Let her answer.', if:()=>S.f.liesl==='coached', do:()=>{S.f.liesl='taken';S.trust-=1;}, out:()=>['"Hanna," Liesl says, and the candle on the table goes up like a torch.','Rook smiles for the first time since he rode in. The cage door closes. Trust drops.'], next:'q3night' },
+    { t:'Let them take Matthis. She is safe where she is.', if:()=>S.f.liesl==='marga'||S.f.liesl==='hag', do:()=>{S.f.matthis='taken';S.trust-=2;}, out:()=>['The street watches a baker go into a cage for a daughter who is miles away. Nobody says your name. Nobody has to.','Trust drops hard. Liesl will hear about this wherever she is.'], next:'q3night' },
+    { t:'Stop them. Nobody takes the baker.', if:()=>S.f.liesl==='marga'||S.f.liesl==='hag', do:()=>{S.f.q3stopped=1;S.trust+=2;S.eye+=1;}, out:()=>W()?['You take the irons off him with your hands. The two men decide they have other errands.','The street cheers. Rook, from the chapel steps, writes it down.']:['You do not touch anyone. You say "Let him go," and the irons open on their own, and every man on the street sees them open.','The street cheers. Rook, from the chapel steps, writes it down.'], next:'q3night' }
+  ]
+};
+N.q3night = {
+  q:'q3', where:'The Drowned Rat, midnight', title:'The knock',
+  text: () => {
+    const raid = !!(S.f.q3hexed || S.eye>=5 || S.f.q3scared || S.f.q3stopped || S.f.q3spoke);
     S.f.q3raid = raid ? 1 : 0;
-    return raid ? [
-      'They come at midnight. Rook and six men, torches, the cage on wheels. Someone told him. Pip says the alderman did, and Pip is usually right about who smells of guilt.',
-      'They are not here for Liesl first. They are here for you.'
-    ] : [
-      'Nothing comes at midnight. Rook leaves in the morning with an empty cage and a letter he will send from Oxenfurt.',
-      S.f.elves==='reported' ? 'Hodd walked him to the gate personally. The alderman likes you, which is worth something, and costs something.' : 'The town watched him go and then looked at you differently. Not worse. Carefully.'
+    if (raid) return [
+      'They come at midnight. Rook and all six, torches, the cage on wheels, a warrant he wrote himself. Someone told him where you sleep. Pip says the alderman did, and Pip is usually right about who smells of guilt.',
+      S.f.liesl==='taken' || S.f.matthis==='taken' ? 'They already have their prisoner in the cage outside. They are here for you.' : 'They are not here for Liesl first. They are here for you.'
+    ];
+    return [
+      'Nothing comes at midnight. Rook has what he came for, or has decided this town is not worth a fourth day.',
+      S.f.liesl==='taken' ? 'Liesl is in the cage in the square. Rook leaves at first light for Oxenfurt, and in Oxenfurt there is a pyre with room on it.' :
+      S.f.matthis==='taken' ? 'Matthis is in the cage in the square. Rook leaves at first light for Oxenfurt, and the baker is going with him as a lesson.' :
+      'Rook leaves at first light with an empty cage and a letter he will send from Oxenfurt with your name in it.'
     ];
   },
   choices: [
-    { t:'Fight through them. Get to the girl.', if:()=>S.f.q3raid, do:()=>{S.f.rook='dead';S.trust-=1;S.eye+=2;}, out:()=>W()?['Six men with torches against a witcher in a doorway. It is not a fight, it is a lesson. Rook dies last, on the steps, surprised.','Liesl is safe. Oxenfurt will hear a captain of the Order died in Greyhollow, and the next letter will be a column.']:['You let them see you. Properly. The glamour comes off and the room fills with a light that is not fire, and six men learn what the Order has been burning women to avoid.','Rook dies with his medallion in his fist. Liesl is safe. Oxenfurt will hear, and the next letter will be a column.'], next:'q3end' },
-    { t:'Run. Out the back, into the dark. Let the town handle the morning.', if:()=>S.f.q3raid, do:()=>{S.f.rook='alive'; if(S.f.liesl==='hidden'||S.f.liesl==='coached'){S.f.liesl='taken';} S.trust-=2;}, out:()=>['You are gone before the door breaks. You are good at this.',(S.f.liesl==='taken')?'Pip could not stop six men from looking up a chimney. Liesl is in the cage by dawn.':'Liesl is already out of their reach. They search the inn and leave with nothing but the alderman’s goodwill.','Rook writes to Oxenfurt with your name in it.'], next:'q3end' },
-    { t:'Humiliate him. Walk out the front door and make him explain, in front of the town, why six armed men need a cage for a baker’s child.', if:()=>S.f.q3raid, do:()=>{S.f.rook='shamed';S.trust+=2;}, out:()=>['It works because the town is already outside, holding lanterns, and because Rook, for all his sermons, has never once been asked a question by a crowd.','He leaves at dawn with an empty cage and a face like a slapped priest.',(S.f.liesl==='hidden')?'Liesl climbs down from the chimney covered in soot and bows. The town laughs. Rook hears it from the road.':'','He will not forget this. Trust in you rises.'].filter(Boolean), next:'q3end' },
-    { t:'Let him go.', if:()=>!S.f.q3raid, do:()=>{S.f.rook='alive';}, out:()=>['He goes. For now.'], next:'q3end' }
+    { t:'Fight through them.', if:()=>S.f.q3raid, do:()=>{S.f.rook='dead';S.trust-=1;S.eye+=2; if(S.f.liesl==='taken') S.f.liesl='hidden'; if(S.f.matthis==='taken') S.f.matthis='freed';}, out:()=>W()?['Six men with torches against a witcher in a doorway. It is not a fight, it is a lesson. Rook dies last, on the steps, surprised.','You break the cage open with a pommel. Oxenfurt will hear a captain of the Order died in Greyhollow, and the next letter will be a column.']:['You let them see you. Properly. The glamour comes off and the room fills with a light that is not fire, and six men learn what the Order has been burning women to avoid.','Rook dies with his medallion in his fist. The cage opens on its own. Oxenfurt will hear, and the next letter will be a column.'], next:'q3end' },
+    { t:'Run. Out the back, into the dark.', if:()=>S.f.q3raid, do:()=>{S.f.rook='alive';S.trust-=2; if(S.f.liesl==='hidden' && !S.f.q3pip) S.f.liesl='taken';}, out:()=>['You are gone before the door breaks. You are good at this.',(S.f.liesl==='taken')?'They search the inn properly this time. Liesl is in the cage by dawn.':(S.f.liesl==='hidden'?'Pip drops every pot in the kitchen again. It works again. Liesl stays up the chimney, shaking.':'They search the inn and leave with nothing but the alderman’s goodwill.'),'Rook writes to Oxenfurt with your name in it. Trust drops.'], next:'q3end' },
+    { t:'Walk out the front door and make him explain, to the whole street, why six armed men need a cage for a baker’s child.', if:()=>S.f.q3raid, do:()=>{S.f.rook='shamed';S.trust+=2; if(S.f.liesl==='taken') S.f.liesl='hidden'; if(S.f.matthis==='taken') S.f.matthis='freed';}, out:()=>['It works because the town is already outside, holding lanterns, and because Rook, for all his sermons, has never once been asked a question by a crowd.','Berna opens the cage herself. Rook leaves at dawn with it empty and a face like a slapped priest.',(S.f.liesl==='hidden')?'Liesl climbs down from the chimney covered in soot and bows. The town laughs. Rook hears it from the road.':'','He will not forget this. Trust rises.'].filter(Boolean), next:'q3end' },
+    { t:'Break the cage before dawn. Quietly.', if:()=>!S.f.q3raid && (S.f.liesl==='taken'||S.f.matthis==='taken'), do:()=>{S.f.rook='alive';S.eye+=1; if(S.f.liesl==='taken') S.f.liesl='hidden'; if(S.f.matthis==='taken') S.f.matthis='freed';}, out:()=>W()?['One sleeping guard, one Axii, one bent bar. Whoever was in the cage is back in the inn before the chapel bell.','Rook wakes to an empty cage and knows exactly who did it. He leaves anyway. He has a column to ask for.']:['One sleeping guard, one whispered word, one lock that decides it was never a lock. Whoever was in the cage is back in the inn before the chapel bell.','Rook wakes to an empty cage and knows exactly who did it. He leaves anyway. He has a column to ask for.'], next:'q3end' },
+    { t:'Let him go.', if:()=>!S.f.q3raid, do:()=>{S.f.rook='alive';}, out:()=>[(S.f.liesl==='taken')?'The cage rolls out at dawn with Liesl in it. Matthis runs after it to the bridge and stops there.':(S.f.matthis==='taken')?'The cage rolls out at dawn with Matthis in it. The bakery does not open again.':'He goes. For now. Your name goes with him.'], next:'q3end' }
   ]
 };
 N.q3end = { q:'q3', end:true, where:'Greyhollow', title:'The spark, closed',
   text: () => [
     'Liesl:',
-    S.f.liesl==='trained' ? 'She can light one candle without lighting the others. She looks at you like you hung the moon.' :
-    S.f.liesl==='hidden' ? 'She is in the chimney with Pip, and safe for exactly as long as nobody looks up.' :
-    S.f.liesl==='coached' ? 'She can lie with a straight face now. It is not nothing.' :
-    S.f.liesl==='marga' ? 'She is in Ashbrook with Marga and the chickens, learning things nobody writes down.' :
-    S.f.liesl==='hag' ? 'She is in Nettle Fen. Pip will not say her name anymore.' :
+    S.f.liesl==='trained' ? 'She can light one candle without lighting the others. She stared down the Fire at her own kitchen table. She looks at you like you hung the moon.' :
+    S.f.liesl==='hidden' ? (S.f.q3pip ? 'She is alive because a ninety-year-old chimney spirit threw every pot in the kitchen. She and Pip are inseparable now.' : 'She is alive, and she was in that chimney for all of it.') :
+    S.f.liesl==='coached' ? 'She can lie with a straight face now. Rook has her mother’s name in his book.' :
+    S.f.liesl==='marga' ? 'She is in Ashbrook with Marga and the chickens, learning things nobody writes down.' + (S.f.matthis==='taken' ? ' Her father is in a cage on the Oxenfurt road.' : '') :
+    S.f.liesl==='hag' ? 'She is in Nettle Fen. Pip will not say her name anymore.' + (S.f.matthis==='taken' ? ' Her father is in a cage on the Oxenfurt road. The fen will hear about that.' : '') :
     'She is in a cage on the Oxenfurt road.',
-    'Rook: ' + (S.f.rook==='dead' ? 'dead on the inn steps. Oxenfurt will send more.' : S.f.rook==='shamed' ? 'alive, humiliated, and writing a very long letter.' : 'alive, and your name is in his book.'),
-    'The Fire’s eye on you: ' + (S.eye>=7 ? 'wide open.' : S.eye>=4 ? 'watching.' : 'elsewhere, for now.')
+    'Rook: ' + (S.f.rook==='dead' ? 'dead on the inn steps. Oxenfurt will send more.' : S.f.rook==='shamed' ? 'alive, humiliated in front of a whole street, and writing a very long letter.' : 'alive, and your name is in his book.'),
+    'The Fire’s eye on you: ' + (S.eye>=7 ? 'wide open.' : S.eye>=4 ? 'watching.' : 'elsewhere, for now.'),
+    'What this changes later: who stands in the square on the night the horns sound, and whether thirty white cloaks come back for you.'
   ]
 };
 
@@ -521,7 +552,8 @@ N.q5town = {
     // Liesl
     if (S.f.liesl==='trained') t.push('In the square, the Nilfgaardian captain found a twelve-year-old girl standing in front of the bakery. He is still there, in a sense. She lit one candle, and only one, and it was him.');
     if (S.f.liesl==='taken') t.push('The Order built a pyre in the square before the raid was even over. Liesl is on it. ' + (S.f.held && d>=2 ? 'You cut her down with the torches already lit. She will not sleep for a year. She is alive.' : 'You were not there. You were on the bridge, or running. The town will not say her name to you.'));
-    if (S.f.liesl==='hag') t.push('Auntie Yew walked out of Nettle Fen at midnight with Liesl beside her, and whatever Liesl is now, the thirty men in white cloaks went into the fen after them and did not come out. Pip hid in your coat the whole time.');
+    if (S.f.liesl==='hag') t.push('Auntie Yew walked out of Nettle Fen at midnight with Liesl beside her, and whatever Liesl is now, the thirty men in white cloaks went into the fen after them and did not come out. Pip hid in your coat the whole time.' + (S.f.matthis==='taken' ? ' Liesl did not look at you once. She knows who let them take her father.' : ''));
+    if (S.f.matthis==='taken' && S.f.liesl==='marga') t.push('Matthis did not come back from Oxenfurt. The bakery is dark. Liesl stayed in Ashbrook with Marga, and Marga has told her everything.');
     if (S.f.liesl==='marga') t.push('Liesl is in Ashbrook with Marga. Nothing came near Ashbrook. A charm on a lintel, maybe. Marga is not saying.');
     if (S.f.liesl==='hidden' && !S.f.q3raid) t.push('Liesl is in the chimney. Liesl was in the chimney for all of it. She comes down at dawn, black with soot, and asks if she can have her bread now.');
     if (S.f.liesl==='coached') t.push('Liesl kept her face dull and her story boring and walked past two hundred men and a priest without lighting anything. You taught her that.');
@@ -616,12 +648,13 @@ function visibleChoices(n){
 }
 function startQuest(id){
   const q = QUESTS.find(x=>x.id===id);
+  S.pipMet = 1;
   // reset this quest's flags so replays are clean
   const keep = {};
   Object.keys(S.f).forEach(k => { if (!k.startsWith(id)) keep[k]=S.f[k]; });
   if (id==='q1'){ delete keep.wraith; delete keep.lukas; delete keep.marga; delete keep.margaSafe; delete keep.margaWitness; delete keep.margaCharm; delete keep.bribe; delete keep.refused; delete keep.bertKnows; }
   if (id==='q2'){ delete keep.troll; delete keep.elves; delete keep.trollFriend; delete keep.trollTruth; delete keep.trollScared; }
-  if (id==='q3'){ delete keep.liesl; delete keep.rook; }
+  if (id==='q3'){ delete keep.liesl; delete keep.rook; delete keep.matthis; }
   if (id==='q4'){ delete keep.leshen; delete keep.ysolde; delete keep.marked; delete keep.aldo; }
   if (id==='q5'){ delete keep.held; delete keep.burned; delete keep.trollDiedBridge; }
   S.f = keep; S.node = q.start; S.chosen = null; render();
@@ -659,6 +692,7 @@ function ledgerHTML(){
     ['The elves', S.f.elves==='saved' ? ['In the hills. Came back with arrows.','good'] : S.f.elves==='reported' ? ['Redanian irons.','bad'] : ['Unknown.','']],
     ['Liesl', S.f.liesl==='trained' ? ['Alive. Lit one candle. It was a captain.','good'] : S.f.liesl==='taken' ? (S.f.held && d>=2 ? ['Cut down from the pyre. Alive.','good'] : ['Burned.','bad']) : S.f.liesl==='hag' ? ['Alive. Not the same girl.',''] : S.f.liesl==='marga' ? ['Alive, in Ashbrook, learning things.','good'] : S.f.liesl==='hidden' ? ['Alive. Mostly soot.','good'] : S.f.liesl==='coached' ? ['Alive. Boring on purpose.','good'] : ['Never met her.','']],
     ['Rook', S.f.rook==='dead' ? ['Dead. The Order remembers.','bad'] : S.f.rook==='shamed' ? ['Alive. Humiliated twice.','good'] : S.f.rook ? ['Alive. Your name in his book.','bad'] : ['Never came.','']],
+    ['Matthis the baker', S.f.matthis==='taken' ? ['Taken to Oxenfurt as bait. Did not come back.','bad'] : S.f.matthis==='freed' ? ['Pulled out of the cage. Baking again.','good'] : S.done.q3 ? ['Alive. Bread still a little burnt.',''] : ['Never met him.','']],
     ['Marga', S.f.marga==='gone' ? ['House burned. Gone.','bad'] : S.done.q1 ? ['Alive. Chickens intact.','good'] : ['Never met her.','']],
     ['Lukas', S.f.lukas==='hanged' ? ['Hanged by his father.','bad'] : S.f.lukas==='owes' ? ['Alive. Paid his debt on the bridge.','good'] : S.f.lukas==='free' ? ['Got away with it.','bad'] : ['Never met him.','']],
     ['Aurelio', S.f.wraith==='rested' ? ['Went home.','good'] : S.f.wraith==='destroyed' ? ['Destroyed.',''] : S.f.wraith==='river' ? ['In the river. Took a rank of Nilfgaardians with him.',''] : ['Never met him.','']],
