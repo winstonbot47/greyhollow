@@ -158,16 +158,41 @@ N.hub = {
 
 // ===================== QUEST 1: SALT IN THE WELL =====================
 N.q1a = {
-  q:'q1', where:'Ashbrook, a hamlet upriver', title:'Salt in the well',
+  q:'q1', where:'The river road to Ashbrook', title:'Salt in the well',
   text: () => [
-    'Ashbrook’s well tastes of iron. Two cows are dead, a child is sick, and the village has decided this is the work of the widow Marga, who sells herbs and talks to her chickens. Berthold, the ealdorman (the village headman, the closest thing Ashbrook has to a mayor), offers sixty crowns to "deal with whatever is down there."',
+    'Ashbrook is an hour upriver: thirty houses, a mill, a shrine to whichever god was listening last, and one well. The well tastes of iron. Two cows are dead, a child is sick, and the village has decided this is the work of the widow Marga, who sells herbs and talks to her chickens.',
+    'Berthold, the ealdorman (the village headman, the closest thing Ashbrook has to a mayor), has sent to Greyhollow for help. Sixty crowns to "deal with whatever is down there."',
     R('A child is sick and a village wants to burn an old woman. A witcher has seen this exact shape before. The monster is rarely the one they point at.',
-      'You have been that old woman, in other villages, under other names. You feel the mood of the square the way other people feel weather.'),
-    'Where do you start?'
+      'You have been that old woman, in other villages, under other names. You feel the mood of a square the way other people feel weather.'),
+    '<pip>Pip, from your pocket: "Ashbrook. Good bread, bad gossip. The miller’s wife cheats at dice. I’ll be quiet now."</pip>',
+    'On the road in, a woman is running toward you with a boy in her arms.'
+  ],
+  choices: [
+    { t:'Stop. Look at the boy.', out:()=>['His name is Tam. He is six. His lips are grey and his breathing is wrong, and his mother, Ida, has been carrying him since dawn because the village told her the witch did it and she does not know what else to do.'], next:'q1child' },
+    { t:'Keep walking. The well first, then the sick.', do:()=>{S.f.q1passedChild=1;S.trust-=1;}, out:()=>['You tell her the healer in Greyhollow is an hour that way. She looks at you like you are made of wood.','Ashbrook hears about it before you reach the gate. Trust drops.'], next:'q1gate' }
+  ]
+};
+N.q1child = {
+  q:'q1', where:'The river road', title:'Tam',
+  text: () => [
+    R('You know poison when you see it. Not a curse. Something in the water, something that was alive once and is not now. White Honey would clear it from a witcher’s blood in an hour. In a six-year-old it would clear everything else too.',
+      'You put your hand on his chest and feel it: not a curse. Rot. Something dead in the water, and its slow black breath in his lungs. You could burn it out of him. It would cost you, and someone on this road would see.'),
+    'Ida is watching your hands.'
+  ],
+  choices: [
+    { t:R('Cut a White Honey draught ten to one with river water and make him drink it.','Burn it out of him. Here. Now.'), do:()=>{S.f.childSaved=1;S.trust+=2; if(!W()) S.eye+=1;}, out:()=>W()?['He vomits black for a full minute. Then he breathes. Then he asks for bread.','Ida does not say thank you. She says "Who else?" and you understand she means the well.','Ashbrook will remember this. Trust rises.']:['Light under your palm, and a smell like a struck match. He screams once, then breathes, then asks for bread.','Ida does not say thank you. She says "Who else?" and you understand she means the well.','Ashbrook will remember this. Trust rises. So does the chance someone on the road describes the light to the wrong person.'], next:'q1gate' },
+    { t:'Tell her the truth: keep him off the well water, and he will mend. Slowly.', do:()=>{S.f.childSaved=0;S.trust+=0;}, out:()=>['She believes you, because you did not try to sell her anything.','Tam will be sick for a week. He will live. Ida will tell the village the stranger said it was the water, not the witch.'], next:'q1gate' }
+  ]
+};
+N.q1gate = {
+  q:'q1', where:'Ashbrook gate', title:'Three doors',
+  text: () => [
+    'Ashbrook at noon: shutters closed, a dog barking at nothing, and a knot of men by the shrine with a rope they are not using yet. The well is in the square. Berthold’s house is the only one with glass windows. Marga’s hut is at the far end of the lane, chickens loose in the road.',
+    'You can do all three. The order matters, because the men with the rope are not going to wait all day.'
   ],
   choices: [
     { t:'The well. Look before you listen.', do:()=>{S.f.q1well=1;}, out:()=>['You go down first. Nobody argues.'], next:'q1well' },
-    { t:'Marga, before the village gets to her.', do:()=>{S.f.q1margaFirst=1;S.f.q1marga=1;}, out:()=>['You reach her hut as two men with a rope are deciding whether to knock.','They see you and remember urgent business elsewhere.'], next:'q1marga' },
+    { t:'Marga, before the rope gets used.', do:()=>{S.f.q1margaFirst=1;S.f.q1marga=1;}, out:()=>['You reach her hut as two men with the rope are deciding whether to knock.','They see you and remember urgent business elsewhere.'], next:'q1marga' },
     { t:'Berthold. Follow the money.', do:()=>{S.f.q1bert=1;}, out:()=>['He pours you a drink before you ask a question. That is usually a question answered.'], next:'q1bert' }
   ]
 };
@@ -176,14 +201,13 @@ N.q1well = {
   text: () => [
     R('You go down on a rope with a torch in your teeth. Thirty feet down, the water is black and cold and your medallion is humming hard enough to hurt.',
       'You do not go down. You prick your thumb, let one drop fall into the bucket, and the well tells you itself, in the back of your skull, like a man shouting underwater.'),
-    'There is a body under the water. A soldier in Nilfgaardian black, throat cut, a millstone roped to his chest. He has been there about a month. A letter in his coat, half rotted: his name is Aurelio, he deserted at the Pontar crossing, and he was walking home.',
+    'There is a body under the water. A soldier in Nilfgaardian black, throat cut, a millstone roped to his chest. He has been there about a month. A letter in his coat, half rotted: his name is Aurelio, he deserted at the Pontar crossing, and he was walking home to a town called Vicovaro to see his mother before she died.',
     'His killer left the knife in him. A hunting knife, good steel, with two letters burned into the handle. L. B.',
     'And he is not a drowner, the common river monster the village assumes. He is becoming a wraith: a ghost made from a bad death, angry, and tied to the place it died. In a day or two he will be done becoming.'
   ],
   choices: [
-    { t:'Talk to Marga.', if:()=>!S.f.q1marga, do:()=>{S.f.q1marga=1;}, out:()=>['Her hut door is open and her chickens are loose. Someone got here first.'], next:'q1marga' },
-    { t:'Talk to Berthold.', if:()=>!S.f.q1bert, do:()=>{S.f.q1bert=1;}, out:()=>['He is waiting with a drink and a very steady smile.'], next:'q1bert' },
-    { t:'Wait for nightfall.', out:()=>['You sit by the well with your back to the stone and wait for the thing to finish becoming.'], next:'q1night' }
+    { t:'Take the letter and the knife.', do:()=>{S.f.q1letter=1;}, out:()=>['Both go in your coat. The letter smells of river. His mother’s name is Livia.'], next:'q1hub' },
+    { t:'Leave him as he is. Touch nothing.', out:()=>['You come back up with nothing but the name. The knife stays in him.','Without the knife there is no proof. Without the letter there is no address.'], next:'q1hub' }
   ]
 };
 N.q1marga = {
@@ -194,22 +218,15 @@ N.q1marga = {
     R('She looks at your eyes for a long moment. "Cat eyes. My grandmother said your kind can tell a lie from a truth by the smell. Can you?" You can, a little. She is not lying.',
       'She looks you up and down. "Aretuza. I can smell it on you, girl. Chaos and expensive soap." Then, quieter: "They will come for me with a rope, and when they are done with me they will remember you."')
   ] : [
-    'You find Marga tied to the shrine post in the square with a split lip and a crowd of six deciding what comes next. You cut her loose. The crowd does not like that, and lets you know it.',
-    'Later, in her hut, shaking, she tells you: Lukas, the ealdorman’s son, at the well a month ago, with a rope, with something heavy. She told nobody. She is not going to tell anybody now. "I am done being brave for this village."'
+    'You find Marga tied to the shrine post in the square with a split lip and a crowd of six deciding what comes next. The rope is over the beam already.',
+    'The miller, a wide man named Orm, has the end of it.'
   ],
   choices: [
-    { t:'Promise to keep her name out of it.', do:()=>{S.f.margaSafe=1;}, out:()=>['She nods once. "Then you carry it."'], next:'q1after_marga' },
-    { t:'Ask her to stand up and say it in the square.', if:()=>S.f.q1margaFirst, do:()=>{S.f.margaWitness=1;S.trust+=1;}, out:()=>['She is quiet a long time. "If you are standing next to me. Not behind. Next to."','You agree. Trust in you rises; she has decided you are worth something.'], next:'q1after_marga' },
-    { t:'Give her a charm that turns eyes away from her door.', who:'s', do:()=>{S.f.margaSafe=1;S.f.margaCharm=1;S.eye+=1;}, out:()=>['You twist three of her chicken feathers and a hair of your own into a knot and hang it on the lintel. Nobody will find this hut tonight unless they already know the way.','Someone in the square saw the light in your hands. The Eternal Fire’s eye on you grows.'], next:'q1after_marga' }
-  ]
-};
-N.q1after_marga = {
-  q:'q1', where:'Ashbrook', title:'Two names',
-  text: () => ['You have a name now. Lukas. L. B. The knife in the well matches the boy.', 'The afternoon is getting long.'],
-  choices: [
-    { t:'Look at the well.', if:()=>!S.f.q1well, do:()=>{S.f.q1well=1;}, out:()=>['You go to see it for yourself.'], next:'q1well' },
-    { t:'Talk to Berthold.', if:()=>!S.f.q1bert, do:()=>{S.f.q1bert=1;}, out:()=>['He is waiting with a drink and a very steady smile.'], next:'q1bert' },
-    { t:'Wait for nightfall.', out:()=>['You sit by the well and wait.'], next:'q1night' }
+    { t:'Promise to keep her name out of it.', if:()=>S.f.q1margaFirst, do:()=>{S.f.margaSafe=1;}, out:()=>['She nods once. "Then you carry it."'], next:'q1hub' },
+    { t:'Ask her to stand up and say it in the square.', if:()=>S.f.q1margaFirst, do:()=>{S.f.margaWitness=1;S.trust+=1;}, out:()=>['She is quiet a long time. "If you are standing next to me. Not behind. Next to."','You agree. Trust rises; she has decided you are worth something.'], next:'q1hub' },
+    { t:'Give her a charm that turns eyes away from her door.', who:'s', if:()=>S.f.q1margaFirst, do:()=>{S.f.margaSafe=1;S.f.margaCharm=1;S.eye+=1;}, out:()=>['You twist three of her chicken feathers and a hair of your own into a knot and hang it on the lintel. Nobody will find this hut tonight unless they already know the way.','Someone in the square saw the light in your hands. The Eternal Fire’s eye on you grows.'], next:'q1hub' },
+    { t:'Talk Orm down. "Hang her and the well is still poisoned tomorrow."', if:()=>!S.f.q1margaFirst, do:()=>{S.f.q1margaBeaten=1;S.trust+=1;}, out:()=>['It takes a while. Orm wants to be talked down; he just wants it to look like he lost an argument, not a fight.','Marga walks home on her own feet, which is more than she expected. She will not testify to anything now. "I am done being brave for this village." Trust rises anyway.'], next:'q1hub' },
+    { t:R('Cut the rope. Let them look at the sword and think.','Cut the rope. Let them look at you and think.'), if:()=>!S.f.q1margaFirst, do:()=>{S.f.q1margaBeaten=1;S.trust-=1; if(!W()) S.eye+=1;}, out:()=>['Nobody argues with it. Nobody forgives it either.','Marga walks home. She will not testify to anything now. Trust drops.'], next:'q1hub' }
   ]
 };
 N.q1bert = {
@@ -220,18 +237,40 @@ N.q1bert = {
     R('Your medallion does not react to lies. You do not need it to.', 'He is sweating the way men sweat when they think a woman has not noticed something.')
   ],
   choices: [
-    { t:'Take the purse. Say nothing.', do:()=>{S.f.bribe=1;S.coin+=80;}, out:()=>['Eighty crowns heavier. He relaxes.','He thinks he has bought you. Whether he has is up to you.'], next:'q1after_bert' },
-    { t:'Leave it on the table.', do:()=>{S.f.refused=1;}, out:()=>['"I was hired to find out what is in the well. I am going to find out."','His smile goes somewhere else.'], next:'q1after_bert' },
-    { t:'Ask him where Lukas was a month ago.', do:()=>{S.f.refused=1;S.f.bertKnows=1;}, out:()=>['He stops breathing for a second. Then: "Hunting."','You both know what that means now.'], next:'q1after_bert' }
+    { t:'Take the purse. Say nothing.', do:()=>{S.f.bribe=1;S.coin+=80;}, out:()=>['Eighty crowns heavier. He relaxes.','He thinks he has bought you. Whether he has is up to you.'], next:'q1hub' },
+    { t:'Leave it on the table.', do:()=>{S.f.refused=1;}, out:()=>['"I was hired to find out what is in the well. I am going to find out."','His smile goes somewhere else.'], next:'q1hub' },
+    { t:'Ask him where Lukas was a month ago.', do:()=>{S.f.refused=1;S.f.bertKnows=1;}, out:()=>['He stops breathing for a second. Then: "Hunting."','You both know what that means now.'], next:'q1hub' }
   ]
 };
-N.q1after_bert = {
+N.q1hub = {
   q:'q1', where:'Ashbrook', title:'The afternoon',
-  text: () => ['The sun is dropping. Whatever is in the well will be done becoming by dark.'],
+  text: () => {
+    const n = (S.f.q1well?1:0)+(S.f.q1marga?1:0)+(S.f.q1bert?1:0);
+    return [
+      n>=3 ? 'You have seen the well, the widow, and the man with the glass windows. The sun is low.' : 'The sun is dropping. Whatever is in the well will be done becoming by dark.',
+      (S.f.q1well && S.f.q1marga) ? 'You have a name and a knife that match. Lukas. L. B.' : S.f.q1well ? 'L. B. Half the men in Ashbrook have a B in their name. Only one of them has a father with glass windows.' : '',
+      'Lukas himself has not been seen all day. His mother says he is at the hunting blind on the ridge.'
+    ].filter(Boolean);
+  },
   choices: [
     { t:'Look at the well.', if:()=>!S.f.q1well, do:()=>{S.f.q1well=1;}, out:()=>['You go to see it for yourself.'], next:'q1well' },
     { t:'Talk to Marga.', if:()=>!S.f.q1marga, do:()=>{S.f.q1marga=1;}, out:()=>['Her chickens are loose in the lane. Someone got here before you.'], next:'q1marga' },
-    { t:'Wait for nightfall.', out:()=>['You sit by the well and wait.'], next:'q1night' }
+    { t:'Talk to Berthold.', if:()=>!S.f.q1bert, do:()=>{S.f.q1bert=1;}, out:()=>['He is waiting with a drink and a very steady smile.'], next:'q1bert' },
+    { t:'Go up to the hunting blind. Find Lukas before dark.', if:()=>!S.f.q1blind, do:()=>{S.f.q1blind=1;}, out:()=>['The ridge path is steep and the light is going.'], next:'q1blind' },
+    { t:'Wait for nightfall at the well.', if:()=>S.f.q1well||S.f.q1marga, out:()=>['You sit with your back to the stone and wait for the thing to finish becoming.'], next:'q1night' }
+  ]
+};
+N.q1blind = {
+  q:'q1', where:'The hunting blind on the ridge', title:'Lukas',
+  text: () => [
+    'Lukas is nineteen, sitting in a hunting blind with a bow across his knees and a bottle he has not opened. He has been up here most days for a month. He knows why you are here before you say it.',
+    'He says the soldier was in their barn at night, stealing the winter seed. He says he only meant to scare him. He says the man laughed at him, in Nilfgaardian, and then it was done and he did not remember doing it. He says it twice.',
+    'On the floor of the blind is a Nilfgaardian coin purse with eleven florens in it. Aurelio’s. Lukas has not spent one.'
+  ],
+  choices: [
+    { t:'Tell him what is in the well now, and what it will do to the village.', do:()=>{S.f.lukasTold=1;}, out:()=>['He goes white. He did not know. He thought a body in a well was a body in a well.','"What do I do?" You tell him to be at the well at midnight. He will come. You can see it.'], next:'q1hub' },
+    { t:'Take the purse. Say nothing yet.', do:()=>{S.f.q1purse=1;S.coin+=11;}, out:()=>['Eleven florens. Nilfgaardian silver. He watches you pocket it and does not ask.','Now he thinks you can be paid. That may be useful.'], next:'q1hub' },
+    { t:R('Axii him, gently. "You will tell your father tonight."','Look him in the eye and let him feel it. "You will tell your father tonight."'), do:()=>{S.f.lukasConfess=1; if(!W()) S.eye+=1;}, out:()=>['He walks down the ridge like a man in a dream and into his father’s house with the glass windows.','By the time you reach the square, Berthold is standing in his doorway looking at nothing. He knows. Everyone will know by morning.'], next:'q1hub' }
   ]
 };
 N.q1night = {
@@ -239,36 +278,64 @@ N.q1night = {
   text: () => [
     'He comes up out of the well like smoke that forgot it was supposed to rise. Black coat, open throat, a face that is still mostly a face. He speaks Nilfgaardian, then Common, then just sound. He is asking which way is south. He is asking for his mother.',
     S.f.q1well ? 'You know his name. That matters more than silver.' : 'You never went down. You do not know his name, and he can tell.',
+    S.f.lukasTold ? 'Lukas is here. Standing at the edge of the square with his bow and no arrows, because you told him not to bring any. The wraith turns toward him first.' : '',
     R('Silver out. Yrden ready. You could end this in a minute.', 'He feels you before he sees you. Wraiths and sorceresses recognize each other. Neither likes it.')
   ],
   choices: [
     { t:'Fight. End it clean.', do:()=>{S.f.wraith='destroyed'; if(!W()) S.eye+=2;}, out:()=>W()?['Yrden traps him on the stones. The silver does the rest. He screams like a man and comes apart like a sheet in wind.','Clean. Quick. Nothing laid to rest, only stopped.']:['You bind him in a circle of light bright enough to be seen from the chapel, and you unmake him with a word your teachers told you never to use in public.','It worked. Half the village saw the light. The Fire’s eye on you grows.'], next:'q1dawn' },
-    { t:'Lay him to rest. Give him his name and burn the knife.', if:()=>S.f.q1well && (W() ? (S.f.q1marga && S.f.q1margaFirst) : true), do:()=>{S.f.wraith='rested'; S.trust+=1;}, out:()=>W()?['You cannot do a rite. Marga can. She stands at the well with you and says his name three times into the water while you hold the knife in a fire.','He turns south. He goes. The well is only a well.','The village saw a witcher and the widow standing together. Trust rises.']:['You say his name into the water three times and burn the knife in your bare hand, which hurts exactly as much as it should.','He turns south. He goes. The well is only a well.','Nobody saw a light, because there was none. The village saw you cry a little, which did you more good than a spell.'], next:'q1dawn' },
-    { t:'Lay him to rest. (Marga is too shaken to do the rite, and you never learned his name.)', if:()=>!(S.f.q1well && (W() ? (S.f.q1marga && S.f.q1margaFirst) : true)), disabled:true },
-    { t:R('Axii. Point him at the river and let him walk.','Glamour. Show him the river and call it the road home.'), do:()=>{S.f.wraith='river';}, out:()=>['He believes you. He walks into the Pontar and under it, still asking for his mother.','The well is clean. The river is not. Something is in it now that remembers you.'], next:'q1dawn' }
+    { t:'Lay him to rest. Give him his name, burn the knife, let the boy say it.', if:()=>S.f.q1well && S.f.q1letter && (W() ? (S.f.q1marga && S.f.q1margaFirst) || S.f.lukasTold : true), do:()=>{S.f.wraith='rested'; S.trust+=1;}, out:()=>W()?[S.f.lukasTold?'You cannot do a rite. But a killer can. Lukas stands at the well and says the name three times into the water, and you hold the knife in a fire until the handle goes.':'You cannot do a rite. Marga can. She stands at the well with you and says his name three times into the water while you hold the knife in a fire.','He turns south. He goes. The well is only a well.','The village saw it. Trust rises.']:['You say his name into the water three times and burn the knife in your bare hand, which hurts exactly as much as it should.',S.f.lukasTold?'Lukas says "I’m sorry" to a dead man, in a voice that cracks. It is not nothing.':'','He turns south. He goes. The well is only a well.','Nobody saw a light, because there was none. The village saw you cry a little, which did you more good than a spell.'].filter(Boolean), next:'q1dawn' },
+    { t:'Lay him to rest. (You need his name, his letter, and someone who can say it: Marga unshaken, or Lukas willing.)', if:()=>!(S.f.q1well && S.f.q1letter && (W() ? (S.f.q1marga && S.f.q1margaFirst) || S.f.lukasTold : true)), disabled:true },
+    { t:R('Axii. Point him at the river and let him walk.','Glamour. Show him the river and call it the road home.'), do:()=>{S.f.wraith='river';}, out:()=>['He believes you. He walks into the Pontar and under it, still asking for his mother.','The well is clean. The river is not. Something is in it now that remembers you.'], next:'q1dawn' },
+    { t:'Let him have Lukas. The boy is standing right there.', if:()=>S.f.lukasTold, do:()=>{S.f.wraith='fed';S.f.lukas='dead';S.trust-=2;}, out:()=>['You step aside. It takes about as long as you would think.','When it is over the wraith is gone, satisfied, and Lukas is at the bottom of the well with the man he put there.','Ashbrook saw you step aside. Trust drops hard.'], next:'q1dawn' }
   ]
 };
 N.q1dawn = {
   q:'q1', where:'Ashbrook, dawn', title:'The boy',
-  text: () => [
-    'Lukas is nineteen and waiting for you at the gate with a hunting bow across his knees, which tells you he knows. He says the soldier was stealing their winter seed. He says he only meant to scare him. He says it twice.',
+  text: () => S.f.lukas==='dead' ? [
+    'Berthold stands at the well at dawn and does not look down it. He does not ask you anything. He goes back inside and closes the shutters.',
+    'Ashbrook is quiet in the way a place is quiet when it has decided something about you.'
+  ] : [
+    S.f.lukasConfess ? 'The whole village is in the square at dawn, because Berthold’s son confessed in his father’s kitchen last night and the maid heard it through the floor. Lukas is standing by the well with his hands at his sides.' :
+    S.f.lukasTold ? 'Lukas is at the well at dawn, where you left him, grey-faced, waiting to find out what you are going to do.' :
+    'Lukas is waiting for you at the gate with a hunting bow across his knees, which tells you he knows. He says the soldier was stealing their winter seed. He says he only meant to scare him. He says it twice.',
     'His father is on the porch behind him, not coming down the steps.',
-    S.f.bribe ? 'Berthold’s eighty crowns are in your coat.' : ''
+    S.f.bribe ? 'Berthold’s eighty crowns are in your coat.' : '',
+    S.f.childSaved ? 'Ida is in the crowd with Tam on her hip. She is watching you, not Lukas.' : ''
   ],
   choices: [
-    { t:'Name him in the square. Let the village judge.', do:()=>{S.f.lukas='hanged'; S.trust+=2; if(S.f.bribe){S.coin-=80;S.f.bribe=0;}}, out:()=>['Village law is old and short. Berthold hangs his own son from the mill beam because no one else will, and then sits under him until noon.','Ashbrook trusts you now. Ashbrook also has no one left who can draw a bow.', S.f.margaWitness?'Marga stood next to you and said it. You stood next to her.':'', S.f.bribe?'You threw Berthold’s purse at his feet.':''].filter(Boolean), next:'q1end' },
-    { t:'Deal with him privately. He owes you now.', do:()=>{S.f.lukas='owes';}, out:()=>['You walk him to the river and tell him what you found and what you did with it. He is sick in the reeds. Then he asks what you want.','You tell him you will come for it someday. He believes you.','Nobody hangs. Berthold never stops looking at you.'], next:'q1end' },
-    { t:'Blame the drowner. Take the money. Leave.', if:()=>S.f.bribe, do:()=>{S.f.lukas='free'; S.trust-=2; S.f.marga='gone';}, out:()=>['You tell the square it was a drowner and ride out with Berthold’s crowns.','You hear later the village burned Marga’s hut the same night. She was not in it. Nobody knows where she went.','Trust in you drops. Lukas keeps his bow.'], next:'q1end' }
+    { t:'Name him in the square. Let the village judge.', if:()=>S.f.lukas!=='dead', do:()=>{S.f.lukas='hanged'; S.trust+=2; if(S.f.bribe){S.coin-=80;S.f.bribe=0;}}, out:()=>['Village law is old and short. Berthold hangs his own son from the mill beam because no one else will, and then sits under him until noon.','Ashbrook trusts you now. Ashbrook also has no one left who can draw a bow.', S.f.margaWitness?'Marga stood next to you and said it. You stood next to her.':'', S.f.bribe?'You threw Berthold’s purse at his feet.':''].filter(Boolean), next:'q1letter' },
+    { t:'Deal with him privately. He owes you now.', if:()=>S.f.lukas!=='dead', do:()=>{S.f.lukas='owes';}, out:()=>['You walk him to the river and tell him what you found and what you did with it. He is sick in the reeds. Then he asks what you want.','You tell him you will come for it someday. He believes you.','Nobody hangs. Berthold never stops looking at you.'], next:'q1letter' },
+    { t:'Make him Ashbrook’s problem. Exile, not a rope.', if:()=>S.f.lukas!=='dead', do:()=>{S.f.lukas='exiled';S.trust+=1;}, out:()=>['Berthold argues. Orm the miller does not. Lukas walks out of the north gate with his bow, a loaf, and the eleven florens, if you gave them back.','He will end up in someone’s army. Everyone does.'], next:'q1letter' },
+    { t:'Blame the drowner. Take the money. Leave.', if:()=>S.f.bribe && S.f.lukas!=='dead', do:()=>{S.f.lukas='free'; S.trust-=2; S.f.marga='gone';}, out:()=>['You tell the square it was a drowner and ride out with Berthold’s crowns.','You hear later the village burned Marga’s hut the same night. She was not in it. Nobody knows where she went.','Trust drops. Lukas keeps his bow.'], next:'q1letter' },
+    { t:'Leave. There is nothing left to decide.', if:()=>S.f.lukas==='dead', out:()=>['You go.'], next:'q1letter' }
+  ]
+};
+N.q1letter = {
+  q:'q1', where:'The river road back', title:'Vicovaro',
+  text: () => S.f.q1letter ? [
+    'Aurelio’s letter is still in your coat. His mother’s name is Livia, in Vicovaro, a town deep in Nilfgaard. She was dying a month ago. She may be dead now. She may not.',
+    'A Nilfgaardian grain merchant crosses the bridge every ten days under a trade flag. He will carry a letter south for a price, and he will not ask what is in it.'
+  ] : [
+    'You never took the letter from the well. Whoever Aurelio was walking home to will never know how far he got.',
+    'The river road is quiet all the way back.'
+  ],
+  choices: [
+    { t:'Write to Livia. Tell her where her son is, and that he was laid to rest.', if:()=>S.f.q1letter && S.coin>=10, do:()=>{S.f.letterSent=1;S.coin-=10;}, out:()=>['Ten crowns to the merchant. You write it plainly. You do not say who killed him.','Somewhere in Nilfgaard a woman will get a letter from a stranger in Velen. Nilfgaard is large, and the army is larger, and letters travel in strange directions.'], next:'q1end' },
+    { t:'Keep the letter. One day it may be worth something to someone.', if:()=>S.f.q1letter, do:()=>{S.f.letterKept=1;}, out:()=>['It stays in your coat, smelling of river.'], next:'q1end' },
+    { t:'Burn it. The dead do not need mail.', if:()=>S.f.q1letter, out:()=>['It goes up in a second. Pip says nothing, which for Pip is a speech.'], next:'q1end' },
+    { t:'Ride on.', if:()=>!S.f.q1letter, out:()=>[], next:'q1end' }
   ]
 };
 N.q1end = { q:'q1', end:true, where:'Ashbrook', title:'Salt in the well, closed',
   text: () => [
     'What you leave behind in Ashbrook:',
-    S.f.wraith==='rested' ? 'Aurelio went home.' : S.f.wraith==='destroyed' ? 'Aurelio is gone, which is not the same as home.' : 'Aurelio is in the river.',
-    S.f.lukas==='hanged' ? 'Lukas hangs from the mill. His father will not speak your name.' : S.f.lukas==='owes' ? 'Lukas lives, and owes you.' : 'Lukas got away with it, and the village burned an old woman’s house for your silence.',
+    S.f.wraith==='rested' ? 'Aurelio went home.' : S.f.wraith==='destroyed' ? 'Aurelio is gone, which is not the same as home.' : S.f.wraith==='fed' ? 'Aurelio took what he was owed.' : 'Aurelio is in the river.',
+    S.f.lukas==='hanged' ? 'Lukas hangs from the mill. His father will not speak your name.' : S.f.lukas==='owes' ? 'Lukas lives, and owes you.' : S.f.lukas==='exiled' ? 'Lukas is on the north road with a bow.' : S.f.lukas==='dead' ? 'Lukas is in the well.' : 'Lukas got away with it, and the village burned an old woman’s house for your silence.',
     S.f.marga==='gone' ? 'Marga is gone.' : S.f.margaWitness ? 'Marga is the bravest person in Ashbrook, and they know it now.' : 'Marga is alive and keeps her chickens.',
+    S.f.childSaved ? 'Tam is alive and eating. Ida tells everyone who will listen.' : S.f.q1passedChild ? 'Tam lived, barely. Ida tells everyone who will listen that you walked past.' : 'Tam is mending.',
+    S.f.letterSent ? 'A letter is going south to a woman named Livia.' : '',
     'Some of this comes back.'
-  ]
+  ].filter(Boolean)
 };
 
 // ===================== QUEST 2: THE TOLL =====================
@@ -276,12 +343,26 @@ N.q2a = {
   q:'q2', where:'Greyhollow council chamber', title:'The toll',
   text: () => [
     'Since the Redanian garrison marched north, a troll has taken the stone bridge. His name is Bogdan. He charges a toll: a wheel of cheese, or a story he has not heard. Carts will not pay in cheese, merchants will not pay in stories, and the ferryman, Jens, has started charging what a man charges when he is the only ferry.',
-    'Alderman Hodd offers a hundred crowns for the bridge cleared. Jens, at the back of the room, offers twenty more for it to stay exactly as it is.',
-    '<pip>Pip, from your coat pocket: "Bogdan’s all right. It’s the cheese that’s the problem. Nobody in this town can make cheese."</pip>'
+    'The council is five people shouting. Alderman Hodd wants the bridge cleared and offers a hundred crowns. Jens, at the back, offers twenty more for it to stay exactly as it is. The grain merchants want a bridge and do not care who stands on it. Old Berna from the inn wants to know why nobody has simply asked the troll what he wants.',
+    '<pip>Pip, the godling from the inn chimney, in your pocket: "Bogdan’s all right. It’s the cheese that’s the problem. Nobody in this town can make cheese."</pip>'
   ],
   choices: [
-    { t:'Take the contract.', do:()=>{}, out:()=>['Hodd shakes your hand. Jens leaves without finishing his drink.'], next:'q2bridge' },
-    { t:'Ask what the Redanians were guarding, before they left.', do:()=>{S.f.q2asked=1;}, out:()=>['Hodd says: the bridge. Pip says, quieter: the people under it.'], next:'q2bridge' }
+    { t:'Take Hodd’s contract. A hundred crowns for a clear bridge.', do:()=>{S.f.q2contract='hodd';}, out:()=>['Hodd shakes your hand. Jens leaves without finishing his drink.'], next:'q2scouts' },
+    { t:'Take Jens’s twenty on the side as well. Nobody needs to know.', do:()=>{S.f.q2contract='both';S.coin+=20;S.trust-=1;}, out:()=>['Twenty crowns from a man who wants the opposite of what you were just paid to do. Pip says "Oh, that’s not going to stay secret."','It does not. Trust drops.'], next:'q2scouts' },
+    { t:'Ask Berna’s question. What does the troll actually want?', do:()=>{S.f.q2contract='berna';S.f.q2asked=1;S.trust+=1;}, out:()=>['The room goes quiet, which in this room is a miracle. Hodd says the contract stands either way.','Berna slides you a wheel of cheese across the table. "In case he’s hungry." Trust rises.'], next:'q2scouts' }
+  ]
+};
+N.q2scouts = {
+  q:'q2', where:'The south bank road', title:'Riders in black',
+  text: () => [
+    'On the way to the bridge you meet three Nilfgaardian scouts coming the other way: black cloaks, good horses, maps. They are counting. Bridges, fords, how many men a town could put on a wall. They are polite, the way an army is polite before it arrives.',
+    'Their sergeant asks you, as a traveler, whether the Greyhollow bridge is held.',
+    R('He is looking at your swords. He knows what they mean. Witchers are neutral, as far as empires are concerned, and empires are never quite sure.', 'He is looking at you the way men look at you, and then a second time the way soldiers look at a map. He has seen sorceresses at court. He is trying to decide if you are one.')
+  ],
+  choices: [
+    { t:'Tell him the truth. A troll holds it, and the town has no garrison.', do:()=>{S.f.scouts='told';}, out:()=>['He writes it down. He thanks you. He means it.','Whatever comes up this road later will know exactly what is waiting.'], next:'q2bridge' },
+    { t:'Lie. "A Redanian company. Crossbows on both towers."', do:()=>{S.f.scouts='lied';}, out:()=>['He looks at you a long moment. Then writes it down anyway.','It will cost whoever comes up this road an extra day of caution. A day can matter.'], next:'q2bridge' },
+    { t:R('Kill them. Three fewer maps in Nilfgaard.','Kill them. Quietly. Three men fall off three horses and the horses go home alone.'), do:()=>{S.f.scouts='dead';S.eye+= W()?0:1;}, out:()=>W()?['It is over in a minute. You push the bodies into the reeds and send the horses south.','Nilfgaard will notice three scouts not coming home, and will not know why. That is a different kind of warning.']:['Three men go to sleep in their saddles and do not wake up. The horses go home alone.','Nilfgaard will notice three scouts not coming home, and will not know why. Someone will say the word "witch."'], next:'q2bridge' }
   ]
 };
 N.q2bridge = {
@@ -289,13 +370,27 @@ N.q2bridge = {
   text: () => [
     'Bogdan is nine feet of river rock with moss for eyebrows and a toll-collector’s satchel that used to be a Redanian saddlebag. He stands in the middle of the bridge with his arms folded and says: "Toll. Cheese or story. No story about a dog. Bogdan has heard every dog story."',
     R('Your medallion barely stirs. Rock trolls are not monsters, whatever the council thinks. They are just very large and very bad at negotiating.',
-      'He looks at you the way a very large child looks at a very fancy cake. "Pretty lady is a story herself," he says, which is the nicest thing anyone has said to you in Greyhollow.')
+      'He looks at you the way a very large child looks at a very fancy cake. "Pretty lady is a story herself," he says, which is the nicest thing anyone has said to you in Greyhollow.'),
+    S.f.q2asked ? 'Berna’s cheese is under your arm.' : ''
   ],
   choices: [
-    { t:'Pay in a story. Tell him something true about yourself.', do:()=>{S.f.trollFriend=1;S.f.trollTruth=1;}, out:()=>W()?['You tell him about the Trial of the Grasses. Three boys went in with you. One came out.','He is quiet for a long time. Then he says you can cross for free forever and asks if you want to see what is under the bridge.']:['You tell him about the night Aretuza found out what you could really do, and what it cost the girl in the next bed.','He is quiet a long time. Then he says you can cross for free forever and asks if you want to see what is under the bridge.'], next:'q2under' },
-    { t:'Pay in a story. Make one up.', do:()=>{S.f.trollFriend=1;}, out:()=>['You tell him about a dragon that fell in love with a lighthouse. He loves it. He does not know it is nonsense.','He says you can cross, and asks if you want to see what is under the bridge.'], next:'q2under' },
+    { t:'Pay in cheese.', if:()=>S.f.q2asked, do:()=>{S.f.trollFriend=1;}, out:()=>['He eats the whole wheel in two bites and sits down on the bridge, overcome. "Berna," he says. "Berna makes this?" You say yes. He is in love.','You may cross forever. Also he wants to show you something under the bridge.'], next:'q2riddle' },
+    { t:'Pay in a story. Tell him something true about yourself.', do:()=>{S.f.trollFriend=1;S.f.trollTruth=1;}, out:()=>W()?['You tell him about the Trial of the Grasses. Three boys went in with you. One came out.','He is quiet for a long time. Then he says you can cross for free forever, and asks if you want to see what is under the bridge.']:['You tell him about the night Aretuza found out what you could really do, and what it cost the girl in the next bed.','He is quiet a long time. Then he says you can cross for free forever, and asks if you want to see what is under the bridge.'], next:'q2riddle' },
+    { t:'Pay in a story. Make one up.', do:()=>{S.f.trollFriend=1;}, out:()=>['You tell him about a dragon that fell in love with a lighthouse. He loves it. He does not know it is nonsense.','He says you can cross, and asks if you want to see what is under the bridge.'], next:'q2riddle' },
     { t:'Fight. The council wants a bridge.', do:()=>{S.f.troll='dead';S.trust+=1;S.coin+=100;}, out:()=>W()?['It takes eleven minutes and most of a wall. He dies apologizing for breaking the wall.','A hundred crowns. The town cheers. Pip does not speak to you for a day.']:['You drop the bridge’s own cobbles on him from above. He dies confused.','A hundred crowns. The town cheers. Pip does not speak to you for a day. Half the town saw you lift stone with a gesture.'], next:'q2under_dead' },
     { t:R('Threaten him. Trolls understand a witcher.','Threaten him. Let him see what you are.'), do:()=>{S.f.trollScared=1; if(!W()) S.eye+=1;}, out:()=>['He steps back. He is not stupid. But his eyes go to the edge of the bridge, down, and back to you, and you understand he is not scared for himself.'], next:'q2under' }
+  ]
+};
+N.q2riddle = {
+  q:'q2', where:'The stone bridge', title:'Bogdan’s game',
+  text: () => [
+    'Before he shows you anything, Bogdan wants to play. "Riddle. Bogdan asks, you answer. Get it right, Bogdan tells you a secret. Get it wrong, Bogdan is sad." He sits down, which takes a while.',
+    '"What has a bed but never sleeps, a mouth but never eats, and runs but never walks?"'
+  ],
+  choices: [
+    { t:'A river.', do:()=>{S.f.q2riddle=1;}, out:()=>['He claps, which sounds like a rockslide. "YES. Secret: the Redanian captain who left? He left because he was paid to. Nilfgaard gold. Bogdan saw the purse."','So the garrison did not march north. It was bought off. Someone wanted this bridge unguarded.'], next:'q2under' },
+    { t:'A troll.', out:()=>['He thinks about it. "No. But Bogdan likes that you said Bogdan." He is sad anyway, briefly.','No secret. You climb down to the ledge.'], next:'q2under' },
+    { t:'Skip the game. Show me what is under the bridge.', out:()=>['"No game, no secret." He shrugs, which is a geological event, and leads you down.'], next:'q2under' }
   ]
 };
 N.q2under = {
@@ -303,7 +398,18 @@ N.q2under = {
   text: () => [
     'Under the arch, on a ledge above the waterline, there is a camp. Four elves. A mother, a grandfather, two children, thin as the reeds. To Redania any elf off the road is a Scoia’tael rebel, which means a rope. To Nilfgaard they are deserters from the elf units it conscripted, which means the same rope, slower.',
     '"They make cheese," Bogdan says, as if that settles it. "Good cheese. Bogdan keeps bridge. They keep cheese. Everybody keeps."',
-    'The mother looks at you the way the hunted look at anyone with a weapon.'
+    'The mother looks at you the way the hunted look at anyone with a weapon. The grandfather does not look at you at all. He is looking at the water.'
+  ],
+  choices: [
+    { t:'Sit down. Ask the grandfather where they are going.', do:()=>{S.f.q2talked=1;}, out:()=>['He speaks slowly, in a Common that is older than yours. Mahakam, the dwarf mountains to the east. There are elves in the high valleys there that the kingdoms have not bothered to hunt yet. His son died getting them this far.','He says: "The troll is kinder than any man we have met since the Pontar." He is not trying to make you feel anything. It works anyway.'], next:'q2decide' },
+    { t:'Keep your distance. You have seen refugees before.', out:()=>['You stay on the steps. The children watch you the whole time.'], next:'q2decide' }
+  ]
+};
+N.q2decide = {
+  q:'q2', where:'Under the bridge', title:'Everybody keeps',
+  text: () => [
+    'Hodd wants a bridge. Jens wants a troll. The elves want a night’s head start. Bogdan wants cheese and for everyone to stop asking him to move.',
+    S.f.q2riddle ? 'And someone paid the Redanian garrison to leave this bridge empty. That someone is going to come back for it.' : ''
   ],
   choices: [
     { t:'Make Bogdan the town’s bridge-keeper. Toll in coin, split with the council.', do:()=>{S.f.troll='keeper';S.trust+=1;S.coin+=40;}, out:()=>['It takes an afternoon of shouting. Hodd hates it. Jens hates it more. The merchants do the arithmetic and decide a troll who takes two crowns a cart is cheaper than a ferry that takes ten.','Bogdan gets a hat. The town gets a bridge. Forty crowns for the brokering.','Nobody mentions the elves. You did not mention them either.'], next:'q2elves' },
@@ -327,21 +433,37 @@ N.q2elves = {
   q:'q2', where:'The north bank, after dark', title:'The crossing',
   text: () => [
     'The Redanian picket is six bored men and a lantern. The elves need to be past them and into the Mahakam foothills before dawn.',
-    R('Axii works on one man at a time. Six is a lot. Or there is the river, and Quen, and a very cold swim.', 'You could put six men to sleep with one word. Six men would also wake up knowing exactly what put them there.')
+    R('Axii works on one man at a time. Six is a lot. Or there is the river, and Quen, and a very cold swim.', 'You could put six men to sleep with one word. Six men would also wake up knowing exactly what put them there.'),
+    'The grandfather says he will not make the swim. He says it like a man stating the weather.'
   ],
   choices: [
-    { t:R('Axii the sergeant. Walk them through like you own the road.','Glamour the whole picket. Six men dream of their mothers for an hour.'), do:()=>{S.f.elves='saved'; if(!W()) S.eye+=2;}, out:()=>W()?['The sergeant waves you through and does not remember doing it. The grandfather kisses your hand. The children do not look back.','Somewhere in the hills, four people owe you.']:['Six men sit down in the road and smile at nothing. The grandfather kisses your hand. The children do not look back.','Somewhere in the hills, four people owe you. Six men will wake up and remember a woman walking past them in a light that was not the lantern. The Fire’s eye on you grows.'], next:'q2end' },
-    { t:'Take them across the water, below the picket, the hard way.', do:()=>{S.f.elves='saved';S.trust-=0;}, out:()=>['Cold enough to stop a heart. The grandfather’s nearly does. You carry him the last hundred yards.','Nobody saw. Four people owe you.'], next:'q2end' },
+    { t:R('Axii the sergeant. Walk them through like you own the road.','Glamour the whole picket. Six men dream of their mothers for an hour.'), do:()=>{S.f.elves='saved'; if(!W()) S.eye+=2;}, out:()=>W()?['The sergeant waves you through and does not remember doing it. The grandfather kisses your hand. The children do not look back.','Somewhere in the hills, four people owe you.']:['Six men sit down in the road and smile at nothing. The grandfather kisses your hand. The children do not look back.','Somewhere in the hills, four people owe you. Six men will wake up and remember a woman walking past them in a light that was not the lantern. The Fire’s eye on you grows.'], next:'q2picket' },
+    { t:'Take them across the water, below the picket, the hard way. Carry the old man.', do:()=>{S.f.elves='saved';}, out:()=>['Cold enough to stop a heart. The grandfather’s nearly does. You carry him the last hundred yards on your back.','Nobody saw. Four people owe you.'], next:'q2picket' },
+    { t:'Bribe the picket. Twenty crowns and the sergeant goes blind for an hour.', if:()=>S.coin>=20, do:()=>{S.f.elves='saved';S.coin-=20;S.f.q2bribedPicket=1;}, out:()=>['The sergeant takes the money and turns his back and says, to nobody, "I did not see four elves and I will not see them again."','Four people owe you. So, in a way, does a Redanian sergeant who now has a secret.'], next:'q2picket' },
     { t:'This is too far. Wish them luck.', do:()=>{S.f.elves='left';}, out:()=>['The mother nods like she expected it. They go into the dark on their own.','You do not find out what happens to them. That is its own kind of answer.'], next:'q2end' }
+  ]
+};
+N.q2picket = {
+  q:'q2', where:'The north bank, before dawn', title:'The thing the grandfather said',
+  text: () => [
+    'At the treeline the grandfather stops and takes your hand again. He says, in the old Common: "You will need us. Not soon. But you will. When the horns come, light a fire on the north tower and we will see it."',
+    'Then they are gone into the hills, and it is just you and the river and Pip, who is pretending not to have cried.',
+    S.f.q2bribedPicket ? 'On the way back the sergeant stops you. He wants to know if there will be more. He is not threatening. He is asking what the rate is.' : ''
+  ],
+  choices: [
+    { t:'Go home. Light a fire on the tower someday.', do:()=>{S.f.elfSignal=1;}, out:()=>['You remember it. Pip remembers it louder.'], next:'q2end' },
+    { t:'Tell the sergeant there will be more, and the rate is the same.', if:()=>S.f.q2bribedPicket, do:()=>{S.f.elfSignal=1;S.f.sergeantFriend=1;}, out:()=>['He nods. A Redanian sergeant who takes elf money is a Redanian sergeant who will not look too hard at anything else either.','You have bought a hole in the north bank. It may be useful.'], next:'q2end' }
   ]
 };
 N.q2end = { q:'q2', end:true, where:'Greyhollow', title:'The toll, closed',
   text: () => [
     'The bridge tonight:',
     S.f.troll==='keeper' ? 'Bogdan stands on it in a hat, taking two crowns a cart and telling everyone the dragon story.' : S.f.troll==='dead' ? 'Bogdan is a pile of rock at the foot of the arch. Carts roll over him.' : 'Bogdan still holds it, and Jens still charges what he likes.',
-    S.f.elves==='saved' ? 'Four elves are in the Mahakam hills, alive, because of you.' : S.f.elves==='reported' ? 'Four elves went north in Redanian irons. The chapel thinks well of you.' : 'Four elves are somewhere. You did not ask.',
+    S.f.elves==='saved' ? 'Four elves are in the Mahakam hills, alive, because of you.' + (S.f.elfSignal ? ' They told you to light a fire on the north tower when the horns come.' : '') : S.f.elves==='reported' ? 'Four elves went north in Redanian irons. The chapel thinks well of you.' : 'Four elves are somewhere. You did not ask.',
+    S.f.scouts==='told' ? 'Nilfgaard knows the bridge is held by a troll and nothing else.' : S.f.scouts==='lied' ? 'Nilfgaard thinks there are crossbows on the towers.' : 'Three Nilfgaardian scouts did not come home.',
+    S.f.q2riddle ? 'Someone paid the Redanian garrison to leave. You do not know who yet.' : '',
     'A bridge is the kind of thing that matters most on the one night it matters.'
-  ]
+  ].filter(Boolean)
 };
 
 // ===================== QUEST 3: THE SPARK =====================
@@ -366,28 +488,67 @@ N.q3b = {
     'Liesl is small for twelve and will not look up. When Matthis says the word "hunters" the candle on the table goes from a flame to a torch and back. He flinches. She flinches harder.',
     R('You have seen this before. A Source: someone born with magic that leaks out before anyone teaches them to hold it. In the old days a child like this got sent to a magic school, Aretuza for girls, Ban Ard for boys. In Redania now, she gets a cage.',
       'You know exactly what she is, because you were. Raw Chaos, no training, and a world that would rather burn it than teach it.'),
+    'Liesl finally looks up. "Am I a monster?" she asks you. Not her father. You.'
+  ],
+  choices: [
+    { t:'"No. You are a girl who can do something most people cannot. That is all."', do:()=>{S.f.q3kind=1;}, out:()=>['She nods like she is deciding whether to believe it. The candle settles.','Matthis breathes for what might be the first time today.'], next:'q3letter' },
+    { t:R('"I am a monster, by most people’s reckoning. So is half of what I hunt. The word does not mean much."','"I am what they call a witch. Look at me. Do I look like a monster to you?"'), do:()=>{S.f.q3honest=1;}, out:()=>W()?['She looks at your eyes for a long time. "They’re yellow." "Yes." "Do people run?" "Some." She thinks about that and seems, oddly, comforted.']:['She looks at you the way girls look at you, which is to say: like you are the answer to a question she had not finished asking. "No," she says. "You look like a queen."'], next:'q3letter' },
+    { t:'"The Fire thinks so. That is the only opinion that matters for the next three days."', do:()=>{S.f.q3cold=1;}, out:()=>['The candle flares. Matthis puts his hand over it without thinking and burns his palm.','True. Not helpful. She does not look up again.'], next:'q3letter' }
+  ]
+};
+N.q3letter = {
+  q:'q3', where:'The Drowned Rat, back room', title:'Who wrote the letter',
+  text: () => [
+    'Rook came because of a letter. Someone in Greyhollow wrote to Oxenfurt about a baker’s girl. Matthis has been thinking about nothing else for a month.',
+    '<pip>Pip, quietly: "I know who. The chapel clerk. Father Ansel’s clerk, Dren. He smells like wax and spite. Ansel didn’t know. Ansel’s soft."</pip>',
+    'Father Ansel is the town’s priest of the Eternal Fire. Soft, Pip says. Dren is the one who keeps his books.'
+  ],
+  choices: [
+    { t:'Go see Father Ansel. If he is soft, he is useful.', do:()=>{S.f.q3ansel=1;}, out:()=>['Ansel is sixty, frightened of his own captain, and has been sick about this letter since he found out it was sent. He will not stand up to Rook. He will, he says carefully, be very slow at finding things if asked to help search.','You have a priest who will drag his feet. It is not nothing.'], next:'q3b2' },
+    { t:'Go see Dren. Find out why.', do:()=>{S.f.q3dren=1;}, out:()=>['Dren is twenty-five and owes the bakery money. That is the whole reason. A debt, a letter, a child in a cage.',R('You do not hit him. You let him understand that you thought about it.','You do not hex him. You let him see you decide not to.'),'He will not be writing any more letters. He may also tell Rook you threatened him.'], next:'q3b2' },
+    { t:'It does not matter who. Deal with the girl.', out:()=>['Pip sulks. "It always matters who."'], next:'q3b2' }
+  ]
+};
+N.q3b2 = {
+  q:'q3', where:'The Drowned Rat, back room', title:'Three days',
+  text: () => [
     'Rook has three days and six men. They will search every house. Matthis asks what you can do.'
   ],
   choices: [
-    { t:'Hide her in the inn chimney. Pip will keep her company.', do:()=>{S.f.liesl='hidden';}, out:()=>['Pip is delighted. "I’ve never had a guest." Liesl climbs up with a blanket and a loaf of bread.','It is a good hiding place. It is only a hiding place, and Rook has three days.'], next:'q3c' },
-    { t:'Teach her. Tonight. Control, not fear.', who:'s', do:()=>{S.f.liesl='trained';S.eye+=2;}, out:()=>['You spend the night in the cellar with her and three candles. By midnight she can light one without lighting the others. By dawn she can put one out.','She looks at you like you hung the moon. You remember a woman who looked at you like that once, before she burned.','Two candles’ worth of light leaked under the cellar door. The Fire’s eye on you grows.'], next:'q3c' },
-    { t:'Teach her to lie. Axii for the nerves, and a story she can hold.', who:'w', do:()=>{S.f.liesl='coached';}, out:()=>['You cannot teach her magic. You can teach her to be boring. A calm face, a dull story, and a little Axii so her hands do not shake.','It will hold for one interrogation. Maybe.'], next:'q3c' },
-    { t:'Send her to Marga in Ashbrook. An old woman with chickens is the last place anyone looks.', if:()=>S.done.q1 && S.f.marga!=='gone', do:()=>{S.f.liesl='marga';}, out:()=>['Matthis drives her out before dawn in a cart of flour sacks.','Marga meets them at the gate, takes one look at the girl, and says "Oh, you’re one of mine." Nobody knows what she means by it.'], next:'q3c' },
-    { t:'Send her to Auntie Yew in Nettle Fen. The hag will take a child like this.', do:()=>{S.f.liesl='hag';S.trust-=1;}, out:()=>['Pip goes very still. "Yew keeps what she takes."','Matthis does it anyway, because a hag is not a pyre. Liesl walks into the fen holding a stranger’s hand and does not look back.','The town hears where she went. Trust in you drops.'], next:'q3c' }
+    { t:'Hide her in the inn chimney. Pip will keep her company.', do:()=>{S.f.liesl='hidden';}, out:()=>['Pip is delighted. "I’ve never had a guest." Liesl climbs up with a blanket and a loaf of bread.','It is a good hiding place. It is only a hiding place, and Rook has three days.'], next:'q3hodd' },
+    { t:'Teach her. Tonight. Control, not fear.', who:'s', do:()=>{S.f.liesl='trained';S.eye+=2;}, out:()=>['You spend the night in the cellar with her and three candles. By midnight she can light one without lighting the others. By dawn she can put one out.',S.f.q3kind||S.f.q3honest?'She looks at you like you hung the moon. You remember a woman who looked at you like that once, before she burned.':'She learns it anyway. She does not look at you while she does.','Two candles’ worth of light leaked under the cellar door. The Fire’s eye on you grows.'], next:'q3hodd' },
+    { t:'Teach her to lie. Axii for the nerves, and a story she can hold.', who:'w', do:()=>{S.f.liesl='coached';}, out:()=>['You cannot teach her magic. You can teach her to be boring. A calm face, a dull story, and a little Axii so her hands do not shake.','It will hold for one interrogation. Maybe.'], next:'q3hodd' },
+    { t:'Send her to Marga in Ashbrook. An old woman with chickens is the last place anyone looks.', if:()=>S.done.q1 && S.f.marga!=='gone', do:()=>{S.f.liesl='marga';}, out:()=>['Matthis drives her out before dawn in a cart of flour sacks.','Marga meets them at the gate, takes one look at the girl, and says "Oh, you’re one of mine." Nobody knows what she means by it.'], next:'q3hodd' },
+    { t:'Send her to Auntie Yew in Nettle Fen. The hag will take a child like this.', do:()=>{S.f.liesl='hag';S.trust-=1;}, out:()=>['Pip goes very still. "Yew keeps what she takes."','Matthis does it anyway, because a hag is not a pyre. Liesl walks into the fen holding a stranger’s hand and does not look back.','The town hears where she went. Trust in you drops.'], next:'q3hodd' }
+  ]
+};
+N.q3hodd = {
+  q:'q3', where:'Alderman Hodd’s house', title:'The alderman’s offer',
+  text: () => [
+    'Hodd sends for you after dark. He has a bottle open and the shutters closed. He is a practical man. He has done the arithmetic: a witch hunter who leaves happy is cheaper than a witch hunter who leaves angry.',
+    '"I don’t care about the girl," he says. "I care about the town. Give him something. Give him the girl, give him the old woman in Ashbrook, give him a stranger off the road. He goes home, we go back to work."',
+    S.f.elves==='reported' ? 'He likes you. You handed him the elves. He thinks you understand how things work.' : 'He does not like you much. He thinks you make things complicated.'
+  ],
+  choices: [
+    { t:'"Give him nothing. He leaves with an empty cage or he leaves with a problem."', do:()=>{S.f.q3hoddNo=1;S.trust+=1;}, out:()=>['Hodd sighs. "Then it’s on you." He means it as a threat. It is also, you notice, an admission.','The town will hear you said it. Trust rises.'], next:'q3c' },
+    { t:'"Give him Dren. The clerk wrote the letter. Let the Fire eat its own."', if:()=>S.f.q3dren, do:()=>{S.f.q3hoddDren=1;S.trust-=0;}, out:()=>['Hodd thinks about it for exactly as long as it takes to pour another drink. "The clerk. Yes. The clerk has always been a problem."','Rook will have a name by morning. It will not be Liesl’s. It will not be yours. Pip says "Huh," in a tone you cannot read.'], next:'q3c' },
+    { t:'Take Hodd’s side. The town first. Point Rook at a stranger on the road.', do:()=>{S.f.q3hoddYes=1;S.trust-=2;S.eye=Math.max(0,S.eye-1);}, out:()=>['A tinker camped by the mill. Nobody knows his name. By noon tomorrow nobody will need to.','Hodd shakes your hand. The town does not. Trust drops hard. The Fire’s eye on you softens.'], next:'q3c' }
   ]
 };
 N.q3c = {
   q:'q3', where:'The square, next morning', title:'Questions',
   text: () => [
-    'Rook asks to speak with you. Alone, he says, and then brings two men. He is polite. He knows what you are. He asks where the baker’s girl is, and then, before you answer, he asks about Ashbrook, and the bridge, and a light some people saw.',
+    S.f.q3hoddYes ? 'The tinker is in the cage. He is shouting that he has never done magic in his life, which is true, and which Rook has heard before.' : S.f.q3hoddDren ? 'Dren the clerk is in the cage, white as his own candles. Father Ansel is standing beside it with his hands folded, saying nothing, which is the bravest thing he can manage.' : '',
+    'Rook asks to speak with you anyway. Alone, he says, and then brings two men. He is polite. He knows what you are. He asks where the baker’s girl is, and then, before you answer, he asks about Ashbrook, and the bridge, and a light some people saw.',
     R('He is building a case. Not against the girl. Against you.', 'He is enjoying this. He is looking at your mouth while you talk, and you know that look, and it is not the one men usually give you.'),
     'Behind him, his men are already going door to door. The bakery is three doors from the inn.'
-  ],
+  ].filter(Boolean),
   choices: [
     { t:'Lie. Smoothly. The girl ran off to Oxenfurt a week ago.', do:()=>{S.f.q3lied=1;}, out:()=>['He nods as if he believes you. He writes it down. He does not believe you.'], next:'q3search' },
     { t:'Bribe him. Fifty crowns for a letter that says Greyhollow is clean.', if:()=>S.coin>=50, do:()=>{S.coin-=50;S.f.q3bribed=1;S.eye=Math.max(0,S.eye-1);}, out:()=>['He takes it without looking at it. "The Fire is grateful for your donation."','He does not call off the search. He just stops looking at you while it happens. The eye on you softens, slightly.'], next:'q3search' },
     { t:'Hex him. Make him forget the girl’s name.', who:'s', do:()=>{S.f.q3hexed=1;S.eye+=3;}, out:()=>['You touch his wrist like you are flirting and take the name out of his head.','It works. He stands there blinking. His two men saw your hand glow. The Fire’s eye on you is wide open now.','His men do not need the name. They have the bakery.'], next:'q3search' },
-    { t:'Let him see your eyes. Remind him what a witcher does to men who threaten him.', who:'w', do:()=>{S.f.q3scared=1;S.eye+=1;}, out:()=>['His men step back. He does not, but his hand finds his medallion.','You have bought silence, not safety. He will write to Oxenfurt tonight.'], next:'q3search' }
+    { t:'Let him see your eyes. Remind him what a witcher does to men who threaten him.', who:'w', do:()=>{S.f.q3scared=1;S.eye+=1;}, out:()=>['His men step back. He does not, but his hand finds his medallion.','You have bought silence, not safety. He will write to Oxenfurt tonight.'], next:'q3search' },
+    { t:'Answer every question with a question. Where is his warrant? Who signed it? Does Oxenfurt know he is here?', do:()=>{S.f.q3stalled=1;}, out:()=>['He has a warrant. It is signed by himself. Oxenfurt does not, in fact, know he is here; he came on a clerk’s letter, not an order.','You have learned something. He has learned you noticed.'], next:'q3search' }
   ]
 };
 N.q3search = {
@@ -395,6 +556,7 @@ N.q3search = {
   text: () => {
     const l = S.f.liesl;
     const t = ['Four of Rook’s men come through the inn at dusk with torches and a dog. They are not subtle. They turn over the beds, they open the flour barrels, they put a boot through Berna’s cellar door.'];
+    if (S.f.q3ansel) t.push('Father Ansel is with them, as the town’s priest, and Father Ansel is being extraordinarily slow. He has lost his keys. He has found his keys. He needs to bless the cellar before anyone enters it. Nobody can tell if he is a coward or a hero and he seems unsure himself.');
     if (l==='hidden') t.push('One of them stops at the hearth and looks up. The dog is looking up too. Pip is up there with Liesl, and Pip is a nature spirit, not a soldier.');
     if (l==='trained') t.push('Liesl is in the back room, sitting at the table with her hands folded, three candles in front of her, none of them lit. A man asks her name. She tells him. A man asks if she is afraid. "No," she says, and nothing on the table moves.');
     if (l==='coached') t.push('Liesl is in the back room, sitting at the table with her hands folded. A man asks her name. She tells him the boring story you gave her, in the boring voice. Then Rook comes in, pulls a chair up close, and asks her what her mother’s name was.');
@@ -420,21 +582,24 @@ N.q3night = {
     S.f.q3raid = raid ? 1 : 0;
     if (raid) return [
       'They come at midnight. Rook and all six, torches, the cage on wheels, a warrant he wrote himself. Someone told him where you sleep. Pip says the alderman did, and Pip is usually right about who smells of guilt.',
-      S.f.liesl==='taken' || S.f.matthis==='taken' ? 'They already have their prisoner in the cage outside. They are here for you.' : 'They are not here for Liesl first. They are here for you.'
-    ];
+      S.f.liesl==='taken' || S.f.matthis==='taken' ? 'They already have their prisoner in the cage outside. They are here for you.' : 'They are not here for Liesl first. They are here for you.',
+      S.f.q3stalled ? 'You know something they do not: Oxenfurt never sent him. Whatever happens tonight, there is no one behind him. Yet.' : ''
+    ].filter(Boolean);
     return [
       'Nothing comes at midnight. Rook has what he came for, or has decided this town is not worth a fourth day.',
       S.f.liesl==='taken' ? 'Liesl is in the cage in the square. Rook leaves at first light for Oxenfurt, and in Oxenfurt there is a pyre with room on it.' :
       S.f.matthis==='taken' ? 'Matthis is in the cage in the square. Rook leaves at first light for Oxenfurt, and the baker is going with him as a lesson.' :
+      S.f.q3hoddYes ? 'The tinker is in the cage in the square. He has stopped shouting. Rook leaves at first light with a man who did nothing, and the town watches him go and then looks at you.' :
+      S.f.q3hoddDren ? 'Dren is in the cage in the square. Father Ansel sat beside it all night. Rook leaves at first light with his own clerk in irons and a face that says this is not the trip he wanted.' :
       'Rook leaves at first light with an empty cage and a letter he will send from Oxenfurt with your name in it.'
     ];
   },
   choices: [
     { t:'Fight through them.', if:()=>S.f.q3raid, do:()=>{S.f.rook='dead';S.trust-=1;S.eye+=2; if(S.f.liesl==='taken') S.f.liesl='hidden'; if(S.f.matthis==='taken') S.f.matthis='freed';}, out:()=>W()?['Six men with torches against a witcher in a doorway. It is not a fight, it is a lesson. Rook dies last, on the steps, surprised.','You break the cage open with a pommel. Oxenfurt will hear a captain of the Order died in Greyhollow, and the next letter will be a column.']:['You let them see you. Properly. The glamour comes off and the room fills with a light that is not fire, and six men learn what the Order has been burning women to avoid.','Rook dies with his medallion in his fist. The cage opens on its own. Oxenfurt will hear, and the next letter will be a column.'], next:'q3end' },
     { t:'Run. Out the back, into the dark.', if:()=>S.f.q3raid, do:()=>{S.f.rook='alive';S.trust-=2; if(S.f.liesl==='hidden' && !S.f.q3pip) S.f.liesl='taken';}, out:()=>['You are gone before the door breaks. You are good at this.',(S.f.liesl==='taken')?'They search the inn properly this time. Liesl is in the cage by dawn.':(S.f.liesl==='hidden'?'Pip drops every pot in the kitchen again. It works again. Liesl stays up the chimney, shaking.':'They search the inn and leave with nothing but the alderman’s goodwill.'),'Rook writes to Oxenfurt with your name in it. Trust drops.'], next:'q3end' },
-    { t:'Walk out the front door and make him explain, to the whole street, why six armed men need a cage for a baker’s child.', if:()=>S.f.q3raid, do:()=>{S.f.rook='shamed';S.trust+=2; if(S.f.liesl==='taken') S.f.liesl='hidden'; if(S.f.matthis==='taken') S.f.matthis='freed';}, out:()=>['It works because the town is already outside, holding lanterns, and because Rook, for all his sermons, has never once been asked a question by a crowd.','Berna opens the cage herself. Rook leaves at dawn with it empty and a face like a slapped priest.',(S.f.liesl==='hidden')?'Liesl climbs down from the chimney covered in soot and bows. The town laughs. Rook hears it from the road.':'','He will not forget this. Trust rises.'].filter(Boolean), next:'q3end' },
-    { t:'Break the cage before dawn. Quietly.', if:()=>!S.f.q3raid && (S.f.liesl==='taken'||S.f.matthis==='taken'), do:()=>{S.f.rook='alive';S.eye+=1; if(S.f.liesl==='taken') S.f.liesl='hidden'; if(S.f.matthis==='taken') S.f.matthis='freed';}, out:()=>W()?['One sleeping guard, one Axii, one bent bar. Whoever was in the cage is back in the inn before the chapel bell.','Rook wakes to an empty cage and knows exactly who did it. He leaves anyway. He has a column to ask for.']:['One sleeping guard, one whispered word, one lock that decides it was never a lock. Whoever was in the cage is back in the inn before the chapel bell.','Rook wakes to an empty cage and knows exactly who did it. He leaves anyway. He has a column to ask for.'], next:'q3end' },
-    { t:'Let him go.', if:()=>!S.f.q3raid, do:()=>{S.f.rook='alive';}, out:()=>[(S.f.liesl==='taken')?'The cage rolls out at dawn with Liesl in it. Matthis runs after it to the bridge and stops there.':(S.f.matthis==='taken')?'The cage rolls out at dawn with Matthis in it. The bakery does not open again.':'He goes. For now. Your name goes with him.'], next:'q3end' }
+    { t:'Walk out the front door and make him explain, to the whole street, why six armed men need a cage for a baker’s child.', if:()=>S.f.q3raid, do:()=>{S.f.rook='shamed';S.trust+=2; if(S.f.liesl==='taken') S.f.liesl='hidden'; if(S.f.matthis==='taken') S.f.matthis='freed';}, out:()=>['It works because the town is already outside, holding lanterns, and because Rook, for all his sermons, has never once been asked a question by a crowd.',S.f.q3stalled?'You ask the question that matters: "Who sent you?" He has no answer the street will accept.':'','Berna opens the cage herself. Rook leaves at dawn with it empty and a face like a slapped priest.',(S.f.liesl==='hidden')?'Liesl climbs down from the chimney covered in soot and bows. The town laughs. Rook hears it from the road.':'','He will not forget this. Trust rises.'].filter(Boolean), next:'q3end' },
+    { t:'Break the cage before dawn. Quietly.', if:()=>!S.f.q3raid && (S.f.liesl==='taken'||S.f.matthis==='taken'||S.f.q3hoddYes||S.f.q3hoddDren), do:()=>{S.f.rook='alive';S.eye+=1; if(S.f.liesl==='taken') S.f.liesl='hidden'; if(S.f.matthis==='taken') S.f.matthis='freed'; if(S.f.q3hoddYes) S.f.tinkerFreed=1; if(S.f.q3hoddDren) S.f.drenFreed=1;}, out:()=>W()?['One sleeping guard, one Axii, one bent bar. Whoever was in the cage is back in the inn before the chapel bell.','Rook wakes to an empty cage and knows exactly who did it. He leaves anyway. He has a column to ask for.']:['One sleeping guard, one whispered word, one lock that decides it was never a lock. Whoever was in the cage is back in the inn before the chapel bell.','Rook wakes to an empty cage and knows exactly who did it. He leaves anyway. He has a column to ask for.'], next:'q3end' },
+    { t:'Let him go.', if:()=>!S.f.q3raid, do:()=>{S.f.rook='alive';}, out:()=>[(S.f.liesl==='taken')?'The cage rolls out at dawn with Liesl in it. Matthis runs after it to the bridge and stops there.':(S.f.matthis==='taken')?'The cage rolls out at dawn with Matthis in it. The bakery does not open again.':(S.f.q3hoddYes)?'The cage rolls out at dawn with a tinker in it. You will not learn his name. Nobody will.':(S.f.q3hoddDren)?'The cage rolls out at dawn with Dren in it. Father Ansel walks beside it to the bridge, praying, and then walks back alone.':'He goes. For now. Your name goes with him.'], next:'q3end' }
   ]
 };
 N.q3end = { q:'q3', end:true, where:'Greyhollow', title:'The spark, closed',
@@ -446,10 +611,12 @@ N.q3end = { q:'q3', end:true, where:'Greyhollow', title:'The spark, closed',
     S.f.liesl==='marga' ? 'She is in Ashbrook with Marga and the chickens, learning things nobody writes down.' + (S.f.matthis==='taken' ? ' Her father is in a cage on the Oxenfurt road.' : '') :
     S.f.liesl==='hag' ? 'She is in Nettle Fen. Pip will not say her name anymore.' + (S.f.matthis==='taken' ? ' Her father is in a cage on the Oxenfurt road. The fen will hear about that.' : '') :
     'She is in a cage on the Oxenfurt road.',
+    S.f.q3hoddYes && !S.f.tinkerFreed ? 'A tinker with no name went to Oxenfurt in her place. The town knows whose idea that was.' : S.f.q3hoddDren && !S.f.drenFreed ? 'Dren the clerk went to Oxenfurt in her place. The Fire ate its own, and Father Ansel has not slept since.' : '',
     'Rook: ' + (S.f.rook==='dead' ? 'dead on the inn steps. Oxenfurt will send more.' : S.f.rook==='shamed' ? 'alive, humiliated in front of a whole street, and writing a very long letter.' : 'alive, and your name is in his book.'),
+    S.f.q3stalled ? 'You know Rook came on his own, not on orders. That is a thing to say out loud, in front of the right people, on the right night.' : '',
     'The Fire’s eye on you: ' + (S.eye>=7 ? 'wide open.' : S.eye>=4 ? 'watching.' : 'elsewhere, for now.'),
     'What this changes later: who stands in the square on the night the horns sound, and whether thirty white cloaks come back for you.'
-  ]
+  ].filter(Boolean)
 };
 
 // ===================== QUEST 4: OLD WOOD =====================
@@ -462,24 +629,94 @@ N.q4a = {
       'You can feel it from the road. Something old, and awake, and interested in you specifically.')
   ],
   choices: [
-    { t:'Take Aldo’s coin and go in.', do:()=>{S.f.q4side='aldo';}, out:()=>['A hundred and twenty crowns, half now. Aldo says the forest is lumber. He says it like a man who has never been in it at night.'], next:'q4forest' },
-    { t:'Go in for Thornwick. See what the forest wants.', do:()=>{S.f.q4side='thornwick';}, out:()=>['Hesper gives you a strip of red cloth to tie on your arm. "So it knows you came as a guest."'], next:'q4forest' }
+    { t:'Take Aldo’s coin and go in.', do:()=>{S.f.q4side='aldo';S.coin+=60;}, out:()=>['A hundred and twenty crowns, half now. Aldo says the forest is lumber. He says it like a man who has never been in it at night.'], next:'q4camp' },
+    { t:'Go in for Thornwick. See what the forest wants.', do:()=>{S.f.q4side='thornwick';}, out:()=>['Hesper gives you a strip of red cloth to tie on your arm. "So it knows you came as a guest."'], next:'q4camp' }
+  ]
+};
+N.q4camp = {
+  q:'q4', where:'The woodcutters’ camp', title:'Three dead men',
+  text: () => [
+    'The guild camp is at the treeline: a dozen tents, a saw pit, and three graves with fresh dirt. Aldo says the leshen took them. The men who were there say less. One of them, a boy called Wat, will not look at Aldo when he says it.',
+    R('You read the ground around the graves. Wolf tracks, yes. Crows, yes. And one set of boot prints walking away from the third grave that match the boots Aldo is wearing.',
+      'You put your hand on the third grave and the dead man tells you, without words, in the way the dead do: not wolves. A falling tree. Aldo had them cutting a totem oak, the one tree in the wood you do not cut, and it fell the wrong way, and then the wolves came for the other two because of what they had done.'),
+    'Aldo did not mention the oak.'
+  ],
+  choices: [
+    { t:'Say nothing. The contract is the contract.', out:()=>['You let Aldo keep his story. Wat watches you decide to.'], next:'q4forest' },
+    { t:'Ask Aldo about the oak. In front of his men.', do:()=>{S.f.q4aldoExposed=1;}, out:()=>['He goes red, then white. The men go quiet. He says the oak was in the way. He says it twice.','Half the camp walks out that afternoon. The ones who stay are the ones who need the money more than they fear the wood. Aldo will not forget you did this.'], next:'q4forest' },
+    { t:'Take Wat aside. What does he know?', do:()=>{S.f.q4wat=1;}, out:()=>['Wat is sixteen and has been sick with it for a week. The oak, the fall, the wolves. And one more thing: the night after, he saw the leshen at the treeline, and it looked at him, and he felt it decide he was not the one. "It was looking for someone," he says. "Not me."','He gives you a carved bead he found at the base of the oak. Thornwick work. A girl’s.'], next:'q4forest' }
   ]
 };
 N.q4forest = {
-  q:'q4', where:'The north wood', title:'The marked one',
+  q:'q4', where:'The north wood', title:'Guests and trespassers',
   text: () => [
-    R('Wolves first. They do not attack. They walk beside you, three on each side, like an escort. Your medallion has not stopped humming since the treeline. The totems are everywhere: antlers, bone, red string. You find the mark on a tree by Thornwick’s well: a girl’s name cut in Elder runes. Ysolde. Hesper’s granddaughter.',
-      'The forest speaks to you before you are a hundred yards in. Not words. Pressure. A door opening in your chest. It knows what you are and it is pleased, the way a king is pleased when another king visits. It shows you the mark without being asked: Ysolde. Hesper’s granddaughter. Sixteen.'),
-    'A marked one is the leshen’s tithe. While she lives, the forest is fed and quiet. If you kill the marked one, the leshen loses its anchor and can be destroyed. If the leshen is destroyed with the mark intact, the mark passes to whoever killed it.',
-    'Aldo wants it dead. Thornwick wants it fed. Ysolde wants to be sixteen.'
+    R('Wolves first. They do not attack. They walk beside you, three on each side, like an escort, or a guard. Your medallion has not stopped humming since the treeline. The totems are everywhere: antlers, bone, red string.',
+      'The forest speaks to you before you are a hundred yards in. Not words. Pressure. A door opening in your chest. It knows what you are and it is pleased, the way a king is pleased when another king visits.'),
+    S.f.q4side==='thornwick' ? 'The red cloth on your arm is doing something. The wolves keep their distance. The crows watch and do not call.' : 'You came in on Aldo’s coin, with no cloth on your arm, and the wood knows it. The wolves are closer than you would like.',
+    'Ahead, at a fork in the path, is a totem taller than the others, hung with a fresh deer skull. The path to the left goes to Thornwick’s side of the wood. The path to the right goes deeper, toward where the trees stop making sense.'
   ],
   choices: [
-    { t:'Kill Ysolde. Then the leshen. It is the only clean way.', do:()=>{S.f.leshen='dead';S.f.ysolde='dead';S.trust-=3;S.coin+=120;}, out:()=>['You do it fast, at the well, and she does not see you coming. The forest screams through every tree at once.','The leshen dies two hours later, anchorless, on its knees. The wolves leave. The totems rot by morning.','Aldo pays in full. Thornwick will never speak to you again, and Greyhollow heard what you did. Trust collapses.'], next:'q4end' },
-    { t:'Burn the totems and fight it with the mark intact. Take the mark on yourself.', do:()=>{S.f.leshen='dead';S.f.marked=1;S.coin+=120;}, out:()=>W()?['Igni on the totems. Then the thing itself, in a clearing, antlers like a fallen tree, crows pouring out of it. It takes an hour and everything you have.','When it dies, the mark passes. You feel it settle behind your sternum like a swallowed coal. Something in the wood will remember you.','Aldo pays. Ysolde lives. The forest is quiet, and angry.']:['Fire from your hands on every totem in a mile. Then the thing itself, in a clearing, antlers like a fallen tree, crows pouring out of it. You unmake it with the forest watching.','When it dies, the mark passes. You feel it settle behind your sternum like a swallowed coal. Something in the wood will remember you.','Aldo pays. Ysolde lives. The forest is quiet, and angry.'], next:'q4end' },
-    { t:'Offer it Aldo instead. A woodcutter for the wood.', do:()=>{S.f.leshen='fed';S.f.aldo='dead';S.trust-=1;}, out:()=>['You walk Aldo in to "show him the totems." You walk out alone. The forest does not even make a sound about it.','The guild disbands by the end of the week. Ysolde’s mark fades. Thornwick leaves bread at your door.','Greyhollow hears a version. Trust slips.'], next:'q4end' },
-    { t:'Bargain with it. Offer it better prey than a village girl: the witch hunters, when they come back.', who:'s', if:()=>S.f.rook!=='dead', do:()=>{S.f.leshen='pact';S.eye+=1;}, out:()=>['You stand in the clearing and talk to it like an equal, because tonight you are. You offer it men in white cloaks with fire in their hands. It has been hungry for that kind for a long time.','Ysolde’s mark fades. The wood goes quiet. You have made a promise to a forest, and forests collect.','Something in you is different on the walk out. The Fire’s eye on you grows.'], next:'q4end' },
-    { t:'Walk away. Tell Aldo the forest is not lumber.', do:()=>{S.f.leshen='alive';S.trust-=1;}, out:()=>['Aldo keeps his sixty crowns. Three more woodcutters go in the next week. Two come out.','Ysolde lives, marked. The forest is fed.'], next:'q4end' }
+    { t:R('Igni the big totem. See what the wood does.','Burn the big totem. See what the wood does.'), do:()=>{S.f.q4burnedOne=1; if(!W()) S.eye+=1;}, out:()=>['It goes up like it was waiting to. Every crow in the wood takes off at once. The wolves are gone, which is worse than the wolves being there.','Somewhere deeper in, something very large turns its head.'], next:'q4ysolde' },
+    { t:'Leave it. Walk the left path, toward Thornwick.', out:()=>['The wolves peel off at the edge of the village fields. One of them looks back at you, which wolves do not do.'], next:'q4ysolde' },
+    { t:'Walk the right path. Straight at it.', do:()=>{S.f.q4direct=1;}, out:()=>['The trees get older and the light gets wrong. The wolves stop at an invisible line and sit down, all six, and watch you cross it.'], next:'q4ysolde' }
+  ]
+};
+N.q4ysolde = {
+  q:'q4', where:'A clearing by Thornwick’s well', title:'The marked one',
+  text: () => [
+    'You find the mark on a tree by Thornwick’s well: a name cut in Elder runes. Ysolde. Hesper’s granddaughter. Sixteen.',
+    S.f.q4wat ? 'The bead Wat gave you is hers. She was at the oak the night it fell. She was there to stop them.' : '',
+    'She is at the well, drawing water, and she has known for a week. She asks you not to tell her grandmother. "Gran will try to give herself instead. The wood won’t take her. It wants someone who still has years."',
+    'A marked one is the leshen’s tithe. While she lives, the forest is fed and quiet. If you kill the marked one, the leshen loses its anchor and can be destroyed. If the leshen is destroyed with the mark intact, the mark passes to whoever killed it.',
+    'She knows all of that too. She has had a week.'
+  ].filter(Boolean),
+  choices: [
+    { t:'Promise her you will not tell Hesper.', do:()=>{S.f.q4promise=1;}, out:()=>['She breathes out. "Thank you." She goes back to drawing water, because the goats still need it, marked or not.'], next:'q4thornwick' },
+    { t:'Tell her you make no promises until you have seen the thing.', out:()=>['She nods. "Fair." She is braver than most of the men you have met this month.'], next:'q4thornwick' },
+    { t:'Tell her the truth: the cleanest way out of this is her.', do:()=>{S.f.q4toldYsolde=1;}, out:()=>['She does not flinch. "I know. I’ve known for a week. If it comes to that, do it at the well, at night, and don’t let Gran find me."','You have never been given permission for something like that before. It does not make it easier.'], next:'q4thornwick' }
+  ]
+};
+N.q4thornwick = {
+  q:'q4', where:'Thornwick, after dark', title:'The old faith',
+  text: () => [
+    'Thornwick keeps the rite at the new moon: the whole village at the edge of the wood with lanterns and bread and a goat, singing something older than Common. Hesper leads it. She does not know the name on the tree. She knows there is a name.',
+    'They leave the bread and the goat at the treeline. The wood takes them. It does this every month, and has for longer than the village has had a name, and in return the wood does not take anything else.',
+    'Hesper asks you to stand with them.'
+  ],
+  choices: [
+    { t:'Stand with them. Sing if you can.', do:()=>{S.f.q4rite=1;S.trust+=1; if(!W()) S.eye+=1;}, out:()=>W()?['You do not sing. You stand at the treeline with the lantern and the wood looks at you and, for the first time, does not seem to object.','Thornwick sees a witcher keep the old faith with them. Greyhollow hears of it.']:['You sing. You know the words, which surprises everyone including you; Aretuza teaches many things it does not admit to teaching.','Thornwick sees a sorceress keep the old faith with them. So does the chapel’s clerk, who is at the back, and who writes things down.'], next:'q4speak' },
+    { t:'Watch from outside the circle.', out:()=>['You watch. The wood watches back. Nobody is offended, exactly.'], next:'q4speak' },
+    { t:'Tell Hesper the name on the tree.', if:()=>!S.f.q4promise, do:()=>{S.f.q4toldHesper=1;S.trust-=1;}, out:()=>['Hesper does not cry. She puts down her lantern, walks to the treeline, and offers herself, out loud, to the wood.','Nothing answers. Ysolde was right: it does not want her. Hesper stands there until Ysolde comes and takes her home, and Ysolde does not look at you.','Thornwick will not thank you for this.'], next:'q4speak' }
+  ]
+};
+N.q4speak = {
+  q:'q4', where:'The heart of the wood', title:'The leshen',
+  text: () => [
+    'It comes at midnight, after the rite, because you are at the treeline alone and it has been curious since the road. Antlers like a fallen tree. A body that is bark and shadow and crows. It does not have a face. It has a place where a face would be, and the place looks at you.',
+    R('Leshens do not speak. This one does, in the way the oldest ones can, straight into the part of your head the Trials opened. It knows what you are. It has met your kind before. It did not enjoy it.',
+      'It speaks to you as an equal, because tonight you are. Old power recognizes old power. It asks, without words, what you want.'),
+    S.f.q4burnedOne ? 'It knows you burned the totem. It is not angry. It is interested, the way a cat is interested in a mouse that bit it.' : '',
+    'It tells you the terms, which have not changed in a thousand years. One life, freely marked, and the wood keeps the peace. The oak was cut. The price went up. Three woodcutters were the interest. Ysolde is the principal.'
+  ].filter(Boolean),
+  choices: [
+    { t:'Ask it to take the debt out of the guild instead. They cut the oak.', do:()=>{S.f.q4askedAldo=1;}, out:()=>['It considers. It would accept the one who ordered the cutting. It names him without a name: the one with the red face and the boots.','Aldo. It will take Aldo, and release the girl.'], next:'q4decide' },
+    { t:'Ask it what it fears.', do:()=>{S.f.q4askedFear=1;}, out:()=>['It does not fear. But it remembers fire, and it remembers the ones in white who brought it. It would very much like to meet them again.','You file that away.'], next:'q4decide' },
+    { t:'Say nothing. Let it finish, and decide.', out:()=>['It finishes. It waits. The wood waits with it.'], next:'q4decide' }
+  ]
+};
+N.q4decide = {
+  q:'q4', where:'The heart of the wood', title:'The price',
+  text: () => [
+    'Aldo wants it dead. Thornwick wants it fed. Ysolde wants to be sixteen. The leshen wants what it has always wanted, and will take it from someone.',
+    'There is no clean door. Pick one.'
+  ],
+  choices: [
+    { t:'Kill Ysolde. Then the leshen. It is the only clean way.', do:()=>{S.f.leshen='dead';S.f.ysolde='dead';S.trust-=3;S.coin+=60;}, out:()=>[S.f.q4toldYsolde?'You do it at the well, at night, the way she asked. She does not see you coming.':'You do it fast, at the well, and she does not see you coming.','The forest screams through every tree at once. The leshen dies two hours later, anchorless, on its knees. The wolves leave. The totems rot by morning.','Aldo pays the rest. Thornwick will never speak to you again, and Greyhollow heard what you did. Trust collapses.'], next:'q4end' },
+    { t:'Burn the totems and fight it with the mark intact. Take the mark on yourself.', do:()=>{S.f.leshen='dead';S.f.marked=1;S.coin+=60;}, out:()=>W()?['Igni on every totem in a mile. Then the thing itself, in a clearing, crows pouring out of it. It takes an hour and everything you have, and the wolves watch and do not help it.','When it dies, the mark passes. You feel it settle behind your sternum like a swallowed coal. Something in the wood will remember you.','Aldo pays. Ysolde lives. The forest is quiet, and angry.']:['Fire from your hands on every totem in a mile. Then the thing itself, in a clearing, crows pouring out of it. You unmake it with the forest watching, and it takes everything you have.','When it dies, the mark passes. You feel it settle behind your sternum like a swallowed coal. Something in the wood will remember you.','Aldo pays. Ysolde lives. The forest is quiet, and angry.'], next:'q4end' },
+    { t:'Give it Aldo. He cut the oak.', if:()=>S.f.q4askedAldo||S.f.q4aldoExposed, do:()=>{S.f.leshen='fed';S.f.aldo='dead';S.trust-= S.f.q4aldoExposed?0:1;}, out:()=>['You walk Aldo in to "show him the totems." You walk out alone. The forest does not even make a sound about it.','The guild disbands by the end of the week. Ysolde’s mark fades. Thornwick leaves bread at your door.',S.f.q4aldoExposed?'Greyhollow heard what Aldo did to his own men. Nobody asks where he went.':'Greyhollow hears a version. Trust slips.'], next:'q4end' },
+    { t:'Bargain with it. Offer it better prey than a village girl: the ones in white, when they come back.', who:'s', if:()=>S.f.rook!=='dead', do:()=>{S.f.leshen='pact';S.eye+=1;}, out:()=>['You stand in the clearing and talk to it like an equal, because tonight you are. You offer it men in white cloaks with fire in their hands.',S.f.q4askedFear?'It has been waiting a long time for someone to offer that.':'It has been hungry for that kind for a long time.','Ysolde’s mark fades. The wood goes quiet. You have made a promise to a forest, and forests collect.','Something in you is different on the walk out. The Fire’s eye on you grows.'], next:'q4end' },
+    { t:'Offer it a different tithe: the guild leaves the wood forever, and Thornwick doubles the bread.', if:()=>S.f.q4rite, do:()=>{S.f.leshen='treaty';S.trust+=1;S.f.aldo='gone';}, out:()=>['It takes a long time. Old things do not like new terms. But you stood at the rite, and it saw you do it.','It accepts. Ysolde’s mark fades. The guild is told, by you, in front of their own graves, that the wood is closed. Aldo leaves Greyhollow rather than say he was beaten by a tree.','Nobody dies. Thornwick does not know how to thank you. Trust rises.'], next:'q4end' },
+    { t:'Walk away. Tell Aldo the forest is not lumber.', do:()=>{S.f.leshen='alive';S.trust-=1;}, out:()=>['Aldo keeps the other sixty crowns. Three more woodcutters go in the next week. Two come out.','Ysolde lives, marked. The forest is fed. You did not decide, which is also a decision.'], next:'q4end' }
   ]
 };
 N.q4end = { q:'q4', end:true, where:'The forest road', title:'Old wood, closed',
@@ -488,21 +725,28 @@ N.q4end = { q:'q4', end:true, where:'The forest road', title:'Old wood, closed',
     S.f.leshen==='dead' ? (S.f.marked ? 'The leshen is dead and its mark is in you.' : 'The leshen is dead. Ysolde is dead. The wolves are gone.') :
     S.f.leshen==='fed' ? 'The leshen is fed. Aldo is the meal.' :
     S.f.leshen==='pact' ? 'The leshen is waiting for white cloaks.' :
+    S.f.leshen==='treaty' ? 'The leshen keeps a new bargain. The guild is gone. Ysolde is sixteen.' :
     'The leshen is alive, and Ysolde is still marked.',
+    S.f.q4aldoExposed && S.f.aldo!=='dead' ? 'Aldo’s men know what he did to the three in the graves.' : '',
     'A forest remembers who kept faith with it, and who did not.'
-  ]
+  ].filter(Boolean)
 };
 
 // ===================== QUEST 5: LONG SHADOWS =====================
 function defense(){
   let d = 0; const why = [];
   if (S.f.troll==='keeper'){ d+=2; why.push('Bogdan holds the bridge.'); }
-  if (S.f.elves==='saved'){ d+=2; why.push('Elven arrows from the north bank.'); }
+  if (S.f.elves==='saved' && S.f.elfSignal && S.f.q5signal){ d+=2; why.push('Elven arrows from the north bank, because you lit the fire.'); }
+  else if (S.f.elves==='saved'){ d+=1; why.push('A few elven arrows from the north bank.'); }
   if (S.f.lukas==='owes'){ d+=1; why.push('Lukas and the Ashbrook bows.'); }
+  if (S.f.childSaved){ d+=1; why.push('Ida and half of Ashbrook, with pitchforks, because of Tam.'); }
   if (S.f.liesl==='trained'){ d+=2; why.push('Liesl.'); }
   if (S.f.liesl==='hag'){ d+=2; why.push('Auntie Yew, and what Liesl became.'); }
-  if (S.f.leshen==='pact'||S.f.leshen==='fed'||S.f.leshen==='alive'){ d+=1; why.push('The forest eats what runs into it.'); }
+  if (S.f.leshen==='pact'||S.f.leshen==='fed'||S.f.leshen==='alive'||S.f.leshen==='treaty'){ d+=1; why.push('The forest eats what runs into it.'); }
   if (S.f.wraith==='river'){ d+=1; why.push('Something in the river remembers.'); }
+  if (S.f.scouts==='lied'){ d+=1; why.push('Nilfgaard came slow, expecting crossbows.'); }
+  if (S.f.scouts==='told'){ d-=1; why.push('Nilfgaard came fast. You told them what was here.'); }
+  if (S.f.sergeantFriend){ d+=1; why.push('A Redanian sergeant who owes you looked the other way at the right moment.'); }
   if (S.trust>=6){ d+=1; why.push('The town fights for you.'); }
   if (S.trust<=1){ d-=1; why.push('The town will not fight beside you.'); }
   return {d, why};
@@ -511,13 +755,15 @@ N.q5a = {
   q:'q5', where:'Greyhollow, the small hours', title:'Long shadows',
   text: () => [
     'Horns on the south road. A Nilfgaardian raiding column, two hundred soldiers of the southern empire, come to burn a river town for the lesson it teaches other river towns. They need the bridge to cross the Pontar. Everyone in Greyhollow needs it more.',
+    S.f.q2riddle ? 'You know who paid the Redanian garrison to leave now. It was this. Someone in Nilfgaard bought an empty bridge a month ago and is coming to collect.' : '',
     S.f.rook==='dead' ? 'Behind the column, under the Eternal Fire’s banner, is the rest of Rook’s order. Thirty men with torches, here for whoever killed a captain. They have an understanding with the Nilfgaardians: the town is theirs to burn, you are the Fire’s to keep.' :
     S.f.rook==='alive' && S.eye>=6 ? 'Rook is with them. Of course he is. He has a warrant with your name on it and a column to enforce it.' :
     S.f.rook==='shamed' ? 'Rook is with them, at the back, with a face that has been waiting for this.' : '',
     '<pip>Pip: "Bridge first. Everything else is after."</pip>'
-  ],
+  ].filter(Boolean),
   choices: [
-    { t:'The bridge.', out:()=>['You run.'], next:'q5bridge' }
+    { t:'Light a fire on the north tower first. The elves said they would see it.', if:()=>S.f.elfSignal, do:()=>{S.f.q5signal=1;}, out:()=>['Berna’s whole stock of lamp oil goes up on the tower in one minute. Across the river, in the hills, nothing. Then one light. Then six.','You run for the bridge.'], next:'q5bridge' },
+    { t:'The bridge. Now.', out:()=>['You run.'], next:'q5bridge' }
   ]
 };
 N.q5bridge = {
@@ -527,52 +773,86 @@ N.q5bridge = {
     if (S.f.troll==='keeper') t.push('Bogdan is already on the bridge, hat on, satchel off, a Redanian cart-axle in each hand. "Toll," he says to two hundred men, "is a story. Bogdan has not heard this one."');
     else if (S.f.troll==='dead') t.push('The bridge is empty. The pile of rock at the foot of the arch does not help anyone.');
     else t.push('Bogdan is on the bridge, but he does not know you, and he does not know whose side you are on. He fights the first thing that reaches him. It is a Nilfgaardian, which is luck, not loyalty.');
-    if (S.f.elves==='saved') t.push('Arrows come out of the dark on the north bank. Elven arrows, from the Mahakam side. Four people owed you. They brought friends.');
+    if (S.f.elves==='saved' && S.f.q5signal) t.push('Arrows come out of the dark on the north bank. A lot of arrows. Elven arrows, from the Mahakam side. Four people owed you. They brought everyone.');
+    else if (S.f.elves==='saved') t.push('A few arrows come out of the dark on the north bank. Elven arrows. Four people owed you, and they are doing what four people can.');
     if (S.f.lukas==='owes') t.push('Lukas and eleven Ashbrook bows come down the river road at a run. He finds you on the bridge and says "You said someday."');
-    if (S.f.lukas==='hanged') t.push('Ashbrook sends nobody. Ashbrook has nobody to send.');
+    if (S.f.childSaved) t.push('Behind them, Ida, with Tam left at home and a pitchfork in both hands, and twenty more from Ashbrook who remember a stranger on a road.');
+    if (S.f.lukas==='hanged') t.push('Ashbrook sends nobody with a bow. Ashbrook has nobody to send.');
     if (S.f.wraith==='river') t.push('Something comes up out of the Pontar under the arch. Black coat, open throat. It takes the first rank of Nilfgaardians into the water by the ankles, and it keeps looking at you.');
+    if (S.f.scouts==='lied') t.push('The column comes up the road slow, in cover, expecting crossbows on the towers. It costs them twenty minutes they did not have.');
+    if (S.f.letterSent) t.push('At the head of the column, under the black banner, a captain reins in and shouts a name across the bridge. "Aurelio." Then: "Who wrote to Vicovaro?"');
     t.push(R('Silver is wrong for this. Steel, then, and Quen, and the narrowest part of the bridge.', 'Two hundred men. You could do something about two hundred men. It would be seen from Oxenfurt.'));
     return t;
   },
   choices: [
-    { t:'Hold the bridge. Make them pay for every yard.', do:()=>{S.f.held=1; if(!W()) S.eye+=2;}, out:()=>{ const {d} = defense(); return d>=4 ? ['It holds. Against all sense, it holds, because everyone you ever did right by is standing on it with you.','By dawn the column is backing down the south road and the bridge is still a bridge.'] : d>=2 ? ['It holds for an hour. Then it does not. You fall back into the town with what is left.'] : ['It does not hold. It was never going to. You are off the bridge in ten minutes and the town is burning behind you.']; }, next:'q5town' },
-    { t:R('Fire the bridge. Igni on the old timbers under the arch.','Fire the bridge. Drop the arch into the river.'), do:()=>{S.f.burned=1; if(S.f.troll==='keeper'){S.f.troll='dead';S.f.trollDiedBridge=1;} if(!W()) S.eye+=1;}, out:()=>[S.f.trollDiedBridge?'Bogdan will not come off it. "Bogdan is the toll." The arch goes into the Pontar with him on it, and two hundred men on the wrong side of the water.':'The arch goes into the Pontar. Two hundred men on the wrong side of the water.','No bridge. No raid. Greyhollow is an island now, and Jens the ferryman is the richest man in it.'], next:'q5town' }
+    { t:'Answer the captain. "I did. He was laid to rest. His mother knows."', if:()=>S.f.letterSent, do:()=>{S.f.q5captain=1;S.f.held=1;}, out:()=>['Silence on the bridge for the length of a breath. The captain is Aurelio’s brother. He got the letter in a field camp three weeks ago and has not slept properly since.','He does not call off the column. He cannot. But he pulls his own company, forty men, off the bridge and onto the south bank, and tells them to watch the road. Forty fewer. He looks at you once more and does not look again.','You hold the bridge with what is left.'], next:'q5bridge2' },
+    { t:'Hold the bridge. Make them pay for every yard.', do:()=>{S.f.held=1; if(!W()) S.eye+=2;}, out:()=>['You hold.'], next:'q5bridge2' },
+    { t:R('Fire the bridge. Igni on the old timbers under the arch.','Fire the bridge. Drop the arch into the river.'), do:()=>{S.f.burned=1; if(S.f.troll==='keeper'){S.f.troll='dead';S.f.trollDiedBridge=1;} if(!W()) S.eye+=1;}, out:()=>[S.f.trollDiedBridge?'Bogdan will not come off it. "Bogdan is the toll." The arch goes into the Pontar with him on it, and two hundred men on the wrong side of the water.':'The arch goes into the Pontar. Two hundred men on the wrong side of the water.','No bridge. No raid. Greyhollow is an island now, and Jens the ferryman is the richest man in it.'], next:'q5square' }
   ]
 };
-N.q5town = {
-  q:'q5', where:'Greyhollow', title:'What came after',
+N.q5bridge2 = {
+  q:'q5', where:'The stone bridge, an hour in', title:'The narrow part',
+  text: () => {
+    const {d} = defense();
+    return [
+      d>=4 ? 'It holds. Against all sense, it holds, because everyone you ever did right by is standing on it with you. The column is bunched on the south ramp, taking arrows, and the men at the front have started looking behind them.' :
+      d>=2 ? 'It holds for an hour. Then the right-hand parapet goes and they are over it in a wave, and you are backing up the bridge one yard at a time.' :
+      'It does not hold. It was never going to. You are off the bridge in ten minutes with what is left of whoever came, and the town is lit behind you.',
+      R('Quen is gone. Your sword arm is somebody else’s. There is a thing you could do here that witchers are told not to do: drink everything in the bag at once and see what is left of you after.',
+        'There is a thing you could do here. One word, the real one, the one Aretuza took girls to the cellar for saying. It would end this. It would be seen from Oxenfurt, from Novigrad, from the moon.')
+    ];
+  },
+  choices: [
+    { t:R('Drink everything. Let the mutations have the night.','Say the word.'), do:()=>{S.f.q5allin=1; S.eye+= W()?1:3;}, out:()=>W()?['The world goes very slow and very clear and you are not sure, afterward, how much of what happened on the bridge was you.','It is enough. The column breaks. You come down off it at dawn with black veins to the elbow and a heart that will take a month to forgive you.']:['The glamour goes first, then the sky. For the length of one word there is no night over the Pontar, only you.','It is enough. The column breaks. You come down off the bridge as yourself, which is the last time anyone in Velen will see that face without knowing what it is. The Fire’s eye is a sun now.'], next:'q5square' },
+    { t:'Hold with what you have. No more than that.', out:()=>{ const {d}=defense(); return d>=4 ? ['You do not need the other thing. By dawn the column is backing down the south road and the bridge is still a bridge.'] : d>=2 ? ['You hold the narrow part until there is no narrow part. Then you fall back into the town with what is left.'] : ['You fall back. There was nothing else to do.']; }, next:'q5square' }
+  ]
+};
+N.q5square = {
+  q:'q5', where:'Greyhollow square', title:'The square',
   text: () => {
     const t = [];
     const {d} = defense();
-    const burned = S.f.burned;
-    if (burned) t.push('The town stands because the bridge does not. Nilfgaard will be back in the spring with boats. That is spring’s problem.');
-    else if (d>=4) t.push('Greyhollow stands. Scorched at the edges, short a few roofs, standing.');
-    else if (d>=2) t.push('Half the town burns before the column pulls back. The chapel. The mill. Not the inn. Pip’s chimney is the only chimney on that street still up.');
-    else t.push('Greyhollow burns. The inn, the chapel, the mill, the bridge. What is left walks north at dawn.');
-    // Liesl
-    if (S.f.liesl==='trained') t.push('In the square, the Nilfgaardian captain found a twelve-year-old girl standing in front of the bakery. He is still there, in a sense. She lit one candle, and only one, and it was him.');
-    if (S.f.liesl==='taken') t.push('The Order built a pyre in the square before the raid was even over. Liesl is on it. ' + (S.f.held && d>=2 ? 'You cut her down with the torches already lit. She will not sleep for a year. She is alive.' : 'You were not there. You were on the bridge, or running. The town will not say her name to you.'));
-    if (S.f.liesl==='hag') t.push('Auntie Yew walked out of Nettle Fen at midnight with Liesl beside her, and whatever Liesl is now, the thirty men in white cloaks went into the fen after them and did not come out. Pip hid in your coat the whole time.' + (S.f.matthis==='taken' ? ' Liesl did not look at you once. She knows who let them take her father.' : ''));
-    if (S.f.matthis==='taken' && S.f.liesl==='marga') t.push('Matthis did not come back from Oxenfurt. The bakery is dark. Liesl stayed in Ashbrook with Marga, and Marga has told her everything.');
-    if (S.f.liesl==='marga') t.push('Liesl is in Ashbrook with Marga. Nothing came near Ashbrook. A charm on a lintel, maybe. Marga is not saying.');
-    if (S.f.liesl==='hidden' && !S.f.q3raid) t.push('Liesl is in the chimney. Liesl was in the chimney for all of it. She comes down at dawn, black with soot, and asks if she can have her bread now.');
+    const won = S.f.burned || S.f.q5allin || d>=4;
+    if (S.f.burned) t.push('The town stands because the bridge does not. Nilfgaard will be back in the spring with boats. That is spring’s problem.');
+    else if (won) t.push('The column is going back down the south road. The square is full of people who did not expect to be alive and are not sure what to do with it.');
+    else if (d>=2) t.push('Half the town is burning. The chapel. The mill. Not the inn. Pip’s chimney is the only chimney on that street still up, and there are Nilfgaardians in the square.');
+    else t.push('Greyhollow is burning. The inn, the chapel, the mill. There are Nilfgaardians in the square and they are not in a hurry.');
+    if (S.f.liesl==='trained') t.push('In front of the bakery, a twelve-year-old girl is standing very still with her hands folded. A Nilfgaardian captain, or what is left of one, is on the cobbles in front of her. She lit one candle, and only one, and it was him.');
+    if (S.f.liesl==='taken') t.push('The Order built a pyre in the square before the raid was even over. Liesl is on it, and the torches are lit, and thirty men in white are between you and her.');
+    if (S.f.liesl==='hag') t.push('Auntie Yew walked out of Nettle Fen at midnight with Liesl beside her, and whatever Liesl is now, it has a voice like a well and eyes like the bottom of one.' + (S.f.matthis==='taken' ? ' Liesl does not look at you once. She knows who let them take her father.' : ''));
+    if (S.f.liesl==='marga') t.push('Liesl is in Ashbrook with Marga. ' + (S.f.matthis==='taken' ? 'Matthis did not come back from Oxenfurt. Marga has told her everything.' : 'Nothing came near Ashbrook. A charm on a lintel, maybe. Marga is not saying.'));
+    if (S.f.liesl==='hidden') t.push('Liesl is in the chimney with Pip. Liesl was in the chimney for all of it.');
     if (S.f.liesl==='coached') t.push('Liesl kept her face dull and her story boring and walked past two hundred men and a priest without lighting anything. You taught her that.');
-    // forest
-    if (S.f.leshen==='pact') t.push('The Order’s thirty went into the north wood after a woman in a light. The forest had been promised. The forest collected. You did not have to lift a hand.');
+    if (S.f.rook==='dead' || (S.f.rook && S.eye>=6)) t.push('And in the middle of the square, with thirty white cloaks behind him, is the Order. ' + (S.f.rook==='dead' ? 'A new captain. He has Rook’s medallion on a cord around his wrist.' : 'Rook. He has a warrant and a column and nothing left to be ashamed of.'));
+    else if (S.f.rook==='shamed') t.push('Rook is at the edge of the square with six men, watching. He came to see you lose.');
+    return t;
+  },
+  choices: [
+    { t:'The pyre. Cut her down, whatever it costs.', if:()=>S.f.liesl==='taken', do:()=>{S.f.q5pyre=1; S.f.liesl='saved'; S.eye+=2; S.trust+=2;}, out:()=>W()?['Thirty men. You do not count them. You go through the ones in front and cut the rope with the torches already lit, and carry her out of the square with her dress smoking.','She will not sleep for a year. She is alive. The Order will never stop.']:['You do not go through them. You stand at the edge of the square and the pyre goes out. All of it, at once, cold, as if it had never been lit. Thirty men turn around.','You walk through them to the stake and untie her yourself. Nobody moves. She is alive. The Order will never stop.'], next:'q5forest' },
+    { t:'Face the Order here. Say the thing out loud: nobody sent them.', if:()=>S.f.q3stalled && (S.f.rook==='alive' && S.eye>=6), do:()=>{S.f.q5exposed=1; S.trust+=2;}, out:()=>['You say it to the square: Rook came on a clerk’s letter. No order from Oxenfurt. No warrant but his own hand. Thirty men who thought they were the Church look at a captain who is, legally, a man with a grudge.','Half of them lower their torches. The other half look at Rook. Rook looks at the bridge, and then at the road.'], next:'q5forest' },
+    { t:'Let the Order come. You have other things to do tonight.', if:()=>S.f.rook==='dead' || (S.f.rook && S.eye>=6), out:()=>['They come. You go the other way. The forest is north.'], next:'q5forest' },
+    { t:'Into the north wood, after what is running there.', out:()=>['Whatever broke off the bridge went for the trees.'], next:'q5forest' }
+  ]
+};
+N.q5forest = {
+  q:'q5', where:'The north wood, before dawn', title:'What runs into the trees',
+  text: () => {
+    const t = [];
+    if (S.f.leshen==='pact') t.push('The Order’s thirty went into the north wood after a woman in a light, or after a witcher, or after the raiders. It does not matter which. The forest had been promised. The forest collected. You did not have to lift a hand.');
+    else if (S.f.leshen==='treaty') t.push('What ran from the bridge into the north wood did not come out of the north wood. The bargain was: the guild leaves, the wood keeps the peace. Two hundred men with torches are not the peace. Thornwick heard it from the fields: the whole wood, breathing in.');
     else if (S.f.leshen==='fed'||S.f.leshen==='alive') t.push('What ran from the bridge into the north wood did not come out of the north wood. Thornwick left bread at your door again.');
-    else if (S.f.leshen==='dead' && S.f.marked) t.push('What ran into the north wood regrouped there and came back at dusk. The forest did not stop them. The forest was busy with you. The coal behind your sternum has not cooled.');
+    else if (S.f.leshen==='dead' && S.f.marked) t.push('What ran into the north wood regrouped there and came back at dusk. The forest did not stop them. The forest was busy with you. The coal behind your sternum is awake tonight, and something with antlers is walking beside you that nobody else can see.');
     else if (S.f.leshen==='dead') t.push('What ran into the north wood regrouped there and came back at dusk. The forest is just trees now.');
-    // Rook / personal
-    if (S.f.rook==='dead') t.push('The Order wants you more than Nilfgaard wants the town. You will be leaving Greyhollow by the north road, tonight, and not stopping for a while.');
-    else if (S.eye>=7) t.push(R('Rook has a warrant and thirty men and nothing left to be ashamed of. You will be leaving Greyhollow by the north road, and he will be behind you for years.', 'Rook has a warrant and thirty men and your real face in his memory. You will be leaving Greyhollow by the north road, and he will be behind you for years. He has found his purpose, and it is you.'));
+    if (S.f.q5captain) t.push('On the south bank, forty men under a captain named for a dead man’s brother never crossed. He will be court-martialed in Vicovaro. He knew that when he did it.');
+    if (S.f.rook==='dead' && !S.f.q5exposed) t.push('The Order wants you more than Nilfgaard wants the town. You will be leaving Greyhollow by the north road, tonight, and not stopping for a while.');
+    else if (S.eye>=7 && !S.f.q5exposed) t.push(R('Rook has a warrant and thirty men and nothing left to be ashamed of. You will be leaving Greyhollow by the north road, and he will be behind you for years.', 'Rook has a warrant and thirty men and your real face in his memory. You will be leaving Greyhollow by the north road, and he will be behind you for years. He has found his purpose, and it is you.'));
+    else if (S.f.q5exposed) t.push('Rook left by the south road with the Nilfgaardians, which tells the town everything it needed to know about the Eternal Fire. The thirty went home. Some of them will write to Oxenfurt about a captain who lied. Some of them will write about you.');
     else if (S.f.rook==='shamed') t.push('Rook came to watch you lose. He watched the opposite. He leaves on the same road he came in on, and he has nothing to write to Oxenfurt about.');
     return t;
   },
   choices: [ { t:'The ledger.', out:()=>[], next:'q5end' } ]
 };
-N.q5end = { q:'q5', end:true, where:'Afterward', title:'What it bought', ledger:true,
-  text: () => []
-};
+N.q5end = { q:'q5', end:true, where:'Afterward', title:'What it bought', ledger:true, text: () => [] };
 
 // ---------- quest list ----------
 const QUESTS = [
@@ -652,11 +932,11 @@ function startQuest(id){
   // reset this quest's flags so replays are clean
   const keep = {};
   Object.keys(S.f).forEach(k => { if (!k.startsWith(id)) keep[k]=S.f[k]; });
-  if (id==='q1'){ delete keep.wraith; delete keep.lukas; delete keep.marga; delete keep.margaSafe; delete keep.margaWitness; delete keep.margaCharm; delete keep.bribe; delete keep.refused; delete keep.bertKnows; }
-  if (id==='q2'){ delete keep.troll; delete keep.elves; delete keep.trollFriend; delete keep.trollTruth; delete keep.trollScared; }
-  if (id==='q3'){ delete keep.liesl; delete keep.rook; delete keep.matthis; }
-  if (id==='q4'){ delete keep.leshen; delete keep.ysolde; delete keep.marked; delete keep.aldo; }
-  if (id==='q5'){ delete keep.held; delete keep.burned; delete keep.trollDiedBridge; }
+  if (id==='q1'){ ['wraith','lukas','marga','margaSafe','margaWitness','margaCharm','bribe','refused','bertKnows','childSaved','letterSent','letterKept','lukasTold','lukasConfess'].forEach(k=>delete keep[k]); }
+  if (id==='q2'){ ['troll','elves','trollFriend','trollTruth','trollScared','scouts','elfSignal','sergeantFriend'].forEach(k=>delete keep[k]); }
+  if (id==='q3'){ ['liesl','rook','matthis','tinkerFreed','drenFreed'].forEach(k=>delete keep[k]); }
+  if (id==='q4'){ ['leshen','ysolde','marked','aldo'].forEach(k=>delete keep[k]); }
+  if (id==='q5'){ ['held','burned','trollDiedBridge'].forEach(k=>delete keep[k]); if(keep.liesl==='saved') keep.liesl='taken'; }
   S.f = keep; S.node = q.start; S.chosen = null; render();
 }
 function choose(i){
@@ -684,19 +964,23 @@ function ledgerHTML(){
   const {d, why} = defense();
   const burned = S.f.burned;
   const town = burned ? ['Standing, as an island. Nilfgaard comes back in spring.', 'good'] : d>=4 ? ['Standing.', 'good'] : d>=2 ? ['Half burned. Still a town.', ''] : ['Ashes.', 'bad'];
-  const you = (S.f.rook==='dead' || S.eye>=7) ? [R('Leaving by the north road, hunted by the Order.', 'Leaving by the north road, hunted by the Order, with your real face in Rook’s memory.'), 'bad'] : [R('Free to ride on. Greyhollow will tell stories about the witcher.', 'Free to ride on, glamour intact. Greyhollow will tell stories about the beautiful stranger and get all the details wrong.'), 'good'];
+  const you = S.f.q5exposed ? [R('Free. Rook is finished, and the town knows what the Fire is.', 'Free, and famous in the wrong circles. Rook is finished, and the town knows what the Fire is.'), 'good']
+    : (S.f.rook==='dead' || S.eye>=7) ? [R('Leaving by the north road, hunted by the Order.', 'Leaving by the north road, hunted by the Order, with your real face in Rook’s memory.'), 'bad']
+    : [R('Free to ride on. Greyhollow will tell stories about the witcher.', 'Free to ride on, glamour intact. Greyhollow will tell stories about the beautiful stranger and get all the details wrong.'), 'good'];
   const rows = [
     ['Greyhollow', ...town],
     [NAME(), ...you],
     ['Bogdan', S.f.troll==='keeper' ? ['Alive. Bridge-keeper. Wears the hat.','good'] : S.f.trollDiedBridge ? ['Went into the river with the arch, on purpose.','bad'] : S.f.troll==='dead' ? ['Dead under the bridge.','bad'] : ['Alive, and still a problem for Jens.','']],
     ['The elves', S.f.elves==='saved' ? ['In the hills. Came back with arrows.','good'] : S.f.elves==='reported' ? ['Redanian irons.','bad'] : ['Unknown.','']],
-    ['Liesl', S.f.liesl==='trained' ? ['Alive. Lit one candle. It was a captain.','good'] : S.f.liesl==='taken' ? (S.f.held && d>=2 ? ['Cut down from the pyre. Alive.','good'] : ['Burned.','bad']) : S.f.liesl==='hag' ? ['Alive. Not the same girl.',''] : S.f.liesl==='marga' ? ['Alive, in Ashbrook, learning things.','good'] : S.f.liesl==='hidden' ? ['Alive. Mostly soot.','good'] : S.f.liesl==='coached' ? ['Alive. Boring on purpose.','good'] : ['Never met her.','']],
+    ['Liesl', S.f.liesl==='trained' ? ['Alive. Lit one candle. It was a captain.','good'] : S.f.liesl==='saved' ? ['Cut down from the pyre with her dress smoking. Alive.','good'] : S.f.liesl==='taken' ? ['Burned in the square while you were elsewhere.','bad'] : S.f.liesl==='hag' ? ['Alive. Not the same girl.',''] : S.f.liesl==='marga' ? ['Alive, in Ashbrook, learning things.','good'] : S.f.liesl==='hidden' ? ['Alive. Mostly soot.','good'] : S.f.liesl==='coached' ? ['Alive. Boring on purpose.','good'] : ['Never met her.','']],
     ['Rook', S.f.rook==='dead' ? ['Dead. The Order remembers.','bad'] : S.f.rook==='shamed' ? ['Alive. Humiliated twice.','good'] : S.f.rook ? ['Alive. Your name in his book.','bad'] : ['Never came.','']],
     ['Matthis the baker', S.f.matthis==='taken' ? ['Taken to Oxenfurt as bait. Did not come back.','bad'] : S.f.matthis==='freed' ? ['Pulled out of the cage. Baking again.','good'] : S.done.q3 ? ['Alive. Bread still a little burnt.',''] : ['Never met him.','']],
     ['Marga', S.f.marga==='gone' ? ['House burned. Gone.','bad'] : S.done.q1 ? ['Alive. Chickens intact.','good'] : ['Never met her.','']],
-    ['Lukas', S.f.lukas==='hanged' ? ['Hanged by his father.','bad'] : S.f.lukas==='owes' ? ['Alive. Paid his debt on the bridge.','good'] : S.f.lukas==='free' ? ['Got away with it.','bad'] : ['Never met him.','']],
-    ['Aurelio', S.f.wraith==='rested' ? ['Went home.','good'] : S.f.wraith==='destroyed' ? ['Destroyed.',''] : S.f.wraith==='river' ? ['In the river. Took a rank of Nilfgaardians with him.',''] : ['Never met him.','']],
-    ['The north wood', S.f.leshen==='pact' ? ['Fed on white cloaks. Promise kept.','good'] : S.f.leshen==='fed' ? ['Fed on Aldo. Quiet.',''] : S.f.leshen==='alive' ? ['Alive. Ysolde still marked.',''] : S.f.leshen==='dead' && S.f.marked ? ['Dead. The mark is in you.','bad'] : S.f.leshen==='dead' ? ['Dead. Ysolde dead. Just trees.','bad'] : ['Never went in.','']]
+    ['Lukas', S.f.lukas==='hanged' ? ['Hanged by his father.','bad'] : S.f.lukas==='owes' ? ['Alive. Paid his debt on the bridge.','good'] : S.f.lukas==='exiled' ? ['On the north road with a bow. In someone’s army by now.',''] : S.f.lukas==='dead' ? ['In the well with the man he put there.','bad'] : S.f.lukas==='free' ? ['Got away with it.','bad'] : ['Never met him.','']],
+    ['Tam and Ida', S.f.childSaved ? ['Tam alive. Ida brought Ashbrook to the bridge.','good'] : S.f.q1passedChild ? ['Tam lived. Ida remembers you walked past.','bad'] : S.done.q1 ? ['Tam mending.',''] : ['Never met them.','']],
+    ['Aurelio', S.f.wraith==='rested' ? ['Went home.' + (S.f.letterSent ? ' His brother pulled forty men off the bridge for it.' : ''),'good'] : S.f.wraith==='destroyed' ? ['Destroyed.',''] : S.f.wraith==='river' ? ['In the river. Took a rank of Nilfgaardians with him.',''] : S.f.wraith==='fed' ? ['Took Lukas. Satisfied.','bad'] : ['Never met him.','']],
+    ['Bogdan’s secret', S.f.q2riddle ? ['You knew the garrison was bought. You knew who was coming.','good'] : S.done.q2 ? ['Never asked. The empty bridge was a surprise.',''] : ['','']],
+    ['The north wood', S.f.leshen==='pact' ? ['Fed on white cloaks. Promise kept.','good'] : S.f.leshen==='treaty' ? ['A new bargain. Nobody died. Ysolde is sixteen.','good'] : S.f.leshen==='fed' ? ['Fed on Aldo. Quiet.',''] : S.f.leshen==='alive' ? ['Alive. Ysolde still marked.',''] : S.f.leshen==='dead' && S.f.marked ? ['Dead. The mark is in you.','bad'] : S.f.leshen==='dead' ? ['Dead. Ysolde dead. Just trees.','bad'] : ['Never went in.','']]
   ];
   let h = `<p>Greyhollow’s defense came to <b>${d}</b>. ${why.length ? 'What counted: ' + why.join(' ') : 'Nothing you did came back to help.'}</p>
   <div class="tablewrap"><table><thead><tr><th>Who</th><th>Where they ended up</th></tr></thead><tbody>`;
