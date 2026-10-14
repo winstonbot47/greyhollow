@@ -105,13 +105,14 @@ td.good{color:var(--moss)}
 
 <script>
 // ---------- state ----------
-const fresh = () => ({ role:null, trust:3, eye:0, coin:20, f:{}, done:{}, node:'world', chosen:null, log:[] });
+const SAVE_V = 3;   // bump to reset every player's save on next load
+const fresh = () => ({ v:SAVE_V, role:null, trust:3, eye:0, coin:20, f:{}, done:{}, node:'world', chosen:null, log:[] });
 let S = fresh();
 const W = () => S.role === 'witcher';
 const NAME = () => W() ? 'Garrick' : 'Ilvara';
 const R = (w, s) => W() ? w : s;   // role text
 function save(){ try{ localStorage.setItem('greyhollow', JSON.stringify(S)); }catch(e){} }
-function load(){ try{ const j = localStorage.getItem('greyhollow'); if (j) S = Object.assign(fresh(), JSON.parse(j)); }catch(e){} }
+function load(){ try{ const j = localStorage.getItem('greyhollow'); if (j) { const p = JSON.parse(j); if (p && p.v === SAVE_V) S = Object.assign(fresh(), p); else localStorage.removeItem('greyhollow'); } }catch(e){} }
 function clamp(){ S.trust = Math.max(0, Math.min(10, S.trust)); S.eye = Math.max(0, Math.min(10, S.eye)); S.coin = Math.max(0, S.coin); }
 
 // ---------- nodes ----------
