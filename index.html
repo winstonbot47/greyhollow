@@ -43,7 +43,11 @@ h1 em{color:var(--accent);font-style:italic}
 .eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
 h2{font-family:var(--display);font-weight:400;font-size:1.55rem;margin:0 0 12px;text-wrap:balance;line-height:1.15}
 .scene p{margin:0 0 .75em}
-.scene p.pip{color:var(--muted);font-style:italic;padding-left:12px;border-left:2px solid var(--line)}
+.scene .pip{margin:0 0 .9em;padding:10px 12px 10px 14px;border-left:3px solid var(--gold);background:color-mix(in srgb, var(--gold) 8%, transparent);font-style:italic}
+.scene .pip .pl{display:block;font-family:var(--mono);font-style:normal;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+.card{border:1px solid var(--line);background:color-mix(in srgb, var(--fg) 4%, transparent);padding:10px 14px;margin:0 0 14px;font-size:.93rem;display:grid;gap:4px}
+.card span{display:block}
+.card b{font-family:var(--mono);font-weight:400;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:8px}
 .scene b.lore{font-family:var(--display);font-weight:400;color:var(--gold);font-size:1.1em}
 .prompt{font-family:var(--mono);color:var(--muted);margin:14px 0 8px;font-size:.92rem}
 .choices{display:grid;gap:8px;margin:0;padding:0;list-style:none}
@@ -139,6 +143,24 @@ N.pick = {
   pick:true
 };
 
+N.prologue = {
+  where:'The Drowned Rat, Greyhollow', title:'The inn, and the thing in the chimney',
+  cast: () => [NAME(), 'Berna the innkeeper', 'Pip'],
+  text: () => [
+    R('You ride into Greyhollow at dusk with two swords on your back and rain in your collar. The town is thirty houses and a stone bridge, and every one of the thirty houses watches you pass. The inn is called the Drowned Rat. The sign is a rat. It is, in fact, drowning.',
+      'You ride into Greyhollow at dusk, and the town, which has been grey for three hundred years, notices. Men stop mid-sentence. A woman at a well forgets the bucket. You are used to it. You put a little more into the glamour anyway, out of habit, and the glamour takes it. The inn is called the Drowned Rat. The sign is a rat. It is, in fact, drowning.'),
+    'Berna runs the inn. Sixty, wide, unimpressed by anything that has ever walked through her door. She puts a bowl of stew in front of you and a list on the table: everything wrong with her town, in order of what she would pay to have fixed. "You look like you fix things," she says. It is not a compliment.',
+    'Then something falls down the chimney.',
+    'It is the size of a cat, black with soot, with enormous eyes and a face like a very old child. It dusts itself off, climbs onto the table, looks you up and down, and says: "Right. I’m Pip. I’m a godling. That’s a house spirit, before you ask. I’ve lived in that chimney ninety years. I know everybody in this town by smell. I know who’s lying. I know where the bodies are, and I mean that literally, there are at least four. And you’re going to need me."',
+    'Berna does not look up. "He does this," she says.',
+    '<pip>"I’m coming with you. I’ll ride in your coat. I’ll be quiet mostly. When I talk, listen, because I’m usually right and I’m always smug about it."</pip>'
+  ],
+  choices: [
+    { t:'"Fine. Stay out of the way."', do:()=>{S.metPip=1;}, out:()=>['Pip climbs into your coat pocket like it was built for him. It smells of soot for the rest of the story.'], next:'hub' },
+    { t:R('"I work alone."','"I do not travel with pets."'), do:()=>{S.metPip=1;}, out:()=>['Pip nods seriously, waits until you turn around, and climbs into your coat pocket anyway.','Berna, still not looking up: "He does this."'], next:'hub' }
+  ]
+};
+
 N.hub = {
   where:'The Drowned Rat, Greyhollow', title:'The quest board',
   text: () => {
@@ -146,8 +168,8 @@ N.hub = {
     const open = [
       d===0 ? R('You take the corner table. The innkeeper, Berna, brings ale and a list of everything wrong with her town, in order of what she would pay to have fixed.',
                 'You take the corner table and the room rearranges itself around you. Men stop mid-sentence. Berna the innkeeper brings wine without being asked and a list of everything wrong with her town, in order of what she would pay to have fixed.') : '',
-      !S.pipMet ? 'Something small and sooty is watching you from inside the chimney. It introduces itself as Pip, a godling, which is a knee-high nature spirit that attaches itself to a house and talks too much. Pip has lived in that chimney for ninety years, knows everyone in town by smell, and has opinions about all of these jobs. Pip will be riding in your coat pocket from here on, whether you like it or not.' : '',
-      d>0 && d<4 && S.pipMet ? 'Berna wipes the table. Pip rustles in the chimney. The board has more on it than it did.' : '',
+      d===0 ? '<pip>"Start anywhere. The well’s the quietest. The bridge is the funniest. Don’t start with the hunters."</pip>' : '',
+      d>0 && d<4 ? 'Berna wipes the table. Pip rustles in your pocket. The board has more on it than it did.' : '',
       d>=4 && !S.done.q5 ? 'Pip is not in the chimney. Pip is on the table, which has never happened, and Pip says: "Horns. On the south road. You should finish your drink."' : '',
       S.done.q5 ? 'The story is told. Pip says you can read the ledger again, or start over and see what the other one would have done.' : ''
     ].filter(Boolean);
@@ -856,17 +878,30 @@ N.q5end = { q:'q5', end:true, where:'Afterward', title:'What it bought', ledger:
 
 // ---------- quest list ----------
 const QUESTS = [
-  { id:'q1', name:'Salt in the Well', start:'q1a', blurb:'A poisoned well, a widow, and a boy with a knife.' },
-  { id:'q2', name:'The Toll', start:'q2a', blurb:'A troll on the bridge, and what he is standing on.' },
-  { id:'q3', name:'The Spark', start:'q3a', blurb:'Witch hunters, and a baker’s girl who burns bread.' },
-  { id:'q4', name:'Old Wood', start:'q4a', blurb:'A leshen, a guild, and a girl with a mark.' },
-  { id:'q5', name:'Long Shadows', start:'q5a', blurb:'Horns on the south road. Everything comes due.', gate:4 }
+  { id:'q1', name:'Salt in the Well', start:'q1a', blurb:'A poisoned well, a widow, and a boy with a knife.',
+    brief:{ where:'Ashbrook, a farming hamlet an hour upriver from Greyhollow.', who:'Berthold the ealdorman (headman), his son Lukas, Marga the widow who sells herbs, Ida and her sick boy Tam, Orm the miller.', stake:'Something in the well is poisoning the village. The village wants to hang the widow for it. You have been paid sixty crowns to make it stop.' } },
+  { id:'q2', name:'The Toll', start:'q2a', blurb:'A troll on the bridge, and what he is standing on.',
+    brief:{ where:'Greyhollow’s stone bridge over the Pontar, and the council chamber that argues about it.', who:'Bogdan the troll, Alderman Hodd, Jens the ferryman, Berna, and whoever is living under the bridge.', stake:'A troll has taken the only bridge and charges tolls in cheese. The council wants it cleared. Two armies want to know if it is held.' } },
+  { id:'q3', name:'The Spark', start:'q3a', blurb:'Witch hunters, and a baker’s girl who burns bread.',
+    brief:{ where:'Greyhollow square, the inn, the bakery three doors down.', who:'Captain Rook of the Eternal Fire and six witch hunters, Matthis the baker, his daughter Liesl (12), Alderman Hodd, Father Ansel the town priest, and Pip.', stake:'Someone wrote to the witch hunters about a child who sets things on fire when scared. They have three days and a cage. ' + R('They do not like witchers either.', 'They are the people you have been hiding from your whole life.') } },
+  { id:'q4', name:'Old Wood', start:'q4a', blurb:'A leshen, a guild, and a girl with a mark.',
+    brief:{ where:'The north wood above Greyhollow, the woodcutters’ camp at its edge, and Thornwick, the village that still prays to the forest.', who:'Aldo the woodcutters’ foreman, Wat the apprentice, Elder Hesper of Thornwick, her granddaughter Ysolde, and the leshen.', stake:'The forest spirit has killed three woodcutters and marked a village girl as its price. The guild pays to kill it. The village begs you not to.' } },
+  { id:'q5', name:'Long Shadows', start:'q5a', blurb:'Horns on the south road. Everything comes due.', gate:4,
+    brief:{ where:'Greyhollow, the bridge, the square, the north wood. All of it, in one night.', who:'Everyone you helped or failed in the other four quests.', stake:'Two hundred Nilfgaardian soldiers are coming to burn the town. Whether it stands depends on what you already did.' } }
 ];
+// who is standing in the scene, for the briefing card
+const CAST = {
+  q1child:['Ida','Tam, six, grey-lipped'], q1gate:['Men with a rope by the shrine'], q1well:['Aurelio, a month dead'], q1marga:['Marga, seventy','Orm the miller (if the rope is out)'], q1bert:['Berthold, the ealdorman'], q1blind:['Lukas, nineteen'], q1night:['Aurelio, no longer a body','Lukas (if you sent for him)'], q1dawn:['Lukas','Berthold on the porch','the whole village'],
+  q2a:['The council: Hodd, Jens, the merchants, Berna'], q2scouts:['Three Nilfgaardian scouts and their sergeant'], q2bridge:['Bogdan, nine feet of rock'], q2riddle:['Bogdan'], q2under:['Bogdan','An elf mother, grandfather, two children'], q2decide:['Bogdan','The elves'], q2under_dead:['An elf mother, grandfather, two children'], q2elves:['The elves','Six Redanian soldiers at the picket'], q2picket:['The elf grandfather','The Redanian sergeant'],
+  q3a:['Captain Rook','Six witch hunters','The whole town'], q3b:['Matthis the baker','Liesl'], q3letter:['Matthis','Pip'], q3b2:['Matthis','Liesl','Pip'], q3hodd:['Alderman Hodd'], q3c:['Rook and two men'], q3search:['Four witch hunters and a dog','Berna','whoever you hid'], q3night:['Rook and all six','The town, with lanterns'],
+  q4a:['Aldo the foreman','Elder Hesper'], q4camp:['Aldo','Wat','Three graves'], q4forest:['Six wolves','Crows'], q4ysolde:['Ysolde, sixteen'], q4thornwick:['Elder Hesper','All of Thornwick'], q4speak:['The leshen'], q4decide:['The leshen'],
+  q5a:['Pip','Everyone, waking up'], q5bridge:['Two hundred Nilfgaardians','Whoever came to help'], q5bridge2:['What is left of both sides'], q5square:['The town','The Order, if it came','Liesl, wherever she is'], q5forest:['The wood']
+};
 
 // ---------- render ----------
 function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
 function para(p){
-  if (p.startsWith('<pip>')) return `<p class="pip">${esc(p.slice(5,-6))}</p>`;
+  if (p.startsWith('<pip>')) { let t = p.slice(5,-6); t = t.replace(/^Pip,? (the godling from the inn chimney, )?(from (inside )?your (coat|pocket)|quietly|in your pocket)?:?\s*/i,''); return `<div class="pip"><span class="pl">Pip, from your pocket</span>${esc(t)}</div>`; }
   if (p.startsWith('<h>')) { const i = p.indexOf('</h>'); return `<p><b class="lore">${esc(p.slice(3,i))}</b> ${esc(p.slice(i+4))}</p>`; }
   return `<p>${esc(p)}</p>`;
 }
@@ -881,6 +916,13 @@ function render(){
   clamp(); save(); renderStatus();
   const n = N[S.node]; const main = document.getElementById('main');
   let h = `<section class="scene"><p class="eyebrow">${esc(n.where)}</p><h2>${esc(n.title)}</h2>`;
+  const qd = n.q && QUESTS.find(q=>q.id===n.q);
+  if (qd && qd.start===S.node && qd.brief){
+    h += `<div class="card"><span><b>Where</b>${esc(qd.brief.where)}</span><span><b>Who</b>${esc(qd.brief.who)}</span><span><b>At stake</b>${esc(qd.brief.stake)}</span></div>`;
+  } else if (n.cast || CAST[S.node]) {
+    const c = (n.cast ? n.cast() : CAST[S.node]);
+    h += `<div class="card"><span><b>Who is here</b>${esc(c.join(' · '))}</span></div>`;
+  }
   (n.text ? n.text() : []).filter(Boolean).forEach(p => h += para(p));
   if (n.pick){
     h += `<div class="pick">
@@ -891,8 +933,8 @@ function render(){
     h += `<ul class="board">`;
     QUESTS.forEach(q => {
       const done = !!S.done[q.id];
-      const locked = q.gate && Object.keys(S.done).filter(k=>k!=='q5').length < q.gate;
-      h += `<li class="${done?'done':''}"><button data-q="${q.id}" ${locked?'disabled':''}><span class="qn">${esc(q.name)}</span><span class="qs">${done ? 'Finished. Play again to change it.' : locked ? 'Locked until the other four are done.' : esc(q.blurb)}</span></button></li>`;
+      const early = q.gate && Object.keys(S.done).filter(k=>k!=='q5').length < q.gate;
+      h += `<li class="${done?'done':''}"><button data-q="${q.id}"><span class="qn">${esc(q.name)}</span><span class="qs">${done ? 'Finished. Play again to change it.' : early ? 'Best after the other four. Counts whatever you have done.' : esc(q.blurb)}</span></button></li>`;
     });
     h += `</ul>`;
   } else if (n.end){
@@ -917,7 +959,7 @@ function render(){
   }
   h += `</section>`;
   main.innerHTML = h;
-  main.querySelectorAll('button[data-role]').forEach(b => b.addEventListener('click', () => { S.role = b.dataset.role; S.eye = W() ? 1 : 2; S.node='hub'; render(); }));
+  main.querySelectorAll('button[data-role]').forEach(b => b.addEventListener('click', () => { S.role = b.dataset.role; S.eye = W() ? 1 : 2; S.node='prologue'; render(); }));
   main.querySelectorAll('button[data-q]').forEach(b => b.addEventListener('click', () => startQuest(b.dataset.q)));
   main.querySelectorAll('button[data-i]').forEach(b => b.addEventListener('click', () => choose(+b.dataset.i)));
   const go = document.getElementById('go'); if (go) go.addEventListener('click', advance);
@@ -928,7 +970,6 @@ function visibleChoices(n){
 }
 function startQuest(id){
   const q = QUESTS.find(x=>x.id===id);
-  S.pipMet = 1;
   // reset this quest's flags so replays are clean
   const keep = {};
   Object.keys(S.f).forEach(k => { if (!k.startsWith(id)) keep[k]=S.f[k]; });
@@ -1001,6 +1042,7 @@ document.getElementById('world').addEventListener('click', () => { S._return = S
 
 load();
 if (!N[S.node]) S.node = S.role ? 'hub' : 'world';
+if (S.role && !S.metPip && S.node !== 'world' && S.node !== 'prologue') { S.node = 'prologue'; S.chosen = null; }
 if (!S.seenWorld && S.node !== 'world') { S._return = S.node; S.node = 'world'; S.chosen = null; }
 render();
 </script>
