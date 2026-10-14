@@ -963,7 +963,12 @@ function render(){
   main.querySelectorAll('button[data-q]').forEach(b => b.addEventListener('click', () => startQuest(b.dataset.q)));
   main.querySelectorAll('button[data-i]').forEach(b => b.addEventListener('click', () => choose(+b.dataset.i)));
   const go = document.getElementById('go'); if (go) go.addEventListener('click', advance);
-  window.scrollTo({top:0});
+  if (S.chosen !== null && !n.end) {
+    const r = main.querySelector('.prompt'); // the "> your choice" line, just above the result
+    if (r) { const y = r.getBoundingClientRect().top + window.scrollY - 12; window.scrollTo({top:y, behavior:'smooth'}); }
+  } else {
+    window.scrollTo({top:0});
+  }
 }
 function visibleChoices(n){
   return n.choices.map((c,i)=>Object.assign({_i:i},c)).filter(c => (!c.who || (c.who==='w')===W()) && (!c.if || c.if()));
