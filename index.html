@@ -1052,5 +1052,154 @@ if (S.role && !S.metPip && S.node !== 'world' && S.node !== 'prologue') { S.node
 if (!S.seenWorld && S.node !== 'world') { S._return = S.node; S.node = 'world'; S.chosen = null; }
 render();
 </script>
+<style id="narr-style">
+/* Winston narration control: sits in the header, same mono/muted chrome as .sub and .btn.ghost */
+.narr{display:flex;gap:8px;margin-left:auto;align-items:center}
+.narr[hidden]{display:none}
+.narr button{background:transparent;color:var(--muted);border:1px solid var(--line);font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;padding:5px 9px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;line-height:1}
+.narr button:hover{color:var(--fg);background:var(--choice-h)}
+.narr button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.narr button[aria-pressed="true"]{color:var(--fg);border-color:var(--gold)}
+.narr #narrPlay[aria-pressed="true"] svg{color:var(--gold)}
+.narr svg{width:14px;height:14px;flex:none}
+</style>
+<script id="narr-text">
+// Narration text for Winston's voice. Pure: reads S, N, QUESTS and the page's own
+// para()/visibleChoices(), never writes state. build_narration.py runs this exact
+// block (with the game script above) in Node to learn what to pre-render, so the
+// clips the page asks for and the clips on disk come from one definition.
+const NARR_NUM = ['One','Two','Three','Four','Five','Six','Seven','Eight','Nine'];
+function narrPara(p){
+  // reuse the page's renderer, then flatten its HTML to the words on screen
+  return para(p).replace(/<span class="pl">(.*?)<\/span>/, '$1: ').replace(/<[^>]+>/g, ' ')
+    .replace(/&lt;/g, '<').replace(/&amp;/g, '&');
+}
+function narrClips(){
+  const n = N[S.node]; if (!n) return [];
+  const L = c => typeof c.t === 'function' ? c.t() : c.t;
+  const clips = [];
+  const add = (id, text) => { text = String(text == null ? '' : text).replace(/\s+/g, ' ').trim(); if (text) clips.push({id, text}); };
+  if (S.chosen !== null && !n.end && n.choices && n.choices[S.chosen]) {
+    const c = n.choices[S.chosen];
+    add(`outcome:${S.node}:${S.chosen}:pick`, L(c));
+    (c.out ? c.out() : []).filter(Boolean).forEach((o, k) => add(`outcome:${S.node}:${S.chosen}:${k}`, o));
+    return clips;
+  }
+  add(`scene:${S.node}:title`, n.title);
+  (n.text ? n.text() : []).filter(Boolean).forEach((p, k) => add(`scene:${S.node}:${k}`, narrPara(p)));
+  let opts = [];
+  if (n.pick) opts = ['Garrick of Ard Carraigh, the witcher.', 'Ilvara of Aretuza, the sorceress.'];
+  else if (n.hub) opts = QUESTS.map(q => q.name + '.');
+  else if (!n.end && n.choices) { opts = visibleChoices(n).map(L); if (opts.length) add('ask', 'What do you do?'); }
+  opts.forEach((t, i) => add(`choice:${S.node}:${i}`, `${NARR_NUM[i] || (i + 1)}: ${t}`));
+  return clips;
+}
+// SHA-1 hex of the UTF-8 text; the build names each MP3 sha1(text)[:16]
+function narrSha1(str){
+  const b = new TextEncoder().encode(str), l = b.length, nw = (((l + 8) >> 6) + 1) * 16, w = new Uint32Array(nw), x = new Uint32Array(80);
+  for (let i = 0; i < l; i++) w[i >> 2] |= b[i] << (24 - (i & 3) * 8);
+  w[l >> 2] |= 0x80 << (24 - (l & 3) * 8); w[nw - 1] = l * 8;
+  let h0 = 0x67452301, h1 = 0xEFCDAB89, h2 = 0x98BADCFE, h3 = 0x10325476, h4 = 0xC3D2E1F0;
+  for (let i = 0; i < nw; i += 16) {
+    for (let t = 0; t < 16; t++) x[t] = w[i + t];
+    for (let t = 16; t < 80; t++) { const v = x[t-3] ^ x[t-8] ^ x[t-14] ^ x[t-16]; x[t] = (v << 1) | (v >>> 31); }
+    let a = h0, bb = h1, c = h2, d = h3, e = h4;
+    for (let t = 0; t < 80; t++) {
+      const f = t < 20 ? (bb & c) | (~bb & d) : t < 40 ? bb ^ c ^ d : t < 60 ? (bb & c) | (bb & d) | (c & d) : bb ^ c ^ d;
+      const k = t < 20 ? 0x5A827999 : t < 40 ? 0x6ED9EBA1 : t < 60 ? 0x8F1BBCDC : 0xCA62C1D6;
+      const tmp = (((a << 5) | (a >>> 27)) + f + e + k + x[t]) >>> 0;
+      e = d; d = c; c = ((bb << 30) | (bb >>> 2)) >>> 0; bb = a; a = tmp;
+    }
+    h0 = (h0 + a) >>> 0; h1 = (h1 + bb) >>> 0; h2 = (h2 + c) >>> 0; h3 = (h3 + d) >>> 0; h4 = (h4 + e) >>> 0;
+  }
+  return [h0, h1, h2, h3, h4].map(v => v.toString(16).padStart(8, '0')).join('');
+}
+</script>
+<script id="narr-player">
+// Winston narration player. Pre-rendered MP3s in audio/ (manifest.json maps text hash -> file);
+// a clip with no file falls back to the browser's speechSynthesis. No API key, no network TTS.
+(function(){
+  const header = document.querySelector('header'); if (!header || typeof narrClips !== 'function') return;
+  const hasTTS = 'speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined';
+  const AUTO_KEY = 'greyhollow-autoread';
+  let files = null;            // hash16 -> file name, from audio/manifest.json
+  let auto = false; try { auto = localStorage.getItem(AUTO_KEY) === '1'; } catch(e) {}
+  let armed = false;           // first user gesture seen (iOS: audio may only start inside one)
+  let playing = false, token = 0, queue = [], qi = 0, viewKey = '';
+  const audio = document.createElement('audio'); audio.preload = 'none'; audio.setAttribute('playsinline', '');
+  const icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>';
+  const box = document.createElement('div'); box.className = 'narr'; box.hidden = true;
+  box.innerHTML = `<button type="button" id="narrPlay" aria-pressed="false" title="Winston reads this scene aloud (N)">${icon}<span>Listen</span></button><button type="button" id="narrAuto" aria-pressed="false" title="Read each new scene as it opens">Auto-read <span>off</span></button>`;
+  header.appendChild(box); box.appendChild(audio);
+  const bPlay = box.querySelector('#narrPlay'), bAuto = box.querySelector('#narrAuto');
+  const api = window.GreyhollowNarration = { last: null, sources: [] };   // status, for testing
+
+  function paint(){
+    bPlay.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    bPlay.querySelector('span').textContent = playing ? 'Stop' : 'Listen';
+    bAuto.setAttribute('aria-pressed', auto ? 'true' : 'false');
+    bAuto.querySelector('span').textContent = auto ? 'on' : 'off';
+  }
+  function build(){ return narrClips().map(c => Object.assign(c, { h: narrSha1(c.text).slice(0, 16) })); }
+  function stop(){
+    token++; playing = false; queue = []; qi = 0;
+    audio.onended = audio.onerror = null; try { audio.pause(); } catch(e) {}
+    if (hasTTS) { try { speechSynthesis.cancel(); } catch(e) {} }
+    paint();
+  }
+  function speak(text, my){
+    if (!hasTTS) { next(my); return; }
+    api.sources.push('tts'); api.last = 'tts';
+    const u = new SpeechSynthesisUtterance(text); u.rate = 1.05;
+    u.onend = u.onerror = () => { if (my === token) next(my); };
+    speechSynthesis.speak(u);
+  }
+  function next(my){
+    if (my !== token) return;
+    if (qi >= queue.length) { playing = false; paint(); return; }
+    const c = queue[qi++]; const f = files && files[c.h];
+    if (!f) { speak(c.text, my); return; }
+    api.sources.push('audio:' + f); api.last = 'audio';
+    audio.onended = () => { if (my === token) next(my); };
+    audio.onerror = () => { if (my === token) { audio.onerror = audio.onended = null; speak(c.text, my); } };
+    audio.src = 'audio/' + f;
+    const p = audio.play();
+    if (p && p.catch) p.catch(err => { if (my === token && err && err.name !== 'AbortError') { audio.onerror = audio.onended = null; speak(c.text, my); } });
+  }
+  function play(){
+    stop(); queue = build(); if (!queue.length) return;
+    playing = true; paint(); next(token);
+  }
+  function onView(){
+    const key = build().map(c => c.h).join(',');
+    if (key === viewKey) return; viewKey = key;
+    stop();
+    if (auto && armed) play();
+  }
+  bPlay.addEventListener('click', () => { armed = true; if (playing) stop(); else play(); });
+  bAuto.addEventListener('click', () => {
+    armed = true; auto = !auto; try { localStorage.setItem(AUTO_KEY, auto ? '1' : '0'); } catch(e) {}
+    paint(); if (auto && !playing) play(); else if (!auto) stop();
+  });
+  ['pointerdown', 'keydown'].forEach(t => document.addEventListener(t, () => { armed = true; }, { capture: true, passive: true }));
+  document.addEventListener('keydown', e => {
+    if (box.hidden || e.ctrlKey || e.metaKey || e.altKey || (e.key !== 'n' && e.key !== 'N')) return;
+    const tag = (e.target && e.target.tagName) || ''; if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+    armed = true; if (playing) stop(); else play();
+  });
+  // hear every render (the game calls render() on each state change); synchronous, so a
+  // choice tap that changes the scene still counts as the gesture that starts the audio
+  const gameRender = render;
+  render = function(){ const r = gameRender.apply(this, arguments); try { onView(); } catch(e) {} return r; };
+  viewKey = build().map(c => c.h).join(',');
+
+  fetch('audio/manifest.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null).then(m => {
+    files = {};
+    if (m && m.units) Object.keys(m.units).forEach(h => { files[h] = m.units[h].file; });
+    api.files = Object.keys(files).length;
+    if (api.files || hasTTS) { box.hidden = false; paint(); }
+  });
+})();
+</script>
 </body>
 </html>

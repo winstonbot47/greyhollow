@@ -1,0 +1,8483 @@
+{
+"clips_known": 947,
+"clips_rendered": 947,
+"format": "mp3_44100_64",
+"generated": "2026-10-18T09:36:04",
+"model": "eleven_turbo_v2_5",
+"scenes": 49,
+"settings": {
+"similarity_boost": 0.75,
+"speed": 1.1,
+"stability": 0.5
+},
+"units": {
+"00316f3276159eac": {
+"bytes": 13835,
+"chars": 22,
+"file": "00316f3276159eac.mp3",
+"ids": [
+"choice:q1hub:0|witch",
+"choice:q1hub:0|witcher"
+]
+},
+"0066315747fa7f54": {
+"bytes": 58139,
+"chars": 145,
+"file": "0066315747fa7f54.mp3",
+"ids": [
+"scene:q2under:2|witch",
+"scene:q2under:2|witcher"
+]
+},
+"0071c5f59d89fba6": {
+"bytes": 29927,
+"chars": 53,
+"file": "0071c5f59d89fba6.mp3",
+"ids": [
+"choice:q5bridge:2|witch",
+"choice:q5bridge:2|witcher"
+]
+},
+"00a7f7cac39fda09": {
+"bytes": 110802,
+"chars": 229,
+"file": "00a7f7cac39fda09.mp3",
+"ids": [
+"scene:q4camp:0|witch",
+"scene:q4camp:0|witcher"
+]
+},
+"0125555a6357d7eb": {
+"bytes": 12163,
+"chars": 19,
+"file": "0125555a6357d7eb.mp3",
+"ids": [
+"choice:q1hub:1|witch",
+"choice:q1hub:1|witcher"
+]
+},
+"012e360f0ea2bd2a": {
+"bytes": 108712,
+"chars": 212,
+"file": "012e360f0ea2bd2a.mp3",
+"ids": [
+"outcome:q1a:0:0|witch",
+"outcome:q1a:0:0|witcher"
+]
+},
+"0138102faeae0b8d": {
+"bytes": 43719,
+"chars": 77,
+"file": "0138102faeae0b8d.mp3",
+"ids": [
+"choice:q1letter:0|witch",
+"choice:q1letter:0|witcher"
+]
+},
+"01c9070c5c4a355a": {
+"bytes": 180810,
+"chars": 321,
+"file": "01c9070c5c4a355a.mp3",
+"ids": [
+"scene:q2a:0|witch",
+"scene:q2a:0|witcher"
+]
+},
+"01ddf111fee693be": {
+"bytes": 57721,
+"chars": 109,
+"file": "01ddf111fee693be.mp3",
+"ids": [
+"outcome:q5bridge2:0:0|witch"
+]
+},
+"02673243d0734947": {
+"bytes": 38077,
+"chars": 72,
+"file": "02673243d0734947.mp3",
+"ids": [
+"choice:q3c:1|witch",
+"choice:q3c:1|witcher"
+]
+},
+"02c7a30fa1e89399": {
+"bytes": 31807,
+"chars": 69,
+"file": "02c7a30fa1e89399.mp3",
+"ids": [
+"scene:q4end:1|witch",
+"scene:q4end:1|witcher"
+]
+},
+"02cdccb7464980e2": {
+"bytes": 15716,
+"chars": 32,
+"file": "02cdccb7464980e2.mp3",
+"ids": [
+"scene:q3end:3|witch",
+"scene:q3end:3|witcher",
+"scene:q3end:4|witch",
+"scene:q3end:4|witcher",
+"scene:q3end:5|witch"
+]
+},
+"031ef442892b219d": {
+"bytes": 36614,
+"chars": 89,
+"file": "031ef442892b219d.mp3",
+"ids": [
+"outcome:q1blind:0:1|witch",
+"outcome:q1blind:0:1|witcher"
+]
+},
+"033cffa4ec12ac4d": {
+"bytes": 25538,
+"chars": 64,
+"file": "033cffa4ec12ac4d.mp3",
+"ids": [
+"outcome:q1hub:1:0|witch",
+"outcome:q1hub:1:0|witcher"
+]
+},
+"03e57c1550159890": {
+"bytes": 123132,
+"chars": 220,
+"file": "03e57c1550159890.mp3",
+"ids": [
+"scene:q4speak:2|witch",
+"scene:q4speak:2|witcher",
+"scene:q4speak:3|witch",
+"scene:q4speak:3|witcher"
+]
+},
+"03f5cae5bc15b9f1": {
+"bytes": 31389,
+"chars": 71,
+"file": "03f5cae5bc15b9f1.mp3",
+"ids": [
+"outcome:q2bridge:3:1|witcher"
+]
+},
+"044443ba6f724228": {
+"bytes": 30972,
+"chars": 62,
+"file": "044443ba6f724228.mp3",
+"ids": [
+"scene:q3a:2|witcher"
+]
+},
+"046fba483cdd2764": {
+"bytes": 59184,
+"chars": 135,
+"file": "046fba483cdd2764.mp3",
+"ids": [
+"outcome:q4speak:1:0|witch",
+"outcome:q4speak:1:0|witcher"
+]
+},
+"04b61e363b2e65fc": {
+"bytes": 58557,
+"chars": 116,
+"file": "04b61e363b2e65fc.mp3",
+"ids": [
+"outcome:q1night:0:0|witcher"
+]
+},
+"04cbfe36df3f1173": {
+"bytes": 121669,
+"chars": 225,
+"file": "04cbfe36df3f1173.mp3",
+"ids": [
+"scene:q5square:1|witch"
+]
+},
+"04d79409d1478703": {
+"bytes": 62527,
+"chars": 134,
+"file": "04d79409d1478703.mp3",
+"ids": [
+"outcome:q2under:0:1|witch",
+"outcome:q2under:0:1|witcher"
+]
+},
+"0539b465b1037683": {
+"bytes": 12790,
+"chars": 28,
+"file": "0539b465b1037683.mp3",
+"ids": [
+"outcome:prologue:0:pick|witch",
+"outcome:prologue:0:pick|witcher"
+]
+},
+"05bfcdbab29d70c5": {
+"bytes": 51034,
+"chars": 94,
+"file": "05bfcdbab29d70c5.mp3",
+"ids": [
+"outcome:q3hodd:0:0|witch",
+"outcome:q3hodd:0:0|witcher"
+]
+},
+"05ce23e165a5ce00": {
+"bytes": 27628,
+"chars": 59,
+"file": "05ce23e165a5ce00.mp3",
+"ids": [
+"scene:q4end:2|witch",
+"scene:q4end:2|witcher",
+"scene:q4end:3|witch",
+"scene:q4end:3|witcher"
+]
+},
+"05ecbd72fb8351b5": {
+"bytes": 20523,
+"chars": 38,
+"file": "05ecbd72fb8351b5.mp3",
+"ids": [
+"choice:q1gate:0|witch",
+"choice:q1gate:0|witcher"
+]
+},
+"05ffaf46f9751e38": {
+"bytes": 21776,
+"chars": 49,
+"file": "05ffaf46f9751e38.mp3",
+"ids": [
+"outcome:q4decide:3:1|witch"
+]
+},
+"0617d7bfeee4456c": {
+"bytes": 19060,
+"chars": 38,
+"file": "0617d7bfeee4456c.mp3",
+"ids": [
+"outcome:q3b2:1:pick|witch"
+]
+},
+"06244fb1179a1644": {
+"bytes": 17597,
+"chars": 41,
+"file": "06244fb1179a1644.mp3",
+"ids": [
+"outcome:q1letter:1:0|witch",
+"outcome:q1letter:1:0|witcher"
+]
+},
+"06484fabbb24a6ae": {
+"bytes": 35151,
+"chars": 85,
+"file": "06484fabbb24a6ae.mp3",
+"ids": [
+"outcome:q3b:2:0|witch",
+"outcome:q3b:2:0|witcher"
+]
+},
+"0658680cda6990ea": {
+"bytes": 57094,
+"chars": 107,
+"file": "0658680cda6990ea.mp3",
+"ids": [
+"outcome:q3c:2:1|witch"
+]
+},
+"066e6fc12154683b": {
+"bytes": 87187,
+"chars": 174,
+"file": "066e6fc12154683b.mp3",
+"ids": [
+"scene:q1a:1|witch",
+"scene:q1a:1|witcher"
+]
+},
+"06ad478d1362b6ac": {
+"bytes": 21358,
+"chars": 45,
+"file": "06ad478d1362b6ac.mp3",
+"ids": [
+"outcome:q1marga:4:pick|witch",
+"outcome:q1marga:4:pick|witcher"
+]
+},
+"06b4ae511fbafcc2": {
+"bytes": 87187,
+"chars": 128,
+"file": "06b4ae511fbafcc2.mp3",
+"ids": [
+"outcome:q3night:0:0|witcher"
+]
+},
+"06f7c2dbb1993694": {
+"bytes": 49989,
+"chars": 105,
+"file": "06f7c2dbb1993694.mp3",
+"ids": [
+"scene:q3night:0|witch",
+"scene:q3night:0|witcher"
+]
+},
+"06fccb16a07be252": {
+"bytes": 20314,
+"chars": 42,
+"file": "06fccb16a07be252.mp3",
+"ids": [
+"outcome:q5square:0:pick|witch",
+"outcome:q5square:0:pick|witcher"
+]
+},
+"0701d568e0847423": {
+"bytes": 40376,
+"chars": 85,
+"file": "0701d568e0847423.mp3",
+"ids": [
+"outcome:q3a:1:1|witch",
+"outcome:q3a:1:1|witcher"
+]
+},
+"0719c7c2fe65ef94": {
+"bytes": 10909,
+"chars": 19,
+"file": "0719c7c2fe65ef94.mp3",
+"ids": [
+"scene:q2end:0|witch",
+"scene:q2end:0|witcher"
+]
+},
+"071a7d5ab809a054": {
+"bytes": 66707,
+"chars": 106,
+"file": "071a7d5ab809a054.mp3",
+"ids": [
+"outcome:q3night:2:2|witch",
+"outcome:q3night:2:2|witcher",
+"outcome:q3night:2:3|witch",
+"outcome:q3night:2:3|witcher"
+]
+},
+"075ec3ab308a1885": {
+"bytes": 22194,
+"chars": 45,
+"file": "075ec3ab308a1885.mp3",
+"ids": [
+"outcome:q3a:0:pick|witch",
+"outcome:q3a:0:pick|witcher"
+]
+},
+"07e7e03f839d42cd": {
+"bytes": 18851,
+"chars": 33,
+"file": "07e7e03f839d42cd.mp3",
+"ids": [
+"outcome:q4thornwick:0:pick|witch",
+"outcome:q4thornwick:0:pick|witcher"
+]
+},
+"07ea2afb5623bb84": {
+"bytes": 121669,
+"chars": 231,
+"file": "07ea2afb5623bb84.mp3",
+"ids": [
+"scene:q1child:0|witcher"
+]
+},
+"080ca2bf887a0778": {
+"bytes": 35151,
+"chars": 86,
+"file": "080ca2bf887a0778.mp3",
+"ids": [
+"scene:q5bridge:1|witcher",
+"scene:q5bridge:2|witcher",
+"scene:q5bridge:3|witcher",
+"scene:q5bridge:4|witcher",
+"scene:q5bridge:5|witcher",
+"scene:q5bridge:6|witcher"
+]
+},
+"081797489daf6cf1": {
+"bytes": 91158,
+"chars": 180,
+"file": "081797489daf6cf1.mp3",
+"ids": [
+"scene:q3night:1|witch",
+"scene:q3night:1|witcher"
+]
+},
+"08d1bc22b5b41a72": {
+"bytes": 8402,
+"chars": 14,
+"file": "08d1bc22b5b41a72.mp3",
+"ids": [
+"outcome:q2bridge:0:pick|witch",
+"outcome:q2bridge:0:pick|witcher"
+]
+},
+"08f31da0b8c7ed36": {
+"bytes": 129401,
+"chars": 239,
+"file": "08f31da0b8c7ed36.mp3",
+"ids": [
+"scene:world:7|null",
+"scene:world:7|witch",
+"scene:world:7|witcher"
+]
+},
+"0913d6b54d80c3c0": {
+"bytes": 45182,
+"chars": 97,
+"file": "0913d6b54d80c3c0.mp3",
+"ids": [
+"scene:world:0|null",
+"scene:world:0|witch",
+"scene:world:0|witcher"
+]
+},
+"093a14cd1bb7cdc9": {
+"bytes": 56676,
+"chars": 123,
+"file": "093a14cd1bb7cdc9.mp3",
+"ids": [
+"scene:q3night:1|witch",
+"scene:q3night:1|witcher"
+]
+},
+"093e5143ff7bfc22": {
+"bytes": 18433,
+"chars": 38,
+"file": "093e5143ff7bfc22.mp3",
+"ids": [
+"scene:q3end:1|witch",
+"scene:q3end:1|witcher"
+]
+},
+"0958241fc1bfb75c": {
+"bytes": 114563,
+"chars": 269,
+"file": "0958241fc1bfb75c.mp3",
+"ids": [
+"scene:q1bert:0|witch",
+"scene:q1bert:0|witcher"
+]
+},
+"09755302beee2970": {
+"bytes": 18851,
+"chars": 36,
+"file": "09755302beee2970.mp3",
+"ids": [
+"outcome:q4forest:2:pick|witch",
+"outcome:q4forest:2:pick|witcher"
+]
+},
+"099983bf21a9c5c3": {
+"bytes": 37659,
+"chars": 78,
+"file": "099983bf21a9c5c3.mp3",
+"ids": [
+"outcome:q3b2:0:1|witch",
+"outcome:q3b2:0:1|witcher"
+]
+},
+"09aa8f6423a172d0": {
+"bytes": 60020,
+"chars": 132,
+"file": "09aa8f6423a172d0.mp3",
+"ids": [
+"outcome:q4thornwick:0:1|witch"
+]
+},
+"0a01bec46535185e": {
+"bytes": 40585,
+"chars": 75,
+"file": "0a01bec46535185e.mp3",
+"ids": [
+"scene:q5a:1|witch",
+"scene:q5a:1|witcher",
+"scene:q5a:2|witch",
+"scene:q5a:2|witcher"
+]
+},
+"0a14ac483c4babca": {
+"bytes": 15716,
+"chars": 20,
+"file": "0a14ac483c4babca.mp3",
+"ids": [
+"outcome:q1night:0:pick|witch",
+"outcome:q1night:0:pick|witcher"
+]
+},
+"0a31aae4e88718fe": {
+"bytes": 22194,
+"chars": 48,
+"file": "0a31aae4e88718fe.mp3",
+"ids": [
+"choice:q3c:2|witch"
+]
+},
+"0baa994e3b23d447": {
+"bytes": 32852,
+"chars": 71,
+"file": "0baa994e3b23d447.mp3",
+"ids": [
+"outcome:q3night:1:1|witch",
+"outcome:q3night:1:1|witcher"
+]
+},
+"0baea8143e9b2b71": {
+"bytes": 27628,
+"chars": 54,
+"file": "0baea8143e9b2b71.mp3",
+"ids": [
+"choice:q3letter:0|witch",
+"choice:q3letter:0|witcher"
+]
+},
+"0bf91016c732de10": {
+"bytes": 35151,
+"chars": 67,
+"file": "0bf91016c732de10.mp3",
+"ids": [
+"outcome:q2decide:2:1|witch",
+"outcome:q2decide:2:1|witcher"
+]
+},
+"0c4a8aba1d9f40c4": {
+"bytes": 27628,
+"chars": 63,
+"file": "0c4a8aba1d9f40c4.mp3",
+"ids": [
+"outcome:q3search:8:1|witch",
+"outcome:q3search:8:1|witcher"
+]
+},
+"0cb8ab0b3a52c148": {
+"bytes": 93456,
+"chars": 171,
+"file": "0cb8ab0b3a52c148.mp3",
+"ids": [
+"scene:q1marga:2|witcher"
+]
+},
+"0cc00e6b755896e3": {
+"bytes": 17597,
+"chars": 38,
+"file": "0cc00e6b755896e3.mp3",
+"ids": [
+"outcome:q2decide:1:pick|witch",
+"outcome:q2decide:1:pick|witcher"
+]
+},
+"0d35966b417476d5": {
+"bytes": 28046,
+"chars": 59,
+"file": "0d35966b417476d5.mp3",
+"ids": [
+"outcome:q2picket:1:1|witch",
+"outcome:q2picket:1:1|witcher"
+]
+},
+"0d3d2a27ebd1e97a": {
+"bytes": 36196,
+"chars": 84,
+"file": "0d3d2a27ebd1e97a.mp3",
+"ids": [
+"outcome:q2scouts:2:0|witch"
+]
+},
+"0d43afe2802d1474": {
+"bytes": 23866,
+"chars": 55,
+"file": "0d43afe2802d1474.mp3",
+"ids": [
+"outcome:q2under_dead:2:0|witch",
+"outcome:q2under_dead:2:0|witcher"
+]
+},
+"0d8927d29d3a8b1c": {
+"bytes": 91576,
+"chars": 188,
+"file": "0d8927d29d3a8b1c.mp3",
+"ids": [
+"scene:q5bridge:0|witch",
+"scene:q5bridge:0|witcher"
+]
+},
+"0ddc95eb0e491e62": {
+"bytes": 22821,
+"chars": 55,
+"file": "0ddc95eb0e491e62.mp3",
+"ids": [
+"outcome:q3b2:0:pick|witch",
+"outcome:q3b2:0:pick|witcher"
+]
+},
+"0de00c58aa5675ee": {
+"bytes": 13208,
+"chars": 30,
+"file": "0de00c58aa5675ee.mp3",
+"ids": [
+"outcome:q2under_dead:0:pick|witch",
+"outcome:q2under_dead:0:pick|witcher"
+]
+},
+"0ded1ebba7857916": {
+"bytes": 63363,
+"chars": 116,
+"file": "0ded1ebba7857916.mp3",
+"ids": [
+"choice:q1night:1|witch",
+"choice:q1night:1|witcher"
+]
+},
+"0df4dc045fa34a9a": {
+"bytes": 75902,
+"chars": 169,
+"file": "0df4dc045fa34a9a.mp3",
+"ids": [
+"outcome:q1marga:2:0|witch"
+]
+},
+"0e012becbfb433df": {
+"bytes": 31807,
+"chars": 72,
+"file": "0e012becbfb433df.mp3",
+"ids": [
+"outcome:q1letter:0:pick|witch",
+"outcome:q1letter:0:pick|witcher"
+]
+},
+"0e4991967a323751": {
+"bytes": 67752,
+"chars": 135,
+"file": "0e4991967a323751.mp3",
+"ids": [
+"scene:q5bridge:1|witch",
+"scene:q5bridge:1|witcher",
+"scene:q5bridge:2|witch",
+"scene:q5bridge:2|witcher",
+"scene:q5bridge:3|witch"
+]
+},
+"0ec030929e64d6ab": {
+"bytes": 32225,
+"chars": 67,
+"file": "0ec030929e64d6ab.mp3",
+"ids": [
+"choice:q5square:0|witch"
+]
+},
+"0f42bd486ac36868": {
+"bytes": 35778,
+"chars": 65,
+"file": "0f42bd486ac36868.mp3",
+"ids": [
+"outcome:q3c:3:0|witcher"
+]
+},
+"0f836eaa3fdd9d21": {
+"bytes": 108712,
+"chars": 209,
+"file": "0f836eaa3fdd9d21.mp3",
+"ids": [
+"outcome:q5square:1:0|witch"
+]
+},
+"0fb79587e237c0f6": {
+"bytes": 24284,
+"chars": 49,
+"file": "0fb79587e237c0f6.mp3",
+"ids": [
+"choice:q4camp:1|witch",
+"choice:q4camp:1|witcher"
+]
+},
+"0fdcc77350e05be5": {
+"bytes": 32434,
+"chars": 84,
+"file": "0fdcc77350e05be5.mp3",
+"ids": [
+"outcome:q1night:3:0|witch",
+"outcome:q1night:3:0|witcher"
+]
+},
+"0feaea454c6309a6": {
+"bytes": 103487,
+"chars": 220,
+"file": "0feaea454c6309a6.mp3",
+"ids": [
+"scene:world:6|null",
+"scene:world:6|witch",
+"scene:world:6|witcher"
+]
+},
+"0ff2bea83171b4e5": {
+"bytes": 65244,
+"chars": 115,
+"file": "0ff2bea83171b4e5.mp3",
+"ids": [
+"scene:q3night:2|witch",
+"scene:q3night:2|witcher"
+]
+},
+"108b2b29670ac868": {
+"bytes": 9865,
+"chars": 13,
+"file": "108b2b29670ac868.mp3",
+"ids": [
+"choice:q1letter:0|witch",
+"choice:q1letter:0|witcher"
+]
+},
+"10c350a3bd774a2c": {
+"bytes": 100771,
+"chars": 193,
+"file": "10c350a3bd774a2c.mp3",
+"ids": [
+"scene:q5bridge2:1|witch"
+]
+},
+"1125f547d458c2ab": {
+"bytes": 44764,
+"chars": 100,
+"file": "1125f547d458c2ab.mp3",
+"ids": [
+"outcome:q4decide:2:1|witch",
+"outcome:q4decide:2:1|witcher"
+]
+},
+"11776324a190c7a0": {
+"bytes": 18015,
+"chars": 35,
+"file": "11776324a190c7a0.mp3",
+"ids": [
+"scene:q4thornwick:2|witch",
+"scene:q4thornwick:2|witcher"
+]
+},
+"119f4f7523228df8": {
+"bytes": 49153,
+"chars": 117,
+"file": "119f4f7523228df8.mp3",
+"ids": [
+"scene:q2a:2|witch",
+"scene:q2a:2|witcher"
+]
+},
+"11bf638d7b9e57c8": {
+"bytes": 31807,
+"chars": 84,
+"file": "11bf638d7b9e57c8.mp3",
+"ids": [
+"choice:q1blind:2|witch",
+"choice:q1blind:2|witcher"
+]
+},
+"1221ee3bedecdd7b": {
+"bytes": 15507,
+"chars": 28,
+"file": "1221ee3bedecdd7b.mp3",
+"ids": [
+"outcome:q1bert:0:pick|witch",
+"outcome:q1bert:0:pick|witcher"
+]
+},
+"1357cd29b505b846": {
+"bytes": 19896,
+"chars": 43,
+"file": "1357cd29b505b846.mp3",
+"ids": [
+"outcome:q4forest:0:pick|witch",
+"outcome:q4forest:0:pick|witcher"
+]
+},
+"136e800cea1b9937": {
+"bytes": 140268,
+"chars": 259,
+"file": "136e800cea1b9937.mp3",
+"ids": [
+"scene:q3a:1|witch",
+"scene:q3a:1|witcher"
+]
+},
+"13aac327c693e2d2": {
+"bytes": 32225,
+"chars": 70,
+"file": "13aac327c693e2d2.mp3",
+"ids": [
+"scene:q2end:1|witch",
+"scene:q2end:1|witcher"
+]
+},
+"13ce83aa733edde4": {
+"bytes": 36614,
+"chars": 86,
+"file": "13ce83aa733edde4.mp3",
+"ids": [
+"outcome:q2bridge:3:0|witcher"
+]
+},
+"13d5f819cafeedb2": {
+"bytes": 70678,
+"chars": 144,
+"file": "13d5f819cafeedb2.mp3",
+"ids": [
+"scene:q5forest:0|witch",
+"scene:q5forest:0|witcher",
+"scene:q5forest:1|witch",
+"scene:q5forest:1|witcher"
+]
+},
+"142f464de164341f": {
+"bytes": 22194,
+"chars": 37,
+"file": "142f464de164341f.mp3",
+"ids": [
+"outcome:q3night:2:2|witch",
+"outcome:q3night:2:2|witcher",
+"outcome:q3night:2:3|witch",
+"outcome:q3night:2:3|witcher",
+"outcome:q3night:2:4|witch",
+"outcome:q3night:2:4|witcher"
+]
+},
+"14599f7637f38ceb": {
+"bytes": 84470,
+"chars": 167,
+"file": "14599f7637f38ceb.mp3",
+"ids": [
+"outcome:q5bridge:0:0|witch",
+"outcome:q5bridge:0:0|witcher"
+]
+},
+"14713214d989ed3c": {
+"bytes": 79664,
+"chars": 145,
+"file": "14713214d989ed3c.mp3",
+"ids": [
+"scene:q3letter:1|witch",
+"scene:q3letter:1|witcher"
+]
+},
+"1494e69f458b9053": {
+"bytes": 17179,
+"chars": 33,
+"file": "1494e69f458b9053.mp3",
+"ids": [
+"outcome:q1gate:1:pick|witch",
+"outcome:q1gate:1:pick|witcher"
+]
+},
+"149ae3e691c72c99": {
+"bytes": 21358,
+"chars": 44,
+"file": "149ae3e691c72c99.mp3",
+"ids": [
+"outcome:q2elves:0:1|witcher"
+]
+},
+"14b07294e0bb761d": {
+"bytes": 40376,
+"chars": 69,
+"file": "14b07294e0bb761d.mp3",
+"ids": [
+"scene:q5a:1|witch",
+"scene:q5a:1|witcher",
+"scene:q5a:2|witch",
+"scene:q5a:2|witcher",
+"scene:q5a:3|witch",
+"scene:q5a:3|witcher"
+]
+},
+"14bcba5064553b7f": {
+"bytes": 36614,
+"chars": 75,
+"file": "14bcba5064553b7f.mp3",
+"ids": [
+"scene:q1hub:0|witch",
+"scene:q1hub:0|witcher"
+]
+},
+"155255c6e38c6baf": {
+"bytes": 40585,
+"chars": 95,
+"file": "155255c6e38c6baf.mp3",
+"ids": [
+"outcome:q2a:2:0|witch",
+"outcome:q2a:2:0|witcher"
+]
+},
+"15a6b6414819b570": {
+"bytes": 57094,
+"chars": 127,
+"file": "15a6b6414819b570.mp3",
+"ids": [
+"outcome:q3b2:3:1|witch",
+"outcome:q3b2:3:1|witcher"
+]
+},
+"15ccadb33e236ee9": {
+"bytes": 49571,
+"chars": 128,
+"file": "15ccadb33e236ee9.mp3",
+"ids": [
+"scene:q3end:3|witch",
+"scene:q3end:3|witcher",
+"scene:q3end:4|witch",
+"scene:q3end:4|witcher"
+]
+},
+"15dbe4468beffc9f": {
+"bytes": 17597,
+"chars": 25,
+"file": "15dbe4468beffc9f.mp3",
+"ids": [
+"outcome:q2a:1:1|witch",
+"outcome:q2a:1:1|witcher"
+]
+},
+"15e88b91b292f9fa": {
+"bytes": 43301,
+"chars": 80,
+"file": "15e88b91b292f9fa.mp3",
+"ids": [
+"choice:q2decide:0|witch",
+"choice:q2decide:0|witcher"
+]
+},
+"1630428c569bec89": {
+"bytes": 53332,
+"chars": 107,
+"file": "1630428c569bec89.mp3",
+"ids": [
+"outcome:q5bridge2:1:0|witch",
+"outcome:q5bridge2:1:0|witcher"
+]
+},
+"166acf39da7de0e8": {
+"bytes": 29927,
+"chars": 60,
+"file": "166acf39da7de0e8.mp3",
+"ids": [
+"choice:q3c:0|witch",
+"choice:q3c:0|witcher"
+]
+},
+"16a31b89d4a11868": {
+"bytes": 9447,
+"chars": 13,
+"file": "16a31b89d4a11868.mp3",
+"ids": [
+"scene:q4thornwick:title|witch",
+"scene:q4thornwick:title|witcher"
+]
+},
+"16decd2e616ca040": {
+"bytes": 16552,
+"chars": 38,
+"file": "16decd2e616ca040.mp3",
+"ids": [
+"outcome:q4thornwick:2:2|witch",
+"outcome:q4thornwick:2:2|witcher"
+]
+},
+"17069c629163ac91": {
+"bytes": 37659,
+"chars": 94,
+"file": "17069c629163ac91.mp3",
+"ids": [
+"outcome:q3night:1:1|witch"
+]
+},
+"17cde0d245413991": {
+"bytes": 56676,
+"chars": 140,
+"file": "17cde0d245413991.mp3",
+"ids": [
+"scene:q5bridge2:0|witch",
+"scene:q5bridge2:0|witcher"
+]
+},
+"17fbc00bbe6d7164": {
+"bytes": 17179,
+"chars": 41,
+"file": "17fbc00bbe6d7164.mp3",
+"ids": [
+"choice:q2bridge:2|witch",
+"choice:q2bridge:2|witcher"
+]
+},
+"18070dd82b6a46eb": {
+"bytes": 7148,
+"chars": 8,
+"file": "18070dd82b6a46eb.mp3",
+"ids": [
+"scene:q2a:title|witch",
+"scene:q2a:title|witcher"
+]
+},
+"18145ac958bfcf83": {
+"bytes": 16134,
+"chars": 33,
+"file": "18145ac958bfcf83.mp3",
+"ids": [
+"scene:q2bridge:2|witch",
+"scene:q2bridge:2|witcher"
+]
+},
+"182e3af24ca578e8": {
+"bytes": 22403,
+"chars": 40,
+"file": "182e3af24ca578e8.mp3",
+"ids": [
+"choice:q2bridge:3|witch",
+"choice:q2bridge:3|witcher"
+]
+},
+"184a2d653bd5f2cb": {
+"bytes": 94919,
+"chars": 203,
+"file": "184a2d653bd5f2cb.mp3",
+"ids": [
+"scene:q4forest:0|witch"
+]
+},
+"184c8885bbb610e4": {
+"bytes": 35778,
+"chars": 91,
+"file": "184c8885bbb610e4.mp3",
+"ids": [
+"scene:q3c:2|witch",
+"scene:q3c:2|witcher",
+"scene:q3c:3|witch",
+"scene:q3c:3|witcher"
+]
+},
+"185157d895c69613": {
+"bytes": 35569,
+"chars": 89,
+"file": "185157d895c69613.mp3",
+"ids": [
+"outcome:q3hodd:2:0|witch",
+"outcome:q3hodd:2:0|witcher"
+]
+},
+"18c44393a1d6ccc2": {
+"bytes": 46645,
+"chars": 92,
+"file": "18c44393a1d6ccc2.mp3",
+"ids": [
+"outcome:q4a:1:0|witch",
+"outcome:q4a:1:0|witcher"
+]
+},
+"190faf1d3eb6b0f3": {
+"bytes": 190005,
+"chars": 349,
+"file": "190faf1d3eb6b0f3.mp3",
+"ids": [
+"scene:prologue:0|witch"
+]
+},
+"1a12ef1bacd39c03": {
+"bytes": 45600,
+"chars": 89,
+"file": "1a12ef1bacd39c03.mp3",
+"ids": [
+"outcome:q3night:4:0|witch",
+"outcome:q3night:4:0|witcher"
+]
+},
+"1a335753897b6409": {
+"bytes": 117489,
+"chars": 235,
+"file": "1a335753897b6409.mp3",
+"ids": [
+"scene:hub:0|witch"
+]
+},
+"1a98657bb789e519": {
+"bytes": 27210,
+"chars": 62,
+"file": "1a98657bb789e519.mp3",
+"ids": [
+"outcome:q5square:1:pick|witch"
+]
+},
+"1ae1d3cd61960355": {
+"bytes": 13835,
+"chars": 30,
+"file": "1ae1d3cd61960355.mp3",
+"ids": [
+"outcome:q2under_dead:2:pick|witch",
+"outcome:q2under_dead:2:pick|witcher"
+]
+},
+"1ae8b0942b1b1aec": {
+"bytes": 125430,
+"chars": 268,
+"file": "1ae8b0942b1b1aec.mp3",
+"ids": [
+"outcome:q4camp:2:0|witch",
+"outcome:q4camp:2:0|witcher"
+]
+},
+"1b1485bbb0c87367": {
+"bytes": 38495,
+"chars": 79,
+"file": "1b1485bbb0c87367.mp3",
+"ids": [
+"choice:q3b:0|witch",
+"choice:q3b:0|witcher"
+]
+},
+"1b830c29cb724993": {
+"bytes": 34315,
+"chars": 72,
+"file": "1b830c29cb724993.mp3",
+"ids": [
+"outcome:q3search:5:pick|witcher"
+]
+},
+"1ba8594d33e197eb": {
+"bytes": 12372,
+"chars": 19,
+"file": "1ba8594d33e197eb.mp3",
+"ids": [
+"choice:hub:4|witch",
+"choice:hub:4|witcher"
+]
+},
+"1bf9840da08259cb": {
+"bytes": 41003,
+"chars": 82,
+"file": "1bf9840da08259cb.mp3",
+"ids": [
+"scene:q5square:2|witch",
+"scene:q5square:2|witcher"
+]
+},
+"1c4063d94f77be5d": {
+"bytes": 6939,
+"chars": 5,
+"file": "1c4063d94f77be5d.mp3",
+"ids": [
+"scene:q3b:title|witch",
+"scene:q3b:title|witcher"
+]
+},
+"1c55edbbc90bb75b": {
+"bytes": 109130,
+"chars": 244,
+"file": "1c55edbbc90bb75b.mp3",
+"ids": [
+"scene:q5forest:1|witch"
+]
+},
+"1c73590d81056c3d": {
+"bytes": 53959,
+"chars": 104,
+"file": "1c73590d81056c3d.mp3",
+"ids": [
+"choice:q4decide:3|witch"
+]
+},
+"1cd2b5e064145513": {
+"bytes": 19060,
+"chars": 43,
+"file": "1cd2b5e064145513.mp3",
+"ids": [
+"outcome:q2picket:0:pick|witch",
+"outcome:q2picket:0:pick|witcher"
+]
+},
+"1d539a4399fce46d": {
+"bytes": 25747,
+"chars": 54,
+"file": "1d539a4399fce46d.mp3",
+"ids": [
+"outcome:q3letter:1:1|witch"
+]
+},
+"1d8889cf7d0bc3e3": {
+"bytes": 36614,
+"chars": 69,
+"file": "1d8889cf7d0bc3e3.mp3",
+"ids": [
+"choice:q3b2:1|witcher"
+]
+},
+"1dc9796a2c5b66f7": {
+"bytes": 123132,
+"chars": 246,
+"file": "1dc9796a2c5b66f7.mp3",
+"ids": [
+"scene:q3b:1|witcher"
+]
+},
+"1dd50697c3b122bf": {
+"bytes": 25120,
+"chars": 52,
+"file": "1dd50697c3b122bf.mp3",
+"ids": [
+"outcome:q2scouts:1:pick|witch",
+"outcome:q2scouts:1:pick|witcher"
+]
+},
+"1ea77ac6682466b6": {
+"bytes": 55840,
+"chars": 130,
+"file": "1ea77ac6682466b6.mp3",
+"ids": [
+"outcome:q1blind:2:1|witch",
+"outcome:q1blind:2:1|witcher"
+]
+},
+"1eaf4ad37ad1424e": {
+"bytes": 13626,
+"chars": 30,
+"file": "1eaf4ad37ad1424e.mp3",
+"ids": [
+"outcome:q1child:0:pick|witch",
+"outcome:q1child:0:pick|witcher"
+]
+},
+"1f0d1617e7a7e07f": {
+"bytes": 37032,
+"chars": 73,
+"file": "1f0d1617e7a7e07f.mp3",
+"ids": [
+"outcome:q3search:4:pick|witch"
+]
+},
+"1f2a1e3cb0f44b55": {
+"bytes": 25747,
+"chars": 61,
+"file": "1f2a1e3cb0f44b55.mp3",
+"ids": [
+"outcome:q4decide:0:0|witch",
+"outcome:q4decide:0:0|witcher"
+]
+},
+"1f64a487e7f1479f": {
+"bytes": 81963,
+"chars": 156,
+"file": "1f64a487e7f1479f.mp3",
+"ids": [
+"outcome:q2riddle:0:0|witch",
+"outcome:q2riddle:0:0|witcher"
+]
+},
+"1fb1e83105b0d423": {
+"bytes": 13835,
+"chars": 24,
+"file": "1fb1e83105b0d423.mp3",
+"ids": [
+"scene:q1end:5|witch",
+"scene:q1end:5|witcher",
+"scene:q1end:6|witch",
+"scene:q1end:6|witcher"
+]
+},
+"1fc076ab66b576c5": {
+"bytes": 33688,
+"chars": 76,
+"file": "1fc076ab66b576c5.mp3",
+"ids": [
+"outcome:q1child:0:0|witcher"
+]
+},
+"2044ea5f87149bf0": {
+"bytes": 28464,
+"chars": 57,
+"file": "2044ea5f87149bf0.mp3",
+"ids": [
+"outcome:q1bert:0:1|witch",
+"outcome:q1bert:0:1|witcher"
+]
+},
+"20473f15772cc6ea": {
+"bytes": 60647,
+"chars": 141,
+"file": "20473f15772cc6ea.mp3",
+"ids": [
+"outcome:q3search:0:1|witch",
+"outcome:q3search:0:1|witcher"
+]
+},
+"20c395120abf174a": {
+"bytes": 9029,
+"chars": 10,
+"file": "20c395120abf174a.mp3",
+"ids": [
+"scene:q3search:title|witch",
+"scene:q3search:title|witcher"
+]
+},
+"2133b20b58e5a7ce": {
+"bytes": 14253,
+"chars": 30,
+"file": "2133b20b58e5a7ce.mp3",
+"ids": [
+"scene:q1end:1|witch",
+"scene:q1end:1|witcher"
+]
+},
+"22c92e0cdb89e18c": {
+"bytes": 42256,
+"chars": 77,
+"file": "22c92e0cdb89e18c.mp3",
+"ids": [
+"scene:q3end:1|witcher"
+]
+},
+"22cfbc7bb89a5762": {
+"bytes": 10492,
+"chars": 19,
+"file": "22cfbc7bb89a5762.mp3",
+"ids": [
+"outcome:q4speak:1:1|witch",
+"outcome:q4speak:1:1|witcher"
+]
+},
+"2360de5cdf5e0b58": {
+"bytes": 70051,
+"chars": 129,
+"file": "2360de5cdf5e0b58.mp3",
+"ids": [
+"scene:q5bridge:1|witch",
+"scene:q5bridge:1|witcher"
+]
+},
+"236640b0b388faa3": {
+"bytes": 28464,
+"chars": 61,
+"file": "236640b0b388faa3.mp3",
+"ids": [
+"outcome:q3search:7:1|witch",
+"outcome:q3search:7:1|witcher"
+]
+},
+"236d8b0b72864246": {
+"bytes": 22194,
+"chars": 42,
+"file": "236d8b0b72864246.mp3",
+"ids": [
+"choice:q2under_dead:1|witch",
+"choice:q2under_dead:1|witcher"
+]
+},
+"23c07a938d9b3e59": {
+"bytes": 62945,
+"chars": 133,
+"file": "23c07a938d9b3e59.mp3",
+"ids": [
+"outcome:q4decide:1:1|witch",
+"outcome:q4decide:1:1|witcher"
+]
+},
+"23ee24d5dd405959": {
+"bytes": 20523,
+"chars": 46,
+"file": "23ee24d5dd405959.mp3",
+"ids": [
+"outcome:q2scouts:0:0|witch",
+"outcome:q2scouts:0:0|witcher"
+]
+},
+"23fdd8ed9f9c7871": {
+"bytes": 20940,
+"chars": 47,
+"file": "23fdd8ed9f9c7871.mp3",
+"ids": [
+"outcome:q1hub:3:0|witch",
+"outcome:q1hub:3:0|witcher"
+]
+},
+"242b0f11b044e6df": {
+"bytes": 12372,
+"chars": 21,
+"file": "242b0f11b044e6df.mp3",
+"ids": [
+"scene:q1end:2|witch",
+"scene:q1end:2|witcher"
+]
+},
+"243ca6781dc95ba3": {
+"bytes": 57303,
+"chars": 103,
+"file": "243ca6781dc95ba3.mp3",
+"ids": [
+"outcome:q3night:3:1|witch",
+"outcome:q3night:3:1|witcher"
+]
+},
+"246fb64b5974c98e": {
+"bytes": 16134,
+"chars": 21,
+"file": "246fb64b5974c98e.mp3",
+"ids": [
+"choice:q5a:0|witch",
+"choice:q5a:0|witcher"
+]
+},
+"24fab2f7ac3deeea": {
+"bytes": 17179,
+"chars": 35,
+"file": "24fab2f7ac3deeea.mp3",
+"ids": [
+"choice:q2under_dead:0|witch",
+"choice:q2under_dead:0|witcher"
+]
+},
+"2552887dbe072933": {
+"bytes": 45600,
+"chars": 86,
+"file": "2552887dbe072933.mp3",
+"ids": [
+"scene:q1hub:0|witch",
+"scene:q1hub:0|witcher"
+]
+},
+"2571d8f5c1e2cf0b": {
+"bytes": 28046,
+"chars": 60,
+"file": "2571d8f5c1e2cf0b.mp3",
+"ids": [
+"outcome:q3letter:0:1|witch",
+"outcome:q3letter:0:1|witcher"
+]
+},
+"2595b28dc60f4552": {
+"bytes": 22403,
+"chars": 31,
+"file": "2595b28dc60f4552.mp3",
+"ids": [
+"choice:q3letter:1|witch",
+"choice:q3letter:1|witcher"
+]
+},
+"25b864b4ff2332d9": {
+"bytes": 36196,
+"chars": 71,
+"file": "25b864b4ff2332d9.mp3",
+"ids": [
+"outcome:q3hodd:2:pick|witch",
+"outcome:q3hodd:2:pick|witcher"
+]
+},
+"25bffcab677a6a98": {
+"bytes": 30345,
+"chars": 63,
+"file": "25bffcab677a6a98.mp3",
+"ids": [
+"outcome:q2a:0:0|witch",
+"outcome:q2a:0:0|witcher"
+]
+},
+"260e939c4b9c3a81": {
+"bytes": 45182,
+"chars": 101,
+"file": "260e939c4b9c3a81.mp3",
+"ids": [
+"choice:q4decide:4|witch"
+]
+},
+"263f73f98306dfd6": {
+"bytes": 105786,
+"chars": 206,
+"file": "263f73f98306dfd6.mp3",
+"ids": [
+"scene:q1well:3|witch",
+"scene:q1well:3|witcher"
+]
+},
+"26c7036159ad768c": {
+"bytes": 72349,
+"chars": 145,
+"file": "26c7036159ad768c.mp3",
+"ids": [
+"outcome:q1night:1:0|witcher"
+]
+},
+"26fa0d0e382d9654": {
+"bytes": 95964,
+"chars": 169,
+"file": "26fa0d0e382d9654.mp3",
+"ids": [
+"scene:q5bridge:0|witch",
+"scene:q5bridge:0|witcher"
+]
+},
+"2731a15c14cdcda7": {
+"bytes": 30972,
+"chars": 65,
+"file": "2731a15c14cdcda7.mp3",
+"ids": [
+"scene:q3hodd:2|witch",
+"scene:q3hodd:2|witcher"
+]
+},
+"274eb0491192bdfc": {
+"bytes": 17179,
+"chars": 38,
+"file": "274eb0491192bdfc.mp3",
+"ids": [
+"choice:q3search:0|witch"
+]
+},
+"274f7e4c80cc1d5d": {
+"bytes": 20314,
+"chars": 37,
+"file": "274f7e4c80cc1d5d.mp3",
+"ids": [
+"outcome:q2under_dead:1:pick|witch",
+"outcome:q2under_dead:1:pick|witcher"
+]
+},
+"276144884da20e7d": {
+"bytes": 27628,
+"chars": 58,
+"file": "276144884da20e7d.mp3",
+"ids": [
+"choice:q1hub:2|witch",
+"choice:q1hub:2|witcher"
+]
+},
+"28e5ef4415ac2765": {
+"bytes": 47690,
+"chars": 92,
+"file": "28e5ef4415ac2765.mp3",
+"ids": [
+"outcome:q4camp:1:0|witch",
+"outcome:q4camp:1:0|witcher"
+]
+},
+"28fbb4040425b247": {
+"bytes": 75693,
+"chars": 166,
+"file": "28fbb4040425b247.mp3",
+"ids": [
+"outcome:q1marga:3:1|witch",
+"outcome:q1marga:3:1|witcher"
+]
+},
+"29230c10bad0ab70": {
+"bytes": 7984,
+"chars": 11,
+"file": "29230c10bad0ab70.mp3",
+"ids": [
+"outcome:q3night:4:pick|witch",
+"outcome:q3night:4:pick|witcher"
+]
+},
+"2933aff58db33421": {
+"bytes": 79664,
+"chars": 177,
+"file": "2933aff58db33421.mp3",
+"ids": [
+"scene:q2bridge:1|witch"
+]
+},
+"29365fdc987f40c8": {
+"bytes": 21358,
+"chars": 46,
+"file": "29365fdc987f40c8.mp3",
+"ids": [
+"outcome:q3b:2:1|witch",
+"outcome:q3b:2:1|witcher"
+]
+},
+"296d5b22707ac905": {
+"bytes": 22821,
+"chars": 48,
+"file": "296d5b22707ac905.mp3",
+"ids": [
+"scene:q4end:1|witch",
+"scene:q4end:1|witcher"
+]
+},
+"29f676238af0836b": {
+"bytes": 48526,
+"chars": 111,
+"file": "29f676238af0836b.mp3",
+"ids": [
+"outcome:q2scouts:2:1|witcher"
+]
+},
+"2a097dad7edd06aa": {
+"bytes": 71096,
+"chars": 153,
+"file": "2a097dad7edd06aa.mp3",
+"ids": [
+"outcome:q1night:0:0|witch"
+]
+},
+"2a0f897b8b0c9b85": {
+"bytes": 27628,
+"chars": 50,
+"file": "2a0f897b8b0c9b85.mp3",
+"ids": [
+"outcome:q2under:1:pick|witch",
+"outcome:q2under:1:pick|witcher"
+]
+},
+"2a58caf015ed7f3a": {
+"bytes": 38913,
+"chars": 86,
+"file": "2a58caf015ed7f3a.mp3",
+"ids": [
+"outcome:q4decide:5:1|witch",
+"outcome:q4decide:5:1|witcher"
+]
+},
+"2a65fb65a3715406": {
+"bytes": 46227,
+"chars": 97,
+"file": "2a65fb65a3715406.mp3",
+"ids": [
+"outcome:q3night:2:1|witch",
+"outcome:q3night:2:1|witcher",
+"outcome:q3night:2:2|witch",
+"outcome:q3night:2:2|witcher"
+]
+},
+"2aaf27d39a58cec4": {
+"bytes": 70469,
+"chars": 143,
+"file": "2aaf27d39a58cec4.mp3",
+"ids": [
+"scene:q2scouts:2|witcher"
+]
+},
+"2b8d56b63a0d01a9": {
+"bytes": 41003,
+"chars": 77,
+"file": "2b8d56b63a0d01a9.mp3",
+"ids": [
+"choice:q5a:0|witch",
+"choice:q5a:0|witcher"
+]
+},
+"2bab0a5701563bd6": {
+"bytes": 65662,
+"chars": 141,
+"file": "2bab0a5701563bd6.mp3",
+"ids": [
+"scene:q2bridge:1|witcher"
+]
+},
+"2bdf945ca5b063c9": {
+"bytes": 76320,
+"chars": 148,
+"file": "2bdf945ca5b063c9.mp3",
+"ids": [
+"scene:q5bridge:1|witch",
+"scene:q5bridge:2|witch",
+"scene:q5bridge:2|witcher",
+"scene:q5bridge:3|witch",
+"scene:q5bridge:3|witcher",
+"scene:q5bridge:4|witch"
+]
+},
+"2c051256f3351ce8": {
+"bytes": 32852,
+"chars": 80,
+"file": "2c051256f3351ce8.mp3",
+"ids": [
+"outcome:q1letter:0:0|witch",
+"outcome:q1letter:0:0|witcher"
+]
+},
+"2c4ef22e376163b6": {
+"bytes": 20940,
+"chars": 44,
+"file": "2c4ef22e376163b6.mp3",
+"ids": [
+"choice:q1dawn:0|witch",
+"choice:q1dawn:0|witcher"
+]
+},
+"2c4fc823195ea22d": {
+"bytes": 32852,
+"chars": 72,
+"file": "2c4fc823195ea22d.mp3",
+"ids": [
+"scene:q1dawn:2|witch",
+"scene:q1dawn:2|witcher",
+"scene:q1dawn:3|witch",
+"scene:q1dawn:3|witcher"
+]
+},
+"2c5ee6af708ce642": {
+"bytes": 37659,
+"chars": 89,
+"file": "2c5ee6af708ce642.mp3",
+"ids": [
+"outcome:prologue:1:0|witch",
+"outcome:prologue:1:0|witcher"
+]
+},
+"2c81e342a15dcfd8": {
+"bytes": 25538,
+"chars": 63,
+"file": "2c81e342a15dcfd8.mp3",
+"ids": [
+"choice:q4ysolde:2|witch",
+"choice:q4ysolde:2|witcher"
+]
+},
+"2cc97b1bed2e729e": {
+"bytes": 9865,
+"chars": 13,
+"file": "2cc97b1bed2e729e.mp3",
+"ids": [
+"scene:q1hub:title|witch",
+"scene:q1hub:title|witcher"
+]
+},
+"2d081737016883a5": {
+"bytes": 75902,
+"chars": 145,
+"file": "2d081737016883a5.mp3",
+"ids": [
+"scene:q5bridge:1|witch",
+"scene:q5bridge:1|witcher"
+]
+},
+"2d71a651c1a22a36": {
+"bytes": 35778,
+"chars": 67,
+"file": "2d71a651c1a22a36.mp3",
+"ids": [
+"outcome:q5bridge:0:pick|witch",
+"outcome:q5bridge:0:pick|witcher"
+]
+},
+"2d8b8f134bfb9509": {
+"bytes": 7148,
+"chars": 9,
+"file": "2d8b8f134bfb9509.mp3",
+"ids": [
+"scene:q3night:title|witch",
+"scene:q3night:title|witcher"
+]
+},
+"2dc6c899a1853dcc": {
+"bytes": 60647,
+"chars": 148,
+"file": "2dc6c899a1853dcc.mp3",
+"ids": [
+"outcome:q4thornwick:2:1|witch",
+"outcome:q4thornwick:2:1|witcher"
+]
+},
+"2e348d54d8444b23": {
+"bytes": 58557,
+"chars": 122,
+"file": "2e348d54d8444b23.mp3",
+"ids": [
+"outcome:q3hodd:1:1|witch",
+"outcome:q3hodd:1:1|witcher"
+]
+},
+"2e93ab7195c43055": {
+"bytes": 65871,
+"chars": 109,
+"file": "2e93ab7195c43055.mp3",
+"ids": [
+"scene:q1well:2|witch",
+"scene:q1well:2|witcher"
+]
+},
+"2eedaa3694f9974c": {
+"bytes": 122505,
+"chars": 202,
+"file": "2eedaa3694f9974c.mp3",
+"ids": [
+"scene:q3search:1|witch",
+"scene:q3search:1|witcher",
+"scene:q3search:2|witch",
+"scene:q3search:2|witcher"
+]
+},
+"2ef9d4a12bea0bd7": {
+"bytes": 28882,
+"chars": 70,
+"file": "2ef9d4a12bea0bd7.mp3",
+"ids": [
+"outcome:q3hodd:1:pick|witch",
+"outcome:q3hodd:1:pick|witcher"
+]
+},
+"2f0348fbca50234d": {
+"bytes": 19896,
+"chars": 42,
+"file": "2f0348fbca50234d.mp3",
+"ids": [
+"choice:q1letter:2|witch",
+"choice:q1letter:2|witcher"
+]
+},
+"2f5cf3c0cfd8500d": {
+"bytes": 12790,
+"chars": 30,
+"file": "2f5cf3c0cfd8500d.mp3",
+"ids": [
+"outcome:q1hub:0:0|witch",
+"outcome:q1hub:0:0|witcher"
+]
+},
+"2fa591195e019b3f": {
+"bytes": 30972,
+"chars": 56,
+"file": "2fa591195e019b3f.mp3",
+"ids": [
+"outcome:q2under_dead:0:0|witch",
+"outcome:q2under_dead:0:0|witcher"
+]
+},
+"2fea17302009bb47": {
+"bytes": 25120,
+"chars": 50,
+"file": "2fea17302009bb47.mp3",
+"ids": [
+"outcome:q3b2:4:2|witch",
+"outcome:q3b2:4:2|witcher"
+]
+},
+"303d23bc240e1039": {
+"bytes": 68170,
+"chars": 131,
+"file": "303d23bc240e1039.mp3",
+"ids": [
+"outcome:q4ysolde:2:0|witch",
+"outcome:q4ysolde:2:0|witcher"
+]
+},
+"30bec812231dfd9d": {
+"bytes": 16552,
+"chars": 38,
+"file": "30bec812231dfd9d.mp3",
+"ids": [
+"choice:q4thornwick:0|witch",
+"choice:q4thornwick:0|witcher"
+]
+},
+"30d4ec70e42fc20b": {
+"bytes": 28046,
+"chars": 57,
+"file": "30d4ec70e42fc20b.mp3",
+"ids": [
+"outcome:q4forest:0:1|witch",
+"outcome:q4forest:0:1|witcher"
+]
+},
+"3166a7a520886a1b": {
+"bytes": 110175,
+"chars": 181,
+"file": "3166a7a520886a1b.mp3",
+"ids": [
+"scene:q3b:0|witch",
+"scene:q3b:0|witcher"
+]
+},
+"31e4ab4e26e137d0": {
+"bytes": 56258,
+"chars": 124,
+"file": "31e4ab4e26e137d0.mp3",
+"ids": [
+"scene:q3b:1|witch"
+]
+},
+"32d22e21ef8ae049": {
+"bytes": 28882,
+"chars": 55,
+"file": "32d22e21ef8ae049.mp3",
+"ids": [
+"choice:q2riddle:2|witch",
+"choice:q2riddle:2|witcher"
+]
+},
+"32f4ed5b4afd0f66": {
+"bytes": 261058,
+"chars": 424,
+"file": "32f4ed5b4afd0f66.mp3",
+"ids": [
+"scene:world:5|null",
+"scene:world:5|witch",
+"scene:world:5|witcher"
+]
+},
+"3348da78a490fd2f": {
+"bytes": 82589,
+"chars": 149,
+"file": "3348da78a490fd2f.mp3",
+"ids": [
+"scene:q1marga:0|witch",
+"scene:q1marga:0|witcher"
+]
+},
+"33a1d859d28c5213": {
+"bytes": 60438,
+"chars": 127,
+"file": "33a1d859d28c5213.mp3",
+"ids": [
+"outcome:q2bridge:1:1|witcher"
+]
+},
+"3452fe5fab54bb80": {
+"bytes": 46227,
+"chars": 92,
+"file": "3452fe5fab54bb80.mp3",
+"ids": [
+"scene:q3b2:0|witch",
+"scene:q3b2:0|witcher"
+]
+},
+"3473c715c154d0b7": {
+"bytes": 160330,
+"chars": 319,
+"file": "3473c715c154d0b7.mp3",
+"ids": [
+"scene:q1well:1|witch",
+"scene:q1well:1|witcher"
+]
+},
+"34c9de5334af4ac3": {
+"bytes": 16552,
+"chars": 32,
+"file": "34c9de5334af4ac3.mp3",
+"ids": [
+"outcome:q2elves:1:1|witch",
+"outcome:q2elves:1:1|witcher"
+]
+},
+"3514a773e909596e": {
+"bytes": 32852,
+"chars": 71,
+"file": "3514a773e909596e.mp3",
+"ids": [
+"outcome:q3c:3:1|witcher"
+]
+},
+"3549588bc6b05809": {
+"bytes": 39958,
+"chars": 97,
+"file": "3549588bc6b05809.mp3",
+"ids": [
+"scene:q5forest:0|witch",
+"scene:q5forest:0|witcher"
+]
+},
+"3561797a80da814a": {
+"bytes": 40376,
+"chars": 78,
+"file": "3561797a80da814a.mp3",
+"ids": [
+"choice:q3search:1|witch"
+]
+},
+"35d0d101f320e74c": {
+"bytes": 90531,
+"chars": 205,
+"file": "35d0d101f320e74c.mp3",
+"ids": [
+"scene:q1dawn:0|witch",
+"scene:q1dawn:0|witcher"
+]
+},
+"366f9f31e03aaca8": {
+"bytes": 13835,
+"chars": 27,
+"file": "366f9f31e03aaca8.mp3",
+"ids": [
+"outcome:q1gate:2:pick|witch",
+"outcome:q1gate:2:pick|witcher"
+]
+},
+"369a150f5efac500": {
+"bytes": 28046,
+"chars": 50,
+"file": "369a150f5efac500.mp3",
+"ids": [
+"choice:q3letter:2|witch",
+"choice:q3letter:2|witcher"
+]
+},
+"36dfd8aca8e83b7d": {
+"bytes": 47063,
+"chars": 104,
+"file": "36dfd8aca8e83b7d.mp3",
+"ids": [
+"outcome:prologue:0:0|witch",
+"outcome:prologue:0:0|witcher"
+]
+},
+"370346f949eabca1": {
+"bytes": 19060,
+"chars": 33,
+"file": "370346f949eabca1.mp3",
+"ids": [
+"choice:prologue:1|witch",
+"choice:prologue:1|witcher"
+]
+},
+"384cddc5f6913be6": {
+"bytes": 41420,
+"chars": 81,
+"file": "384cddc5f6913be6.mp3",
+"ids": [
+"outcome:q2scouts:2:pick|witch",
+"outcome:q2scouts:2:pick|witcher"
+]
+},
+"387682c12cefcf16": {
+"bytes": 94919,
+"chars": 210,
+"file": "387682c12cefcf16.mp3",
+"ids": [
+"scene:q3night:0|witch",
+"scene:q3night:0|witcher"
+]
+},
+"38bd68b047d8e536": {
+"bytes": 63781,
+"chars": 138,
+"file": "38bd68b047d8e536.mp3",
+"ids": [
+"scene:q5square:1|witcher"
+]
+},
+"393ac8ff8dd4d85c": {
+"bytes": 55840,
+"chars": 113,
+"file": "393ac8ff8dd4d85c.mp3",
+"ids": [
+"outcome:q4thornwick:2:0|witch",
+"outcome:q4thornwick:2:0|witcher"
+]
+},
+"39a0682f1d7e7978": {
+"bytes": 26583,
+"chars": 58,
+"file": "39a0682f1d7e7978.mp3",
+"ids": [
+"outcome:q3night:1:2|witch",
+"outcome:q3night:1:2|witcher"
+]
+},
+"39b8f4859689c22c": {
+"bytes": 20523,
+"chars": 44,
+"file": "39b8f4859689c22c.mp3",
+"ids": [
+"outcome:prologue:1:1|witch",
+"outcome:prologue:1:1|witcher"
+]
+},
+"39fc17d044d9e3eb": {
+"bytes": 42465,
+"chars": 77,
+"file": "39fc17d044d9e3eb.mp3",
+"ids": [
+"outcome:q4ysolde:1:0|witch",
+"outcome:q4ysolde:1:0|witcher"
+]
+},
+"39fc8570dc0a0a14": {
+"bytes": 10283,
+"chars": 16,
+"file": "39fc8570dc0a0a14.mp3",
+"ids": [
+"choice:q5forest:0|witch",
+"choice:q5forest:0|witcher"
+]
+},
+"3a066f76d71758f2": {
+"bytes": 30972,
+"chars": 64,
+"file": "3a066f76d71758f2.mp3",
+"ids": [
+"outcome:q1marga:1:1|witch",
+"outcome:q1marga:1:1|witcher"
+]
+},
+"3a2d0fdf51bb91f0": {
+"bytes": 26583,
+"chars": 56,
+"file": "3a2d0fdf51bb91f0.mp3",
+"ids": [
+"outcome:q3b:0:1|witch",
+"outcome:q3b:0:1|witcher"
+]
+},
+"3a8c34eef7696444": {
+"bytes": 18015,
+"chars": 39,
+"file": "3a8c34eef7696444.mp3",
+"ids": [
+"outcome:q2riddle:1:1|witch",
+"outcome:q2riddle:1:1|witcher"
+]
+},
+"3b40e281e5c11622": {
+"bytes": 33897,
+"chars": 52,
+"file": "3b40e281e5c11622.mp3",
+"ids": [
+"outcome:q3search:1:pick|witch",
+"outcome:q3search:1:pick|witcher"
+]
+},
+"3b61488cf2959e65": {
+"bytes": 19060,
+"chars": 38,
+"file": "3b61488cf2959e65.mp3",
+"ids": [
+"scene:q1end:3|witch",
+"scene:q1end:3|witcher"
+]
+},
+"3b9921a5d334fb38": {
+"bytes": 88232,
+"chars": 154,
+"file": "3b9921a5d334fb38.mp3",
+"ids": [
+"outcome:q4camp:1:1|witch",
+"outcome:q4camp:1:1|witcher"
+]
+},
+"3c1ac410266f0f25": {
+"bytes": 62527,
+"chars": 104,
+"file": "3c1ac410266f0f25.mp3",
+"ids": [
+"scene:q5square:1|witch",
+"scene:q5square:1|witcher"
+]
+},
+"3c2c69ff295ccbf2": {
+"bytes": 100562,
+"chars": 210,
+"file": "3c2c69ff295ccbf2.mp3",
+"ids": [
+"scene:q4ysolde:1|witch",
+"scene:q4ysolde:1|witcher",
+"scene:q4ysolde:2|witch",
+"scene:q4ysolde:2|witcher"
+]
+},
+"3c3cf30fc84a183f": {
+"bytes": 29091,
+"chars": 62,
+"file": "3c3cf30fc84a183f.mp3",
+"ids": [
+"scene:q5bridge:1|witch",
+"scene:q5bridge:1|witcher",
+"scene:q5bridge:2|witch",
+"scene:q5bridge:2|witcher",
+"scene:q5bridge:3|witch",
+"scene:q5bridge:3|witcher"
+]
+},
+"3c68b557a1079428": {
+"bytes": 49153,
+"chars": 96,
+"file": "3c68b557a1079428.mp3",
+"ids": [
+"outcome:q5bridge:2:1|witch",
+"outcome:q5bridge:2:1|witcher"
+]
+},
+"3cdc2511bea8cb9b": {
+"bytes": 37659,
+"chars": 82,
+"file": "3cdc2511bea8cb9b.mp3",
+"ids": [
+"choice:q4decide:1|witch",
+"choice:q4decide:1|witcher"
+]
+},
+"3d074ddcc27d6ee3": {
+"bytes": 11327,
+"chars": 15,
+"file": "3d074ddcc27d6ee3.mp3",
+"ids": [
+"scene:q5bridge2:title|witch",
+"scene:q5bridge2:title|witcher"
+]
+},
+"3d66cee6fed6ccdc": {
+"bytes": 45182,
+"chars": 93,
+"file": "3d66cee6fed6ccdc.mp3",
+"ids": [
+"outcome:q2riddle:0:1|witch",
+"outcome:q2riddle:0:1|witcher"
+]
+},
+"3d6f13a64aa2c02e": {
+"bytes": 35778,
+"chars": 76,
+"file": "3d6f13a64aa2c02e.mp3",
+"ids": [
+"outcome:q2bridge:2:1|witch",
+"outcome:q2bridge:2:1|witcher"
+]
+},
+"3d9f60cbd157b70e": {
+"bytes": 44764,
+"chars": 81,
+"file": "3d9f60cbd157b70e.mp3",
+"ids": [
+"outcome:q2riddle:2:0|witch",
+"outcome:q2riddle:2:0|witcher"
+]
+},
+"3da19a913b13308c": {
+"bytes": 38495,
+"chars": 86,
+"file": "3da19a913b13308c.mp3",
+"ids": [
+"scene:q1dawn:1|witch",
+"scene:q1dawn:1|witcher"
+]
+},
+"3daf5904b82e4bc5": {
+"bytes": 77783,
+"chars": 167,
+"file": "3daf5904b82e4bc5.mp3",
+"ids": [
+"scene:q4camp:1|witcher"
+]
+},
+"3dc0b3a67e5f74c3": {
+"bytes": 27210,
+"chars": 54,
+"file": "3dc0b3a67e5f74c3.mp3",
+"ids": [
+"outcome:q1night:3:pick|witch",
+"outcome:q1night:3:pick|witcher"
+]
+},
+"3e309d1777d92c19": {
+"bytes": 16134,
+"chars": 30,
+"file": "3e309d1777d92c19.mp3",
+"ids": [
+"outcome:q4thornwick:1:pick|witch",
+"outcome:q4thornwick:1:pick|witcher"
+]
+},
+"3eb857d2bf2eb7e1": {
+"bytes": 60647,
+"chars": 107,
+"file": "3eb857d2bf2eb7e1.mp3",
+"ids": [
+"scene:q3letter:2|witch",
+"scene:q3letter:2|witcher"
+]
+},
+"3ed2a33be0a96067": {
+"bytes": 8820,
+"chars": 10,
+"file": "3ed2a33be0a96067.mp3",
+"ids": [
+"scene:q5square:title|witch",
+"scene:q5square:title|witcher"
+]
+},
+"3eea12acfeeef52f": {
+"bytes": 91158,
+"chars": 166,
+"file": "3eea12acfeeef52f.mp3",
+"ids": [
+"scene:q1well:0|witch"
+]
+},
+"3f1a6032b0f749a6": {
+"bytes": 95755,
+"chars": 196,
+"file": "3f1a6032b0f749a6.mp3",
+"ids": [
+"scene:q4speak:1|witcher"
+]
+},
+"3f664b05d58201c3": {
+"bytes": 63990,
+"chars": 132,
+"file": "3f664b05d58201c3.mp3",
+"ids": [
+"scene:q1a:2|witch"
+]
+},
+"3f73b95b706d2932": {
+"bytes": 57721,
+"chars": 117,
+"file": "3f73b95b706d2932.mp3",
+"ids": [
+"scene:q1blind:2|witch",
+"scene:q1blind:2|witcher"
+]
+},
+"3faa92dfc5bd9604": {
+"bytes": 28882,
+"chars": 60,
+"file": "3faa92dfc5bd9604.mp3",
+"ids": [
+"outcome:q3b2:3:0|witch",
+"outcome:q3b2:3:0|witcher"
+]
+},
+"3fbcf13ffc8e6943": {
+"bytes": 20940,
+"chars": 49,
+"file": "3fbcf13ffc8e6943.mp3",
+"ids": [
+"outcome:q1marga:4:0|witch",
+"outcome:q1marga:4:0|witcher"
+]
+},
+"400ca0e4adc19087": {
+"bytes": 14671,
+"chars": 27,
+"file": "400ca0e4adc19087.mp3",
+"ids": [
+"scene:q2under:title|witch",
+"scene:q2under:title|witcher"
+]
+},
+"4054b225d8fe688f": {
+"bytes": 51034,
+"chars": 99,
+"file": "4054b225d8fe688f.mp3",
+"ids": [
+"outcome:q4decide:3:2|witch"
+]
+},
+"406029982a9bc0d5": {
+"bytes": 20314,
+"chars": 43,
+"file": "406029982a9bc0d5.mp3",
+"ids": [
+"choice:q2decide:1|witch",
+"choice:q2decide:1|witcher"
+]
+},
+"406bb21c3b9c3aea": {
+"bytes": 9447,
+"chars": 14,
+"file": "406bb21c3b9c3aea.mp3",
+"ids": [
+"scene:q5end:title|witch",
+"scene:q5end:title|witcher"
+]
+},
+"4071e487c934c69d": {
+"bytes": 18851,
+"chars": 37,
+"file": "4071e487c934c69d.mp3",
+"ids": [
+"choice:q1blind:1|witch",
+"choice:q1blind:1|witcher"
+]
+},
+"40dd56f6c7268ea9": {
+"bytes": 84470,
+"chars": 145,
+"file": "40dd56f6c7268ea9.mp3",
+"ids": [
+"scene:q3end:1|witch"
+]
+},
+"4145993dad894795": {
+"bytes": 41838,
+"chars": 95,
+"file": "4145993dad894795.mp3",
+"ids": [
+"outcome:q3b2:0:0|witch",
+"outcome:q3b2:0:0|witcher"
+]
+},
+"417ea40e4a1737b9": {
+"bytes": 19896,
+"chars": 40,
+"file": "417ea40e4a1737b9.mp3",
+"ids": [
+"choice:q1marga:0|witch",
+"choice:q1marga:0|witcher"
+]
+},
+"423a4b23a7eb5358": {
+"bytes": 18433,
+"chars": 36,
+"file": "423a4b23a7eb5358.mp3",
+"ids": [
+"choice:q1hub:0|witch",
+"choice:q1hub:0|witcher"
+]
+},
+"425fdb7707665ad9": {
+"bytes": 51034,
+"chars": 110,
+"file": "425fdb7707665ad9.mp3",
+"ids": [
+"scene:q4forest:1|witch",
+"scene:q4forest:1|witcher"
+]
+},
+"42993f294fa37ea6": {
+"bytes": 28882,
+"chars": 66,
+"file": "42993f294fa37ea6.mp3",
+"ids": [
+"choice:q2a:1|witch",
+"choice:q2a:1|witcher"
+]
+},
+"43098350ed20bca6": {
+"bytes": 17597,
+"chars": 41,
+"file": "43098350ed20bca6.mp3",
+"ids": [
+"outcome:q3c:2:pick|witch"
+]
+},
+"4354b942546baa51": {
+"bytes": 62318,
+"chars": 142,
+"file": "4354b942546baa51.mp3",
+"ids": [
+"outcome:q5bridge2:0:1|witcher"
+]
+},
+"4410d06f1a7e5b85": {
+"bytes": 38913,
+"chars": 79,
+"file": "4410d06f1a7e5b85.mp3",
+"ids": [
+"outcome:q1blind:1:0|witch",
+"outcome:q1blind:1:0|witcher"
+]
+},
+"448f641497724f79": {
+"bytes": 38495,
+"chars": 81,
+"file": "448f641497724f79.mp3",
+"ids": [
+"scene:q3hodd:2|witch",
+"scene:q3hodd:2|witcher"
+]
+},
+"44ab12dccec05b63": {
+"bytes": 29091,
+"chars": 67,
+"file": "44ab12dccec05b63.mp3",
+"ids": [
+"choice:q5square:1|witch"
+]
+},
+"44ae2e61f11075e1": {
+"bytes": 9865,
+"chars": 10,
+"file": "44ae2e61f11075e1.mp3",
+"ids": [
+"scene:q3b2:title|witch",
+"scene:q3b2:title|witcher"
+]
+},
+"44c96582c5d7bbbf": {
+"bytes": 51869,
+"chars": 121,
+"file": "44c96582c5d7bbbf.mp3",
+"ids": [
+"outcome:q5bridge2:0:0|witcher"
+]
+},
+"45c3342f3629730e": {
+"bytes": 54795,
+"chars": 127,
+"file": "45c3342f3629730e.mp3",
+"ids": [
+"outcome:q4a:0:0|witch",
+"outcome:q4a:0:0|witcher"
+]
+},
+"45c9e57d534a1863": {
+"bytes": 10909,
+"chars": 15,
+"file": "45c9e57d534a1863.mp3",
+"ids": [
+"outcome:q3search:6:pick|witcher"
+]
+},
+"4601eb464c57ec89": {
+"bytes": 22821,
+"chars": 58,
+"file": "4601eb464c57ec89.mp3",
+"ids": [
+"outcome:q4decide:3:1|witch"
+]
+},
+"460bb455b1989fd4": {
+"bytes": 111638,
+"chars": 208,
+"file": "460bb455b1989fd4.mp3",
+"ids": [
+"scene:q3hodd:0|witch",
+"scene:q3hodd:0|witcher"
+]
+},
+"463e560794db0af7": {
+"bytes": 59602,
+"chars": 109,
+"file": "463e560794db0af7.mp3",
+"ids": [
+"outcome:q1dawn:3:1|witch",
+"outcome:q1dawn:3:1|witcher"
+]
+},
+"46405e4d6f553fb6": {
+"bytes": 25747,
+"chars": 49,
+"file": "46405e4d6f553fb6.mp3",
+"ids": [
+"outcome:q1night:0:1|witcher"
+]
+},
+"4669403ae174361c": {
+"bytes": 58139,
+"chars": 124,
+"file": "4669403ae174361c.mp3",
+"ids": [
+"choice:q3night:2|witch",
+"choice:q3night:2|witcher"
+]
+},
+"46b858e009db1557": {
+"bytes": 127938,
+"chars": 267,
+"file": "46b858e009db1557.mp3",
+"ids": [
+"scene:q3a:0|witch",
+"scene:q3a:0|witcher"
+]
+},
+"46be6cf967952ce8": {
+"bytes": 80500,
+"chars": 176,
+"file": "46be6cf967952ce8.mp3",
+"ids": [
+"outcome:q4decide:1:0|witcher"
+]
+},
+"46d28d9d7d36715a": {
+"bytes": 10909,
+"chars": 13,
+"file": "46d28d9d7d36715a.mp3",
+"ids": [
+"scene:q2riddle:title|witch",
+"scene:q2riddle:title|witcher"
+]
+},
+"46e5f861e8d74630": {
+"bytes": 19896,
+"chars": 25,
+"file": "46e5f861e8d74630.mp3",
+"ids": [
+"choice:q1night:0|witch",
+"choice:q1night:0|witcher"
+]
+},
+"46eb5fd2076ac137": {
+"bytes": 62318,
+"chars": 109,
+"file": "46eb5fd2076ac137.mp3",
+"ids": [
+"scene:q2decide:1|witch",
+"scene:q2decide:1|witcher"
+]
+},
+"471762c5c148ba4c": {
+"bytes": 16134,
+"chars": 33,
+"file": "471762c5c148ba4c.mp3",
+"ids": [
+"scene:q4decide:1|witch",
+"scene:q4decide:1|witcher"
+]
+},
+"4839cee0a5808abd": {
+"bytes": 27628,
+"chars": 54,
+"file": "4839cee0a5808abd.mp3",
+"ids": [
+"choice:q1dawn:2|witch",
+"choice:q1dawn:2|witcher"
+]
+},
+"484bf1485e458e0f": {
+"bytes": 12790,
+"chars": 22,
+"file": "484bf1485e458e0f.mp3",
+"ids": [
+"choice:q1hub:0|witch",
+"choice:q1hub:0|witcher"
+]
+},
+"48c1e80cb56b526c": {
+"bytes": 43719,
+"chars": 88,
+"file": "48c1e80cb56b526c.mp3",
+"ids": [
+"choice:q2scouts:2|witch",
+"choice:q2scouts:2|witcher"
+]
+},
+"4a091de09db30854": {
+"bytes": 25538,
+"chars": 52,
+"file": "4a091de09db30854.mp3",
+"ids": [
+"choice:q4a:1|witch",
+"choice:q4a:1|witcher"
+]
+},
+"4a1b74c4c5b04e76": {
+"bytes": 117907,
+"chars": 143,
+"file": "4a1b74c4c5b04e76.mp3",
+"ids": [
+"outcome:q3search:5:0|witcher"
+]
+},
+"4a3d524c0c645f33": {
+"bytes": 40376,
+"chars": 89,
+"file": "4a3d524c0c645f33.mp3",
+"ids": [
+"outcome:q3b2:3:pick|witch",
+"outcome:q3b2:3:pick|witcher"
+]
+},
+"4a611c14aa64cd85": {
+"bytes": 22194,
+"chars": 42,
+"file": "4a611c14aa64cd85.mp3",
+"ids": [
+"choice:q3search:2|witch",
+"choice:q3search:2|witcher"
+]
+},
+"4acdc19013c16dd7": {
+"bytes": 61483,
+"chars": 119,
+"file": "4acdc19013c16dd7.mp3",
+"ids": [
+"outcome:q1child:1:1|witch",
+"outcome:q1child:1:1|witcher"
+]
+},
+"4af2adb097c26c4f": {
+"bytes": 24284,
+"chars": 49,
+"file": "4af2adb097c26c4f.mp3",
+"ids": [
+"outcome:q3letter:0:pick|witch",
+"outcome:q3letter:0:pick|witcher"
+]
+},
+"4b1254aaca1cd612": {
+"bytes": 46227,
+"chars": 90,
+"file": "4b1254aaca1cd612.mp3",
+"ids": [
+"scene:q3a:2|witch"
+]
+},
+"4b1a1c7eeba358ae": {
+"bytes": 42465,
+"chars": 93,
+"file": "4b1a1c7eeba358ae.mp3",
+"ids": [
+"scene:q2end:1|witch",
+"scene:q2end:1|witcher"
+]
+},
+"4b7ee83db64b0450": {
+"bytes": 18851,
+"chars": 35,
+"file": "4b7ee83db64b0450.mp3",
+"ids": [
+"outcome:q1marga:0:0|witch",
+"outcome:q1marga:0:0|witcher"
+]
+},
+"4bcd7d23986cdb84": {
+"bytes": 44764,
+"chars": 96,
+"file": "4bcd7d23986cdb84.mp3",
+"ids": [
+"scene:q4ysolde:1|witch",
+"scene:q4ysolde:1|witcher"
+]
+},
+"4beec87b337b68b6": {
+"bytes": 28882,
+"chars": 70,
+"file": "4beec87b337b68b6.mp3",
+"ids": [
+"outcome:q2bridge:3:0|witch"
+]
+},
+"4bf1f61923eb5c1e": {
+"bytes": 60647,
+"chars": 116,
+"file": "4bf1f61923eb5c1e.mp3",
+"ids": [
+"scene:q4ysolde:0|witch",
+"scene:q4ysolde:0|witcher"
+]
+},
+"4bfed95bf158f90a": {
+"bytes": 13626,
+"chars": 31,
+"file": "4bfed95bf158f90a.mp3",
+"ids": [
+"outcome:q1hub:4:pick|witch",
+"outcome:q1hub:4:pick|witcher"
+]
+},
+"4c2abca1452ca806": {
+"bytes": 32852,
+"chars": 73,
+"file": "4c2abca1452ca806.mp3",
+"ids": [
+"outcome:q2elves:3:1|witch",
+"outcome:q2elves:3:1|witcher"
+]
+},
+"4c9460a602d35566": {
+"bytes": 75902,
+"chars": 148,
+"file": "4c9460a602d35566.mp3",
+"ids": [
+"scene:q5a:1|witch",
+"scene:q5a:1|witcher"
+]
+},
+"4c9a64038366c658": {
+"bytes": 25120,
+"chars": 46,
+"file": "4c9a64038366c658.mp3",
+"ids": [
+"outcome:q2under_dead:1:1|witch",
+"outcome:q2under_dead:1:1|witcher"
+]
+},
+"4cb166711d884113": {
+"bytes": 88650,
+"chars": 188,
+"file": "4cb166711d884113.mp3",
+"ids": [
+"scene:q5bridge2:1|witcher"
+]
+},
+"4d31aa2eed2612d1": {
+"bytes": 25120,
+"chars": 50,
+"file": "4d31aa2eed2612d1.mp3",
+"ids": [
+"choice:q3a:0|witch",
+"choice:q3a:0|witcher"
+]
+},
+"4d5227b7c39bd862": {
+"bytes": 17597,
+"chars": 35,
+"file": "4d5227b7c39bd862.mp3",
+"ids": [
+"outcome:q3search:2:pick|witch",
+"outcome:q3search:2:pick|witcher"
+]
+},
+"4d7d163dbe4de281": {
+"bytes": 23239,
+"chars": 45,
+"file": "4d7d163dbe4de281.mp3",
+"ids": [
+"choice:q2bridge:4|witch",
+"choice:q2bridge:4|witcher"
+]
+},
+"4d9f91b5e3391893": {
+"bytes": 8820,
+"chars": 6,
+"file": "4d9f91b5e3391893.mp3",
+"ids": [
+"scene:q2bridge:title|witch",
+"scene:q2bridge:title|witcher"
+]
+},
+"4da31dacd5e80c8d": {
+"bytes": 70678,
+"chars": 132,
+"file": "4da31dacd5e80c8d.mp3",
+"ids": [
+"scene:q3end:1|witch",
+"scene:q3end:1|witcher"
+]
+},
+"4deb4c21dfcf1663": {
+"bytes": 26583,
+"chars": 67,
+"file": "4deb4c21dfcf1663.mp3",
+"ids": [
+"outcome:q4speak:0:pick|witch",
+"outcome:q4speak:0:pick|witcher"
+]
+},
+"4eae7e6b1dc81851": {
+"bytes": 51034,
+"chars": 101,
+"file": "4eae7e6b1dc81851.mp3",
+"ids": [
+"scene:q5a:1|witch",
+"scene:q5a:1|witcher",
+"scene:q5a:2|witch"
+]
+},
+"4ece129bc4f453ef": {
+"bytes": 9447,
+"chars": 12,
+"file": "4ece129bc4f453ef.mp3",
+"ids": [
+"scene:q2elves:title|witch",
+"scene:q2elves:title|witcher"
+]
+},
+"4f22cdff7e012e23": {
+"bytes": 16134,
+"chars": 41,
+"file": "4f22cdff7e012e23.mp3",
+"ids": [
+"choice:q4camp:2|witch",
+"choice:q4camp:2|witcher"
+]
+},
+"4f9b8774d4507fa3": {
+"bytes": 23657,
+"chars": 46,
+"file": "4f9b8774d4507fa3.mp3",
+"ids": [
+"outcome:q5bridge:2:pick|witch",
+"outcome:q5bridge:2:pick|witcher"
+]
+},
+"4fa337804efc5b0a": {
+"bytes": 10909,
+"chars": 18,
+"file": "4fa337804efc5b0a.mp3",
+"ids": [
+"choice:q5bridge2:0|witch",
+"choice:q5bridge2:0|witcher"
+]
+},
+"500d9f72c7717218": {
+"bytes": 30345,
+"chars": 56,
+"file": "500d9f72c7717218.mp3",
+"ids": [
+"scene:q1night:2|witcher",
+"scene:q1night:3|witcher"
+]
+},
+"50223e6e5f338f43": {
+"bytes": 62318,
+"chars": 90,
+"file": "50223e6e5f338f43.mp3",
+"ids": [
+"outcome:q3hodd:2:1|witch",
+"outcome:q3hodd:2:1|witcher"
+]
+},
+"50551bb39751e5cf": {
+"bytes": 36196,
+"chars": 74,
+"file": "50551bb39751e5cf.mp3",
+"ids": [
+"choice:q1blind:0|witch",
+"choice:q1blind:0|witcher"
+]
+},
+"50835f3cbb19241e": {
+"bytes": 10909,
+"chars": 17,
+"file": "50835f3cbb19241e.mp3",
+"ids": [
+"outcome:q1hub:0:pick|witch",
+"outcome:q1hub:0:pick|witcher"
+]
+},
+"51c81b779590f3d2": {
+"bytes": 41838,
+"chars": 83,
+"file": "51c81b779590f3d2.mp3",
+"ids": [
+"scene:q3end:2|witch",
+"scene:q3end:2|witcher",
+"scene:q3end:3|witch",
+"scene:q3end:3|witcher"
+]
+},
+"534a171e1f0ffa5c": {
+"bytes": 44346,
+"chars": 83,
+"file": "534a171e1f0ffa5c.mp3",
+"ids": [
+"outcome:q3search:6:1|witcher"
+]
+},
+"534ffaeaec073944": {
+"bytes": 20314,
+"chars": 48,
+"file": "534ffaeaec073944.mp3",
+"ids": [
+"choice:q5bridge2:1|witch",
+"choice:q5bridge2:1|witcher"
+]
+},
+"536aab1672d6eeb9": {
+"bytes": 82589,
+"chars": 155,
+"file": "536aab1672d6eeb9.mp3",
+"ids": [
+"scene:q5forest:0|witcher"
+]
+},
+"53e62c3496947e7e": {
+"bytes": 37241,
+"chars": 81,
+"file": "53e62c3496947e7e.mp3",
+"ids": [
+"outcome:q2elves:2:1|witch",
+"outcome:q2elves:2:1|witcher"
+]
+},
+"5437d7114dade329": {
+"bytes": 15089,
+"chars": 24,
+"file": "5437d7114dade329.mp3",
+"ids": [
+"choice:q3night:0|witch",
+"choice:q3night:0|witcher"
+]
+},
+"5452eee0fe2cf0cb": {
+"bytes": 38077,
+"chars": 76,
+"file": "5452eee0fe2cf0cb.mp3",
+"ids": [
+"outcome:q1well:1:1|witch",
+"outcome:q1well:1:1|witcher"
+]
+},
+"54ea700f2ae47dc0": {
+"bytes": 67334,
+"chars": 110,
+"file": "54ea700f2ae47dc0.mp3",
+"ids": [
+"outcome:q4ysolde:0:0|witch",
+"outcome:q4ysolde:0:0|witcher"
+]
+},
+"550132cfbb8e88bc": {
+"bytes": 42465,
+"chars": 79,
+"file": "550132cfbb8e88bc.mp3",
+"ids": [
+"choice:q2elves:2|witch",
+"choice:q2elves:2|witcher"
+]
+},
+"555b6460105b9d44": {
+"bytes": 33897,
+"chars": 52,
+"file": "555b6460105b9d44.mp3",
+"ids": [
+"outcome:q1night:4:pick|witch",
+"outcome:q1night:4:pick|witcher"
+]
+},
+"556653789178043f": {
+"bytes": 240578,
+"chars": 385,
+"file": "556653789178043f.mp3",
+"ids": [
+"scene:world:3|null",
+"scene:world:3|witch",
+"scene:world:3|witcher"
+]
+},
+"55a73971223cd27d": {
+"bytes": 23239,
+"chars": 49,
+"file": "55a73971223cd27d.mp3",
+"ids": [
+"scene:prologue:4|witch",
+"scene:prologue:4|witcher"
+]
+},
+"5652b6d5f9a84c04": {
+"bytes": 20314,
+"chars": 43,
+"file": "5652b6d5f9a84c04.mp3",
+"ids": [
+"outcome:q5bridge2:1:pick|witch",
+"outcome:q5bridge2:1:pick|witcher"
+]
+},
+"569e457da14f8575": {
+"bytes": 25747,
+"chars": 62,
+"file": "569e457da14f8575.mp3",
+"ids": [
+"outcome:q3b2:1:1|witch"
+]
+},
+"56a10bee2c0f69d2": {
+"bytes": 12163,
+"chars": 22,
+"file": "56a10bee2c0f69d2.mp3",
+"ids": [
+"outcome:q1bert:1:pick|witch",
+"outcome:q1bert:1:pick|witcher"
+]
+},
+"56b646c8c5267182": {
+"bytes": 13208,
+"chars": 28,
+"file": "56b646c8c5267182.mp3",
+"ids": [
+"outcome:q2bridge:2:pick|witch",
+"outcome:q2bridge:2:pick|witcher"
+]
+},
+"56bd0dd29e278ff9": {
+"bytes": 30345,
+"chars": 72,
+"file": "56bd0dd29e278ff9.mp3",
+"ids": [
+"outcome:q2elves:2:pick|witch",
+"outcome:q2elves:2:pick|witcher"
+]
+},
+"56caed6f13a20d16": {
+"bytes": 129192,
+"chars": 265,
+"file": "56caed6f13a20d16.mp3",
+"ids": [
+"scene:prologue:0|witcher"
+]
+},
+"56d54ec9c2247318": {
+"bytes": 20940,
+"chars": 49,
+"file": "56d54ec9c2247318.mp3",
+"ids": [
+"scene:q1night:1|witch",
+"scene:q1night:1|witcher"
+]
+},
+"576d6c1a0e4a43df": {
+"bytes": 37241,
+"chars": 80,
+"file": "576d6c1a0e4a43df.mp3",
+"ids": [
+"outcome:q4decide:0:0|witch",
+"outcome:q4decide:0:0|witcher"
+]
+},
+"57a0c8c54a5f431b": {
+"bytes": 6521,
+"chars": 8,
+"file": "57a0c8c54a5f431b.mp3",
+"ids": [
+"outcome:q2riddle:0:pick|witch",
+"outcome:q2riddle:0:pick|witcher"
+]
+},
+"584c2caafd532183": {
+"bytes": 37241,
+"chars": 75,
+"file": "584c2caafd532183.mp3",
+"ids": [
+"outcome:q2decide:0:pick|witch",
+"outcome:q2decide:0:pick|witcher"
+]
+},
+"5879a97225e85d90": {
+"bytes": 13835,
+"chars": 24,
+"file": "5879a97225e85d90.mp3",
+"ids": [
+"scene:q5forest:title|witch",
+"scene:q5forest:title|witcher"
+]
+},
+"5879ddd01a4c1dc3": {
+"bytes": 29509,
+"chars": 68,
+"file": "5879ddd01a4c1dc3.mp3",
+"ids": [
+"outcome:q2scouts:0:1|witch",
+"outcome:q2scouts:0:1|witcher"
+]
+},
+"58851c42a21bad57": {
+"bytes": 14671,
+"chars": 27,
+"file": "58851c42a21bad57.mp3",
+"ids": [
+"choice:q1bert:1|witch",
+"choice:q1bert:1|witcher"
+]
+},
+"5898e1ffa77acd86": {
+"bytes": 44346,
+"chars": 110,
+"file": "5898e1ffa77acd86.mp3",
+"ids": [
+"outcome:q1marga:3:0|witch",
+"outcome:q1marga:3:0|witcher"
+]
+},
+"58d2dbaed2adcf4d": {
+"bytes": 39958,
+"chars": 74,
+"file": "58d2dbaed2adcf4d.mp3",
+"ids": [
+"outcome:q2decide:0:1|witch",
+"outcome:q2decide:0:1|witcher"
+]
+},
+"58f13d4bd42acdb2": {
+"bytes": 23866,
+"chars": 56,
+"file": "58f13d4bd42acdb2.mp3",
+"ids": [
+"scene:q4end:1|witch",
+"scene:q4end:1|witcher"
+]
+},
+"5953f51e139c271e": {
+"bytes": 17597,
+"chars": 45,
+"file": "5953f51e139c271e.mp3",
+"ids": [
+"outcome:q1marga:1:pick|witch",
+"outcome:q1marga:1:pick|witcher"
+]
+},
+"59acdb9f8032ab30": {
+"bytes": 14671,
+"chars": 24,
+"file": "59acdb9f8032ab30.mp3",
+"ids": [
+"scene:q1end:title|witch",
+"scene:q1end:title|witcher"
+]
+},
+"59b7b2a14fe06104": {
+"bytes": 104950,
+"chars": 189,
+"file": "59b7b2a14fe06104.mp3",
+"ids": [
+"outcome:q5bridge2:0:1|witch"
+]
+},
+"5ab7fd1146c30186": {
+"bytes": 132118,
+"chars": 252,
+"file": "5ab7fd1146c30186.mp3",
+"ids": [
+"scene:q2scouts:0|witch",
+"scene:q2scouts:0|witcher"
+]
+},
+"5abc684fa984b306": {
+"bytes": 19896,
+"chars": 47,
+"file": "5abc684fa984b306.mp3",
+"ids": [
+"choice:q5square:0|witch",
+"choice:q5square:0|witcher"
+]
+},
+"5bee28bcebd15b54": {
+"bytes": 52914,
+"chars": 119,
+"file": "5bee28bcebd15b54.mp3",
+"ids": [
+"scene:q5square:0|witch",
+"scene:q5square:0|witcher"
+]
+},
+"5c2bcda93ffcb878": {
+"bytes": 33270,
+"chars": 65,
+"file": "5c2bcda93ffcb878.mp3",
+"ids": [
+"scene:q1marga:1|witch",
+"scene:q1marga:1|witcher"
+]
+},
+"5c2d13326a6423d5": {
+"bytes": 70678,
+"chars": 157,
+"file": "5c2d13326a6423d5.mp3",
+"ids": [
+"scene:q5square:1|witch",
+"scene:q5square:1|witcher"
+]
+},
+"5c7a4616175c83bb": {
+"bytes": 39540,
+"chars": 84,
+"file": "5c7a4616175c83bb.mp3",
+"ids": [
+"outcome:q3b:2:pick|witch",
+"outcome:q3b:2:pick|witcher"
+]
+},
+"5c9677d3b2a05acb": {
+"bytes": 19896,
+"chars": 42,
+"file": "5c9677d3b2a05acb.mp3",
+"ids": [
+"scene:q4end:1|witch",
+"scene:q4end:1|witcher"
+]
+},
+"5ca4b66489ced24a": {
+"bytes": 34733,
+"chars": 72,
+"file": "5ca4b66489ced24a.mp3",
+"ids": [
+"choice:q2scouts:0|witch",
+"choice:q2scouts:0|witcher"
+]
+},
+"5cdce63192814832": {
+"bytes": 69215,
+"chars": 146,
+"file": "5cdce63192814832.mp3",
+"ids": [
+"scene:q1well:0|witcher"
+]
+},
+"5d0e0f2b41fc9261": {
+"bytes": 9029,
+"chars": 11,
+"file": "5d0e0f2b41fc9261.mp3",
+"ids": [
+"scene:q1gate:title|witch",
+"scene:q1gate:title|witcher"
+]
+},
+"5d3406954b74aeb9": {
+"bytes": 51869,
+"chars": 137,
+"file": "5d3406954b74aeb9.mp3",
+"ids": [
+"scene:q1dawn:0|witch",
+"scene:q1dawn:0|witcher"
+]
+},
+"5dda1d5cf02c5149": {
+"bytes": 61065,
+"chars": 110,
+"file": "5dda1d5cf02c5149.mp3",
+"ids": [
+"outcome:q2elves:1:0|witch",
+"outcome:q2elves:1:0|witcher"
+]
+},
+"5ddbe481e245c90e": {
+"bytes": 27001,
+"chars": 63,
+"file": "5ddbe481e245c90e.mp3",
+"ids": [
+"outcome:q1a:1:1|witch",
+"outcome:q1a:1:1|witcher"
+]
+},
+"5de18f7c0a607e27": {
+"bytes": 13835,
+"chars": 32,
+"file": "5de18f7c0a607e27.mp3",
+"ids": [
+"outcome:q1night:1:2|witcher"
+]
+},
+"5e060e7f22ace6c9": {
+"bytes": 18433,
+"chars": 42,
+"file": "5e060e7f22ace6c9.mp3",
+"ids": [
+"outcome:q2decide:1:1|witch",
+"outcome:q2decide:1:1|witcher"
+]
+},
+"5e0c0d68444f8af0": {
+"bytes": 45809,
+"chars": 77,
+"file": "5e0c0d68444f8af0.mp3",
+"ids": [
+"outcome:q1blind:2:pick|witch",
+"outcome:q1blind:2:pick|witcher"
+]
+},
+"5ee601dfe1f4835d": {
+"bytes": 59184,
+"chars": 109,
+"file": "5ee601dfe1f4835d.mp3",
+"ids": [
+"outcome:q2scouts:2:1|witch"
+]
+},
+"5f2ff8d6edc9d9fa": {
+"bytes": 15507,
+"chars": 33,
+"file": "5f2ff8d6edc9d9fa.mp3",
+"ids": [
+"scene:q3end:3|witch",
+"scene:q3end:3|witcher",
+"scene:q3end:4|witch",
+"scene:q3end:5|witch"
+]
+},
+"5f35a80e67075a0e": {
+"bytes": 25747,
+"chars": 36,
+"file": "5f35a80e67075a0e.mp3",
+"ids": [
+"scene:q4end:1|witch",
+"scene:q4end:1|witcher"
+]
+},
+"5fe3c142a5f1c038": {
+"bytes": 26165,
+"chars": 62,
+"file": "5fe3c142a5f1c038.mp3",
+"ids": [
+"outcome:q1letter:1:pick|witch",
+"outcome:q1letter:1:pick|witcher"
+]
+},
+"5ff1e92b836a33c8": {
+"bytes": 24284,
+"chars": 48,
+"file": "5ff1e92b836a33c8.mp3",
+"ids": [
+"choice:q4forest:0|witch",
+"choice:q4forest:0|witcher"
+]
+},
+"600d102267f17553": {
+"bytes": 21776,
+"chars": 39,
+"file": "600d102267f17553.mp3",
+"ids": [
+"choice:q3search:1|witch",
+"choice:q3search:1|witcher"
+]
+},
+"60a0550b5bc12612": {
+"bytes": 36196,
+"chars": 71,
+"file": "60a0550b5bc12612.mp3",
+"ids": [
+"outcome:q1night:1:pick|witch",
+"outcome:q1night:1:pick|witcher"
+]
+},
+"61602e97cfff0154": {
+"bytes": 9865,
+"chars": 14,
+"file": "61602e97cfff0154.mp3",
+"ids": [
+"scene:q1end:3|witch",
+"scene:q1end:3|witcher"
+]
+},
+"61614c82dcbdb24d": {
+"bytes": 61065,
+"chars": 138,
+"file": "61614c82dcbdb24d.mp3",
+"ids": [
+"outcome:q3night:0:1|witcher"
+]
+},
+"6163d0ca4354aa40": {
+"bytes": 118325,
+"chars": 222,
+"file": "6163d0ca4354aa40.mp3",
+"ids": [
+"scene:q5forest:0|witch"
+]
+},
+"61d6c40b1c35120b": {
+"bytes": 43301,
+"chars": 80,
+"file": "61d6c40b1c35120b.mp3",
+"ids": [
+"choice:q3b:1|witch",
+"choice:q3b:1|witcher"
+]
+},
+"61fc5a4cbc08eef5": {
+"bytes": 16552,
+"chars": 34,
+"file": "61fc5a4cbc08eef5.mp3",
+"ids": [
+"choice:q1gate:2|witch",
+"choice:q1gate:2|witcher"
+]
+},
+"6227890775aa7596": {
+"bytes": 27210,
+"chars": 52,
+"file": "6227890775aa7596.mp3",
+"ids": [
+"choice:q4decide:4|witch",
+"choice:q4decide:4|witcher"
+]
+},
+"623dd80c2dc8349d": {
+"bytes": 17597,
+"chars": 38,
+"file": "623dd80c2dc8349d.mp3",
+"ids": [
+"outcome:q5bridge:0:2|witch",
+"outcome:q5bridge:0:2|witcher"
+]
+},
+"63ef0908fad40dd3": {
+"bytes": 21358,
+"chars": 51,
+"file": "63ef0908fad40dd3.mp3",
+"ids": [
+"scene:q2end:3|witch",
+"scene:q2end:3|witcher"
+]
+},
+"643debe05635bf75": {
+"bytes": 6521,
+"chars": 6,
+"file": "643debe05635bf75.mp3",
+"ids": [
+"scene:q3end:0|witch",
+"scene:q3end:0|witcher"
+]
+},
+"648868b395cf0d4c": {
+"bytes": 46227,
+"chars": 117,
+"file": "648868b395cf0d4c.mp3",
+"ids": [
+"outcome:q2decide:2:0|witch",
+"outcome:q2decide:2:0|witcher"
+]
+},
+"652e39071b4ad7cb": {
+"bytes": 27628,
+"chars": 59,
+"file": "652e39071b4ad7cb.mp3",
+"ids": [
+"outcome:q2decide:1:0|witch",
+"outcome:q2decide:1:0|witcher"
+]
+},
+"6565d628a99c5b87": {
+"bytes": 15716,
+"chars": 33,
+"file": "6565d628a99c5b87.mp3",
+"ids": [
+"outcome:q1gate:0:0|witch",
+"outcome:q1gate:0:0|witcher"
+]
+},
+"65a705d32db86482": {
+"bytes": 43928,
+"chars": 76,
+"file": "65a705d32db86482.mp3",
+"ids": [
+"choice:q3hodd:1|witch",
+"choice:q3hodd:1|witcher"
+]
+},
+"65a9b797d1d4dbfb": {
+"bytes": 57303,
+"chars": 121,
+"file": "65a9b797d1d4dbfb.mp3",
+"ids": [
+"scene:q5bridge:1|witch",
+"scene:q5bridge:1|witcher",
+"scene:q5bridge:2|witch",
+"scene:q5bridge:2|witcher"
+]
+},
+"65f60fa612877230": {
+"bytes": 16134,
+"chars": 29,
+"file": "65f60fa612877230.mp3",
+"ids": [
+"outcome:q4decide:2:pick|witch",
+"outcome:q4decide:2:pick|witcher"
+]
+},
+"6609718bba558321": {
+"bytes": 24284,
+"chars": 47,
+"file": "6609718bba558321.mp3",
+"ids": [
+"outcome:q1dawn:2:pick|witch",
+"outcome:q1dawn:2:pick|witcher"
+]
+},
+"67c6744fc0fba073": {
+"bytes": 17597,
+"chars": 36,
+"file": "67c6744fc0fba073.mp3",
+"ids": [
+"choice:q1hub:1|witch",
+"choice:q1hub:1|witcher"
+]
+},
+"682ed74bc6122c54": {
+"bytes": 50407,
+"chars": 108,
+"file": "682ed74bc6122c54.mp3",
+"ids": [
+"scene:q1letter:0|witch",
+"scene:q1letter:0|witcher"
+]
+},
+"6869dbdb0609d655": {
+"bytes": 41003,
+"chars": 81,
+"file": "6869dbdb0609d655.mp3",
+"ids": [
+"choice:q3b2:2|witch",
+"choice:q3b2:2|witcher"
+]
+},
+"690300ade6217761": {
+"bytes": 18015,
+"chars": 47,
+"file": "690300ade6217761.mp3",
+"ids": [
+"scene:q1end:1|witch",
+"scene:q1end:1|witcher"
+]
+},
+"6966d5708d2a0d3d": {
+"bytes": 68170,
+"chars": 148,
+"file": "6966d5708d2a0d3d.mp3",
+"ids": [
+"outcome:q5bridge:2:0|witch",
+"outcome:q5bridge:2:0|witcher"
+]
+},
+"69dd1ebb0eaeb521": {
+"bytes": 18433,
+"chars": 41,
+"file": "69dd1ebb0eaeb521.mp3",
+"ids": [
+"outcome:q2picket:0:0|witch",
+"outcome:q2picket:0:0|witcher"
+]
+},
+"69f727d46a32c32b": {
+"bytes": 71096,
+"chars": 142,
+"file": "69f727d46a32c32b.mp3",
+"ids": [
+"scene:q2decide:0|witch",
+"scene:q2decide:0|witcher"
+]
+},
+"6a13910d8040f187": {
+"bytes": 22821,
+"chars": 42,
+"file": "6a13910d8040f187.mp3",
+"ids": [
+"scene:q2end:2|witch",
+"scene:q2end:2|witcher"
+]
+},
+"6a5040a5f3a4b8e4": {
+"bytes": 43928,
+"chars": 97,
+"file": "6a5040a5f3a4b8e4.mp3",
+"ids": [
+"scene:q1hub:1|witch",
+"scene:q1hub:1|witcher",
+"scene:q1hub:2|witch",
+"scene:q1hub:2|witcher"
+]
+},
+"6a63dde6f28dc32f": {
+"bytes": 33688,
+"chars": 66,
+"file": "6a63dde6f28dc32f.mp3",
+"ids": [
+"outcome:q1marga:3:pick|witch",
+"outcome:q1marga:3:pick|witcher"
+]
+},
+"6ad2b1b7ce77696e": {
+"bytes": 56258,
+"chars": 117,
+"file": "6ad2b1b7ce77696e.mp3",
+"ids": [
+"scene:q4speak:2|witch",
+"scene:q4speak:2|witcher"
+]
+},
+"6baec5a6df040324": {
+"bytes": 10492,
+"chars": 17,
+"file": "6baec5a6df040324.mp3",
+"ids": [
+"outcome:q1hub:2:pick|witch",
+"outcome:q1hub:2:pick|witcher"
+]
+},
+"6bf790c850492b46": {
+"bytes": 9447,
+"chars": 16,
+"file": "6bf790c850492b46.mp3",
+"ids": [
+"scene:q1a:title|witch",
+"scene:q1a:title|witcher"
+]
+},
+"6bfef96c313eabb4": {
+"bytes": 32852,
+"chars": 72,
+"file": "6bfef96c313eabb4.mp3",
+"ids": [
+"scene:q2under_dead:1|witch",
+"scene:q2under_dead:1|witcher"
+]
+},
+"6cf62a67f0cac083": {
+"bytes": 22821,
+"chars": 52,
+"file": "6cf62a67f0cac083.mp3",
+"ids": [
+"scene:q1marga:1|witch",
+"scene:q1marga:1|witcher"
+]
+},
+"6d350fb0f82d268b": {
+"bytes": 38495,
+"chars": 81,
+"file": "6d350fb0f82d268b.mp3",
+"ids": [
+"outcome:q1blind:0:0|witch",
+"outcome:q1blind:0:0|witcher"
+]
+},
+"6d370b4371143791": {
+"bytes": 60647,
+"chars": 115,
+"file": "6d370b4371143791.mp3",
+"ids": [
+"outcome:q1night:1:2|witch",
+"outcome:q1night:1:3|witch"
+]
+},
+"6dc86521cfc62760": {
+"bytes": 20523,
+"chars": 46,
+"file": "6dc86521cfc62760.mp3",
+"ids": [
+"choice:q1dawn:1|witch",
+"choice:q1dawn:1|witcher"
+]
+},
+"6dd0292099104fad": {
+"bytes": 27628,
+"chars": 64,
+"file": "6dd0292099104fad.mp3",
+"ids": [
+"choice:q2decide:2|witch",
+"choice:q2decide:2|witcher"
+]
+},
+"6e172a39e4ec598f": {
+"bytes": 146119,
+"chars": 304,
+"file": "6e172a39e4ec598f.mp3",
+"ids": [
+"scene:prologue:1|witch",
+"scene:prologue:1|witcher"
+]
+},
+"6e77b9833eb7561e": {
+"bytes": 27001,
+"chars": 51,
+"file": "6e77b9833eb7561e.mp3",
+"ids": [
+"outcome:q2under:0:pick|witch",
+"outcome:q2under:0:pick|witcher"
+]
+},
+"6ec8c3aa8b78421a": {
+"bytes": 13208,
+"chars": 19,
+"file": "6ec8c3aa8b78421a.mp3",
+"ids": [
+"choice:q1hub:0|witch",
+"choice:q1hub:0|witcher"
+]
+},
+"6ef10acf5fb5dffa": {
+"bytes": 34733,
+"chars": 71,
+"file": "6ef10acf5fb5dffa.mp3",
+"ids": [
+"scene:q2end:2|witch",
+"scene:q2end:2|witcher"
+]
+},
+"6f36595e5b1cf235": {
+"bytes": 21776,
+"chars": 42,
+"file": "6f36595e5b1cf235.mp3",
+"ids": [
+"scene:q3end:2|witch",
+"scene:q3end:2|witcher",
+"scene:q3end:3|witch",
+"scene:q3end:3|witcher"
+]
+},
+"6fd843ecf9b3e57f": {
+"bytes": 58557,
+"chars": 130,
+"file": "6fd843ecf9b3e57f.mp3",
+"ids": [
+"scene:q3end:4|witch",
+"scene:q3end:4|witcher",
+"scene:q3end:5|witch",
+"scene:q3end:5|witcher",
+"scene:q3end:6|witch",
+"scene:q3end:6|witcher"
+]
+},
+"6fe1c4d481658332": {
+"bytes": 73394,
+"chars": 143,
+"file": "6fe1c4d481658332.mp3",
+"ids": [
+"scene:q3search:1|witch",
+"scene:q3search:1|witcher",
+"scene:q3search:2|witch",
+"scene:q3search:2|witcher"
+]
+},
+"6ff7b534a9a690a8": {
+"bytes": 16552,
+"chars": 35,
+"file": "6ff7b534a9a690a8.mp3",
+"ids": [
+"outcome:q1marga:0:pick|witch",
+"outcome:q1marga:0:pick|witcher"
+]
+},
+"704aa90ab5b48724": {
+"bytes": 9865,
+"chars": 20,
+"file": "704aa90ab5b48724.mp3",
+"ids": [
+"scene:q3letter:title|witch",
+"scene:q3letter:title|witcher"
+]
+},
+"709f4cfe226a9f1b": {
+"bytes": 45182,
+"chars": 96,
+"file": "709f4cfe226a9f1b.mp3",
+"ids": [
+"choice:q3b2:2|witch",
+"choice:q3b2:2|witcher"
+]
+},
+"70bb91d4337e5a1b": {
+"bytes": 18015,
+"chars": 44,
+"file": "70bb91d4337e5a1b.mp3",
+"ids": [
+"outcome:q5bridge2:1:0|witch",
+"outcome:q5bridge2:1:0|witcher"
+]
+},
+"710ecfc15c74d2da": {
+"bytes": 42883,
+"chars": 71,
+"file": "710ecfc15c74d2da.mp3",
+"ids": [
+"outcome:q1night:0:1|witch"
+]
+},
+"71147a757a634686": {
+"bytes": 17179,
+"chars": 35,
+"file": "71147a757a634686.mp3",
+"ids": [
+"outcome:q3letter:2:0|witch",
+"outcome:q3letter:2:0|witcher"
+]
+},
+"7125a754acd9f863": {
+"bytes": 38077,
+"chars": 75,
+"file": "7125a754acd9f863.mp3",
+"ids": [
+"choice:q3hodd:1|witch",
+"choice:q3hodd:1|witcher"
+]
+},
+"714d67cabb99032a": {
+"bytes": 56258,
+"chars": 117,
+"file": "714d67cabb99032a.mp3",
+"ids": [
+"outcome:q3night:2:pick|witch",
+"outcome:q3night:2:pick|witcher"
+]
+},
+"7176a20e2f3dec3e": {
+"bytes": 100562,
+"chars": 211,
+"file": "7176a20e2f3dec3e.mp3",
+"ids": [
+"scene:q1dawn:0|witch",
+"scene:q1dawn:0|witcher"
+]
+},
+"7196b59e97ccf7f0": {
+"bytes": 25120,
+"chars": 51,
+"file": "7196b59e97ccf7f0.mp3",
+"ids": [
+"choice:q5bridge:1|witch",
+"choice:q5bridge:1|witcher"
+]
+},
+"71b4b9bc545fc190": {
+"bytes": 12790,
+"chars": 23,
+"file": "71b4b9bc545fc190.mp3",
+"ids": [
+"scene:q4end:0|witch",
+"scene:q4end:0|witcher"
+]
+},
+"7228d4db863f0214": {
+"bytes": 10283,
+"chars": 15,
+"file": "7228d4db863f0214.mp3",
+"ids": [
+"choice:hub:3|witch",
+"choice:hub:3|witcher"
+]
+},
+"72303d32964486a4": {
+"bytes": 8820,
+"chars": 13,
+"file": "72303d32964486a4.mp3",
+"ids": [
+"choice:q2riddle:0|witch",
+"choice:q2riddle:0|witcher"
+]
+},
+"72a5bd5cae4b4965": {
+"bytes": 27628,
+"chars": 70,
+"file": "72a5bd5cae4b4965.mp3",
+"ids": [
+"outcome:q3search:6:0|witcher"
+]
+},
+"72b5fa1067f3be97": {
+"bytes": 117489,
+"chars": 224,
+"file": "72b5fa1067f3be97.mp3",
+"ids": [
+"outcome:q2under:0:0|witch",
+"outcome:q2under:0:0|witcher"
+]
+},
+"73384291732741a5": {
+"bytes": 19896,
+"chars": 49,
+"file": "73384291732741a5.mp3",
+"ids": [
+"outcome:q5square:3:pick|witch",
+"outcome:q5square:3:pick|witcher"
+]
+},
+"7401a85bd0f0a33d": {
+"bytes": 30554,
+"chars": 61,
+"file": "7401a85bd0f0a33d.mp3",
+"ids": [
+"choice:q5square:0|witch",
+"choice:q5square:0|witcher"
+]
+},
+"743c36ec2e435f91": {
+"bytes": 43301,
+"chars": 79,
+"file": "743c36ec2e435f91.mp3",
+"ids": [
+"outcome:q1night:3:1|witch",
+"outcome:q1night:3:1|witcher"
+]
+},
+"745c662a8f06b145": {
+"bytes": 27001,
+"chars": 45,
+"file": "745c662a8f06b145.mp3",
+"ids": [
+"choice:q2bridge:3|witch",
+"choice:q2bridge:3|witcher"
+]
+},
+"747ca09a6074cf96": {
+"bytes": 10283,
+"chars": 18,
+"file": "747ca09a6074cf96.mp3",
+"ids": [
+"scene:q1end:1|witch",
+"scene:q1end:1|witcher"
+]
+},
+"748d09724bac39ea": {
+"bytes": 26583,
+"chars": 47,
+"file": "748d09724bac39ea.mp3",
+"ids": [
+"choice:q1dawn:3|witch",
+"choice:q1dawn:3|witcher"
+]
+},
+"74d23c7d7dd50c88": {
+"bytes": 29509,
+"chars": 68,
+"file": "74d23c7d7dd50c88.mp3",
+"ids": [
+"outcome:q1letter:2:0|witch",
+"outcome:q1letter:2:0|witcher"
+]
+},
+"750aa6767ccdb8ea": {
+"bytes": 39958,
+"chars": 73,
+"file": "750aa6767ccdb8ea.mp3",
+"ids": [
+"outcome:q1gate:1:0|witch",
+"outcome:q1gate:1:0|witcher"
+]
+},
+"7563b470b59a2e27": {
+"bytes": 120206,
+"chars": 247,
+"file": "7563b470b59a2e27.mp3",
+"ids": [
+"scene:q5a:1|witch",
+"scene:q5a:1|witcher",
+"scene:q5a:2|witch",
+"scene:q5a:2|witcher"
+]
+},
+"75af1885890770f3": {
+"bytes": 36614,
+"chars": 76,
+"file": "75af1885890770f3.mp3",
+"ids": [
+"outcome:q3c:2:0|witch"
+]
+},
+"75d35fe5d026b0d0": {
+"bytes": 28464,
+"chars": 53,
+"file": "75d35fe5d026b0d0.mp3",
+"ids": [
+"outcome:q5square:2:0|witch",
+"outcome:q5square:2:0|witcher"
+]
+},
+"76caa0fdca5240d2": {
+"bytes": 27001,
+"chars": 50,
+"file": "76caa0fdca5240d2.mp3",
+"ids": [
+"choice:q1marga:1|witch",
+"choice:q1marga:1|witcher"
+]
+},
+"7746ec4d5217c619": {
+"bytes": 40585,
+"chars": 67,
+"file": "7746ec4d5217c619.mp3",
+"ids": [
+"outcome:q4decide:4:2|witch",
+"outcome:q4decide:4:2|witcher"
+]
+},
+"774855ce4df9a989": {
+"bytes": 12372,
+"chars": 24,
+"file": "774855ce4df9a989.mp3",
+"ids": [
+"scene:q1end:1|witch",
+"scene:q1end:1|witcher"
+]
+},
+"77a5e44fb50c7f98": {
+"bytes": 48944,
+"chars": 107,
+"file": "77a5e44fb50c7f98.mp3",
+"ids": [
+"scene:q3night:1|witch",
+"scene:q3night:1|witcher"
+]
+},
+"77df3d104e8cf0b4": {
+"bytes": 135879,
+"chars": 258,
+"file": "77df3d104e8cf0b4.mp3",
+"ids": [
+"scene:world:2|null",
+"scene:world:2|witch",
+"scene:world:2|witcher"
+]
+},
+"77ed13bf0ccd64b6": {
+"bytes": 30345,
+"chars": 52,
+"file": "77ed13bf0ccd64b6.mp3",
+"ids": [
+"choice:q4decide:3|witch",
+"choice:q4decide:3|witcher"
+]
+},
+"782cf2a333d879f4": {
+"bytes": 70469,
+"chars": 145,
+"file": "782cf2a333d879f4.mp3",
+"ids": [
+"scene:hub:0|witch",
+"scene:hub:0|witcher"
+]
+},
+"785e0d3095dd108c": {
+"bytes": 54795,
+"chars": 123,
+"file": "785e0d3095dd108c.mp3",
+"ids": [
+"outcome:q2bridge:1:1|witch"
+]
+},
+"78b68b00040bf87b": {
+"bytes": 13835,
+"chars": 27,
+"file": "78b68b00040bf87b.mp3",
+"ids": [
+"scene:q1child:1|witch",
+"scene:q1child:1|witcher"
+]
+},
+"78bc007ac003ca82": {
+"bytes": 32434,
+"chars": 68,
+"file": "78bc007ac003ca82.mp3",
+"ids": [
+"choice:q2picket:1|witch",
+"choice:q2picket:1|witcher"
+]
+},
+"78e022de3d544f3f": {
+"bytes": 13835,
+"chars": 22,
+"file": "78e022de3d544f3f.mp3",
+"ids": [
+"choice:q1hub:1|witch",
+"choice:q1hub:1|witcher"
+]
+},
+"7912bad1ac4c367e": {
+"bytes": 33270,
+"chars": 69,
+"file": "7912bad1ac4c367e.mp3",
+"ids": [
+"scene:q2end:4|witch",
+"scene:q2end:4|witcher"
+]
+},
+"79190b81a180819a": {
+"bytes": 16134,
+"chars": 33,
+"file": "79190b81a180819a.mp3",
+"ids": [
+"choice:q1bert:0|witch",
+"choice:q1bert:0|witcher"
+]
+},
+"793da7cbda5b6d06": {
+"bytes": 33688,
+"chars": 78,
+"file": "793da7cbda5b6d06.mp3",
+"ids": [
+"outcome:q5bridge:2:0|witch",
+"outcome:q5bridge:2:0|witcher"
+]
+},
+"79bb43155a57e799": {
+"bytes": 13208,
+"chars": 30,
+"file": "79bb43155a57e799.mp3",
+"ids": [
+"scene:q2picket:title|witch",
+"scene:q2picket:title|witcher"
+]
+},
+"7a255b66e1606f5c": {
+"bytes": 8820,
+"chars": 13,
+"file": "7a255b66e1606f5c.mp3",
+"ids": [
+"outcome:q5bridge2:0:pick|witch",
+"outcome:q5bridge2:0:pick|witcher"
+]
+},
+"7a70bf31e6f9a719": {
+"bytes": 10283,
+"chars": 9,
+"file": "7a70bf31e6f9a719.mp3",
+"ids": [
+"scene:q4decide:title|witch",
+"scene:q4decide:title|witcher"
+]
+},
+"7aa95231700519cc": {
+"bytes": 5685,
+"chars": 8,
+"file": "7aa95231700519cc.mp3",
+"ids": [
+"outcome:q2riddle:1:pick|witch",
+"outcome:q2riddle:1:pick|witcher"
+]
+},
+"7ab413e1012c6b13": {
+"bytes": 18433,
+"chars": 45,
+"file": "7ab413e1012c6b13.mp3",
+"ids": [
+"outcome:q2decide:2:2|witch",
+"outcome:q2decide:2:2|witcher"
+]
+},
+"7ae6b9856ab45c02": {
+"bytes": 29509,
+"chars": 56,
+"file": "7ae6b9856ab45c02.mp3",
+"ids": [
+"outcome:q5square:2:pick|witch",
+"outcome:q5square:2:pick|witcher"
+]
+},
+"7c155fa11c170ed7": {
+"bytes": 25538,
+"chars": 57,
+"file": "7c155fa11c170ed7.mp3",
+"ids": [
+"outcome:q2decide:2:pick|witch",
+"outcome:q2decide:2:pick|witcher"
+]
+},
+"7c16a7bbedc19ba8": {
+"bytes": 27210,
+"chars": 61,
+"file": "7c16a7bbedc19ba8.mp3",
+"ids": [
+"outcome:q3search:0:pick|witch",
+"outcome:q3search:0:pick|witcher"
+]
+},
+"7c3b5cd5e80e8888": {
+"bytes": 63781,
+"chars": 132,
+"file": "7c3b5cd5e80e8888.mp3",
+"ids": [
+"scene:q3c:1|witch",
+"scene:q3c:2|witch"
+]
+},
+"7c45a014ad0e7fe8": {
+"bytes": 37659,
+"chars": 78,
+"file": "7c45a014ad0e7fe8.mp3",
+"ids": [
+"outcome:q3night:4:0|witch",
+"outcome:q3night:4:0|witcher"
+]
+},
+"7c752436561b0e34": {
+"bytes": 54795,
+"chars": 125,
+"file": "7c752436561b0e34.mp3",
+"ids": [
+"scene:q3night:1|witch",
+"scene:q3night:1|witcher"
+]
+},
+"7cb94d7dfae67c08": {
+"bytes": 25120,
+"chars": 60,
+"file": "7cb94d7dfae67c08.mp3",
+"ids": [
+"choice:q2bridge:1|witch",
+"choice:q2bridge:1|witcher"
+]
+},
+"7cef4e2ed45a32b1": {
+"bytes": 117280,
+"chars": 209,
+"file": "7cef4e2ed45a32b1.mp3",
+"ids": [
+"scene:q2picket:0|witch",
+"scene:q2picket:0|witcher"
+]
+},
+"7d1b79a689313b88": {
+"bytes": 61483,
+"chars": 149,
+"file": "7d1b79a689313b88.mp3",
+"ids": [
+"outcome:q3b2:1:0|witch"
+]
+},
+"7d33181dd7669c13": {
+"bytes": 21776,
+"chars": 41,
+"file": "7d33181dd7669c13.mp3",
+"ids": [
+"choice:q3night:0|witch",
+"choice:q3night:0|witcher"
+]
+},
+"7db485b91a633958": {
+"bytes": 32434,
+"chars": 66,
+"file": "7db485b91a633958.mp3",
+"ids": [
+"choice:q3search:0|witch",
+"choice:q3search:0|witcher"
+]
+},
+"7db5b951c56b2af1": {
+"bytes": 16552,
+"chars": 33,
+"file": "7db5b951c56b2af1.mp3",
+"ids": [
+"choice:prologue:0|witch",
+"choice:prologue:0|witcher"
+]
+},
+"7df4caf770bff574": {
+"bytes": 35778,
+"chars": 76,
+"file": "7df4caf770bff574.mp3",
+"ids": [
+"scene:q2end:4|witch",
+"scene:q2end:4|witcher",
+"scene:q2end:5|witch",
+"scene:q2end:5|witcher"
+]
+},
+"7e075abab1146443": {
+"bytes": 19896,
+"chars": 35,
+"file": "7e075abab1146443.mp3",
+"ids": [
+"choice:q1well:0|witch",
+"choice:q1well:0|witcher"
+]
+},
+"7e2161e793ca49ab": {
+"bytes": 132118,
+"chars": 249,
+"file": "7e2161e793ca49ab.mp3",
+"ids": [
+"scene:q5forest:0|witch",
+"scene:q5forest:0|witcher"
+]
+},
+"7e30185933831519": {
+"bytes": 38913,
+"chars": 77,
+"file": "7e30185933831519.mp3",
+"ids": [
+"outcome:q4decide:1:pick|witch",
+"outcome:q4decide:1:pick|witcher"
+]
+},
+"7e39688d985e8505": {
+"bytes": 125848,
+"chars": 195,
+"file": "7e39688d985e8505.mp3",
+"ids": [
+"scene:q5forest:0|witch",
+"scene:q5forest:1|witch",
+"scene:q5forest:2|witch"
+]
+},
+"7e3f79e6853660bc": {
+"bytes": 97427,
+"chars": 220,
+"file": "7e3f79e6853660bc.mp3",
+"ids": [
+"scene:q5bridge2:0|witch",
+"scene:q5bridge2:0|witcher"
+]
+},
+"7e8f272a0da9d5b8": {
+"bytes": 39540,
+"chars": 74,
+"file": "7e8f272a0da9d5b8.mp3",
+"ids": [
+"outcome:q1dawn:0:1|witch",
+"outcome:q1dawn:0:1|witcher"
+]
+},
+"7ee3d31d795a7936": {
+"bytes": 24284,
+"chars": 44,
+"file": "7ee3d31d795a7936.mp3",
+"ids": [
+"outcome:q3hodd:0:1|witch",
+"outcome:q3hodd:0:1|witcher"
+]
+},
+"7ef7b3eedf9a51b0": {
+"bytes": 53750,
+"chars": 114,
+"file": "7ef7b3eedf9a51b0.mp3",
+"ids": [
+"outcome:q3b2:1:1|witch"
+]
+},
+"7f1558698b0b9e59": {
+"bytes": 19896,
+"chars": 46,
+"file": "7f1558698b0b9e59.mp3",
+"ids": [
+"choice:q3c:1|witch"
+]
+},
+"7f3aa67be51dc83d": {
+"bytes": 10492,
+"chars": 18,
+"file": "7f3aa67be51dc83d.mp3",
+"ids": [
+"scene:q1well:title|witch",
+"scene:q1well:title|witcher"
+]
+},
+"7f4749b112ab61fe": {
+"bytes": 16552,
+"chars": 38,
+"file": "7f4749b112ab61fe.mp3",
+"ids": [
+"scene:prologue:2|witch",
+"scene:prologue:2|witcher"
+]
+},
+"7f92be4c920bc4b3": {
+"bytes": 59184,
+"chars": 137,
+"file": "7f92be4c920bc4b3.mp3",
+"ids": [
+"outcome:q1dawn:0:0|witch",
+"outcome:q1dawn:0:0|witcher"
+]
+},
+"7fbc68aceeaf13a5": {
+"bytes": 37032,
+"chars": 75,
+"file": "7fbc68aceeaf13a5.mp3",
+"ids": [
+"outcome:q4decide:3:3|witch"
+]
+},
+"7fd3bc11e9e815ca": {
+"bytes": 18015,
+"chars": 34,
+"file": "7fd3bc11e9e815ca.mp3",
+"ids": [
+"outcome:q2bridge:3:pick|witch",
+"outcome:q2bridge:3:pick|witcher"
+]
+},
+"7fdbd264eadab0c7": {
+"bytes": 135879,
+"chars": 276,
+"file": "7fdbd264eadab0c7.mp3",
+"ids": [
+"scene:q4speak:0|witch",
+"scene:q4speak:0|witcher"
+]
+},
+"8011960df2393025": {
+"bytes": 9447,
+"chars": 13,
+"file": "8011960df2393025.mp3",
+"ids": [
+"choice:q2riddle:1|witch",
+"choice:q2riddle:1|witcher"
+]
+},
+"8046a66ecc17d9e5": {
+"bytes": 15507,
+"chars": 34,
+"file": "8046a66ecc17d9e5.mp3",
+"ids": [
+"outcome:q4camp:2:pick|witch",
+"outcome:q4camp:2:pick|witcher"
+]
+},
+"80498b25f62fb836": {
+"bytes": 54795,
+"chars": 120,
+"file": "80498b25f62fb836.mp3",
+"ids": [
+"scene:q5square:0|witch",
+"scene:q5square:0|witcher"
+]
+},
+"806bb399dbbcaa40": {
+"bytes": 18015,
+"chars": 38,
+"file": "806bb399dbbcaa40.mp3",
+"ids": [
+"scene:q1end:2|witch",
+"scene:q1end:2|witcher"
+]
+},
+"8086caea8d546fe5": {
+"bytes": 39958,
+"chars": 85,
+"file": "8086caea8d546fe5.mp3",
+"ids": [
+"choice:q3c:2|witcher"
+]
+},
+"80e5cb70aebed1e1": {
+"bytes": 30554,
+"chars": 67,
+"file": "80e5cb70aebed1e1.mp3",
+"ids": [
+"outcome:q1well:1:0|witch",
+"outcome:q1well:1:0|witcher"
+]
+},
+"80e79d049e2e744d": {
+"bytes": 37032,
+"chars": 71,
+"file": "80e79d049e2e744d.mp3",
+"ids": [
+"outcome:q3search:1:0|witch"
+]
+},
+"8172849aad87233b": {
+"bytes": 42465,
+"chars": 95,
+"file": "8172849aad87233b.mp3",
+"ids": [
+"outcome:q4decide:4:pick|witch",
+"outcome:q4decide:4:pick|witcher"
+]
+},
+"823e455b802eabed": {
+"bytes": 13208,
+"chars": 26,
+"file": "823e455b802eabed.mp3",
+"ids": [
+"outcome:q3letter:1:pick|witch",
+"outcome:q3letter:1:pick|witcher"
+]
+},
+"830024a794a49707": {
+"bytes": 56676,
+"chars": 132,
+"file": "830024a794a49707.mp3",
+"ids": [
+"scene:q3a:2|witch"
+]
+},
+"83bcd314e887476e": {
+"bytes": 43301,
+"chars": 97,
+"file": "83bcd314e887476e.mp3",
+"ids": [
+"outcome:q1blind:2:0|witch",
+"outcome:q1blind:2:0|witcher"
+]
+},
+"83f9360e810a2846": {
+"bytes": 12790,
+"chars": 27,
+"file": "83f9360e810a2846.mp3",
+"ids": [
+"outcome:q4a:0:pick|witch",
+"outcome:q4a:0:pick|witcher"
+]
+},
+"84134b6e02278662": {
+"bytes": 84052,
+"chars": 162,
+"file": "84134b6e02278662.mp3",
+"ids": [
+"scene:q5square:0|witch",
+"scene:q5square:0|witcher"
+]
+},
+"8477a848e0fae8de": {
+"bytes": 75275,
+"chars": 146,
+"file": "8477a848e0fae8de.mp3",
+"ids": [
+"scene:q1a:2|witcher"
+]
+},
+"84909fb23129e494": {
+"bytes": 22821,
+"chars": 47,
+"file": "84909fb23129e494.mp3",
+"ids": [
+"scene:q1end:5|witch",
+"scene:q1end:5|witcher"
+]
+},
+"84fe40df91c7a696": {
+"bytes": 65871,
+"chars": 133,
+"file": "84fe40df91c7a696.mp3",
+"ids": [
+"scene:q2picket:2|witch",
+"scene:q2picket:2|witcher"
+]
+},
+"860d1b9ade9fbdae": {
+"bytes": 78201,
+"chars": 151,
+"file": "860d1b9ade9fbdae.mp3",
+"ids": [
+"outcome:q3night:2:0|witch",
+"outcome:q3night:2:0|witcher"
+]
+},
+"869c128a19f93dba": {
+"bytes": 137969,
+"chars": 230,
+"file": "869c128a19f93dba.mp3",
+"ids": [
+"scene:q4forest:2|witch",
+"scene:q4forest:2|witcher"
+]
+},
+"870b630dfdd74d1e": {
+"bytes": 79246,
+"chars": 157,
+"file": "870b630dfdd74d1e.mp3",
+"ids": [
+"scene:q5square:1|witch",
+"scene:q5square:1|witcher"
+]
+},
+"876ee072eda6bf24": {
+"bytes": 50407,
+"chars": 120,
+"file": "876ee072eda6bf24.mp3",
+"ids": [
+"outcome:q2bridge:3:1|witch"
+]
+},
+"87cf9cf9dd0a37c2": {
+"bytes": 133998,
+"chars": 268,
+"file": "87cf9cf9dd0a37c2.mp3",
+"ids": [
+"scene:q3search:1|witch",
+"scene:q3search:1|witcher"
+]
+},
+"87d0915271562cd1": {
+"bytes": 18433,
+"chars": 40,
+"file": "87d0915271562cd1.mp3",
+"ids": [
+"choice:q4thornwick:2|witch",
+"choice:q4thornwick:2|witcher"
+]
+},
+"884d720f7f2f4d36": {
+"bytes": 112056,
+"chars": 230,
+"file": "884d720f7f2f4d36.mp3",
+"ids": [
+"scene:q5square:1|witch",
+"scene:q5square:1|witcher"
+]
+},
+"89353083713813a6": {
+"bytes": 58557,
+"chars": 142,
+"file": "89353083713813a6.mp3",
+"ids": [
+"scene:q5square:0|witch",
+"scene:q5square:0|witcher"
+]
+},
+"89357daec1690776": {
+"bytes": 62945,
+"chars": 118,
+"file": "89357daec1690776.mp3",
+"ids": [
+"scene:q3end:1|witch",
+"scene:q3end:1|witcher"
+]
+},
+"8a0fff2592b2ebd8": {
+"bytes": 35569,
+"chars": 69,
+"file": "8a0fff2592b2ebd8.mp3",
+"ids": [
+"outcome:q2elves:0:pick|witch",
+"outcome:q2elves:0:pick|witcher"
+]
+},
+"8a663080b88a2f92": {
+"bytes": 13835,
+"chars": 31,
+"file": "8a663080b88a2f92.mp3",
+"ids": [
+"scene:pick:1|null"
+]
+},
+"8a92f9f623dee0d5": {
+"bytes": 39540,
+"chars": 78,
+"file": "8a92f9f623dee0d5.mp3",
+"ids": [
+"outcome:q3c:3:pick|witcher"
+]
+},
+"8ada3422f439175b": {
+"bytes": 40585,
+"chars": 77,
+"file": "8ada3422f439175b.mp3",
+"ids": [
+"outcome:q1well:0:0|witch",
+"outcome:q1well:0:0|witcher"
+]
+},
+"8adb563a12ba9fe7": {
+"bytes": 40376,
+"chars": 89,
+"file": "8adb563a12ba9fe7.mp3",
+"ids": [
+"scene:world:8|null",
+"scene:world:8|witch",
+"scene:world:8|witcher"
+]
+},
+"8b0267d491af19a3": {
+"bytes": 101607,
+"chars": 178,
+"file": "8b0267d491af19a3.mp3",
+"ids": [
+"outcome:q4decide:4:1|witch",
+"outcome:q4decide:4:1|witcher"
+]
+},
+"8b371552b848f792": {
+"bytes": 85933,
+"chars": 191,
+"file": "8b371552b848f792.mp3",
+"ids": [
+"scene:q3search:0|witch",
+"scene:q3search:0|witcher"
+]
+},
+"8bd46e7cb4885fb9": {
+"bytes": 59184,
+"chars": 130,
+"file": "8bd46e7cb4885fb9.mp3",
+"ids": [
+"outcome:q3hodd:1:0|witch",
+"outcome:q3hodd:1:0|witcher"
+]
+},
+"8c43d36ccffc497f": {
+"bytes": 28046,
+"chars": 63,
+"file": "8c43d36ccffc497f.mp3",
+"ids": [
+"scene:q1night:1|witch",
+"scene:q1night:1|witcher"
+]
+},
+"8c86019358420a8c": {
+"bytes": 39122,
+"chars": 85,
+"file": "8c86019358420a8c.mp3",
+"ids": [
+"scene:q1end:2|witch",
+"scene:q1end:2|witcher"
+]
+},
+"8ce9037a377f6672": {
+"bytes": 10909,
+"chars": 20,
+"file": "8ce9037a377f6672.mp3",
+"ids": [
+"scene:q3hodd:title|witch",
+"scene:q3hodd:title|witcher"
+]
+},
+"8d102315bc156486": {
+"bytes": 62527,
+"chars": 129,
+"file": "8d102315bc156486.mp3",
+"ids": [
+"outcome:q4forest:2:0|witch",
+"outcome:q4forest:2:0|witcher"
+]
+},
+"8d16fa5446f01044": {
+"bytes": 53959,
+"chars": 131,
+"file": "8d16fa5446f01044.mp3",
+"ids": [
+"scene:q3c:0|witch",
+"scene:q3c:0|witcher"
+]
+},
+"8d27db8e3a13e2ad": {
+"bytes": 25747,
+"chars": 63,
+"file": "8d27db8e3a13e2ad.mp3",
+"ids": [
+"choice:q2a:0|witch",
+"choice:q2a:0|witcher"
+]
+},
+"8d402bcea3c1750e": {
+"bytes": 78201,
+"chars": 160,
+"file": "8d402bcea3c1750e.mp3",
+"ids": [
+"outcome:q1letter:0:1|witch",
+"outcome:q1letter:0:1|witcher"
+]
+},
+"8d8a9d83bc729ba7": {
+"bytes": 42256,
+"chars": 85,
+"file": "8d8a9d83bc729ba7.mp3",
+"ids": [
+"outcome:q4camp:2:1|witch",
+"outcome:q4camp:2:1|witcher"
+]
+},
+"8da15543b2b5af57": {
+"bytes": 54795,
+"chars": 106,
+"file": "8da15543b2b5af57.mp3",
+"ids": [
+"outcome:q3c:4:pick|witch",
+"outcome:q3c:4:pick|witcher"
+]
+},
+"8def96fdabb8beba": {
+"bytes": 27628,
+"chars": 62,
+"file": "8def96fdabb8beba.mp3",
+"ids": [
+"scene:q1end:3|witch",
+"scene:q1end:3|witcher"
+]
+},
+"8e1bdcbea032c6b3": {
+"bytes": 33897,
+"chars": 72,
+"file": "8e1bdcbea032c6b3.mp3",
+"ids": [
+"outcome:q2under_dead:1:0|witch",
+"outcome:q2under_dead:1:0|witcher"
+]
+},
+"8e2f8817c1d22744": {
+"bytes": 18433,
+"chars": 41,
+"file": "8e2f8817c1d22744.mp3",
+"ids": [
+"outcome:q1dawn:1:pick|witch",
+"outcome:q1dawn:1:pick|witcher"
+]
+},
+"8f2bffde74e1bbfe": {
+"bytes": 18015,
+"chars": 17,
+"file": "8f2bffde74e1bbfe.mp3",
+"ids": [
+"scene:q3end:title|witch",
+"scene:q3end:title|witcher"
+]
+},
+"8f7f3f872122ef42": {
+"bytes": 85724,
+"chars": 166,
+"file": "8f7f3f872122ef42.mp3",
+"ids": [
+"outcome:q1night:1:0|witcher"
+]
+},
+"8fac9607f9fa7c9a": {
+"bytes": 15089,
+"chars": 32,
+"file": "8fac9607f9fa7c9a.mp3",
+"ids": [
+"choice:q4a:0|witch",
+"choice:q4a:0|witcher"
+]
+},
+"8fb34478011c19b3": {
+"bytes": 25747,
+"chars": 58,
+"file": "8fb34478011c19b3.mp3",
+"ids": [
+"choice:q1night:3|witch",
+"choice:q1night:3|witcher"
+]
+},
+"8fe99cc4737d627d": {
+"bytes": 32225,
+"chars": 73,
+"file": "8fe99cc4737d627d.mp3",
+"ids": [
+"outcome:q1dawn:3:0|witch",
+"outcome:q1dawn:3:0|witcher"
+]
+},
+"9005c2e3dae4cf49": {
+"bytes": 27628,
+"chars": 55,
+"file": "9005c2e3dae4cf49.mp3",
+"ids": [
+"choice:q2under:1|witch",
+"choice:q2under:1|witcher"
+]
+},
+"9011a47cf512387c": {
+"bytes": 35151,
+"chars": 72,
+"file": "9011a47cf512387c.mp3",
+"ids": [
+"choice:q4speak:0|witch",
+"choice:q4speak:0|witcher"
+]
+},
+"90846cb034442720": {
+"bytes": 22403,
+"chars": 46,
+"file": "90846cb034442720.mp3",
+"ids": [
+"outcome:q3search:2:1|witch",
+"outcome:q3search:2:1|witcher"
+]
+},
+"909ab166ed754249": {
+"bytes": 27210,
+"chars": 51,
+"file": "909ab166ed754249.mp3",
+"ids": [
+"choice:q1dawn:0|witch",
+"choice:q1dawn:0|witcher"
+]
+},
+"90ae2c11fbe23a67": {
+"bytes": 109339,
+"chars": 222,
+"file": "90ae2c11fbe23a67.mp3",
+"ids": [
+"outcome:q5bridge:0:1|witch",
+"outcome:q5bridge:0:1|witcher"
+]
+},
+"9124a76a55c3be02": {
+"bytes": 19060,
+"chars": 47,
+"file": "9124a76a55c3be02.mp3",
+"ids": [
+"outcome:q4a:1:pick|witch",
+"outcome:q4a:1:pick|witcher"
+]
+},
+"91292020fd10e7ad": {
+"bytes": 7148,
+"chars": 7,
+"file": "91292020fd10e7ad.mp3",
+"ids": [
+"outcome:q1dawn:4:0|witch",
+"outcome:q1dawn:4:0|witcher"
+]
+},
+"9130e52a4ce9e070": {
+"bytes": 23239,
+"chars": 59,
+"file": "9130e52a4ce9e070.mp3",
+"ids": [
+"outcome:q2decide:0:2|witch",
+"outcome:q2decide:0:2|witcher"
+]
+},
+"91842d5a780d2c9c": {
+"bytes": 20940,
+"chars": 37,
+"file": "91842d5a780d2c9c.mp3",
+"ids": [
+"choice:q1hub:3|witch",
+"choice:q1hub:3|witcher"
+]
+},
+"9184de0fe05d0f3c": {
+"bytes": 52496,
+"chars": 109,
+"file": "9184de0fe05d0f3c.mp3",
+"ids": [
+"scene:q2elves:1|witch"
+]
+},
+"91e07dedd3acf84e": {
+"bytes": 26583,
+"chars": 59,
+"file": "91e07dedd3acf84e.mp3",
+"ids": [
+"outcome:q1dawn:1:1|witch",
+"outcome:q1dawn:1:1|witcher"
+]
+},
+"91f06d26cb2635a4": {
+"bytes": 17179,
+"chars": 37,
+"file": "91f06d26cb2635a4.mp3",
+"ids": [
+"outcome:q4ysolde:0:pick|witch",
+"outcome:q4ysolde:0:pick|witcher"
+]
+},
+"920cc90c485cf7be": {
+"bytes": 78201,
+"chars": 170,
+"file": "920cc90c485cf7be.mp3",
+"ids": [
+"outcome:q5square:0:0|witcher"
+]
+},
+"927201abeddbf0f5": {
+"bytes": 16970,
+"chars": 32,
+"file": "927201abeddbf0f5.mp3",
+"ids": [
+"outcome:q2elves:3:pick|witch",
+"outcome:q2elves:3:pick|witcher"
+]
+},
+"92a087b011f8cba2": {
+"bytes": 69633,
+"chars": 149,
+"file": "92a087b011f8cba2.mp3",
+"ids": [
+"outcome:q3night:3:0|witch"
+]
+},
+"92b592c6fe6677bc": {
+"bytes": 141731,
+"chars": 280,
+"file": "92b592c6fe6677bc.mp3",
+"ids": [
+"scene:q1a:0|witch",
+"scene:q1a:0|witcher"
+]
+},
+"92cdce2cf360ae8e": {
+"bytes": 115399,
+"chars": 216,
+"file": "92cdce2cf360ae8e.mp3",
+"ids": [
+"scene:q4forest:0|witcher"
+]
+},
+"92f1fc664aee7472": {
+"bytes": 27001,
+"chars": 62,
+"file": "92f1fc664aee7472.mp3",
+"ids": [
+"outcome:q4thornwick:1:0|witch",
+"outcome:q4thornwick:1:0|witcher"
+]
+},
+"92fb0bc61acbbbd6": {
+"bytes": 20314,
+"chars": 49,
+"file": "92fb0bc61acbbbd6.mp3",
+"ids": [
+"outcome:q5square:3:0|witch",
+"outcome:q5square:3:0|witcher"
+]
+},
+"9320b79e2faa96a4": {
+"bytes": 71096,
+"chars": 126,
+"file": "9320b79e2faa96a4.mp3",
+"ids": [
+"outcome:q3search:4:1|witch"
+]
+},
+"933e521c7ee0fa17": {
+"bytes": 25747,
+"chars": 41,
+"file": "933e521c7ee0fa17.mp3",
+"ids": [
+"outcome:q1child:0:2|witcher"
+]
+},
+"937e8a01303d6c86": {
+"bytes": 60647,
+"chars": 115,
+"file": "937e8a01303d6c86.mp3",
+"ids": [
+"outcome:q2elves:0:0|witch"
+]
+},
+"93958c49203865c5": {
+"bytes": 40585,
+"chars": 97,
+"file": "93958c49203865c5.mp3",
+"ids": [
+"outcome:q3a:1:0|witch",
+"outcome:q3a:1:0|witcher"
+]
+},
+"93a86604f08e6c54": {
+"bytes": 11745,
+"chars": 22,
+"file": "93a86604f08e6c54.mp3",
+"ids": [
+"outcome:q1a:0:pick|witch",
+"outcome:q1a:0:pick|witcher"
+]
+},
+"93bc6b73706300ba": {
+"bytes": 17597,
+"chars": 32,
+"file": "93bc6b73706300ba.mp3",
+"ids": [
+"outcome:q1blind:1:pick|witch",
+"outcome:q1blind:1:pick|witcher"
+]
+},
+"93ec72548283b1d4": {
+"bytes": 18015,
+"chars": 40,
+"file": "93ec72548283b1d4.mp3",
+"ids": [
+"outcome:q4decide:2:2|witch",
+"outcome:q4decide:2:2|witcher"
+]
+},
+"941739c36c70af95": {
+"bytes": 10492,
+"chars": 10,
+"file": "941739c36c70af95.mp3",
+"ids": [
+"scene:q4speak:title|witch",
+"scene:q4speak:title|witcher"
+]
+},
+"942f591005099a30": {
+"bytes": 52914,
+"chars": 116,
+"file": "942f591005099a30.mp3",
+"ids": [
+"scene:hub:0|witch",
+"scene:hub:0|witcher",
+"scene:hub:1|witch",
+"scene:hub:1|witcher"
+]
+},
+"94416dc04716ad62": {
+"bytes": 65662,
+"chars": 128,
+"file": "94416dc04716ad62.mp3",
+"ids": [
+"outcome:q4thornwick:0:0|witch"
+]
+},
+"944c0d31f1d3b965": {
+"bytes": 35569,
+"chars": 83,
+"file": "944c0d31f1d3b965.mp3",
+"ids": [
+"scene:q5bridge:0|witch",
+"scene:q5bridge:0|witcher"
+]
+},
+"9510eeefd282f06b": {
+"bytes": 51452,
+"chars": 112,
+"file": "9510eeefd282f06b.mp3",
+"ids": [
+"choice:q3c:3|witch",
+"choice:q3c:3|witcher"
+]
+},
+"957709817ce66c59": {
+"bytes": 20314,
+"chars": 38,
+"file": "957709817ce66c59.mp3",
+"ids": [
+"choice:q1hub:2|witch",
+"choice:q1hub:2|witcher"
+]
+},
+"96607819a28931b3": {
+"bytes": 19060,
+"chars": 35,
+"file": "96607819a28931b3.mp3",
+"ids": [
+"outcome:q1letter:2:pick|witch",
+"outcome:q1letter:2:pick|witcher"
+]
+},
+"96beedeb26e16878": {
+"bytes": 17597,
+"chars": 34,
+"file": "96beedeb26e16878.mp3",
+"ids": [
+"scene:q1end:0|witch",
+"scene:q1end:0|witcher"
+]
+},
+"96c79ab03f8e5daa": {
+"bytes": 49571,
+"chars": 110,
+"file": "96c79ab03f8e5daa.mp3",
+"ids": [
+"outcome:q2bridge:2:0|witch",
+"outcome:q2bridge:2:0|witcher"
+]
+},
+"96f734c33de7d529": {
+"bytes": 18433,
+"chars": 35,
+"file": "96f734c33de7d529.mp3",
+"ids": [
+"choice:q2bridge:2|witch",
+"choice:q2bridge:2|witcher"
+]
+},
+"9804679655e6f2b1": {
+"bytes": 27210,
+"chars": 63,
+"file": "9804679655e6f2b1.mp3",
+"ids": [
+"scene:q2end:3|witch",
+"scene:q2end:3|witcher"
+]
+},
+"99328ff1feacf46f": {
+"bytes": 25538,
+"chars": 56,
+"file": "99328ff1feacf46f.mp3",
+"ids": [
+"outcome:q4ysolde:2:pick|witch",
+"outcome:q4ysolde:2:pick|witcher"
+]
+},
+"99366f6b58c42a81": {
+"bytes": 96382,
+"chars": 193,
+"file": "99366f6b58c42a81.mp3",
+"ids": [
+"scene:q1blind:0|witch",
+"scene:q1blind:0|witcher"
+]
+},
+"994cfef2de7a30a5": {
+"bytes": 40376,
+"chars": 80,
+"file": "994cfef2de7a30a5.mp3",
+"ids": [
+"outcome:q1marga:1:0|witch",
+"outcome:q1marga:1:0|witcher"
+]
+},
+"99602ff72b6cbf17": {
+"bytes": 37032,
+"chars": 77,
+"file": "99602ff72b6cbf17.mp3",
+"ids": [
+"outcome:q3hodd:0:pick|witch",
+"outcome:q3hodd:0:pick|witcher"
+]
+},
+"9971f8f866364cb5": {
+"bytes": 50616,
+"chars": 104,
+"file": "9971f8f866364cb5.mp3",
+"ids": [
+"outcome:q4decide:4:0|witch",
+"outcome:q4decide:4:0|witcher"
+]
+},
+"9986eba654a1104c": {
+"bytes": 116444,
+"chars": 246,
+"file": "9986eba654a1104c.mp3",
+"ids": [
+"scene:q4ysolde:2|witch",
+"scene:q4ysolde:2|witcher",
+"scene:q4ysolde:3|witch",
+"scene:q4ysolde:3|witcher"
+]
+},
+"99970662aa5ae34b": {
+"bytes": 39122,
+"chars": 76,
+"file": "99970662aa5ae34b.mp3",
+"ids": [
+"choice:q1night:1|witch",
+"choice:q1night:1|witcher"
+]
+},
+"999c72a284b682d0": {
+"bytes": 24702,
+"chars": 51,
+"file": "999c72a284b682d0.mp3",
+"ids": [
+"choice:q5bridge:1|witch",
+"choice:q5bridge:1|witcher"
+]
+},
+"99e47a85b35a10c7": {
+"bytes": 15507,
+"chars": 33,
+"file": "99e47a85b35a10c7.mp3",
+"ids": [
+"outcome:q4thornwick:2:pick|witch",
+"outcome:q4thornwick:2:pick|witcher"
+]
+},
+"9a0eac09aa03e094": {
+"bytes": 41003,
+"chars": 74,
+"file": "9a0eac09aa03e094.mp3",
+"ids": [
+"outcome:q3c:0:0|witch",
+"outcome:q3c:0:0|witcher"
+]
+},
+"9a1fc1731f624d1f": {
+"bytes": 9447,
+"chars": 9,
+"file": "9a1fc1731f624d1f.mp3",
+"ids": [
+"scene:q3c:title|witch",
+"scene:q3c:title|witcher"
+]
+},
+"9a9b4a102f3c162e": {
+"bytes": 6939,
+"chars": 3,
+"file": "9a9b4a102f3c162e.mp3",
+"ids": [
+"scene:q1child:title|witch",
+"scene:q1child:title|witcher"
+]
+},
+"9af15ad2fc53af46": {
+"bytes": 27210,
+"chars": 60,
+"file": "9af15ad2fc53af46.mp3",
+"ids": [
+"choice:q4decide:0|witch",
+"choice:q4decide:0|witcher"
+]
+},
+"9b95971d818637cd": {
+"bytes": 78201,
+"chars": 169,
+"file": "9b95971d818637cd.mp3",
+"ids": [
+"outcome:q3night:0:0|witch"
+]
+},
+"9bbf9455b4446bfd": {
+"bytes": 57094,
+"chars": 115,
+"file": "9bbf9455b4446bfd.mp3",
+"ids": [
+"outcome:q3search:3:0|witch"
+]
+},
+"9bd1ba9dd0d89c1a": {
+"bytes": 33270,
+"chars": 75,
+"file": "9bd1ba9dd0d89c1a.mp3",
+"ids": [
+"outcome:q3b:1:pick|witch",
+"outcome:q3b:1:pick|witcher"
+]
+},
+"9bd783c02b21536a": {
+"bytes": 7984,
+"chars": 16,
+"file": "9bd783c02b21536a.mp3",
+"ids": [
+"choice:q3night:0|witch",
+"choice:q3night:0|witcher"
+]
+},
+"9be917c0d1aca0db": {
+"bytes": 75275,
+"chars": 144,
+"file": "9be917c0d1aca0db.mp3",
+"ids": [
+"outcome:q1dawn:2:0|witch",
+"outcome:q1dawn:2:0|witcher"
+]
+},
+"9bfddc6a4e6ae8f6": {
+"bytes": 11327,
+"chars": 15,
+"file": "9bfddc6a4e6ae8f6.mp3",
+"ids": [
+"scene:q2scouts:title|witch",
+"scene:q2scouts:title|witcher"
+]
+},
+"9c333b0cd1b82c46": {
+"bytes": 21776,
+"chars": 34,
+"file": "9c333b0cd1b82c46.mp3",
+"ids": [
+"outcome:q1well:1:pick|witch",
+"outcome:q1well:1:pick|witcher"
+]
+},
+"9c382e764f47966c": {
+"bytes": 26583,
+"chars": 63,
+"file": "9c382e764f47966c.mp3",
+"ids": [
+"choice:q2a:2|witch",
+"choice:q2a:2|witcher"
+]
+},
+"9c7dcfbb7515f131": {
+"bytes": 21776,
+"chars": 43,
+"file": "9c7dcfbb7515f131.mp3",
+"ids": [
+"choice:q1bert:2|witch",
+"choice:q1bert:2|witcher"
+]
+},
+"9cf48a71a9191c0a": {
+"bytes": 55213,
+"chars": 109,
+"file": "9cf48a71a9191c0a.mp3",
+"ids": [
+"outcome:q3letter:1:0|witch",
+"outcome:q3letter:1:0|witcher"
+]
+},
+"9cfb0f44d2e895e1": {
+"bytes": 79246,
+"chars": 151,
+"file": "9cfb0f44d2e895e1.mp3",
+"ids": [
+"outcome:q3search:2:0|witch",
+"outcome:q3search:2:0|witcher"
+]
+},
+"9cff1a367778a2c3": {
+"bytes": 118743,
+"chars": 255,
+"file": "9cff1a367778a2c3.mp3",
+"ids": [
+"scene:q5forest:0|witch",
+"scene:q5forest:0|witcher"
+]
+},
+"9d4e3bf22df81308": {
+"bytes": 35778,
+"chars": 80,
+"file": "9d4e3bf22df81308.mp3",
+"ids": [
+"outcome:q1night:1:1|witch"
+]
+},
+"9d82035ac4ada601": {
+"bytes": 32852,
+"chars": 57,
+"file": "9d82035ac4ada601.mp3",
+"ids": [
+"choice:q3search:1|witch",
+"choice:q3search:1|witcher"
+]
+},
+"9daf5dc831b1e873": {
+"bytes": 43928,
+"chars": 102,
+"file": "9daf5dc831b1e873.mp3",
+"ids": [
+"outcome:q1a:1:0|witch",
+"outcome:q1a:1:0|witcher"
+]
+},
+"9dd2cca64119e1f1": {
+"bytes": 15716,
+"chars": 30,
+"file": "9dd2cca64119e1f1.mp3",
+"ids": [
+"choice:world:0|null"
+]
+},
+"9e0afecdb0f3f3c3": {
+"bytes": 127311,
+"chars": 268,
+"file": "9e0afecdb0f3f3c3.mp3",
+"ids": [
+"scene:q1marga:0|witch",
+"scene:q1marga:0|witcher"
+]
+},
+"9e31e7e237c3a157": {
+"bytes": 35778,
+"chars": 85,
+"file": "9e31e7e237c3a157.mp3",
+"ids": [
+"outcome:q2scouts:2:0|witcher"
+]
+},
+"9ee452a0aa2206f6": {
+"bytes": 58557,
+"chars": 133,
+"file": "9ee452a0aa2206f6.mp3",
+"ids": [
+"scene:q4a:2|witcher"
+]
+},
+"9efa9bf2381261cc": {
+"bytes": 36196,
+"chars": 76,
+"file": "9efa9bf2381261cc.mp3",
+"ids": [
+"outcome:q2bridge:0:1|witch",
+"outcome:q2bridge:0:1|witcher"
+]
+},
+"9f1cb805a2f8409f": {
+"bytes": 56676,
+"chars": 127,
+"file": "9f1cb805a2f8409f.mp3",
+"ids": [
+"scene:q5bridge:1|witch",
+"scene:q5bridge:1|witcher",
+"scene:q5bridge:2|witch",
+"scene:q5bridge:2|witcher",
+"scene:q5bridge:3|witch",
+"scene:q5bridge:3|witcher"
+]
+},
+"9f60dd6ce6784ebf": {
+"bytes": 16134,
+"chars": 33,
+"file": "9f60dd6ce6784ebf.mp3",
+"ids": [
+"outcome:q3search:3:pick|witch"
+]
+},
+"9f7774c15fa54ed9": {
+"bytes": 62318,
+"chars": 132,
+"file": "9f7774c15fa54ed9.mp3",
+"ids": [
+"outcome:q4speak:0:0|witch",
+"outcome:q4speak:0:0|witcher"
+]
+},
+"9f9fc8094c40a82e": {
+"bytes": 20940,
+"chars": 50,
+"file": "9f9fc8094c40a82e.mp3",
+"ids": [
+"outcome:q1blind:1:1|witch",
+"outcome:q1blind:1:1|witcher"
+]
+},
+"9fc32d5b78a76acb": {
+"bytes": 51869,
+"chars": 109,
+"file": "9fc32d5b78a76acb.mp3",
+"ids": [
+"outcome:q4forest:1:0|witch",
+"outcome:q4forest:1:0|witcher"
+]
+},
+"9ff52476ed4f1706": {
+"bytes": 9447,
+"chars": 15,
+"file": "9ff52476ed4f1706.mp3",
+"ids": [
+"scene:q1end:4|witch",
+"scene:q1end:4|witcher"
+]
+},
+"a0476f8a6eee9b70": {
+"bytes": 37032,
+"chars": 87,
+"file": "a0476f8a6eee9b70.mp3",
+"ids": [
+"outcome:q3search:8:0|witcher"
+]
+},
+"a04b504530f3cd0e": {
+"bytes": 22403,
+"chars": 44,
+"file": "a04b504530f3cd0e.mp3",
+"ids": [
+"scene:q2end:3|witch",
+"scene:q2end:3|witcher"
+]
+},
+"a0ab32ddb8b6992b": {
+"bytes": 59602,
+"chars": 145,
+"file": "a0ab32ddb8b6992b.mp3",
+"ids": [
+"scene:q5bridge2:0|witch",
+"scene:q5bridge2:0|witcher"
+]
+},
+"a0ec9edade3bb7e6": {
+"bytes": 93456,
+"chars": 183,
+"file": "a0ec9edade3bb7e6.mp3",
+"ids": [
+"outcome:q4decide:1:0|witch"
+]
+},
+"a1326e49bb65f012": {
+"bytes": 28046,
+"chars": 63,
+"file": "a1326e49bb65f012.mp3",
+"ids": [
+"outcome:q2picket:1:pick|witch",
+"outcome:q2picket:1:pick|witcher"
+]
+},
+"a13b2bb90bfd3a9e": {
+"bytes": 20314,
+"chars": 42,
+"file": "a13b2bb90bfd3a9e.mp3",
+"ids": [
+"outcome:q3b2:2:1|witcher"
+]
+},
+"a148ab1ac50d6fe5": {
+"bytes": 24702,
+"chars": 50,
+"file": "a148ab1ac50d6fe5.mp3",
+"ids": [
+"choice:q1marga:1|witch",
+"choice:q1marga:1|witcher"
+]
+},
+"a15f094d65a69067": {
+"bytes": 27628,
+"chars": 53,
+"file": "a15f094d65a69067.mp3",
+"ids": [
+"scene:q3end:2|witch",
+"scene:q3end:2|witcher",
+"scene:q3end:3|witch",
+"scene:q3end:3|witcher"
+]
+},
+"a19c9163f11b81fc": {
+"bytes": 47272,
+"chars": 77,
+"file": "a19c9163f11b81fc.mp3",
+"ids": [
+"choice:q3search:0|witcher"
+]
+},
+"a1be54b6d6277083": {
+"bytes": 29927,
+"chars": 56,
+"file": "a1be54b6d6277083.mp3",
+"ids": [
+"choice:q1hub:1|witch",
+"choice:q1hub:1|witcher"
+]
+},
+"a1d57f1fa2e159af": {
+"bytes": 43928,
+"chars": 83,
+"file": "a1d57f1fa2e159af.mp3",
+"ids": [
+"choice:q2elves:1|witch",
+"choice:q2elves:1|witcher"
+]
+},
+"a1f6dbd94a444b57": {
+"bytes": 87396,
+"chars": 207,
+"file": "a1f6dbd94a444b57.mp3",
+"ids": [
+"scene:q3hodd:1|witch",
+"scene:q3hodd:1|witcher"
+]
+},
+"a201c9024cabaa4e": {
+"bytes": 10283,
+"chars": 14,
+"file": "a201c9024cabaa4e.mp3",
+"ids": [
+"scene:q4ysolde:title|witch",
+"scene:q4ysolde:title|witcher"
+]
+},
+"a208c9ec6154c942": {
+"bytes": 63990,
+"chars": 142,
+"file": "a208c9ec6154c942.mp3",
+"ids": [
+"scene:q5forest:0|witch",
+"scene:q5forest:0|witcher",
+"scene:q5forest:1|witch",
+"scene:q5forest:1|witcher"
+]
+},
+"a2096d9865262794": {
+"bytes": 153643,
+"chars": 251,
+"file": "a2096d9865262794.mp3",
+"ids": [
+"scene:world:4|null",
+"scene:world:4|witch",
+"scene:world:4|witcher"
+]
+},
+"a22c1903dd7bb23a": {
+"bytes": 41420,
+"chars": 98,
+"file": "a22c1903dd7bb23a.mp3",
+"ids": [
+"outcome:q4decide:3:pick|witch"
+]
+},
+"a2cbba229d518d7a": {
+"bytes": 25120,
+"chars": 51,
+"file": "a2cbba229d518d7a.mp3",
+"ids": [
+"outcome:q3c:2:2|witch"
+]
+},
+"a3041a39dcfe16ee": {
+"bytes": 46227,
+"chars": 86,
+"file": "a3041a39dcfe16ee.mp3",
+"ids": [
+"outcome:q3b2:1:2|witch"
+]
+},
+"a34bbc3a38588eac": {
+"bytes": 27210,
+"chars": 63,
+"file": "a34bbc3a38588eac.mp3",
+"ids": [
+"outcome:q1child:1:0|witch",
+"outcome:q1child:1:0|witcher"
+]
+},
+"a3565915bde941a0": {
+"bytes": 23866,
+"chars": 58,
+"file": "a3565915bde941a0.mp3",
+"ids": [
+"outcome:q3night:1:0|witch",
+"outcome:q3night:1:0|witcher"
+]
+},
+"a38ca655809f6aca": {
+"bytes": 61900,
+"chars": 120,
+"file": "a38ca655809f6aca.mp3",
+"ids": [
+"scene:q4forest:1|witch",
+"scene:q4forest:1|witcher"
+]
+},
+"a394e576150d5dae": {
+"bytes": 19478,
+"chars": 39,
+"file": "a394e576150d5dae.mp3",
+"ids": [
+"outcome:q4speak:2:pick|witch",
+"outcome:q4speak:2:pick|witcher"
+]
+},
+"a3a25b3f77b5d667": {
+"bytes": 23866,
+"chars": 52,
+"file": "a3a25b3f77b5d667.mp3",
+"ids": [
+"choice:q4forest:1|witch",
+"choice:q4forest:1|witcher"
+]
+},
+"a3ce148178096631": {
+"bytes": 25538,
+"chars": 56,
+"file": "a3ce148178096631.mp3",
+"ids": [
+"scene:q3end:1|witch",
+"scene:q3end:1|witcher"
+]
+},
+"a4aa9893ffb6138d": {
+"bytes": 10283,
+"chars": 14,
+"file": "a4aa9893ffb6138d.mp3",
+"ids": [
+"scene:q4camp:title|witch",
+"scene:q4camp:title|witcher"
+]
+},
+"a4ec6f1a60844094": {
+"bytes": 18015,
+"chars": 27,
+"file": "a4ec6f1a60844094.mp3",
+"ids": [
+"choice:q1a:0|witch",
+"choice:q1a:0|witcher"
+]
+},
+"a52e8289117f5b67": {
+"bytes": 25120,
+"chars": 52,
+"file": "a52e8289117f5b67.mp3",
+"ids": [
+"outcome:q1gate:1:1|witch",
+"outcome:q1gate:1:1|witcher"
+]
+},
+"a55f09a1501279c9": {
+"bytes": 134207,
+"chars": 275,
+"file": "a55f09a1501279c9.mp3",
+"ids": [
+"scene:q2bridge:0|witch",
+"scene:q2bridge:0|witcher"
+]
+},
+"a5641b04991072dc": {
+"bytes": 94501,
+"chars": 159,
+"file": "a5641b04991072dc.mp3",
+"ids": [
+"scene:q5forest:1|witch",
+"scene:q5forest:1|witcher"
+]
+},
+"a57a386b9e7c021d": {
+"bytes": 28046,
+"chars": 67,
+"file": "a57a386b9e7c021d.mp3",
+"ids": [
+"choice:q1letter:1|witch",
+"choice:q1letter:1|witcher"
+]
+},
+"a685aaf5f56211cd": {
+"bytes": 102025,
+"chars": 199,
+"file": "a685aaf5f56211cd.mp3",
+"ids": [
+"scene:q1marga:2|witch"
+]
+},
+"a6b67acbff05acc4": {
+"bytes": 35151,
+"chars": 91,
+"file": "a6b67acbff05acc4.mp3",
+"ids": [
+"outcome:q3night:2:1|witch",
+"outcome:q3night:2:1|witcher"
+]
+},
+"a6fe55119c9536ba": {
+"bytes": 28464,
+"chars": 52,
+"file": "a6fe55119c9536ba.mp3",
+"ids": [
+"scene:q1hub:1|witch",
+"scene:q1hub:1|witcher"
+]
+},
+"a73ebacc10d0b4cb": {
+"bytes": 23866,
+"chars": 51,
+"file": "a73ebacc10d0b4cb.mp3",
+"ids": [
+"outcome:q1hub:2:0|witch",
+"outcome:q1hub:2:0|witcher"
+]
+},
+"a7572ee7e3cd6a52": {
+"bytes": 10283,
+"chars": 12,
+"file": "a7572ee7e3cd6a52.mp3",
+"ids": [
+"scene:q5bridge:title|witch",
+"scene:q5bridge:title|witcher"
+]
+},
+"a7bb727d12b26bfa": {
+"bytes": 57094,
+"chars": 115,
+"file": "a7bb727d12b26bfa.mp3",
+"ids": [
+"outcome:q2bridge:1:0|witch"
+]
+},
+"a88e2bb2b2a34df8": {
+"bytes": 36614,
+"chars": 87,
+"file": "a88e2bb2b2a34df8.mp3",
+"ids": [
+"outcome:q2bridge:1:0|witcher"
+]
+},
+"a8a8cc063b7535d5": {
+"bytes": 39958,
+"chars": 91,
+"file": "a8a8cc063b7535d5.mp3",
+"ids": [
+"choice:q3b:2|witch",
+"choice:q3b:2|witcher"
+]
+},
+"a8d059704395ab28": {
+"bytes": 19060,
+"chars": 42,
+"file": "a8d059704395ab28.mp3",
+"ids": [
+"scene:q1dawn:2|witch",
+"scene:q1dawn:2|witcher"
+]
+},
+"a8da7493d2c08077": {
+"bytes": 16970,
+"chars": 34,
+"file": "a8da7493d2c08077.mp3",
+"ids": [
+"outcome:q3search:8:pick|witch",
+"outcome:q3search:8:pick|witcher"
+]
+},
+"a94e2c3a7533ef47": {
+"bytes": 24702,
+"chars": 48,
+"file": "a94e2c3a7533ef47.mp3",
+"ids": [
+"outcome:q3b2:4:0|witch",
+"outcome:q3b2:4:0|witcher"
+]
+},
+"a9a32456b65e569b": {
+"bytes": 28464,
+"chars": 65,
+"file": "a9a32456b65e569b.mp3",
+"ids": [
+"scene:q1dawn:1|witch",
+"scene:q1dawn:1|witcher"
+]
+},
+"a9ba4316238b53aa": {
+"bytes": 20940,
+"chars": 46,
+"file": "a9ba4316238b53aa.mp3",
+"ids": [
+"outcome:q4speak:2:0|witch",
+"outcome:q4speak:2:0|witcher"
+]
+},
+"aa187dbc3878b996": {
+"bytes": 58557,
+"chars": 127,
+"file": "aa187dbc3878b996.mp3",
+"ids": [
+"outcome:q2elves:0:0|witcher"
+]
+},
+"aba742e67f03a31d": {
+"bytes": 26583,
+"chars": 49,
+"file": "aba742e67f03a31d.mp3",
+"ids": [
+"outcome:q1bert:2:0|witch",
+"outcome:q1bert:2:0|witcher"
+]
+},
+"abf7aa5dd0f6faca": {
+"bytes": 25747,
+"chars": 51,
+"file": "abf7aa5dd0f6faca.mp3",
+"ids": [
+"outcome:q1hub:3:pick|witch",
+"outcome:q1hub:3:pick|witcher"
+]
+},
+"ac50c292c2c014f7": {
+"bytes": 21358,
+"chars": 51,
+"file": "ac50c292c2c014f7.mp3",
+"ids": [
+"choice:q5bridge:0|witch",
+"choice:q5bridge:0|witcher"
+]
+},
+"aca8b98aac350c54": {
+"bytes": 38913,
+"chars": 88,
+"file": "aca8b98aac350c54.mp3",
+"ids": [
+"scene:q3end:2|witch",
+"scene:q3end:2|witcher"
+]
+},
+"acc1a78dc775034d": {
+"bytes": 26583,
+"chars": 46,
+"file": "acc1a78dc775034d.mp3",
+"ids": [
+"outcome:q4decide:5:pick|witch",
+"outcome:q4decide:5:pick|witcher"
+]
+},
+"acd9b7fcedd2acc2": {
+"bytes": 20523,
+"chars": 48,
+"file": "acd9b7fcedd2acc2.mp3",
+"ids": [
+"outcome:q2riddle:2:pick|witch",
+"outcome:q2riddle:2:pick|witcher"
+]
+},
+"ace1084b5526cb18": {
+"bytes": 8402,
+"chars": 15,
+"file": "ace1084b5526cb18.mp3",
+"ids": [
+"ask|null",
+"ask|witch",
+"ask|witcher"
+]
+},
+"ad02709c5d0a5247": {
+"bytes": 48526,
+"chars": 74,
+"file": "ad02709c5d0a5247.mp3",
+"ids": [
+"choice:q2elves:0|witch",
+"choice:q2elves:0|witcher"
+]
+},
+"ad5f582d14d081ab": {
+"bytes": 57303,
+"chars": 123,
+"file": "ad5f582d14d081ab.mp3",
+"ids": [
+"outcome:q3search:8:0|witch"
+]
+},
+"ad8834bd8f7d9608": {
+"bytes": 20523,
+"chars": 41,
+"file": "ad8834bd8f7d9608.mp3",
+"ids": [
+"outcome:q1dawn:3:pick|witch",
+"outcome:q1dawn:3:pick|witcher"
+]
+},
+"adac2a6f064e5a71": {
+"bytes": 105368,
+"chars": 240,
+"file": "adac2a6f064e5a71.mp3",
+"ids": [
+"scene:q4thornwick:0|witch",
+"scene:q4thornwick:0|witcher"
+]
+},
+"ae574942704e3c78": {
+"bytes": 58557,
+"chars": 126,
+"file": "ae574942704e3c78.mp3",
+"ids": [
+"scene:q2elves:0|witch",
+"scene:q2elves:0|witcher"
+]
+},
+"ae5b43bd9dd87442": {
+"bytes": 19060,
+"chars": 34,
+"file": "ae5b43bd9dd87442.mp3",
+"ids": [
+"outcome:q1bert:0:0|witch",
+"outcome:q1bert:0:0|witcher"
+]
+},
+"aed035994616ec85": {
+"bytes": 20314,
+"chars": 42,
+"file": "aed035994616ec85.mp3",
+"ids": [
+"outcome:q4camp:0:pick|witch",
+"outcome:q4camp:0:pick|witcher"
+]
+},
+"af511c059a752319": {
+"bytes": 38077,
+"chars": 75,
+"file": "af511c059a752319.mp3",
+"ids": [
+"scene:q1end:4|witch",
+"scene:q1end:4|witcher"
+]
+},
+"b0222e2269d56c83": {
+"bytes": 121251,
+"chars": 252,
+"file": "b0222e2269d56c83.mp3",
+"ids": [
+"scene:q1night:0|witch",
+"scene:q1night:0|witcher"
+]
+},
+"b19d4f9b8e7925f4": {
+"bytes": 22821,
+"chars": 48,
+"file": "b19d4f9b8e7925f4.mp3",
+"ids": [
+"outcome:q1dawn:2:1|witch",
+"outcome:q1dawn:2:1|witcher"
+]
+},
+"b21079d02e8ed063": {
+"bytes": 50407,
+"chars": 97,
+"file": "b21079d02e8ed063.mp3",
+"ids": [
+"outcome:q3search:5:1|witcher"
+]
+},
+"b244303231a88a71": {
+"bytes": 13626,
+"chars": 20,
+"file": "b244303231a88a71.mp3",
+"ids": [
+"choice:q3search:1|witcher"
+]
+},
+"b26c31918029014c": {
+"bytes": 20523,
+"chars": 33,
+"file": "b26c31918029014c.mp3",
+"ids": [
+"choice:q2bridge:1|witch",
+"choice:q2bridge:1|witcher"
+]
+},
+"b2716ef877b0d0f7": {
+"bytes": 16134,
+"chars": 39,
+"file": "b2716ef877b0d0f7.mp3",
+"ids": [
+"scene:q4end:1|witch"
+]
+},
+"b2b50d674fb7d7ac": {
+"bytes": 12372,
+"chars": 16,
+"file": "b2b50d674fb7d7ac.mp3",
+"ids": [
+"scene:q2end:title|witch",
+"scene:q2end:title|witcher"
+]
+},
+"b2b5cfa628a392d4": {
+"bytes": 11745,
+"chars": 21,
+"file": "b2b5cfa628a392d4.mp3",
+"ids": [
+"scene:world:title|null",
+"scene:world:title|witch",
+"scene:world:title|witcher"
+]
+},
+"b3049741fed7982d": {
+"bytes": 22821,
+"chars": 49,
+"file": "b3049741fed7982d.mp3",
+"ids": [
+"outcome:q1night:1:1|witch",
+"outcome:q1night:1:1|witcher",
+"outcome:q1night:1:2|witch"
+]
+},
+"b3787828cc645e11": {
+"bytes": 19060,
+"chars": 42,
+"file": "b3787828cc645e11.mp3",
+"ids": [
+"scene:q3end:3|witch",
+"scene:q3end:3|witcher",
+"scene:q3end:4|witch",
+"scene:q3end:4|witcher",
+"scene:q3end:5|witch",
+"scene:q3end:5|witcher"
+]
+},
+"b3a8dc1057933876": {
+"bytes": 22821,
+"chars": 50,
+"file": "b3a8dc1057933876.mp3",
+"ids": [
+"outcome:q1dawn:1:2|witch",
+"outcome:q1dawn:1:2|witcher"
+]
+},
+"b3f094a1c24f007f": {
+"bytes": 23657,
+"chars": 44,
+"file": "b3f094a1c24f007f.mp3",
+"ids": [
+"outcome:q1a:1:pick|witch",
+"outcome:q1a:1:pick|witcher"
+]
+},
+"b434ad142037c663": {
+"bytes": 36614,
+"chars": 71,
+"file": "b434ad142037c663.mp3",
+"ids": [
+"outcome:q5square:0:1|witcher"
+]
+},
+"b4b7818fd7959e88": {
+"bytes": 39958,
+"chars": 76,
+"file": "b4b7818fd7959e88.mp3",
+"ids": [
+"outcome:q3c:1:0|witch",
+"outcome:q3c:1:0|witcher"
+]
+},
+"b4c8abccf2d41397": {
+"bytes": 32225,
+"chars": 65,
+"file": "b4c8abccf2d41397.mp3",
+"ids": [
+"choice:q4ysolde:1|witch",
+"choice:q4ysolde:1|witcher"
+]
+},
+"b4e8b30fcb74d5d0": {
+"bytes": 29927,
+"chars": 60,
+"file": "b4e8b30fcb74d5d0.mp3",
+"ids": [
+"outcome:q3a:1:pick|witch",
+"outcome:q3a:1:pick|witcher"
+]
+},
+"b627d63d425b5d41": {
+"bytes": 28882,
+"chars": 58,
+"file": "b627d63d425b5d41.mp3",
+"ids": [
+"outcome:q2a:0:pick|witch",
+"outcome:q2a:0:pick|witcher"
+]
+},
+"b66edc8865bc6da2": {
+"bytes": 79037,
+"chars": 172,
+"file": "b66edc8865bc6da2.mp3",
+"ids": [
+"scene:q3c:0|witch",
+"scene:q3c:0|witcher"
+]
+},
+"b675f06be765960c": {
+"bytes": 58975,
+"chars": 135,
+"file": "b675f06be765960c.mp3",
+"ids": [
+"outcome:q4thornwick:0:0|witcher"
+]
+},
+"b69ed0382e9af490": {
+"bytes": 12163,
+"chars": 16,
+"file": "b69ed0382e9af490.mp3",
+"ids": [
+"outcome:q5a:1:pick|witch",
+"outcome:q5a:1:pick|witcher"
+]
+},
+"b6a58e0692429692": {
+"bytes": 18851,
+"chars": 33,
+"file": "b6a58e0692429692.mp3",
+"ids": [
+"outcome:q1dawn:3:2|witch",
+"outcome:q1dawn:3:2|witcher"
+]
+},
+"b6df468efb136296": {
+"bytes": 53959,
+"chars": 121,
+"file": "b6df468efb136296.mp3",
+"ids": [
+"outcome:q1child:0:2|witch"
+]
+},
+"b77a91787f85fccf": {
+"bytes": 82380,
+"chars": 170,
+"file": "b77a91787f85fccf.mp3",
+"ids": [
+"outcome:q2elves:0:1|witch"
+]
+},
+"b790209096a03b5c": {
+"bytes": 15507,
+"chars": 21,
+"file": "b790209096a03b5c.mp3",
+"ids": [
+"choice:q5a:1|witch",
+"choice:q5a:1|witcher"
+]
+},
+"b79349e46c14dab5": {
+"bytes": 28046,
+"chars": 60,
+"file": "b79349e46c14dab5.mp3",
+"ids": [
+"outcome:q4ysolde:1:pick|witch",
+"outcome:q4ysolde:1:pick|witcher"
+]
+},
+"b7af5617c06ad915": {
+"bytes": 29091,
+"chars": 70,
+"file": "b7af5617c06ad915.mp3",
+"ids": [
+"outcome:q1bert:1:0|witch",
+"outcome:q1bert:1:0|witcher"
+]
+},
+"b833a983d4bf7c37": {
+"bytes": 6521,
+"chars": 8,
+"file": "b833a983d4bf7c37.mp3",
+"ids": [
+"outcome:q5a:1:0|witch",
+"outcome:q5a:1:0|witcher"
+]
+},
+"b83730a2e953c64b": {
+"bytes": 70469,
+"chars": 151,
+"file": "b83730a2e953c64b.mp3",
+"ids": [
+"scene:q1night:2|witch",
+"scene:q1night:2|witcher"
+]
+},
+"b8e6e66203a1c0ab": {
+"bytes": 59602,
+"chars": 141,
+"file": "b8e6e66203a1c0ab.mp3",
+"ids": [
+"outcome:q4forest:0:0|witch",
+"outcome:q4forest:0:0|witcher"
+]
+},
+"b97bbea313d1a64d": {
+"bytes": 65244,
+"chars": 129,
+"file": "b97bbea313d1a64d.mp3",
+"ids": [
+"scene:q2end:2|witch",
+"scene:q2end:2|witcher"
+]
+},
+"b9cabc9544937019": {
+"bytes": 39540,
+"chars": 87,
+"file": "b9cabc9544937019.mp3",
+"ids": [
+"outcome:q1child:0:1|witch",
+"outcome:q1child:0:1|witcher"
+]
+},
+"ba18e32e4f9ed0b8": {
+"bytes": 50616,
+"chars": 121,
+"file": "ba18e32e4f9ed0b8.mp3",
+"ids": [
+"scene:q5forest:0|witch",
+"scene:q5forest:0|witcher"
+]
+},
+"ba21e451c450b18c": {
+"bytes": 14253,
+"chars": 30,
+"file": "ba21e451c450b18c.mp3",
+"ids": [
+"outcome:q1well:0:pick|witch",
+"outcome:q1well:0:pick|witcher"
+]
+},
+"ba866a888b6cd8ca": {
+"bytes": 82380,
+"chars": 188,
+"file": "ba866a888b6cd8ca.mp3",
+"ids": [
+"outcome:q2decide:0:0|witch",
+"outcome:q2decide:0:0|witcher"
+]
+},
+"baaa05ff2ee871e5": {
+"bytes": 103905,
+"chars": 140,
+"file": "baaa05ff2ee871e5.mp3",
+"ids": [
+"outcome:q3b:1:0|witcher"
+]
+},
+"bb8c8d8d94434169": {
+"bytes": 74857,
+"chars": 151,
+"file": "bb8c8d8d94434169.mp3",
+"ids": [
+"scene:hub:0|witcher"
+]
+},
+"bbb4d20772d793b4": {
+"bytes": 14671,
+"chars": 16,
+"file": "bbb4d20772d793b4.mp3",
+"ids": [
+"scene:q4end:title|witch",
+"scene:q4end:title|witcher"
+]
+},
+"bc476011286f8dfc": {
+"bytes": 54795,
+"chars": 109,
+"file": "bc476011286f8dfc.mp3",
+"ids": [
+"scene:q5square:1|witch",
+"scene:q5square:1|witcher"
+]
+},
+"bc91ede6a10ab0d7": {
+"bytes": 37241,
+"chars": 78,
+"file": "bc91ede6a10ab0d7.mp3",
+"ids": [
+"scene:q2scouts:1|witch",
+"scene:q2scouts:1|witcher"
+]
+},
+"bcb3fbc3f7dacb98": {
+"bytes": 19478,
+"chars": 46,
+"file": "bcb3fbc3f7dacb98.mp3",
+"ids": [
+"outcome:q1dawn:0:pick|witch",
+"outcome:q1dawn:0:pick|witcher"
+]
+},
+"bd5e36b9deced148": {
+"bytes": 37241,
+"chars": 74,
+"file": "bd5e36b9deced148.mp3",
+"ids": [
+"outcome:q3b:0:pick|witch",
+"outcome:q3b:0:pick|witcher"
+]
+},
+"bd6e5efe5829d64e": {
+"bytes": 18433,
+"chars": 41,
+"file": "bd6e5efe5829d64e.mp3",
+"ids": [
+"scene:q1letter:1|witch",
+"scene:q1letter:1|witcher"
+]
+},
+"bda533d20c303d6a": {
+"bytes": 39958,
+"chars": 84,
+"file": "bda533d20c303d6a.mp3",
+"ids": [
+"scene:q2riddle:1|witch",
+"scene:q2riddle:1|witcher"
+]
+},
+"bda7f36b967387ef": {
+"bytes": 22194,
+"chars": 48,
+"file": "bda7f36b967387ef.mp3",
+"ids": [
+"choice:q2picket:0|witch",
+"choice:q2picket:0|witcher"
+]
+},
+"be15a628c21e3158": {
+"bytes": 18851,
+"chars": 39,
+"file": "be15a628c21e3158.mp3",
+"ids": [
+"outcome:q1dawn:4:pick|witch",
+"outcome:q1dawn:4:pick|witcher"
+]
+},
+"be2e4f5a0e23ba81": {
+"bytes": 13208,
+"chars": 29,
+"file": "be2e4f5a0e23ba81.mp3",
+"ids": [
+"scene:q4camp:2|witch",
+"scene:q4camp:2|witcher"
+]
+},
+"be666e157469e41b": {
+"bytes": 37659,
+"chars": 90,
+"file": "be666e157469e41b.mp3",
+"ids": [
+"scene:q2elves:2|witch",
+"scene:q2elves:2|witcher"
+]
+},
+"bec36961d0c03203": {
+"bytes": 6939,
+"chars": 7,
+"file": "bec36961d0c03203.mp3",
+"ids": [
+"scene:q1night:title|witch",
+"scene:q1night:title|witcher"
+]
+},
+"bee9738cd95d234b": {
+"bytes": 52496,
+"chars": 110,
+"file": "bee9738cd95d234b.mp3",
+"ids": [
+"outcome:q4decide:2:0|witch",
+"outcome:q4decide:2:0|witcher"
+]
+},
+"bf34b4b0dc733adb": {
+"bytes": 58139,
+"chars": 110,
+"file": "bf34b4b0dc733adb.mp3",
+"ids": [
+"outcome:q3night:3:0|witcher"
+]
+},
+"bf6c8c6153502f92": {
+"bytes": 67752,
+"chars": 108,
+"file": "bf6c8c6153502f92.mp3",
+"ids": [
+"outcome:q1child:0:0|witch"
+]
+},
+"bf8b1f432914d767": {
+"bytes": 27628,
+"chars": 61,
+"file": "bf8b1f432914d767.mp3",
+"ids": [
+"scene:q1bert:2|witcher"
+]
+},
+"bf8f36273e6f6a33": {
+"bytes": 42256,
+"chars": 91,
+"file": "bf8f36273e6f6a33.mp3",
+"ids": [
+"scene:q4a:1|witch",
+"scene:q4a:1|witcher"
+]
+},
+"bfdcb4de9fec65ef": {
+"bytes": 26165,
+"chars": 61,
+"file": "bfdcb4de9fec65ef.mp3",
+"ids": [
+"outcome:q2under:1:0|witch",
+"outcome:q2under:1:0|witcher"
+]
+},
+"c0473853d60e5232": {
+"bytes": 30972,
+"chars": 73,
+"file": "c0473853d60e5232.mp3",
+"ids": [
+"outcome:q2elves:3:0|witch",
+"outcome:q2elves:3:0|witcher"
+]
+},
+"c058b5639bee6e0e": {
+"bytes": 8402,
+"chars": 9,
+"file": "c058b5639bee6e0e.mp3",
+"ids": [
+"scene:q1marga:title|witch",
+"scene:q1marga:title|witcher"
+]
+},
+"c068d7664456be7d": {
+"bytes": 109339,
+"chars": 215,
+"file": "c068d7664456be7d.mp3",
+"ids": [
+"scene:q1child:0|witch"
+]
+},
+"c0bd738872791c24": {
+"bytes": 20940,
+"chars": 43,
+"file": "c0bd738872791c24.mp3",
+"ids": [
+"outcome:q3letter:2:pick|witch",
+"outcome:q3letter:2:pick|witcher"
+]
+},
+"c1307290841e9531": {
+"bytes": 37659,
+"chars": 73,
+"file": "c1307290841e9531.mp3",
+"ids": [
+"outcome:q4decide:2:2|witch",
+"outcome:q4decide:2:2|witcher"
+]
+},
+"c15676bd6e1827b9": {
+"bytes": 23657,
+"chars": 53,
+"file": "c15676bd6e1827b9.mp3",
+"ids": [
+"choice:q3search:0|witch",
+"choice:q3search:0|witcher"
+]
+},
+"c16b9a30030146d0": {
+"bytes": 97427,
+"chars": 154,
+"file": "c16b9a30030146d0.mp3",
+"ids": [
+"scene:q5square:2|witch",
+"scene:q5square:2|witcher"
+]
+},
+"c176ebae6ba08727": {
+"bytes": 17597,
+"chars": 39,
+"file": "c176ebae6ba08727.mp3",
+"ids": [
+"outcome:q2bridge:4:pick|witch",
+"outcome:q2bridge:4:pick|witcher"
+]
+},
+"c1a28c456ece43c3": {
+"bytes": 19896,
+"chars": 39,
+"file": "c1a28c456ece43c3.mp3",
+"ids": [
+"choice:q1well:1|witch",
+"choice:q1well:1|witcher"
+]
+},
+"c1b2b98c37844122": {
+"bytes": 27628,
+"chars": 59,
+"file": "c1b2b98c37844122.mp3",
+"ids": [
+"choice:q1marga:2|witch"
+]
+},
+"c20653f557b55db2": {
+"bytes": 56258,
+"chars": 112,
+"file": "c20653f557b55db2.mp3",
+"ids": [
+"outcome:q4decide:0:2|witch",
+"outcome:q4decide:0:2|witcher"
+]
+},
+"c2506e96d2a19be2": {
+"bytes": 22403,
+"chars": 54,
+"file": "c2506e96d2a19be2.mp3",
+"ids": [
+"choice:q5square:0|witch",
+"choice:q5square:0|witcher"
+]
+},
+"c260d085bc3608a9": {
+"bytes": 16970,
+"chars": 36,
+"file": "c260d085bc3608a9.mp3",
+"ids": [
+"outcome:q1bert:2:pick|witch",
+"outcome:q1bert:2:pick|witcher"
+]
+},
+"c2ba6e0f34a01f6d": {
+"bytes": 60438,
+"chars": 123,
+"file": "c2ba6e0f34a01f6d.mp3",
+"ids": [
+"outcome:q3night:4:0|witch",
+"outcome:q3night:4:0|witcher"
+]
+},
+"c2bd04410d9ae0df": {
+"bytes": 27628,
+"chars": 56,
+"file": "c2bd04410d9ae0df.mp3",
+"ids": [
+"choice:q5square:2|witch",
+"choice:q5square:2|witcher"
+]
+},
+"c376901298de4121": {
+"bytes": 63990,
+"chars": 111,
+"file": "c376901298de4121.mp3",
+"ids": [
+"scene:q1a:3|witch",
+"scene:q1a:3|witcher"
+]
+},
+"c3a010808066d26b": {
+"bytes": 133580,
+"chars": 279,
+"file": "c3a010808066d26b.mp3",
+"ids": [
+"scene:q1gate:0|witch",
+"scene:q1gate:0|witcher"
+]
+},
+"c3a3a374d736637c": {
+"bytes": 55631,
+"chars": 113,
+"file": "c3a3a374d736637c.mp3",
+"ids": [
+"scene:q2picket:1|witch",
+"scene:q2picket:1|witcher"
+]
+},
+"c3c8a70a71a70a67": {
+"bytes": 21776,
+"chars": 46,
+"file": "c3c8a70a71a70a67.mp3",
+"ids": [
+"outcome:q5bridge:1:pick|witch",
+"outcome:q5bridge:1:pick|witcher"
+]
+},
+"c43e4ce5ae204ce6": {
+"bytes": 28464,
+"chars": 55,
+"file": "c43e4ce5ae204ce6.mp3",
+"ids": [
+"outcome:q4camp:0:0|witch",
+"outcome:q4camp:0:0|witcher"
+]
+},
+"c46c1237fa0ecc12": {
+"bytes": 7984,
+"chars": 5,
+"file": "c46c1237fa0ecc12.mp3",
+"ids": [
+"scene:q1blind:title|witch",
+"scene:q1blind:title|witcher"
+]
+},
+"c476f2d71704948d": {
+"bytes": 15089,
+"chars": 19,
+"file": "c476f2d71704948d.mp3",
+"ids": [
+"choice:q2bridge:0|witch",
+"choice:q2bridge:0|witcher"
+]
+},
+"c48009ab347de416": {
+"bytes": 169525,
+"chars": 308,
+"file": "c48009ab347de416.mp3",
+"ids": [
+"scene:q4camp:1|witch"
+]
+},
+"c5ee75af173b9adc": {
+"bytes": 6939,
+"chars": 9,
+"file": "c5ee75af173b9adc.mp3",
+"ids": [
+"outcome:q5bridge:1:0|witch",
+"outcome:q5bridge:1:0|witcher"
+]
+},
+"c63e08721df67200": {
+"bytes": 25120,
+"chars": 55,
+"file": "c63e08721df67200.mp3",
+"ids": [
+"outcome:q3c:0:pick|witch",
+"outcome:q3c:0:pick|witcher"
+]
+},
+"c64860de1f1ceaed": {
+"bytes": 35151,
+"chars": 83,
+"file": "c64860de1f1ceaed.mp3",
+"ids": [
+"scene:q1bert:2|witch"
+]
+},
+"c6bb9b8cfca6dbb7": {
+"bytes": 10909,
+"chars": 9,
+"file": "c6bb9b8cfca6dbb7.mp3",
+"ids": [
+"scene:q3a:title|witch",
+"scene:q3a:title|witcher"
+]
+},
+"c716c75bf944a2ce": {
+"bytes": 36196,
+"chars": 82,
+"file": "c716c75bf944a2ce.mp3",
+"ids": [
+"outcome:q3letter:1:2|witch",
+"outcome:q3letter:1:2|witcher"
+]
+},
+"c73f3b83bf291c80": {
+"bytes": 10492,
+"chars": 12,
+"file": "c73f3b83bf291c80.mp3",
+"ids": [
+"scene:q5a:title|witch",
+"scene:q5a:title|witcher"
+]
+},
+"c7e22786338f5e48": {
+"bytes": 65871,
+"chars": 125,
+"file": "c7e22786338f5e48.mp3",
+"ids": [
+"scene:q4speak:1|witch"
+]
+},
+"c7e5d8a682b34e6c": {
+"bytes": 32852,
+"chars": 64,
+"file": "c7e5d8a682b34e6c.mp3",
+"ids": [
+"outcome:q3b2:2:pick|witcher"
+]
+},
+"c7e62761d5c49e43": {
+"bytes": 39540,
+"chars": 74,
+"file": "c7e62761d5c49e43.mp3",
+"ids": [
+"outcome:q1child:1:pick|witch",
+"outcome:q1child:1:pick|witcher"
+]
+},
+"c8185d8d988fe5da": {
+"bytes": 80500,
+"chars": 177,
+"file": "c8185d8d988fe5da.mp3",
+"ids": [
+"scene:q5bridge:1|witch",
+"scene:q5bridge:1|witcher",
+"scene:q5bridge:2|witch",
+"scene:q5bridge:2|witcher",
+"scene:q5bridge:3|witch",
+"scene:q5bridge:3|witcher"
+]
+},
+"c8457fa15cb27778": {
+"bytes": 45600,
+"chars": 79,
+"file": "c8457fa15cb27778.mp3",
+"ids": [
+"choice:q1child:1|witch",
+"choice:q1child:1|witcher"
+]
+},
+"c86aab6b531277e2": {
+"bytes": 22403,
+"chars": 46,
+"file": "c86aab6b531277e2.mp3",
+"ids": [
+"choice:q4speak:2|witch",
+"choice:q4speak:2|witcher"
+]
+},
+"c891c91efdbbd06d": {
+"bytes": 58557,
+"chars": 129,
+"file": "c891c91efdbbd06d.mp3",
+"ids": [
+"outcome:q2a:1:0|witch",
+"outcome:q2a:1:0|witcher"
+]
+},
+"c8afd35a45eeb0b0": {
+"bytes": 37241,
+"chars": 88,
+"file": "c8afd35a45eeb0b0.mp3",
+"ids": [
+"scene:hub:0|witch",
+"scene:hub:0|witcher"
+]
+},
+"c8bffe01d0848af9": {
+"bytes": 13208,
+"chars": 25,
+"file": "c8bffe01d0848af9.mp3",
+"ids": [
+"choice:world:0|witch",
+"choice:world:0|witcher"
+]
+},
+"c8e04270fa52e932": {
+"bytes": 84888,
+"chars": 160,
+"file": "c8e04270fa52e932.mp3",
+"ids": [
+"scene:q1letter:1|witch",
+"scene:q1letter:1|witcher"
+]
+},
+"c917c1346d24122e": {
+"bytes": 33688,
+"chars": 53,
+"file": "c917c1346d24122e.mp3",
+"ids": [
+"choice:q4decide:2|witch",
+"choice:q4decide:2|witcher"
+]
+},
+"c928a8f9d2b7c924": {
+"bytes": 28046,
+"chars": 52,
+"file": "c928a8f9d2b7c924.mp3",
+"ids": [
+"outcome:q1marga:2:pick|witch"
+]
+},
+"ca8f88d24bd63a0a": {
+"bytes": 10909,
+"chars": 15,
+"file": "ca8f88d24bd63a0a.mp3",
+"ids": [
+"scene:hub:title|witch",
+"scene:hub:title|witcher"
+]
+},
+"cb8e9492e759724a": {
+"bytes": 29927,
+"chars": 60,
+"file": "cb8e9492e759724a.mp3",
+"ids": [
+"choice:q2bridge:0|witch",
+"choice:q2bridge:0|witcher"
+]
+},
+"cbf5c784000c1a53": {
+"bytes": 18851,
+"chars": 42,
+"file": "cbf5c784000c1a53.mp3",
+"ids": [
+"outcome:q3night:4:0|witch",
+"outcome:q3night:4:0|witcher"
+]
+},
+"cc1aeb2eeedb1532": {
+"bytes": 37659,
+"chars": 83,
+"file": "cc1aeb2eeedb1532.mp3",
+"ids": [
+"scene:q3end:1|witch",
+"scene:q3end:1|witcher"
+]
+},
+"cc70662d13bbb12e": {
+"bytes": 83007,
+"chars": 201,
+"file": "cc70662d13bbb12e.mp3",
+"ids": [
+"scene:q4thornwick:1|witch",
+"scene:q4thornwick:1|witcher"
+]
+},
+"ccf53ea0e0307300": {
+"bytes": 87187,
+"chars": 171,
+"file": "ccf53ea0e0307300.mp3",
+"ids": [
+"scene:q3night:1|witch",
+"scene:q3night:1|witcher"
+]
+},
+"ccff30f6512c325d": {
+"bytes": 44764,
+"chars": 87,
+"file": "ccff30f6512c325d.mp3",
+"ids": [
+"outcome:q1marga:2:1|witch"
+]
+},
+"cdab43533cda509f": {
+"bytes": 56258,
+"chars": 107,
+"file": "cdab43533cda509f.mp3",
+"ids": [
+"scene:q1dawn:0|witch",
+"scene:q1dawn:0|witcher"
+]
+},
+"cdba60839079934f": {
+"bytes": 18851,
+"chars": 36,
+"file": "cdba60839079934f.mp3",
+"ids": [
+"choice:q4decide:2|witch",
+"choice:q4decide:2|witcher"
+]
+},
+"cdd9fee6f59b9db1": {
+"bytes": 30345,
+"chars": 68,
+"file": "cdd9fee6f59b9db1.mp3",
+"ids": [
+"outcome:q1marga:4:1|witch",
+"outcome:q1marga:4:1|witcher"
+]
+},
+"cde62148f9da55ad": {
+"bytes": 37659,
+"chars": 72,
+"file": "cde62148f9da55ad.mp3",
+"ids": [
+"outcome:q3b:0:0|witch",
+"outcome:q3b:0:0|witcher"
+]
+},
+"ce4f3d39803ded61": {
+"bytes": 85933,
+"chars": 150,
+"file": "ce4f3d39803ded61.mp3",
+"ids": [
+"outcome:q4decide:0:1|witch",
+"outcome:q4decide:0:1|witcher"
+]
+},
+"ce579d6f36f5f198": {
+"bytes": 62945,
+"chars": 113,
+"file": "ce579d6f36f5f198.mp3",
+"ids": [
+"outcome:q3search:7:0|witch",
+"outcome:q3search:7:0|witcher"
+]
+},
+"ceb6a240c28a9769": {
+"bytes": 82380,
+"chars": 160,
+"file": "ceb6a240c28a9769.mp3",
+"ids": [
+"outcome:q3search:4:0|witch"
+]
+},
+"cfee0d9458a29901": {
+"bytes": 18851,
+"chars": 37,
+"file": "cfee0d9458a29901.mp3",
+"ids": [
+"choice:q2under_dead:2|witch",
+"choice:q2under_dead:2|witcher"
+]
+},
+"d0a1e852acc1a3b0": {
+"bytes": 33688,
+"chars": 67,
+"file": "d0a1e852acc1a3b0.mp3",
+"ids": [
+"outcome:q2scouts:0:pick|witch",
+"outcome:q2scouts:0:pick|witcher"
+]
+},
+"d0be15c2b3e929f7": {
+"bytes": 98681,
+"chars": 191,
+"file": "d0be15c2b3e929f7.mp3",
+"ids": [
+"scene:q2riddle:0|witch",
+"scene:q2riddle:0|witcher"
+]
+},
+"d165bef4e3ac4127": {
+"bytes": 60647,
+"chars": 126,
+"file": "d165bef4e3ac4127.mp3",
+"ids": [
+"scene:q2under:1|witch",
+"scene:q2under:1|witcher"
+]
+},
+"d1e4038cc3f56475": {
+"bytes": 28046,
+"chars": 63,
+"file": "d1e4038cc3f56475.mp3",
+"ids": [
+"choice:q5square:2|witch"
+]
+},
+"d1ed91df2c8e1bc3": {
+"bytes": 24702,
+"chars": 47,
+"file": "d1ed91df2c8e1bc3.mp3",
+"ids": [
+"choice:q4camp:0|witch",
+"choice:q4camp:0|witcher"
+]
+},
+"d20b124624195be0": {
+"bytes": 49989,
+"chars": 99,
+"file": "d20b124624195be0.mp3",
+"ids": [
+"scene:q1bert:1|witch",
+"scene:q1bert:1|witcher"
+]
+},
+"d20caddfb1283a5c": {
+"bytes": 62318,
+"chars": 113,
+"file": "d20caddfb1283a5c.mp3",
+"ids": [
+"outcome:q5square:0:1|witch"
+]
+},
+"d2261befb42a8d2e": {
+"bytes": 19060,
+"chars": 38,
+"file": "d2261befb42a8d2e.mp3",
+"ids": [
+"choice:q2elves:3|witch",
+"choice:q2elves:3|witcher"
+]
+},
+"d25a1746ee6baf60": {
+"bytes": 30972,
+"chars": 67,
+"file": "d25a1746ee6baf60.mp3",
+"ids": [
+"outcome:q3c:1:pick|witch",
+"outcome:q3c:1:pick|witcher"
+]
+},
+"d275ec65c6cf3f3d": {
+"bytes": 59184,
+"chars": 116,
+"file": "d275ec65c6cf3f3d.mp3",
+"ids": [
+"outcome:q3search:3:1|witch"
+]
+},
+"d28dd9c3e0a14dbb": {
+"bytes": 105995,
+"chars": 228,
+"file": "d28dd9c3e0a14dbb.mp3",
+"ids": [
+"outcome:q3letter:0:0|witch",
+"outcome:q3letter:0:0|witcher"
+]
+},
+"d2a8ebd88c1e0cab": {
+"bytes": 22821,
+"chars": 43,
+"file": "d2a8ebd88c1e0cab.mp3",
+"ids": [
+"choice:q4forest:2|witch",
+"choice:q4forest:2|witcher"
+]
+},
+"d30abb6c7597c3aa": {
+"bytes": 14671,
+"chars": 28,
+"file": "d30abb6c7597c3aa.mp3",
+"ids": [
+"outcome:prologue:1:pick|witch",
+"outcome:prologue:1:pick|witcher"
+]
+},
+"d358fdd64423bd46": {
+"bytes": 18015,
+"chars": 35,
+"file": "d358fdd64423bd46.mp3",
+"ids": [
+"choice:q1child:0|witch",
+"choice:q1child:0|witcher"
+]
+},
+"d37edb0b845b590d": {
+"bytes": 48108,
+"chars": 102,
+"file": "d37edb0b845b590d.mp3",
+"ids": [
+"choice:q4decide:2|witch",
+"choice:q4decide:2|witcher"
+]
+},
+"d3bf0d9e42398416": {
+"bytes": 61065,
+"chars": 126,
+"file": "d3bf0d9e42398416.mp3",
+"ids": [
+"outcome:q2elves:2:0|witch",
+"outcome:q2elves:2:0|witcher"
+]
+},
+"d48daba6c08a6f7f": {
+"bytes": 48108,
+"chars": 116,
+"file": "d48daba6c08a6f7f.mp3",
+"ids": [
+"outcome:q5bridge2:1:0|witch",
+"outcome:q5bridge2:1:0|witcher"
+]
+},
+"d491aa622ff7e585": {
+"bytes": 20523,
+"chars": 46,
+"file": "d491aa622ff7e585.mp3",
+"ids": [
+"scene:q4ysolde:3|witch",
+"scene:q4ysolde:3|witcher",
+"scene:q4ysolde:4|witch",
+"scene:q4ysolde:4|witcher"
+]
+},
+"d4a833d337af362f": {
+"bytes": 8402,
+"chars": 7,
+"file": "d4a833d337af362f.mp3",
+"ids": [
+"scene:q1dawn:title|witch",
+"scene:q1dawn:title|witcher"
+]
+},
+"d4cfe41e5353192e": {
+"bytes": 38495,
+"chars": 78,
+"file": "d4cfe41e5353192e.mp3",
+"ids": [
+"outcome:q4thornwick:0:1|witcher"
+]
+},
+"d51a90f8ba97a2a3": {
+"bytes": 19478,
+"chars": 35,
+"file": "d51a90f8ba97a2a3.mp3",
+"ids": [
+"choice:q4thornwick:1|witch",
+"choice:q4thornwick:1|witcher"
+]
+},
+"d553cb44ac5b2a8f": {
+"bytes": 81545,
+"chars": 165,
+"file": "d553cb44ac5b2a8f.mp3",
+"ids": [
+"outcome:q5square:0:0|witch"
+]
+},
+"d62db4e8fd534bc5": {
+"bytes": 29509,
+"chars": 57,
+"file": "d62db4e8fd534bc5.mp3",
+"ids": [
+"scene:q3c:1|witcher",
+"scene:q3c:2|witcher"
+]
+},
+"d65a878d72f9c88b": {
+"bytes": 67752,
+"chars": 127,
+"file": "d65a878d72f9c88b.mp3",
+"ids": [
+"outcome:q3b2:4:1|witch",
+"outcome:q3b2:4:1|witcher"
+]
+},
+"d6fc00f92fe6bd56": {
+"bytes": 46645,
+"chars": 117,
+"file": "d6fc00f92fe6bd56.mp3",
+"ids": [
+"outcome:q3a:0:0|witch",
+"outcome:q3a:0:0|witcher"
+]
+},
+"d70d79472791566c": {
+"bytes": 16134,
+"chars": 22,
+"file": "d70d79472791566c.mp3",
+"ids": [
+"choice:hub:0|witch",
+"choice:hub:0|witcher"
+]
+},
+"d7c48e29032e8868": {
+"bytes": 38495,
+"chars": 92,
+"file": "d7c48e29032e8868.mp3",
+"ids": [
+"outcome:q4decide:5:0|witch",
+"outcome:q4decide:5:0|witcher"
+]
+},
+"d8188d42b211027b": {
+"bytes": 24284,
+"chars": 55,
+"file": "d8188d42b211027b.mp3",
+"ids": [
+"outcome:q3search:1:1|witcher"
+]
+},
+"d8489da7b557eae9": {
+"bytes": 16134,
+"chars": 37,
+"file": "d8489da7b557eae9.mp3",
+"ids": [
+"scene:prologue:title|witch",
+"scene:prologue:title|witcher"
+]
+},
+"d8a41ad4dee0b580": {
+"bytes": 99308,
+"chars": 191,
+"file": "d8a41ad4dee0b580.mp3",
+"ids": [
+"scene:q2under_dead:0|witch",
+"scene:q2under_dead:0|witcher"
+]
+},
+"d8daccaad125f3f7": {
+"bytes": 50616,
+"chars": 96,
+"file": "d8daccaad125f3f7.mp3",
+"ids": [
+"scene:q1night:2|witch",
+"scene:q1night:3|witch"
+]
+},
+"d9253fabf196e830": {
+"bytes": 43719,
+"chars": 91,
+"file": "d9253fabf196e830.mp3",
+"ids": [
+"outcome:q2riddle:1:0|witch",
+"outcome:q2riddle:1:0|witcher"
+]
+},
+"d9ac9056f4ebb36f": {
+"bytes": 33270,
+"chars": 72,
+"file": "d9ac9056f4ebb36f.mp3",
+"ids": [
+"choice:q5bridge:0|witch",
+"choice:q5bridge:0|witcher"
+]
+},
+"da0712f7a55b7e1c": {
+"bytes": 71514,
+"chars": 146,
+"file": "da0712f7a55b7e1c.mp3",
+"ids": [
+"scene:q4decide:0|witch",
+"scene:q4decide:0|witcher"
+]
+},
+"dafee02cb7111b7c": {
+"bytes": 30345,
+"chars": 73,
+"file": "dafee02cb7111b7c.mp3",
+"ids": [
+"scene:q5square:1|witch",
+"scene:q5square:1|witcher"
+]
+},
+"db0554f6ee4fb86d": {
+"bytes": 57303,
+"chars": 123,
+"file": "db0554f6ee4fb86d.mp3",
+"ids": [
+"scene:hub:1|witch",
+"scene:hub:1|witcher"
+]
+},
+"db22ffcb8262a768": {
+"bytes": 19478,
+"chars": 38,
+"file": "db22ffcb8262a768.mp3",
+"ids": [
+"choice:q1gate:1|witch",
+"choice:q1gate:1|witcher"
+]
+},
+"db55daac9eb1335b": {
+"bytes": 26583,
+"chars": 55,
+"file": "db55daac9eb1335b.mp3",
+"ids": [
+"scene:q4end:2|witch",
+"scene:q4end:2|witcher"
+]
+},
+"db7bafc360522490": {
+"bytes": 87396,
+"chars": 167,
+"file": "db7bafc360522490.mp3",
+"ids": [
+"scene:q1letter:0|witch",
+"scene:q1letter:0|witcher"
+]
+},
+"dbb5a3b3ad0d8206": {
+"bytes": 19896,
+"chars": 38,
+"file": "dbb5a3b3ad0d8206.mp3",
+"ids": [
+"choice:q3night:1|witch",
+"choice:q3night:1|witcher"
+]
+},
+"dbb97f2ff0f202ae": {
+"bytes": 38913,
+"chars": 71,
+"file": "dbb97f2ff0f202ae.mp3",
+"ids": [
+"choice:q1marga:0|witch",
+"choice:q1marga:0|witcher"
+]
+},
+"dc17a4dbaacd3f83": {
+"bytes": 35778,
+"chars": 78,
+"file": "dc17a4dbaacd3f83.mp3",
+"ids": [
+"outcome:q1hub:4:0|witch",
+"outcome:q1hub:4:0|witcher"
+]
+},
+"dc81dd585f042608": {
+"bytes": 51034,
+"chars": 105,
+"file": "dc81dd585f042608.mp3",
+"ids": [
+"scene:q3end:2|witch",
+"scene:q3end:2|witcher"
+]
+},
+"dc8657095a0b4a8a": {
+"bytes": 28464,
+"chars": 55,
+"file": "dc8657095a0b4a8a.mp3",
+"ids": [
+"outcome:q4decide:0:pick|witch",
+"outcome:q4decide:0:pick|witcher"
+]
+},
+"dcd35da565795700": {
+"bytes": 83007,
+"chars": 141,
+"file": "dcd35da565795700.mp3",
+"ids": [
+"outcome:q2bridge:0:0|witch",
+"outcome:q2bridge:0:0|witcher"
+]
+},
+"dcdb82d24e164abf": {
+"bytes": 38077,
+"chars": 65,
+"file": "dcdb82d24e164abf.mp3",
+"ids": [
+"choice:q3a:1|witch",
+"choice:q3a:1|witcher"
+]
+},
+"dd484b9317422af8": {
+"bytes": 24702,
+"chars": 55,
+"file": "dd484b9317422af8.mp3",
+"ids": [
+"outcome:q2bridge:1:pick|witch",
+"outcome:q2bridge:1:pick|witcher"
+]
+},
+"dd62af2132ce5839": {
+"bytes": 169316,
+"chars": 311,
+"file": "dd62af2132ce5839.mp3",
+"ids": [
+"scene:q2under:0|witch",
+"scene:q2under:0|witcher"
+]
+},
+"dd6d0f388a9eb57c": {
+"bytes": 21358,
+"chars": 42,
+"file": "dd6d0f388a9eb57c.mp3",
+"ids": [
+"choice:pick:0|null"
+]
+},
+"ddc80b8b435c79f2": {
+"bytes": 167435,
+"chars": 333,
+"file": "ddc80b8b435c79f2.mp3",
+"ids": [
+"scene:q2a:1|witch",
+"scene:q2a:1|witcher"
+]
+},
+"de5e09239c2c8016": {
+"bytes": 24284,
+"chars": 56,
+"file": "de5e09239c2c8016.mp3",
+"ids": [
+"scene:q3end:1|witch",
+"scene:q3end:1|witcher"
+]
+},
+"de6cd878848fd5a1": {
+"bytes": 30972,
+"chars": 60,
+"file": "de6cd878848fd5a1.mp3",
+"ids": [
+"choice:q3b2:0|witch",
+"choice:q3b2:0|witcher"
+]
+},
+"dea82a2137201260": {
+"bytes": 19060,
+"chars": 36,
+"file": "dea82a2137201260.mp3",
+"ids": [
+"outcome:q3night:3:pick|witch",
+"outcome:q3night:3:pick|witcher"
+]
+},
+"defe730d225c5f7b": {
+"bytes": 58557,
+"chars": 110,
+"file": "defe730d225c5f7b.mp3",
+"ids": [
+"outcome:q5square:1:1|witch"
+]
+},
+"df2d613d52f4192a": {
+"bytes": 218217,
+"chars": 399,
+"file": "df2d613d52f4192a.mp3",
+"ids": [
+"scene:world:1|null",
+"scene:world:1|witch",
+"scene:world:1|witcher"
+]
+},
+"df59cd8800d30d61": {
+"bytes": 75902,
+"chars": 168,
+"file": "df59cd8800d30d61.mp3",
+"ids": [
+"scene:prologue:5|witch",
+"scene:prologue:5|witcher"
+]
+},
+"df73661f814d9605": {
+"bytes": 48526,
+"chars": 106,
+"file": "df73661f814d9605.mp3",
+"ids": [
+"scene:q3a:3|witch",
+"scene:q3a:3|witcher"
+]
+},
+"df7c9272a78ee601": {
+"bytes": 29091,
+"chars": 57,
+"file": "df7c9272a78ee601.mp3",
+"ids": [
+"scene:q3night:1|witch",
+"scene:q3night:1|witcher"
+]
+},
+"e045829db4af027a": {
+"bytes": 49571,
+"chars": 101,
+"file": "e045829db4af027a.mp3",
+"ids": [
+"scene:q1gate:1|witch",
+"scene:q1gate:1|witcher"
+]
+},
+"e0a637874b3e72d9": {
+"bytes": 124176,
+"chars": 251,
+"file": "e0a637874b3e72d9.mp3",
+"ids": [
+"scene:q5a:0|witch",
+"scene:q5a:0|witcher"
+]
+},
+"e0b68089132d3334": {
+"bytes": 131700,
+"chars": 242,
+"file": "e0b68089132d3334.mp3",
+"ids": [
+"scene:q3search:1|witcher",
+"scene:q3search:2|witcher"
+]
+},
+"e0d2c315ab3abd8d": {
+"bytes": 67334,
+"chars": 131,
+"file": "e0d2c315ab3abd8d.mp3",
+"ids": [
+"outcome:q3b2:2:0|witcher"
+]
+},
+"e0fd48b9a0e193a5": {
+"bytes": 51452,
+"chars": 112,
+"file": "e0fd48b9a0e193a5.mp3",
+"ids": [
+"outcome:q3search:1:1|witch"
+]
+},
+"e1daf3d5613808ac": {
+"bytes": 12790,
+"chars": 23,
+"file": "e1daf3d5613808ac.mp3",
+"ids": [
+"outcome:q5a:0:1|witch",
+"outcome:q5a:0:1|witcher"
+]
+},
+"e20a6e832f1d8deb": {
+"bytes": 25120,
+"chars": 58,
+"file": "e20a6e832f1d8deb.mp3",
+"ids": [
+"outcome:q1night:4:0|witch",
+"outcome:q1night:4:0|witcher"
+]
+},
+"e20d488cce8b5811": {
+"bytes": 12163,
+"chars": 17,
+"file": "e20d488cce8b5811.mp3",
+"ids": [
+"choice:hub:2|witch",
+"choice:hub:2|witcher"
+]
+},
+"e295c569b9327875": {
+"bytes": 10909,
+"chars": 20,
+"file": "e295c569b9327875.mp3",
+"ids": [
+"scene:q2under_dead:title|witch",
+"scene:q2under_dead:title|witcher"
+]
+},
+"e29ccc92a143a85b": {
+"bytes": 9865,
+"chars": 14,
+"file": "e29ccc92a143a85b.mp3",
+"ids": [
+"outcome:q1hub:1:pick|witch",
+"outcome:q1hub:1:pick|witcher"
+]
+},
+"e2e5da4be6fb0b78": {
+"bytes": 25538,
+"chars": 55,
+"file": "e2e5da4be6fb0b78.mp3",
+"ids": [
+"choice:q5square:3|witch"
+]
+},
+"e2efccd8553eba72": {
+"bytes": 12790,
+"chars": 26,
+"file": "e2efccd8553eba72.mp3",
+"ids": [
+"scene:pick:title|null"
+]
+},
+"e2f1f2edc1397068": {
+"bytes": 25747,
+"chars": 61,
+"file": "e2f1f2edc1397068.mp3",
+"ids": [
+"choice:q5square:1|witch",
+"choice:q5square:1|witcher"
+]
+},
+"e3002ce7b09090f8": {
+"bytes": 65871,
+"chars": 150,
+"file": "e3002ce7b09090f8.mp3",
+"ids": [
+"scene:q5square:2|witch",
+"scene:q5square:2|witcher"
+]
+},
+"e378b5860d39bef6": {
+"bytes": 7566,
+"chars": 8,
+"file": "e378b5860d39bef6.mp3",
+"ids": [
+"scene:q1bert:title|witch",
+"scene:q1bert:title|witcher"
+]
+},
+"e38c4fe5a7911f21": {
+"bytes": 52496,
+"chars": 113,
+"file": "e38c4fe5a7911f21.mp3",
+"ids": [
+"outcome:q3c:1:1|witch",
+"outcome:q3c:1:1|witcher"
+]
+},
+"e3d95d09cc18a2f5": {
+"bytes": 57303,
+"chars": 123,
+"file": "e3d95d09cc18a2f5.mp3",
+"ids": [
+"outcome:q2picket:1:0|witch",
+"outcome:q2picket:1:0|witcher"
+]
+},
+"e56dee0352b0b021": {
+"bytes": 22194,
+"chars": 56,
+"file": "e56dee0352b0b021.mp3",
+"ids": [
+"outcome:q2a:2:pick|witch",
+"outcome:q2a:2:pick|witcher"
+]
+},
+"e572ba45db8690a0": {
+"bytes": 35778,
+"chars": 77,
+"file": "e572ba45db8690a0.mp3",
+"ids": [
+"scene:q3a:4|witch",
+"scene:q3a:4|witcher"
+]
+},
+"e59d77e1ac950a24": {
+"bytes": 41003,
+"chars": 78,
+"file": "e59d77e1ac950a24.mp3",
+"ids": [
+"outcome:q2elves:1:pick|witch",
+"outcome:q2elves:1:pick|witcher"
+]
+},
+"e6ae750ce4a92067": {
+"bytes": 8402,
+"chars": 8,
+"file": "e6ae750ce4a92067.mp3",
+"ids": [
+"scene:q4a:title|witch",
+"scene:q4a:title|witcher"
+]
+},
+"e6d0d7a4fb4c1305": {
+"bytes": 45809,
+"chars": 97,
+"file": "e6d0d7a4fb4c1305.mp3",
+"ids": [
+"outcome:q3night:4:0|witcher"
+]
+},
+"e70aaa7b60660763": {
+"bytes": 37659,
+"chars": 96,
+"file": "e70aaa7b60660763.mp3",
+"ids": [
+"outcome:q4ysolde:2:1|witch",
+"outcome:q4ysolde:2:1|witcher"
+]
+},
+"e791879f2914adb6": {
+"bytes": 47272,
+"chars": 113,
+"file": "e791879f2914adb6.mp3",
+"ids": [
+"choice:q3c:2|witch",
+"choice:q3c:2|witcher"
+]
+},
+"e7e2ad48953c1a9f": {
+"bytes": 13835,
+"chars": 22,
+"file": "e7e2ad48953c1a9f.mp3",
+"ids": [
+"scene:q4forest:title|witch",
+"scene:q4forest:title|witcher"
+]
+},
+"e8020baab4201551": {
+"bytes": 10909,
+"chars": 15,
+"file": "e8020baab4201551.mp3",
+"ids": [
+"scene:q2decide:title|witch",
+"scene:q2decide:title|witcher"
+]
+},
+"e80920a9188f8009": {
+"bytes": 58139,
+"chars": 132,
+"file": "e80920a9188f8009.mp3",
+"ids": [
+"outcome:q1dawn:1:0|witch",
+"outcome:q1dawn:1:0|witcher"
+]
+},
+"e82cda1ac231435c": {
+"bytes": 19060,
+"chars": 44,
+"file": "e82cda1ac231435c.mp3",
+"ids": [
+"outcome:q4camp:1:pick|witch",
+"outcome:q4camp:1:pick|witcher"
+]
+},
+"e83ca62b71df11f7": {
+"bytes": 10909,
+"chars": 14,
+"file": "e83ca62b71df11f7.mp3",
+"ids": [
+"choice:hub:1|witch",
+"choice:hub:1|witcher"
+]
+},
+"e868cba1552ec8d8": {
+"bytes": 53959,
+"chars": 104,
+"file": "e868cba1552ec8d8.mp3",
+"ids": [
+"scene:q1hub:1|witch",
+"scene:q1hub:1|witcher"
+]
+},
+"e86aa00297733ec6": {
+"bytes": 232428,
+"chars": 454,
+"file": "e86aa00297733ec6.mp3",
+"ids": [
+"scene:prologue:3|witch",
+"scene:prologue:3|witcher"
+]
+},
+"e887103264836e05": {
+"bytes": 38077,
+"chars": 82,
+"file": "e887103264836e05.mp3",
+"ids": [
+"outcome:q2scouts:1:1|witch",
+"outcome:q2scouts:1:1|witcher"
+]
+},
+"e8af1e6c71b03c3d": {
+"bytes": 58975,
+"chars": 129,
+"file": "e8af1e6c71b03c3d.mp3",
+"ids": [
+"scene:q3end:1|witch",
+"scene:q3end:1|witcher"
+]
+},
+"e8cb3bf3943bcd3b": {
+"bytes": 25747,
+"chars": 69,
+"file": "e8cb3bf3943bcd3b.mp3",
+"ids": [
+"outcome:q3letter:1:1|witcher"
+]
+},
+"e953703057c76164": {
+"bytes": 65662,
+"chars": 101,
+"file": "e953703057c76164.mp3",
+"ids": [
+"scene:q2elves:1|witcher"
+]
+},
+"e9f51ea4dfc94ba4": {
+"bytes": 110593,
+"chars": 231,
+"file": "e9f51ea4dfc94ba4.mp3",
+"ids": [
+"scene:q1blind:1|witch",
+"scene:q1blind:1|witcher"
+]
+},
+"ea40a1d1a85a80ef": {
+"bytes": 9447,
+"chars": 19,
+"file": "ea40a1d1a85a80ef.mp3",
+"ids": [
+"outcome:q3night:0:pick|witch",
+"outcome:q3night:0:pick|witcher"
+]
+},
+"eb04b6507f5ada66": {
+"bytes": 9447,
+"chars": 8,
+"file": "eb04b6507f5ada66.mp3",
+"ids": [
+"scene:q1letter:title|witch",
+"scene:q1letter:title|witcher"
+]
+},
+"eb40f61dca29e147": {
+"bytes": 32434,
+"chars": 69,
+"file": "eb40f61dca29e147.mp3",
+"ids": [
+"scene:q1a:4|witch",
+"scene:q1a:4|witcher"
+]
+},
+"eb69e2291d439834": {
+"bytes": 27210,
+"chars": 61,
+"file": "eb69e2291d439834.mp3",
+"ids": [
+"outcome:q2a:1:pick|witch",
+"outcome:q2a:1:pick|witcher"
+]
+},
+"ebf4cee4c2220e76": {
+"bytes": 61483,
+"chars": 121,
+"file": "ebf4cee4c2220e76.mp3",
+"ids": [
+"outcome:q3search:1:0|witcher"
+]
+},
+"ec8912cfcbd88572": {
+"bytes": 34733,
+"chars": 56,
+"file": "ec8912cfcbd88572.mp3",
+"ids": [
+"outcome:q4decide:1:2|witch",
+"outcome:q4decide:1:2|witcher"
+]
+},
+"ec8e0ad5d3e163a0": {
+"bytes": 37032,
+"chars": 72,
+"file": "ec8e0ad5d3e163a0.mp3",
+"ids": [
+"outcome:q5a:0:pick|witch",
+"outcome:q5a:0:pick|witcher"
+]
+},
+"ec8ff88166fc36c6": {
+"bytes": 15716,
+"chars": 33,
+"file": "ec8ff88166fc36c6.mp3",
+"ids": [
+"outcome:q3night:1:pick|witch",
+"outcome:q3night:1:pick|witcher"
+]
+},
+"ec94f904e0aa51ed": {
+"bytes": 23657,
+"chars": 59,
+"file": "ec94f904e0aa51ed.mp3",
+"ids": [
+"outcome:q1dawn:0:2|witch",
+"outcome:q1dawn:0:2|witcher"
+]
+},
+"ee31849e5052403b": {
+"bytes": 74021,
+"chars": 139,
+"file": "ee31849e5052403b.mp3",
+"ids": [
+"outcome:q4decide:3:0|witch"
+]
+},
+"ee899e8552ae3584": {
+"bytes": 54795,
+"chars": 123,
+"file": "ee899e8552ae3584.mp3",
+"ids": [
+"outcome:q1night:1:0|witch"
+]
+},
+"ef5adbb6339e73ec": {
+"bytes": 9029,
+"chars": 16,
+"file": "ef5adbb6339e73ec.mp3",
+"ids": [
+"choice:q3night:1|witch",
+"choice:q3night:1|witcher"
+]
+},
+"ef707d1aa502ad42": {
+"bytes": 30345,
+"chars": 63,
+"file": "ef707d1aa502ad42.mp3",
+"ids": [
+"scene:q1end:2|witch",
+"scene:q1end:2|witcher"
+]
+},
+"ef8bdd8d0478cf0a": {
+"bytes": 27210,
+"chars": 54,
+"file": "ef8bdd8d0478cf0a.mp3",
+"ids": [
+"choice:q5square:1|witch",
+"choice:q5square:1|witcher"
+]
+},
+"f0f50665a0956a82": {
+"bytes": 33270,
+"chars": 69,
+"file": "f0f50665a0956a82.mp3",
+"ids": [
+"outcome:q3night:1:1|witch",
+"outcome:q3night:1:1|witcher"
+]
+},
+"f16c361196071e71": {
+"bytes": 13835,
+"chars": 30,
+"file": "f16c361196071e71.mp3",
+"ids": [
+"outcome:q1bert:1:1|witch",
+"outcome:q1bert:1:1|witcher"
+]
+},
+"f1db159499d6bbc1": {
+"bytes": 60438,
+"chars": 112,
+"file": "f1db159499d6bbc1.mp3",
+"ids": [
+"outcome:q1night:4:1|witch",
+"outcome:q1night:4:1|witcher"
+]
+},
+"f1fb5a930b3e495b": {
+"bytes": 65244,
+"chars": 134,
+"file": "f1fb5a930b3e495b.mp3",
+"ids": [
+"outcome:q5a:0:0|witch",
+"outcome:q5a:0:0|witcher"
+]
+},
+"f24603154b29419e": {
+"bytes": 38495,
+"chars": 92,
+"file": "f24603154b29419e.mp3",
+"ids": [
+"scene:q4a:2|witch"
+]
+},
+"f295bc7e6f69fc06": {
+"bytes": 28046,
+"chars": 56,
+"file": "f295bc7e6f69fc06.mp3",
+"ids": [
+"choice:q2under:0|witch",
+"choice:q2under:0|witcher"
+]
+},
+"f29ea5500cbb9c5d": {
+"bytes": 37659,
+"chars": 82,
+"file": "f29ea5500cbb9c5d.mp3",
+"ids": [
+"choice:q3hodd:0|witch",
+"choice:q3hodd:0|witcher"
+]
+},
+"f2a758b83e296fa2": {
+"bytes": 23866,
+"chars": 58,
+"file": "f2a758b83e296fa2.mp3",
+"ids": [
+"outcome:q2scouts:1:0|witch",
+"outcome:q2scouts:1:0|witcher"
+]
+},
+"f31ee0a21f7c803b": {
+"bytes": 16134,
+"chars": 34,
+"file": "f31ee0a21f7c803b.mp3",
+"ids": [
+"outcome:q1bert:2:1|witch",
+"outcome:q1bert:2:1|witcher"
+]
+},
+"f3479debc8c79800": {
+"bytes": 29509,
+"chars": 60,
+"file": "f3479debc8c79800.mp3",
+"ids": [
+"scene:q1end:4|witch",
+"scene:q1end:4|witcher"
+]
+},
+"f37b72c6b1fcc945": {
+"bytes": 38495,
+"chars": 78,
+"file": "f37b72c6b1fcc945.mp3",
+"ids": [
+"choice:q3hodd:2|witch",
+"choice:q3hodd:2|witcher"
+]
+},
+"f434445b55aa9107": {
+"bytes": 70051,
+"chars": 150,
+"file": "f434445b55aa9107.mp3",
+"ids": [
+"scene:q3letter:0|witch",
+"scene:q3letter:0|witcher"
+]
+},
+"f446217ce9315900": {
+"bytes": 27210,
+"chars": 43,
+"file": "f446217ce9315900.mp3",
+"ids": [
+"choice:q3b2:1|witch"
+]
+},
+"f45068518bd3adc9": {
+"bytes": 50616,
+"chars": 105,
+"file": "f45068518bd3adc9.mp3",
+"ids": [
+"choice:q4decide:2|witch"
+]
+},
+"f59a95ea88fe5851": {
+"bytes": 11745,
+"chars": 21,
+"file": "f59a95ea88fe5851.mp3",
+"ids": [
+"outcome:q4speak:1:pick|witch",
+"outcome:q4speak:1:pick|witcher"
+]
+},
+"f5ed0b63eacffe25": {
+"bytes": 252490,
+"chars": 490,
+"file": "f5ed0b63eacffe25.mp3",
+"ids": [
+"scene:q4a:0|witch",
+"scene:q4a:0|witcher"
+]
+},
+"f64f01cd0a495170": {
+"bytes": 22194,
+"chars": 49,
+"file": "f64f01cd0a495170.mp3",
+"ids": [
+"choice:q1a:1|witch",
+"choice:q1a:1|witcher"
+]
+},
+"f6694b235b35cbcf": {
+"bytes": 22194,
+"chars": 42,
+"file": "f6694b235b35cbcf.mp3",
+"ids": [
+"choice:q4ysolde:0|witch",
+"choice:q4ysolde:0|witcher"
+]
+},
+"f702352f4d4ec729": {
+"bytes": 24284,
+"chars": 46,
+"file": "f702352f4d4ec729.mp3",
+"ids": [
+"outcome:q1night:4:2|witch",
+"outcome:q1night:4:2|witcher"
+]
+},
+"f7878add8228bd9c": {
+"bytes": 47272,
+"chars": 88,
+"file": "f7878add8228bd9c.mp3",
+"ids": [
+"outcome:q2a:2:1|witch",
+"outcome:q2a:2:1|witcher"
+]
+},
+"f7e698c2ec511b8c": {
+"bytes": 63363,
+"chars": 130,
+"file": "f7e698c2ec511b8c.mp3",
+"ids": [
+"outcome:q3c:4:0|witch",
+"outcome:q3c:4:0|witcher"
+]
+},
+"f81c0180269e28c6": {
+"bytes": 101607,
+"chars": 173,
+"file": "f81c0180269e28c6.mp3",
+"ids": [
+"scene:q2scouts:2|witch"
+]
+},
+"f8876831f817161b": {
+"bytes": 15089,
+"chars": 26,
+"file": "f8876831f817161b.mp3",
+"ids": [
+"scene:q1end:2|witch",
+"scene:q1end:2|witcher"
+]
+},
+"f92f72025960eca3": {
+"bytes": 39540,
+"chars": 76,
+"file": "f92f72025960eca3.mp3",
+"ids": [
+"scene:q3b:2|witch",
+"scene:q3b:2|witcher"
+]
+},
+"f97072ae253e5da2": {
+"bytes": 20523,
+"chars": 46,
+"file": "f97072ae253e5da2.mp3",
+"ids": [
+"outcome:q4speak:0:1|witch",
+"outcome:q4speak:0:1|witcher"
+]
+},
+"f99424639a920b5a": {
+"bytes": 81127,
+"chars": 147,
+"file": "f99424639a920b5a.mp3",
+"ids": [
+"outcome:q2bridge:4:0|witch",
+"outcome:q2bridge:4:0|witcher"
+]
+},
+"f9f9965f9a61fcbc": {
+"bytes": 106831,
+"chars": 159,
+"file": "f9f9965f9a61fcbc.mp3",
+"ids": [
+"outcome:q3search:0:0|witch",
+"outcome:q3search:0:0|witcher"
+]
+},
+"fa213174da4bae65": {
+"bytes": 36614,
+"chars": 76,
+"file": "fa213174da4bae65.mp3",
+"ids": [
+"scene:q3night:1|witch",
+"scene:q3night:1|witcher"
+]
+},
+"fa3a08e3d66ce2bf": {
+"bytes": 16134,
+"chars": 26,
+"file": "fa3a08e3d66ce2bf.mp3",
+"ids": [
+"choice:q4speak:1|witch",
+"choice:q4speak:1|witcher"
+]
+},
+"fab7e18e88e15b55": {
+"bytes": 40585,
+"chars": 74,
+"file": "fab7e18e88e15b55.mp3",
+"ids": [
+"outcome:q3b2:4:pick|witch",
+"outcome:q3b2:4:pick|witcher"
+]
+},
+"fad9c3e92d111164": {
+"bytes": 33270,
+"chars": 69,
+"file": "fad9c3e92d111164.mp3",
+"ids": [
+"outcome:q1blind:0:pick|witch",
+"outcome:q1blind:0:pick|witcher"
+]
+},
+"fb46caa29f02ddde": {
+"bytes": 25120,
+"chars": 38,
+"file": "fb46caa29f02ddde.mp3",
+"ids": [
+"choice:pick:1|null"
+]
+},
+"fb696159192acb30": {
+"bytes": 89695,
+"chars": 168,
+"file": "fb696159192acb30.mp3",
+"ids": [
+"outcome:q3b:1:0|witch"
+]
+},
+"fb829b7e87e96368": {
+"bytes": 27001,
+"chars": 55,
+"file": "fb829b7e87e96368.mp3",
+"ids": [
+"outcome:q3c:4:1|witch",
+"outcome:q3c:4:1|witcher"
+]
+},
+"fbafb54de466a91e": {
+"bytes": 63363,
+"chars": 126,
+"file": "fbafb54de466a91e.mp3",
+"ids": [
+"outcome:q3night:0:1|witch"
+]
+},
+"fbbc63cadbaf295b": {
+"bytes": 35778,
+"chars": 84,
+"file": "fbbc63cadbaf295b.mp3",
+"ids": [
+"outcome:q1gate:2:0|witch",
+"outcome:q1gate:2:0|witcher"
+]
+},
+"fbbda652e81a3c83": {
+"bytes": 152598,
+"chars": 317,
+"file": "fbbda652e81a3c83.mp3",
+"ids": [
+"scene:pick:0|null"
+]
+},
+"fbdeed84ad3f6709": {
+"bytes": 15089,
+"chars": 33,
+"file": "fbdeed84ad3f6709.mp3",
+"ids": [
+"outcome:q1gate:0:pick|witch",
+"outcome:q1gate:0:pick|witcher"
+]
+},
+"fc237435fb7e6324": {
+"bytes": 38495,
+"chars": 80,
+"file": "fc237435fb7e6324.mp3",
+"ids": [
+"choice:q3b2:3|witch",
+"choice:q3b2:3|witcher"
+]
+},
+"fc46296bcc819f87": {
+"bytes": 24702,
+"chars": 56,
+"file": "fc46296bcc819f87.mp3",
+"ids": [
+"choice:q1hub:0|witch",
+"choice:q1hub:0|witcher"
+]
+},
+"fc6cb71413f50529": {
+"bytes": 29091,
+"chars": 61,
+"file": "fc6cb71413f50529.mp3",
+"ids": [
+"choice:q1night:2|witch",
+"choice:q1night:2|witcher"
+]
+},
+"fce2b508d67c7993": {
+"bytes": 43928,
+"chars": 83,
+"file": "fce2b508d67c7993.mp3",
+"ids": [
+"choice:q3c:1|witcher"
+]
+},
+"fd17e34a14bfd1a4": {
+"bytes": 99099,
+"chars": 246,
+"file": "fd17e34a14bfd1a4.mp3",
+"ids": [
+"scene:q3c:0|witch",
+"scene:q3c:0|witcher",
+"scene:q3c:1|witch",
+"scene:q3c:1|witcher"
+]
+},
+"fd3020d64ffed43f": {
+"bytes": 22194,
+"chars": 48,
+"file": "fd3020d64ffed43f.mp3",
+"ids": [
+"outcome:q3search:7:pick|witch",
+"outcome:q3search:7:pick|witcher"
+]
+},
+"fd504c535caee171": {
+"bytes": 53959,
+"chars": 101,
+"file": "fd504c535caee171.mp3",
+"ids": [
+"choice:q4decide:3|witch",
+"choice:q4decide:3|witcher"
+]
+},
+"fde86741830c5da3": {
+"bytes": 130237,
+"chars": 232,
+"file": "fde86741830c5da3.mp3",
+"ids": [
+"scene:q3search:1|witch",
+"scene:q3search:2|witch"
+]
+},
+"fe4d06a5d5e1e247": {
+"bytes": 28046,
+"chars": 51,
+"file": "fe4d06a5d5e1e247.mp3",
+"ids": [
+"choice:q4decide:5|witch"
+]
+},
+"ff134a6c70f97047": {
+"bytes": 20314,
+"chars": 49,
+"file": "ff134a6c70f97047.mp3",
+"ids": [
+"outcome:q2under_dead:2:1|witch",
+"outcome:q2under_dead:2:1|witcher"
+]
+},
+"ff546d6aa3ac39b5": {
+"bytes": 29927,
+"chars": 57,
+"file": "ff546d6aa3ac39b5.mp3",
+"ids": [
+"choice:q2scouts:1|witch",
+"choice:q2scouts:1|witcher"
+]
+},
+"ffeb51b7cc58c607": {
+"bytes": 33897,
+"chars": 94,
+"file": "ffeb51b7cc58c607.mp3",
+"ids": [
+"scene:q5bridge:1|witch",
+"scene:q5bridge:2|witch",
+"scene:q5bridge:3|witch",
+"scene:q5bridge:4|witch",
+"scene:q5bridge:5|witch",
+"scene:q5bridge:6|witch"
+]
+},
+"fff226259e35eee7": {
+"bytes": 25538,
+"chars": 47,
+"file": "fff226259e35eee7.mp3",
+"ids": [
+"outcome:q4forest:1:pick|witch",
+"outcome:q4forest:1:pick|witcher"
+]
+}
+},
+"voice": "NFG5qt843uXKj4pFvR7C"
+}
