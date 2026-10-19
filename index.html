@@ -158,7 +158,7 @@ N.prologue = {
   ],
   choices: [
     { t:'"Fine. Stay out of the way."', do:()=>{S.metPip=1;}, out:()=>['Pip climbs into your coat pocket like it was built for him. It smells of soot for the rest of the story.'], next:'hub' },
-    { t:R('"I work alone."','"I do not travel with pets."'), do:()=>{S.metPip=1;}, out:()=>['Pip nods seriously, waits until you turn around, and climbs into your coat pocket anyway.','Berna, still not looking up: "He does this."'], next:'hub' }
+    { t:()=>R('"I work alone."','"I do not travel with pets."'), do:()=>{S.metPip=1;}, out:()=>['Pip nods seriously, waits until you turn around, and climbs into your coat pocket anyway.','Berna, still not looking up: "He does this."'], next:'hub' }
   ]
 };
 
@@ -203,7 +203,7 @@ N.q1child = {
     'Ida is watching your hands.'
   ],
   choices: [
-    { t:R('Cut a White Honey draught ten to one with river water and make him drink it.','Burn it out of him. Here. Now.'), do:()=>{S.f.childSaved=1;S.trust+=2; if(!W()) S.eye+=1;}, out:()=>W()?['He vomits black for a full minute. Then he breathes. Then he asks for bread.','Ida does not say thank you. She says "Who else?" and you understand she means the well.','Ashbrook will remember this. Trust rises.']:['Light under your palm, and a smell like a struck match. He screams once, then breathes, then asks for bread.','Ida does not say thank you. She says "Who else?" and you understand she means the well.','Ashbrook will remember this. Trust rises. So does the chance someone on the road describes the light to the wrong person.'], next:'q1gate' },
+    { t:()=>R('Cut a White Honey draught ten to one with river water and make him drink it.','Burn it out of him. Here. Now.'), do:()=>{S.f.childSaved=1;S.trust+=2; if(!W()) S.eye+=1;}, out:()=>W()?['He vomits black for a full minute. Then he breathes. Then he asks for bread.','Ida does not say thank you. She says "Who else?" and you understand she means the well.','Ashbrook will remember this. Trust rises.']:['Light under your palm, and a smell like a struck match. He screams once, then breathes, then asks for bread.','Ida does not say thank you. She says "Who else?" and you understand she means the well.','Ashbrook will remember this. Trust rises. So does the chance someone on the road describes the light to the wrong person.'], next:'q1gate' },
     { t:'Tell her the truth: keep him off the well water, and he will mend. Slowly.', do:()=>{S.f.childSaved=0;S.trust+=0;}, out:()=>['She believes you, because you did not try to sell her anything.','Tam will be sick for a week. He will live. Ida will tell the village the stranger said it was the water, not the witch.'], next:'q1gate' }
   ]
 };
@@ -249,7 +249,7 @@ N.q1marga = {
     { t:'Ask her to stand up and say it in the square.', if:()=>S.f.q1margaFirst, do:()=>{S.f.margaWitness=1;S.trust+=1;}, out:()=>['She is quiet a long time. "If you are standing next to me. Not behind. Next to."','You agree. Trust rises; she has decided you are worth something.'], next:'q1hub' },
     { t:'Give her a charm that turns eyes away from her door.', who:'s', if:()=>S.f.q1margaFirst, do:()=>{S.f.margaSafe=1;S.f.margaCharm=1;S.eye+=1;}, out:()=>['You twist three of her chicken feathers and a hair of your own into a knot and hang it on the lintel. Nobody will find this hut tonight unless they already know the way.','Someone in the square saw the light in your hands. The Eternal Fire’s eye on you grows.'], next:'q1hub' },
     { t:'Talk Orm down. "Hang her and the well is still poisoned tomorrow."', if:()=>!S.f.q1margaFirst, do:()=>{S.f.q1margaBeaten=1;S.trust+=1;}, out:()=>['It takes a while. Orm wants to be talked down; he just wants it to look like he lost an argument, not a fight.','Marga walks home on her own feet, which is more than she expected. She will not testify to anything now. "I am done being brave for this village." Trust rises anyway.'], next:'q1hub' },
-    { t:R('Cut the rope. Let them look at the sword and think.','Cut the rope. Let them look at you and think.'), if:()=>!S.f.q1margaFirst, do:()=>{S.f.q1margaBeaten=1;S.trust-=1; if(!W()) S.eye+=1;}, out:()=>['Nobody argues with it. Nobody forgives it either.','Marga walks home. She will not testify to anything now. Trust drops.'], next:'q1hub' }
+    { t:()=>R('Cut the rope. Let them look at the sword and think.','Cut the rope. Let them look at you and think.'), if:()=>!S.f.q1margaFirst, do:()=>{S.f.q1margaBeaten=1;S.trust-=1; if(!W()) S.eye+=1;}, out:()=>['Nobody argues with it. Nobody forgives it either.','Marga walks home. She will not testify to anything now. Trust drops.'], next:'q1hub' }
   ]
 };
 N.q1bert = {
@@ -293,7 +293,7 @@ N.q1blind = {
   choices: [
     { t:'Tell him what is in the well now, and what it will do to the village.', do:()=>{S.f.lukasTold=1;}, out:()=>['He goes white. He did not know. He thought a body in a well was a body in a well.','"What do I do?" You tell him to be at the well at midnight. He will come. You can see it.'], next:'q1hub' },
     { t:'Take the purse. Say nothing yet.', do:()=>{S.f.q1purse=1;S.coin+=11;}, out:()=>['Eleven florens. Nilfgaardian silver. He watches you pocket it and does not ask.','Now he thinks you can be paid. That may be useful.'], next:'q1hub' },
-    { t:R('Axii him, gently. "You will tell your father tonight."','Look him in the eye and let him feel it. "You will tell your father tonight."'), do:()=>{S.f.lukasConfess=1; if(!W()) S.eye+=1;}, out:()=>['He walks down the ridge like a man in a dream and into his father’s house with the glass windows.','By the time you reach the square, Berthold is standing in his doorway looking at nothing. He knows. Everyone will know by morning.'], next:'q1hub' }
+    { t:()=>R('Axii him, gently. "You will tell your father tonight."','Look him in the eye and let him feel it. "You will tell your father tonight."'), do:()=>{S.f.lukasConfess=1; if(!W()) S.eye+=1;}, out:()=>['He walks down the ridge like a man in a dream and into his father’s house with the glass windows.','By the time you reach the square, Berthold is standing in his doorway looking at nothing. He knows. Everyone will know by morning.'], next:'q1hub' }
   ]
 };
 N.q1night = {
@@ -308,7 +308,7 @@ N.q1night = {
     { t:'Fight. End it clean.', do:()=>{S.f.wraith='destroyed'; if(!W()) S.eye+=2;}, out:()=>W()?['Yrden traps him on the stones. The silver does the rest. He screams like a man and comes apart like a sheet in wind.','Clean. Quick. Nothing laid to rest, only stopped.']:['You bind him in a circle of light bright enough to be seen from the chapel, and you unmake him with a word your teachers told you never to use in public.','It worked. Half the village saw the light. The Fire’s eye on you grows.'], next:'q1dawn' },
     { t:'Lay him to rest. Give him his name, burn the knife, let the boy say it.', if:()=>S.f.q1well && S.f.q1letter && (W() ? (S.f.q1marga && S.f.q1margaFirst) || S.f.lukasTold : true), do:()=>{S.f.wraith='rested'; S.trust+=1;}, out:()=>W()?[S.f.lukasTold?'You cannot do a rite. But a killer can. Lukas stands at the well and says the name three times into the water, and you hold the knife in a fire until the handle goes.':'You cannot do a rite. Marga can. She stands at the well with you and says his name three times into the water while you hold the knife in a fire.','He turns south. He goes. The well is only a well.','The village saw it. Trust rises.']:['You say his name into the water three times and burn the knife in your bare hand, which hurts exactly as much as it should.',S.f.lukasTold?'Lukas says "I’m sorry" to a dead man, in a voice that cracks. It is not nothing.':'','He turns south. He goes. The well is only a well.','Nobody saw a light, because there was none. The village saw you cry a little, which did you more good than a spell.'].filter(Boolean), next:'q1dawn' },
     { t:'Lay him to rest. (You need his name, his letter, and someone who can say it: Marga unshaken, or Lukas willing.)', if:()=>!(S.f.q1well && S.f.q1letter && (W() ? (S.f.q1marga && S.f.q1margaFirst) || S.f.lukasTold : true)), disabled:true },
-    { t:R('Axii. Point him at the river and let him walk.','Glamour. Show him the river and call it the road home.'), do:()=>{S.f.wraith='river';}, out:()=>['He believes you. He walks into the Pontar and under it, still asking for his mother.','The well is clean. The river is not. Something is in it now that remembers you.'], next:'q1dawn' },
+    { t:()=>R('Axii. Point him at the river and let him walk.','Glamour. Show him the river and call it the road home.'), do:()=>{S.f.wraith='river';}, out:()=>['He believes you. He walks into the Pontar and under it, still asking for his mother.','The well is clean. The river is not. Something is in it now that remembers you.'], next:'q1dawn' },
     { t:'Let him have Lukas. The boy is standing right there.', if:()=>S.f.lukasTold, do:()=>{S.f.wraith='fed';S.f.lukas='dead';S.trust-=2;}, out:()=>['You step aside. It takes about as long as you would think.','When it is over the wraith is gone, satisfied, and Lukas is at the bottom of the well with the man he put there.','Ashbrook saw you step aside. Trust drops hard.'], next:'q1dawn' }
   ]
 };
@@ -385,7 +385,7 @@ N.q2scouts = {
   choices: [
     { t:'Tell him the truth. A troll holds it, and the town has no garrison.', do:()=>{S.f.scouts='told';}, out:()=>['He writes it down. He thanks you. He means it.','Whatever comes up this road later will know exactly what is waiting.'], next:'q2bridge' },
     { t:'Lie. "A Redanian company. Crossbows on both towers."', do:()=>{S.f.scouts='lied';}, out:()=>['He looks at you a long moment. Then writes it down anyway.','It will cost whoever comes up this road an extra day of caution. A day can matter.'], next:'q2bridge' },
-    { t:R('Kill them. Three fewer maps in Nilfgaard.','Kill them. Quietly. Three men fall off three horses and the horses go home alone.'), do:()=>{S.f.scouts='dead';S.eye+= W()?0:1;}, out:()=>W()?['It is over in a minute. You push the bodies into the reeds and send the horses south.','Nilfgaard will notice three scouts not coming home, and will not know why. That is a different kind of warning.']:['Three men go to sleep in their saddles and do not wake up. The horses go home alone.','Nilfgaard will notice three scouts not coming home, and will not know why. Someone will say the word "witch."'], next:'q2bridge' }
+    { t:()=>R('Kill them. Three fewer maps in Nilfgaard.','Kill them. Quietly. Three men fall off three horses and the horses go home alone.'), do:()=>{S.f.scouts='dead';S.eye+= W()?0:1;}, out:()=>W()?['It is over in a minute. You push the bodies into the reeds and send the horses south.','Nilfgaard will notice three scouts not coming home, and will not know why. That is a different kind of warning.']:['Three men go to sleep in their saddles and do not wake up. The horses go home alone.','Nilfgaard will notice three scouts not coming home, and will not know why. Someone will say the word "witch."'], next:'q2bridge' }
   ]
 };
 N.q2bridge = {
@@ -401,7 +401,7 @@ N.q2bridge = {
     { t:'Pay in a story. Tell him something true about yourself.', do:()=>{S.f.trollFriend=1;S.f.trollTruth=1;}, out:()=>W()?['You tell him about the Trial of the Grasses. Three boys went in with you. One came out.','He is quiet for a long time. Then he says you can cross for free forever, and asks if you want to see what is under the bridge.']:['You tell him about the night Aretuza found out what you could really do, and what it cost the girl in the next bed.','He is quiet a long time. Then he says you can cross for free forever, and asks if you want to see what is under the bridge.'], next:'q2riddle' },
     { t:'Pay in a story. Make one up.', do:()=>{S.f.trollFriend=1;}, out:()=>['You tell him about a dragon that fell in love with a lighthouse. He loves it. He does not know it is nonsense.','He says you can cross, and asks if you want to see what is under the bridge.'], next:'q2riddle' },
     { t:'Fight. The council wants a bridge.', do:()=>{S.f.troll='dead';S.trust+=1;S.coin+=100;}, out:()=>W()?['It takes eleven minutes and most of a wall. He dies apologizing for breaking the wall.','A hundred crowns. The town cheers. Pip does not speak to you for a day.']:['You drop the bridge’s own cobbles on him from above. He dies confused.','A hundred crowns. The town cheers. Pip does not speak to you for a day. Half the town saw you lift stone with a gesture.'], next:'q2under_dead' },
-    { t:R('Threaten him. Trolls understand a witcher.','Threaten him. Let him see what you are.'), do:()=>{S.f.trollScared=1; if(!W()) S.eye+=1;}, out:()=>['He steps back. He is not stupid. But his eyes go to the edge of the bridge, down, and back to you, and you understand he is not scared for himself.'], next:'q2under' }
+    { t:()=>R('Threaten him. Trolls understand a witcher.','Threaten him. Let him see what you are.'), do:()=>{S.f.trollScared=1; if(!W()) S.eye+=1;}, out:()=>['He steps back. He is not stupid. But his eyes go to the edge of the bridge, down, and back to you, and you understand he is not scared for himself.'], next:'q2under' }
   ]
 };
 N.q2riddle = {
@@ -460,7 +460,7 @@ N.q2elves = {
     'The grandfather says he will not make the swim. He says it like a man stating the weather.'
   ],
   choices: [
-    { t:R('Axii the sergeant. Walk them through like you own the road.','Glamour the whole picket. Six men dream of their mothers for an hour.'), do:()=>{S.f.elves='saved'; if(!W()) S.eye+=2;}, out:()=>W()?['The sergeant waves you through and does not remember doing it. The grandfather kisses your hand. The children do not look back.','Somewhere in the hills, four people owe you.']:['Six men sit down in the road and smile at nothing. The grandfather kisses your hand. The children do not look back.','Somewhere in the hills, four people owe you. Six men will wake up and remember a woman walking past them in a light that was not the lantern. The Fire’s eye on you grows.'], next:'q2picket' },
+    { t:()=>R('Axii the sergeant. Walk them through like you own the road.','Glamour the whole picket. Six men dream of their mothers for an hour.'), do:()=>{S.f.elves='saved'; if(!W()) S.eye+=2;}, out:()=>W()?['The sergeant waves you through and does not remember doing it. The grandfather kisses your hand. The children do not look back.','Somewhere in the hills, four people owe you.']:['Six men sit down in the road and smile at nothing. The grandfather kisses your hand. The children do not look back.','Somewhere in the hills, four people owe you. Six men will wake up and remember a woman walking past them in a light that was not the lantern. The Fire’s eye on you grows.'], next:'q2picket' },
     { t:'Take them across the water, below the picket, the hard way. Carry the old man.', do:()=>{S.f.elves='saved';}, out:()=>['Cold enough to stop a heart. The grandfather’s nearly does. You carry him the last hundred yards on your back.','Nobody saw. Four people owe you.'], next:'q2picket' },
     { t:'Bribe the picket. Twenty crowns and the sergeant goes blind for an hour.', if:()=>S.coin>=20, do:()=>{S.f.elves='saved';S.coin-=20;S.f.q2bribedPicket=1;}, out:()=>['The sergeant takes the money and turns his back and says, to nobody, "I did not see four elves and I will not see them again."','Four people owe you. So, in a way, does a Redanian sergeant who now has a secret.'], next:'q2picket' },
     { t:'This is too far. Wish them luck.', do:()=>{S.f.elves='left';}, out:()=>['The mother nods like she expected it. They go into the dark on their own.','You do not find out what happens to them. That is its own kind of answer.'], next:'q2end' }
@@ -515,7 +515,7 @@ N.q3b = {
   ],
   choices: [
     { t:'"No. You are a girl who can do something most people cannot. That is all."', do:()=>{S.f.q3kind=1;}, out:()=>['She nods like she is deciding whether to believe it. The candle settles.','Matthis breathes for what might be the first time today.'], next:'q3letter' },
-    { t:R('"I am a monster, by most people’s reckoning. So is half of what I hunt. The word does not mean much."','"I am what they call a witch. Look at me. Do I look like a monster to you?"'), do:()=>{S.f.q3honest=1;}, out:()=>W()?['She looks at your eyes for a long time. "They’re yellow." "Yes." "Do people run?" "Some." She thinks about that and seems, oddly, comforted.']:['She looks at you the way girls look at you, which is to say: like you are the answer to a question she had not finished asking. "No," she says. "You look like a queen."'], next:'q3letter' },
+    { t:()=>R('"I am a monster, by most people’s reckoning. So is half of what I hunt. The word does not mean much."','"I am what they call a witch. Look at me. Do I look like a monster to you?"'), do:()=>{S.f.q3honest=1;}, out:()=>W()?['She looks at your eyes for a long time. "They’re yellow." "Yes." "Do people run?" "Some." She thinks about that and seems, oddly, comforted.']:['She looks at you the way girls look at you, which is to say: like you are the answer to a question she had not finished asking. "No," she says. "You look like a queen."'], next:'q3letter' },
     { t:'"The Fire thinks so. That is the only opinion that matters for the next three days."', do:()=>{S.f.q3cold=1;}, out:()=>['The candle flares. Matthis puts his hand over it without thinking and burns his palm.','True. Not helpful. She does not look up again.'], next:'q3letter' }
   ]
 };
@@ -588,7 +588,7 @@ N.q3search = {
   },
   choices: [
     { t:'Let Pip handle it. Godlings are good at being somewhere else.', if:()=>S.f.liesl==='hidden', do:()=>{S.f.q3pip=1;}, out:()=>['Every pot in the kitchen falls off its hook at once. The dog bolts. The torches gutter. A voice from the rafters says "BOO" in a tone of enormous satisfaction.','The soldier at the hearth decides the chimney is a problem for the morning. There will not be a morning for this. Pip has never been prouder.'], next:'q3night' },
-    { t:R('Axii the man at the hearth. He has seen nothing.','Glamour the hearth. Stone, soot, no ladder, no girl.'), if:()=>S.f.liesl==='hidden', do:()=>{S.eye+= W()?1:2;}, out:()=>W()?['He blinks, nods, and walks out. The dog does not nod. The dog keeps looking up, and one of the other men notices the dog.','It holds. Barely. Someone will mention the dog to Rook.']:['The hearth is a hearth. The dog whines at nothing and is kicked for it.','It holds. The man who was kicked for his dog will mention the woman by the fire whose shadow fell the wrong way.'], next:'q3night' },
+    { t:()=>R('Axii the man at the hearth. He has seen nothing.','Glamour the hearth. Stone, soot, no ladder, no girl.'), if:()=>S.f.liesl==='hidden', do:()=>{S.eye+= W()?1:2;}, out:()=>W()?['He blinks, nods, and walks out. The dog does not nod. The dog keeps looking up, and one of the other men notices the dog.','It holds. Barely. Someone will mention the dog to Rook.']:['The hearth is a hearth. The dog whines at nothing and is kicked for it.','It holds. The man who was kicked for his dog will mention the woman by the fire whose shadow fell the wrong way.'], next:'q3night' },
     { t:'Do nothing. Trust the hiding place.', if:()=>S.f.liesl==='hidden', do:()=>{S.f.liesl='taken';S.trust-=1;}, out:()=>['He puts the torch up the flue. Liesl screams. They have her out and in the cage inside a minute, and Pip is a smear of soot on the hearthstone, crying.','The town watched you stand there. Trust drops.'], next:'q3night' },
     { t:'Stand behind her and say nothing.', if:()=>S.f.liesl==='trained', do:()=>{S.trust+=1;}, out:()=>['They search the room around her and leave. Rook looks at the three unlit candles for a long moment and then at you.','She did that. You taught her to. The town saw a baker’s girl stare down the Fire and Greyhollow is quietly thrilled.'], next:'q3night' },
     { t:'Get her out the back before they reach the room. Do not make her test it.', if:()=>S.f.liesl==='trained', do:()=>{S.eye+=1;}, out:()=>['She goes over the yard wall. The dog goes after her. Halfway down the lane the dog’s tail catches fire, just the tail, just for a second, and the dog goes home.','They lose her. They also now know exactly what they are looking for, and that it has been taught. The Fire’s eye on you grows.'], next:'q3night' },
@@ -679,7 +679,7 @@ N.q4forest = {
     'Ahead, at a fork in the path, is a totem taller than the others, hung with a fresh deer skull. The path to the left goes to Thornwick’s side of the wood. The path to the right goes deeper, toward where the trees stop making sense.'
   ],
   choices: [
-    { t:R('Igni the big totem. See what the wood does.','Burn the big totem. See what the wood does.'), do:()=>{S.f.q4burnedOne=1; if(!W()) S.eye+=1;}, out:()=>['It goes up like it was waiting to. Every crow in the wood takes off at once. The wolves are gone, which is worse than the wolves being there.','Somewhere deeper in, something very large turns its head.'], next:'q4ysolde' },
+    { t:()=>R('Igni the big totem. See what the wood does.','Burn the big totem. See what the wood does.'), do:()=>{S.f.q4burnedOne=1; if(!W()) S.eye+=1;}, out:()=>['It goes up like it was waiting to. Every crow in the wood takes off at once. The wolves are gone, which is worse than the wolves being there.','Somewhere deeper in, something very large turns its head.'], next:'q4ysolde' },
     { t:'Leave it. Walk the left path, toward Thornwick.', out:()=>['The wolves peel off at the edge of the village fields. One of them looks back at you, which wolves do not do.'], next:'q4ysolde' },
     { t:'Walk the right path. Straight at it.', do:()=>{S.f.q4direct=1;}, out:()=>['The trees get older and the light gets wrong. The wolves stop at an invisible line and sit down, all six, and watch you cross it.'], next:'q4ysolde' }
   ]
@@ -810,7 +810,7 @@ N.q5bridge = {
   choices: [
     { t:'Answer the captain. "I did. He was laid to rest. His mother knows."', if:()=>S.f.letterSent, do:()=>{S.f.q5captain=1;S.f.held=1;}, out:()=>['Silence on the bridge for the length of a breath. The captain is Aurelio’s brother. He got the letter in a field camp three weeks ago and has not slept properly since.','He does not call off the column. He cannot. But he pulls his own company, forty men, off the bridge and onto the south bank, and tells them to watch the road. Forty fewer. He looks at you once more and does not look again.','You hold the bridge with what is left.'], next:'q5bridge2' },
     { t:'Hold the bridge. Make them pay for every yard.', do:()=>{S.f.held=1; if(!W()) S.eye+=2;}, out:()=>['You hold.'], next:'q5bridge2' },
-    { t:R('Fire the bridge. Igni on the old timbers under the arch.','Fire the bridge. Drop the arch into the river.'), do:()=>{S.f.burned=1; if(S.f.troll==='keeper'){S.f.troll='dead';S.f.trollDiedBridge=1;} if(!W()) S.eye+=1;}, out:()=>[S.f.trollDiedBridge?'Bogdan will not come off it. "Bogdan is the toll." The arch goes into the Pontar with him on it, and two hundred men on the wrong side of the water.':'The arch goes into the Pontar. Two hundred men on the wrong side of the water.','No bridge. No raid. Greyhollow is an island now, and Jens the ferryman is the richest man in it.'], next:'q5square' }
+    { t:()=>R('Fire the bridge. Igni on the old timbers under the arch.','Fire the bridge. Drop the arch into the river.'), do:()=>{S.f.burned=1; if(S.f.troll==='keeper'){S.f.troll='dead';S.f.trollDiedBridge=1;} if(!W()) S.eye+=1;}, out:()=>[S.f.trollDiedBridge?'Bogdan will not come off it. "Bogdan is the toll." The arch goes into the Pontar with him on it, and two hundred men on the wrong side of the water.':'The arch goes into the Pontar. Two hundred men on the wrong side of the water.','No bridge. No raid. Greyhollow is an island now, and Jens the ferryman is the richest man in it.'], next:'q5square' }
   ]
 };
 N.q5bridge2 = {
@@ -826,7 +826,7 @@ N.q5bridge2 = {
     ];
   },
   choices: [
-    { t:R('Drink everything. Let the mutations have the night.','Say the word.'), do:()=>{S.f.q5allin=1; S.eye+= W()?1:3;}, out:()=>W()?['The world goes very slow and very clear and you are not sure, afterward, how much of what happened on the bridge was you.','It is enough. The column breaks. You come down off it at dawn with black veins to the elbow and a heart that will take a month to forgive you.']:['The glamour goes first, then the sky. For the length of one word there is no night over the Pontar, only you.','It is enough. The column breaks. You come down off the bridge as yourself, which is the last time anyone in Velen will see that face without knowing what it is. The Fire’s eye is a sun now.'], next:'q5square' },
+    { t:()=>R('Drink everything. Let the mutations have the night.','Say the word.'), do:()=>{S.f.q5allin=1; S.eye+= W()?1:3;}, out:()=>W()?['The world goes very slow and very clear and you are not sure, afterward, how much of what happened on the bridge was you.','It is enough. The column breaks. You come down off it at dawn with black veins to the elbow and a heart that will take a month to forgive you.']:['The glamour goes first, then the sky. For the length of one word there is no night over the Pontar, only you.','It is enough. The column breaks. You come down off the bridge as yourself, which is the last time anyone in Velen will see that face without knowing what it is. The Fire’s eye is a sun now.'], next:'q5square' },
     { t:'Hold with what you have. No more than that.', out:()=>{ const {d}=defense(); return d>=4 ? ['You do not need the other thing. By dawn the column is backing down the south road and the bridge is still a bridge.'] : d>=2 ? ['You hold the narrow part until there is no narrow part. Then you fall back into the town with what is left.'] : ['You fall back. There was nothing else to do.']; }, next:'q5square' }
   ]
 };
@@ -884,7 +884,7 @@ const QUESTS = [
   { id:'q2', name:'The Toll', start:'q2a', blurb:'A troll on the bridge, and what he is standing on.',
     brief:{ where:'Greyhollow’s stone bridge over the Pontar, and the council chamber that argues about it.', who:'Bogdan the troll, Alderman Hodd, Jens the ferryman, Berna, and whoever is living under the bridge.', stake:'A troll has taken the only bridge and charges tolls in cheese. The council wants it cleared. Two armies want to know if it is held.' } },
   { id:'q3', name:'The Spark', start:'q3a', blurb:'Witch hunters, and a baker’s girl who burns bread.',
-    brief:{ where:'Greyhollow square, the inn, the bakery three doors down.', who:'Captain Rook of the Eternal Fire and six witch hunters, Matthis the baker, his daughter Liesl (12), Alderman Hodd, Father Ansel the town priest, and Pip.', stake:'Someone wrote to the witch hunters about a child who sets things on fire when scared. They have three days and a cage. ' + R('They do not like witchers either.', 'They are the people you have been hiding from your whole life.') } },
+    brief:{ where:'Greyhollow square, the inn, the bakery three doors down.', who:'Captain Rook of the Eternal Fire and six witch hunters, Matthis the baker, his daughter Liesl (12), Alderman Hodd, Father Ansel the town priest, and Pip.', get stake(){ return 'Someone wrote to the witch hunters about a child who sets things on fire when scared. They have three days and a cage. ' + R('They do not like witchers either.', 'They are the people you have been hiding from your whole life.'); } } },
   { id:'q4', name:'Old Wood', start:'q4a', blurb:'A leshen, a guild, and a girl with a mark.',
     brief:{ where:'The north wood above Greyhollow, the woodcutters’ camp at its edge, and Thornwick, the village that still prays to the forest.', who:'Aldo the woodcutters’ foreman, Wat the apprentice, Elder Hesper of Thornwick, her granddaughter Ysolde, and the leshen.', stake:'The forest spirit has killed three woodcutters and marked a village girl as its price. The guild pays to kill it. The village begs you not to.' } },
   { id:'q5', name:'Long Shadows', start:'q5a', blurb:'Horns on the south road. Everything comes due.', gate:4,
@@ -1061,6 +1061,8 @@ render();
 .narr button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .narr button[aria-pressed="true"]{color:var(--fg);border-color:var(--gold)}
 .narr #narrPlay[aria-pressed="true"] svg{color:var(--gold)}
+.narr #narrPlay.reading{color:var(--muted);border-color:var(--line)}
+.narr #narrPlay.reading svg{color:var(--muted)}
 .narr svg{width:14px;height:14px;flex:none}
 </style>
 <script id="narr-text">
@@ -1094,6 +1096,34 @@ function narrClips(){
   opts.forEach((t, i) => add(`choice:${S.node}:${i}`, `${NARR_NUM[i] || (i + 1)}: ${t}`));
   return clips;
 }
+// v2 narration (10/19): whole-scene clips on eleven_v3, rendered on demand by ARC and cached there.
+// The clips above stay the units (and the v1 fallback files); narrParts() joins them into the clips ARC
+// renders. Clip id = sha1(model|voice|settings|text)[:16]; build_narration.py asserts Python agrees.
+const NARR_V3 = { model: 'eleven_v3', voice: 'NFG5qt843uXKj4pFvR7C',
+  settings: 'stability=0.5,similarity_boost=0.75,style=0.3,speed=1.0,use_speaker_boost=true,output_format=mp3_44100_128' };
+const NARR_MAX = 4500;   // characters per ElevenLabs request; a longer scene splits at a paragraph boundary
+function narrParts(){
+  const clips = narrClips(); if (!clips.length) return [];
+  const n = N[S.node];
+  const kind = clips[0].id.startsWith('outcome:') ? 'outcome' : n.hub ? 'hub' : n.pick ? 'role' : 'scene';
+  const isOpt = c => c.id === 'ask' || c.id.startsWith('choice:');
+  // v3 audio tags as in the approved test (audio-test/v3_scene.txt): [short pause] between units,
+  // [long pause] before "What do you do?" (or before the list on the hub and role screens)
+  const seg = clips.map((c, i) => {
+    let t = c.text;
+    if (c.id.endsWith(':title') && !/[.!?…]$/.test(t)) t += '.';
+    const long = i > 0 && isOpt(c) && !isOpt(clips[i - 1]);
+    return { t, sep: long ? ' [long pause] ' : ' [short pause] ', sub: c };
+  });
+  const groups = []; let cur = null;
+  seg.forEach(g => {
+    if (cur && cur.text.length + g.sep.length + g.t.length > NARR_MAX) cur = null;
+    if (!cur) { cur = { text: g.t, subs: [g.sub] }; groups.push(cur); }
+    else { cur.text += g.sep + g.t; cur.subs.push(g.sub); }
+  });
+  return groups.map((g, k) => ({ id: narrSha1(`${NARR_V3.model}|${NARR_V3.voice}|${NARR_V3.settings}|${g.text}`).slice(0, 16),
+    kind, scene: S.node, part: k + 1, of: groups.length, text: g.text, subs: g.subs }));
+}
 // SHA-1 hex of the UTF-8 text; the build names each MP3 sha1(text)[:16]
 function narrSha1(str){
   const b = new TextEncoder().encode(str), l = b.length, nw = (((l + 8) >> 6) + 1) * 16, w = new Uint32Array(nw), x = new Uint32Array(80);
@@ -1116,36 +1146,63 @@ function narrSha1(str){
 }
 </script>
 <script id="narr-player">
-// Winston narration player. Pre-rendered MP3s in audio/ (manifest.json maps text hash -> file);
-// a clip with no file falls back to the browser's speechSynthesis. No API key, no network TTS.
+// Winston narration player (v2, 10/19). Each view is one whole-scene clip on eleven_v3 (narrParts), rendered the
+// first time anyone asks for it and cached by ARC: GET /api/games/narrate/<id>. ARC only knows the ids in its
+// narration.json, so no text ever leaves this page and nobody can spend credits on their own words.
+// Per clip: (1) ARC (this origin when the page is served by ARC, else the public ARC host), (2) the v1
+// per-paragraph clips in audio/ (manifest.json), (3) the browser's speechSynthesis. No API key here.
 (function(){
-  const header = document.querySelector('header'); if (!header || typeof narrClips !== 'function') return;
+  const header = document.querySelector('header'); if (!header || typeof narrParts !== 'function') return;
   const hasTTS = 'speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined';
   const AUTO_KEY = 'greyhollow-autoread';
-  let files = null;            // hash16 -> file name, from audio/manifest.json
+  const ARC = (/^\/static\/games\//.test(location.pathname) ? location.origin : 'https://winston.tail05945a.ts.net') + '/api/games/narrate/';
+  let files = null;            // v1 fallback: hash16 -> file name, from audio/manifest.json
+  let arcDownUntil = 0;        // a network failure skips ARC for a minute
   let auto = false; try { auto = localStorage.getItem(AUTO_KEY) === '1'; } catch(e) {}
   let armed = false;           // first user gesture seen (iOS: audio may only start inside one)
-  let playing = false, token = 0, queue = [], qi = 0, viewKey = '';
+  let playing = false, reading = false, token = 0, queue = [], qi = 0, viewKey = '', ctl = null, blobUrl = '';
   const audio = document.createElement('audio'); audio.preload = 'none'; audio.setAttribute('playsinline', '');
+  // a tenth of a second of silence, played inside the tap that starts narration, so iOS lets this element
+  // play the clip that arrives later (after the fetch, outside the gesture)
+  const SILENT = (() => { const n = 800, b = new Uint8Array(44 + n), v = new DataView(b.buffer);
+    const w = (o, t) => { for (let i = 0; i < t.length; i++) b[o + i] = t.charCodeAt(i); };
+    w(0, 'RIFF'); v.setUint32(4, 36 + n, true); w(8, 'WAVEfmt '); v.setUint32(16, 16, true); v.setUint16(20, 1, true);
+    v.setUint16(22, 1, true); v.setUint32(24, 8000, true); v.setUint32(28, 8000, true); v.setUint16(32, 1, true);
+    v.setUint16(34, 8, true); w(36, 'data'); v.setUint32(40, n, true); b.fill(128, 44);
+    let s = ''; b.forEach(x => { s += String.fromCharCode(x); }); return 'data:audio/wav;base64,' + btoa(s); })();
   const icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>';
   const box = document.createElement('div'); box.className = 'narr'; box.hidden = true;
   box.innerHTML = `<button type="button" id="narrPlay" aria-pressed="false" title="Winston reads this scene aloud (N)">${icon}<span>Listen</span></button><button type="button" id="narrAuto" aria-pressed="false" title="Read each new scene as it opens">Auto-read <span>off</span></button>`;
   header.appendChild(box); box.appendChild(audio);
   const bPlay = box.querySelector('#narrPlay'), bAuto = box.querySelector('#narrAuto');
-  const api = window.GreyhollowNarration = { last: null, sources: [] };   // status, for testing
+  const api = window.GreyhollowNarration = { last: null, sources: [], arc: null };   // status, for testing
 
   function paint(){
     bPlay.setAttribute('aria-pressed', playing ? 'true' : 'false');
-    bPlay.querySelector('span').textContent = playing ? 'Stop' : 'Listen';
+    bPlay.classList.toggle('reading', reading);
+    bPlay.querySelector('span').textContent = reading ? 'Winston is reading…' : playing ? 'Stop' : 'Listen';
     bAuto.setAttribute('aria-pressed', auto ? 'true' : 'false');
     bAuto.querySelector('span').textContent = auto ? 'on' : 'off';
   }
-  function build(){ return narrClips().map(c => Object.assign(c, { h: narrSha1(c.text).slice(0, 16) })); }
+  function clearBlob(){ if (blobUrl) { try { URL.revokeObjectURL(blobUrl); } catch(e) {} blobUrl = ''; } }
   function stop(){
-    token++; playing = false; queue = []; qi = 0;
+    token++; playing = false; reading = false; queue = []; qi = 0;
+    if (ctl) { try { ctl.abort(); } catch(e) {} ctl = null; }
     audio.onended = audio.onerror = null; try { audio.pause(); } catch(e) {}
+    clearBlob();
     if (hasTTS) { try { speechSynthesis.cancel(); } catch(e) {} }
     paint();
+  }
+  function unlock(){
+    try { audio.onended = audio.onerror = null; audio.src = SILENT; const p = audio.play(); if (p && p.catch) p.catch(() => {}); } catch(e) {}
+  }
+  function playSrc(src, my, onFail, label){
+    api.sources.push(label); api.last = label.split(':')[0];
+    audio.onended = () => { if (my === token) next(my); };
+    audio.onerror = () => { if (my === token) { audio.onerror = audio.onended = null; onFail(); } };
+    audio.src = src;
+    const p = audio.play();
+    if (p && p.catch) p.catch(err => { if (my === token && err && err.name !== 'AbortError') { audio.onerror = audio.onended = null; onFail(); } });
   }
   function speak(text, my){
     if (!hasTTS) { next(my); return; }
@@ -1156,22 +1213,55 @@ function narrSha1(str){
   }
   function next(my){
     if (my !== token) return;
-    if (qi >= queue.length) { playing = false; paint(); return; }
-    const c = queue[qi++]; const f = files && files[c.h];
-    if (!f) { speak(c.text, my); return; }
-    api.sources.push('audio:' + f); api.last = 'audio';
-    audio.onended = () => { if (my === token) next(my); };
-    audio.onerror = () => { if (my === token) { audio.onerror = audio.onended = null; speak(c.text, my); } };
-    audio.src = 'audio/' + f;
-    const p = audio.play();
-    if (p && p.catch) p.catch(err => { if (my === token && err && err.name !== 'AbortError') { audio.onerror = audio.onended = null; speak(c.text, my); } });
+    if (qi >= queue.length) { playing = false; reading = false; paint(); return; }
+    const it = queue[qi++];
+    if (it.part) { arcPlay(it.part, my); return; }
+    const f = files && files[it.h];                       // v1 clip, else the browser voice
+    if (!f) { speak(it.text, my); return; }
+    playSrc('audio/' + f, my, () => speak(it.text, my), 'v1:' + f);
   }
+  function fallback(part, my){                            // this clip's v1 units, in order
+    queue.splice(qi, 0, ...part.subs.map(c => ({ text: c.text, h: narrSha1(c.text).slice(0, 16) })));
+    next(my);
+  }
+  async function arcPlay(part, my){
+    if (Date.now() < arcDownUntil) { fallback(part, my); return; }
+    const slow = setTimeout(() => { if (my === token) { reading = true; paint(); } }, 350);
+    let tries = 0;
+    try {
+      for (;;) {
+        ctl = new AbortController();
+        const r = await fetch(ARC + part.id, { signal: ctl.signal });
+        if (my !== token) return;
+        api.arc = r.status;
+        if (r.status === 429 && tries++ < 2) {          // one render at a time on ARC: wait and ask again
+          let s = 3; try { s = (await r.json()).retry_s || 3; } catch(e) {}
+          await new Promise(z => setTimeout(z, s * 1000));
+          if (my !== token) return;
+          continue;
+        }
+        if (!r.ok) throw new Error('arc ' + r.status);   // 404 / 429 again / 503 quota or cap / 5xx
+        const b = await r.blob();
+        if (my !== token) return;
+        clearTimeout(slow); reading = false; clearBlob(); blobUrl = URL.createObjectURL(b); paint();
+        playSrc(blobUrl, my, () => fallback(part, my), 'arc:' + part.id);
+        return;
+      }
+    } catch (e) {
+      clearTimeout(slow);
+      if (my !== token) return;
+      if (e && e.name === 'TypeError') arcDownUntil = Date.now() + 60000;   // network: ARC unreachable
+      reading = false; paint();
+      fallback(part, my);
+    }
+  }
+  function build(){ return narrParts(); }
   function play(){
-    stop(); queue = build(); if (!queue.length) return;
-    playing = true; paint(); next(token);
+    stop(); const parts = build(); if (!parts.length) return;
+    queue = parts.map(p => ({ part: p })); playing = true; paint(); unlock(); next(token);
   }
   function onView(){
-    const key = build().map(c => c.h).join(',');
+    const key = build().map(p => p.id).join(',');
     if (key === viewKey) return; viewKey = key;
     stop();
     if (auto && armed) play();
@@ -1191,14 +1281,18 @@ function narrSha1(str){
   // choice tap that changes the scene still counts as the gesture that starts the audio
   const gameRender = render;
   render = function(){ const r = gameRender.apply(this, arguments); try { onView(); } catch(e) {} return r; };
-  viewKey = build().map(c => c.h).join(',');
+  viewKey = build().map(p => p.id).join(',');
 
-  fetch('audio/manifest.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null).then(m => {
+  const withTimeout = (p, ms) => Promise.race([p, new Promise((_, no) => setTimeout(() => no(new Error('timeout')), ms))]);
+  const v1 = fetch('audio/manifest.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null).then(m => {
     files = {};
     if (m && m.units) Object.keys(m.units).forEach(h => { files[h] = m.units[h].file; });
     api.files = Object.keys(files).length;
-    if (api.files || hasTTS) { box.hidden = false; paint(); }
   });
+  const arc = withTimeout(fetch(ARC + 'status', { cache: 'no-store' }), 6000).then(r => r.ok, () => false).then(ok => {
+    api.arcStatus = ok; if (!ok) arcDownUntil = Date.now() + 60000;
+  });
+  Promise.all([v1, arc]).then(() => { if (api.arcStatus || api.files || hasTTS) { box.hidden = false; paint(); } });
 })();
 </script>
 </body>
